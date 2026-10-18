@@ -129,12 +129,12 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   // --- SAFETY ---
   {
     id: 'unodc_homicide',
-    name: 'Violent Crime (Intentional Homicide Rate)',
+    name: 'Intentional Homicide Rate',
     shortName: 'Homicide Rate',
     category: 'safety',
-    source: 'UNODC / WHO Mortality Database',
+    source: 'UNODC via World Bank WDI',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'Annual intentional homicides per 100,000 residents, widely treated as the most reliable indicator of violent crime.',
     pros: [
       'Unlike theft or assault, dead bodies are hard to conceal, making homicide the least underreported violent crime globally.',
@@ -151,11 +151,33 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'Low'
   },
   {
+    id: 'who_traffic_safety',
+    name: 'Road Traffic Death Rate',
+    shortName: 'Road Deaths',
+    category: 'safety',
+    source: 'WHO Global Health Observatory',
+    tier: 1,
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'Annual road traffic fatalities per 100,000 population.',
+    pros: [
+      'In peacetime nations, daily transit fatality risk dwarfs violent crime by an order of magnitude.',
+      'Direct, tangible measure of civil engineering quality, vehicle standards, and traffic law enforcement.',
+      'Directly correlates with basic state capacity to protect everyday human life.'
+    ],
+    cons: [
+      'Severe underreporting in developing nations where deaths occurring days after a crash in under-equipped hospitals are not coded as traffic fatalities.',
+      'Fails to measure non-fatal catastrophic disabilities (traumatic brain injuries, amputations) that place enormous burdens on families.'
+    ],
+    westernCentricity: 'Relatively low philosophical bias, though road designs and vehicle safety certification standards are heavily dominated by European (Euro NCAP) and North American automotive regulations.',
+    realWorldImpact: 'Shapes multilateral development bank (MDB) highway and urban transit infrastructure loans.',
+    biasRisk: 'Low'
+  },
+  {
     id: 'global_peace_index',
-    name: 'Global Peace Index (GPI)',
+    name: 'Global Peace Index 2026',
     shortName: 'Peace Index',
     category: 'safety',
-    source: 'Institute for Economics & Peace (IEP, Sydney/London)',
+    source: 'Institute for Economics & Peace (IEP)',
     tier: 2,
     tierLabel: 'Normative Consensus',
     whatItMeasures: 'Composite index measuring 23 indicators across ongoing domestic/international conflict, societal safety, and militarisation.',
@@ -174,56 +196,34 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'High'
   },
   {
-    id: 'global_terrorism_index',
-    name: 'Terrorism Impact (GTI)',
-    shortName: 'Terrorism Impact',
+    id: 'organized_crime_index',
+    name: 'Organised Crime: Criminality Score',
+    shortName: 'Organised Crime',
     category: 'safety',
-    source: 'Institute for Economics & Peace (IEP)',
-    tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Direct casualties, property damage, and psychological impact of non-state insurgent and extremist attacks.',
+    source: 'Global Initiative Against Transnational Organized Crime',
+    tier: 3,
+    tierLabel: 'Expert / Institutional',
+    whatItMeasures: 'Expert-assessed scale and influence of 15 criminal markets (trafficking, extortion, drugs, cyber-crime and more) and 5 types of criminal actor. This dashboard uses the criminality score only, not the separate resilience score.',
     pros: [
-      'Rigorous event-based tracking based on the Global Terrorism Database (GTD).',
-      'Captures the disproportionate concentration of non-state extremist violence in fragile and conflict-affected states.'
+      'Captures shadow economies and criminal syndicates that standard national police statistics intentionally omit.',
+      'Assesses both the threat of criminal enterprise and the democratic state capacity to resist corruption.'
     ],
     cons: [
-      'Excludes state-sponsored terrorism, military airstrikes on civilian infrastructure, and drone warfare conducted by sovereign armed forces.',
-      'The definition of "terrorist" vs "freedom fighter" or "insurgent" is deeply contested in international law and frequently politicised by national governments.'
+      'Relies on qualitative expert consensus panels; illicit networks operate secretly, making objective measurement challenging.',
+      'Prone to reputational stereotypes regarding specific geographic regions.'
     ],
-    westernCentricity: 'Heavily shaped by Western counter-terrorism doctrines post-2001. Actions by non-state actors in Africa or the Middle East are classified as "terrorism", whereas state actions that cause comparable civilian deaths are classified as "military operations".',
-    realWorldImpact: 'Used to justify banking restrictions, anti-money laundering (AML/CFT) blacklists, international aid freezes, and strict visa vetting.',
+    westernCentricity: 'Western demand drives illicit markets (cocaine, narcotics, weapons, and untaxed financial flows), yet source and transit nations in Latin America and Africa bear the stigma and penalties in the rankings.',
+    realWorldImpact: 'Influences bilateral security cooperation, INTERPOL operations, and international anti-money laundering (AML) compliance.',
     biasRisk: 'High'
   },
   {
-    id: 'who_traffic_safety',
-    name: 'Road Safety (Traffic Mortality Rate)',
-    shortName: 'Traffic Deaths',
-    category: 'safety',
-    source: 'World Health Organisation (WHO)',
-    tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Annual road traffic fatalities per 100,000 population.',
-    pros: [
-      'In peacetime nations, daily transit fatality risk dwarfs violent crime by an order of magnitude.',
-      'Direct, tangible measure of civil engineering quality, vehicle standards, and traffic law enforcement.',
-      'Directly correlates with basic state capacity to protect everyday human life.'
-    ],
-    cons: [
-      'Severe underreporting in developing nations where deaths occurring days after a crash in under-equipped hospitals are not coded as traffic fatalities.',
-      'Fails to measure non-fatal catastrophic disabilities (traumatic brain injuries, amputations) that place enormous burdens on families.'
-    ],
-    westernCentricity: 'Relatively low philosophical bias, though road designs and vehicle safety certification standards are heavily dominated by European (Euro NCAP) and North American automotive regulations.',
-    realWorldImpact: 'Shapes multilateral development bank (MDB) highway and urban transit infrastructure loans.',
-    biasRisk: 'Low'
-  },
-  {
     id: 'world_risk_index',
-    name: 'Natural Disaster & Hazard Safety',
-    shortName: 'Disaster Safety (WRI)',
+    name: 'WorldRiskIndex 2026 (Disaster Risk)',
+    shortName: 'Disaster Risk',
     category: 'safety',
-    source: 'Bündnis Entwicklung Hilft & Ruhr University Bochum',
+    source: 'Bündnis Entwicklung Hilft & IFHV Ruhr University Bochum',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'Exposure to natural hazards (earthquakes, cyclones, floods, droughts) combined with national coping and adaptive capacity.',
     pros: [
       'Accounts for physical environmental vulnerability that dwarfs human violent crime in hazard-prone territories.',
@@ -237,35 +237,13 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     realWorldImpact: 'Shapes international catastrophe reinsurance pricing, climate adaptation grants, and disaster relief allocations.',
     biasRisk: 'Medium'
   },
-  {
-    id: 'organized_crime_index',
-    name: 'Organised Crime Resilience',
-    shortName: 'Crime Resilience (GI-TOC)',
-    category: 'safety',
-    source: 'Global Initiative Against Transnational Organised Crime (GI-TOC, Geneva)',
-    tier: 2,
-    tierLabel: 'Normative Consensus',
-    whatItMeasures: 'Transnational illicit criminal markets (cartels, smuggling, extortion) balanced against state judicial and enforcement resilience.',
-    pros: [
-      'Captures shadow economies and criminal syndicates that standard national police statistics intentionally omit.',
-      'Assesses both the threat of criminal enterprise and the democratic state capacity to resist corruption.'
-    ],
-    cons: [
-      'Relies on qualitative expert consensus panels; illicit networks operate secretly, making objective measurement challenging.',
-      'Prone to reputational stereotypes regarding specific geographic regions.'
-    ],
-    westernCentricity: 'Western demand drives illicit markets (cocaine, narcotics, weapons, and untaxed financial flows), yet source and transit nations in Latin America and Africa bear the stigma and penalties in the rankings.',
-    realWorldImpact: 'Influences bilateral security cooperation, INTERPOL operations, and international anti-money laundering (AML) compliance.',
-    biasRisk: 'High'
-  },
-
   // --- GOVERNANCE ---
   {
     id: 'ti_cpi',
-    name: 'Corruption Perceptions Index (CPI)',
-    shortName: 'Anti-Corruption (CPI)',
+    name: 'Corruption Perceptions Index 2025',
+    shortName: 'Anti-Corruption',
     category: 'governance',
-    source: 'Transparency International (Berlin)',
+    source: 'Transparency International',
     tier: 3,
     tierLabel: 'Expert Perception',
     whatItMeasures: 'Perceived levels of public sector corruption as evaluated by business executives, risk analysts, and country experts.',
@@ -285,10 +263,10 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'wgi_rule_of_law',
-    name: 'Rule of Law Indicator',
+    name: 'Rule of Law (WGI)',
     shortName: 'Rule of Law',
     category: 'governance',
-    source: 'World Bank Worldwide Governance Indicators (WGI)',
+    source: 'World Bank Worldwide Governance Indicators',
     tier: 3,
     tierLabel: 'Expert / Institutional',
     whatItMeasures: 'Confidence in contract enforcement, property rights, police fairness, and the independence of courts.',
@@ -307,10 +285,10 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'wgi_gov_effectiveness',
-    name: 'Government Effectiveness',
+    name: 'Government Effectiveness (WGI)',
     shortName: 'Gov Effectiveness',
     category: 'governance',
-    source: 'World Bank Worldwide Governance Indicators (WGI)',
+    source: 'World Bank Worldwide Governance Indicators',
     tier: 3,
     tierLabel: 'Expert / Institutional',
     whatItMeasures: 'Quality of public services, civil service independence from political pressures, and policy delivery competence.',
@@ -327,120 +305,121 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'High'
   },
   {
-    id: 'ipri_property_rights',
-    name: 'Property & Land Rights Security',
-    shortName: 'Property Rights (IPRI)',
+    id: 'wgi_regulatory_quality',
+    name: 'Regulatory Quality (WGI)',
+    shortName: 'Regulatory Quality',
     category: 'governance',
-    source: 'Property Rights Alliance (Washington, D.C.)',
-    tier: 2,
-    tierLabel: 'Normative Regulatory',
-    whatItMeasures: 'Legal protection of physical land tenure, protection from unlawful expropriation, and intellectual property protections.',
+    source: 'World Bank Worldwide Governance Indicators',
+    tier: 3,
+    tierLabel: 'Expert / Institutional',
+    whatItMeasures: 'Perceptions of the government\'s ability to formulate and implement sound policies and regulations that permit and promote private-sector development.',
     pros: [
-      'Secure property tenure prevents arbitrary land grabs and enables long-term familial wealth generation.',
-      'Examines both physical land protections and judicial independence against executive expropriation.'
+      'Aggregates dozens of underlying surveys and expert assessments, and publishes a margin of error for every country.',
+      'Captures the day-to-day burden of red tape, licensing and price controls that people and small businesses actually face.'
     ],
     cons: [
-      'Aggressively rewards restrictive Western intellectual property patents, penalising countries providing affordable generic pharmaceuticals.',
-      'Biased against communal, collective, or indigenous land tenure systems that lack formalised individual deeds.'
+      'Many underlying sources are business-risk surveys, so "good regulation" leans towards what investors want rather than what workers or consumers want.',
+      'Highly correlated with the other WGI dimensions and with income, so it adds less independent information than it seems.'
     ],
-    westernCentricity: 'Rooted in Anglo-American Lockean private property theory. Treats non-commercial communal lands as legally "unprotected" deficits.',
-    realWorldImpact: 'Directly influences bilateral investment treaties, patent law litigation, and international agribusiness concessions.',
-    biasRisk: 'High'
+    westernCentricity: 'Embeds a market-liberal view of the state: heavy regulation is scored as bad even where it protects public health, labour or the environment.',
+    realWorldImpact: 'Feeds into sovereign credit assessments, aid allocation formulas and foreign direct investment decisions.',
+    biasRisk: 'Medium'
   },
-
   // --- ECONOMY ---
   {
-    id: 'cri_inequality',
-    name: 'Income Equality (Low Gini / CRI)',
-    shortName: 'Income Equality',
+    id: 'gdp_per_capita_ppp',
+    name: 'GDP per Capita (PPP)',
+    shortName: 'GDP per Capita',
     category: 'economy',
-    source: 'World Bank / Oxfam & DFI (Commitment to Reducing Inequality)',
+    source: 'World Bank WDI / ICP',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Distribution of household income (Gini coefficient) alongside public social spending on health, education, and labour protections.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'Gross Domestic Product per person adjusted for purchasing power parity.',
     pros: [
-      'Exposes extreme internal inequality masked by high aggregate national GDP per capita.',
-      'Highlights whether economic growth translates into broad living standard improvements for regular citizens.'
+      'The foundational metric of modern macroeconomic accounts; highly correlated with technological capacity and public health infrastructure.'
     ],
     cons: [
-      'Top-1% wealth is frequently hidden in offshore tax shelters, leading to underestimation of actual inequality in wealthy nations.',
-      'Does not capture informal intra-family transfers or non-monetary mutual aid.'
+      'Distorted by extreme wealth inequality: a billionaire walking into a village raises the average GDP per capita without feeding anyone.',
+      'Completely ignores unpaid care labour, domestic housework, childcare, and volunteerism, which are disproportionately performed by women.',
+      'Counts environmental destruction as economic growth: an oil spill or a clearcut ancient forest increases GDP through cleanup expenditures and timber sales.'
     ],
-    westernCentricity: 'Rewards formal European-style welfare state redistribution models; penalises nations relying on family networks or religious mutual aid systems (e.g. Zakat).',
-    realWorldImpact: 'Drives progressive tax policy debates, IMF poverty assessments, and international development NGO campaigning.',
-    biasRisk: 'Medium'
-  },
-  {
-    id: 'ituc_worker_rights',
-    name: 'Workers\' Rights & Union Protections',
-    shortName: 'Workers\' Rights (ITUC)',
-    category: 'economy',
-    source: 'International Trade Union Confederation (ITUC, Brussels)',
-    tier: 2,
-    tierLabel: 'Normative Consensus',
-    whatItMeasures: 'Evaluates statutory collective bargaining rights, strike protections, fair dismissals, and physical safety of trade union organisers.',
-    pros: [
-      'Directly measures whether working people can organise without facing police violence, retaliatory firing, or legal harassment.',
-      'Examines real-world violations and violence against labour activists.'
-    ],
-    cons: [
-      'Focuses primarily on formal unionisation, which misses the majority of workers in developing nations with high informal employment.',
-      'Can overlook high statutory wage growth in developmental state models with controlled union structures.'
-    ],
-    westernCentricity: 'Rooted in Western European post-war social partnership models; treats informal agrarian and artisanal work as an institutional deficit.',
-    realWorldImpact: 'Used in corporate ESG supply-chain audits, ILO complaint filings, and international trade agreement labour clauses.',
+    westernCentricity: 'Ignores the informal and communal economy. In Sub-Saharan Africa and South Asia, 50% to 80% of citizens work in informal, agrarian, or mutual aid networks that are invisible to tax collectors and thus omitted or heavily discounted in GDP calculations. Furthermore, corporate tax havens (Ireland, Luxembourg, Bermuda) experience phantom "Leprechaun GDP" spikes due to multinational intellectual property booking that does not benefit ordinary residents.',
+    realWorldImpact: 'Determines eligibility for concessional development loans (IDA), World Bank classification (Low, Middle, High Income), and international climate assistance.',
     biasRisk: 'High'
   },
   {
-    id: 'work_life_balance',
-    name: 'Work-Life Balance & Reasonable Hours',
-    shortName: 'Work-Life Balance',
+    id: 'gini_inequality',
+    name: 'Income Inequality (Gini)',
+    shortName: 'Income Equality',
     category: 'economy',
-    source: 'OECD / International Labour Organisation (ILO)',
+    source: 'World Bank Poverty & Inequality Platform',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Share of workforce avoiding excessive hours (50+ hrs/wk), statutory paid annual leave, and dedicated leisure time.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'How unevenly household income (or consumption) is distributed, from 0 (everyone equal) to 100 (one household has everything), taken from national household surveys.',
     pros: [
-      'Direct counterweight to productivist metrics; recognises that life quality requires leisure, rest, and personal time.',
-      'Correlates strongly with parental mental health and family stability.'
+      'Built directly from household survey microdata harmonised by the World Bank, not from expert opinion.',
+      'Captures something GDP per capita hides: whether prosperity reaches the typical household.'
     ],
     cons: [
-      'Only measures formal wage employment; ignores uncompensated domestic labour, childcare, and gig-work overwork.',
-      'Can be distorted in developing countries where long hours are an economic necessity rather than corporate culture.'
+      'Survey years vary widely: some countries\' latest figure is a decade old.',
+      'Some countries measure income and others measure consumption, which is naturally more equal, so comparisons are imperfect.',
+      'Household surveys under-sample the very rich, so top-end inequality is understated almost everywhere.'
     ],
-    westernCentricity: 'Presumes a strict binary separation between "work" and "leisure". In communal and artisanal cultures, social life and daily labour are fluidly intertwined.',
-    realWorldImpact: 'Informs national legislation on statutory leave, 4-day workweek trials, and right-to-disconnect laws.',
+    westernCentricity: 'Low conceptual bias, but data quality is far higher in countries with established statistical offices.',
+    realWorldImpact: 'Central to SDG 10 monitoring and to debates about taxation and social transfers.',
+    biasRisk: 'Low'
+  },
+  {
+    id: 'ilo_unemployment',
+    name: 'Unemployment Rate',
+    shortName: 'Unemployment',
+    category: 'economy',
+    source: 'ILO modelled estimates via World Bank WDI',
+    tier: 1,
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'The share of the labour force that is without work but available for and actively seeking a job, using the harmonised ILO definition.',
+    pros: [
+      'One consistent international definition applied to every country, with ILO modelling filling gaps between surveys.',
+      'A direct, intuitive signal of how hard it is to find work.'
+    ],
+    cons: [
+      'Low unemployment can mean a strong job market or simply that people cannot afford to be unemployed and take any informal work available.',
+      'Ignores underemployment, informality and people who have given up looking.'
+    ],
+    westernCentricity: 'The concept fits formal wage economies best; in largely informal economies it says little about job quality.',
+    realWorldImpact: 'One of the headline indicators for central banks, governments and migrants choosing where to move.',
     biasRisk: 'Medium'
   },
   {
-    id: 'housing_affordability',
-    name: 'Housing Affordability (Price-to-Income)',
-    shortName: 'Housing Affordability',
+    id: 'ilo_working_hours',
+    name: 'Average Weekly Working Hours',
+    shortName: 'Working Hours',
     category: 'economy',
-    source: 'OECD Affordable Housing Database / Demographia',
+    source: 'International Labour Organization (ILOSTAT)',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Median home purchase price and rent relative to median household disposable income.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'Mean weekly hours actually worked per employed person, from national labour force surveys (or ILO modelled estimates where no recent survey exists).',
     pros: [
-      'Housing is the single largest household expense; directly measures middle-class economic solvency.',
-      'Exposes financialised real estate bubbles in globally wealthy cities.'
+      'A concrete, measured proxy for time available for family, rest and leisure.',
+      'Comes from labour force surveys rather than statutory limits, so it reflects what people really work.'
     ],
     cons: [
-      'National averages conceal extreme disparities between capital megacities and regional towns.',
-      'Assumes single-family freehold homeownership; does not account for multi-generational communal residences.'
+      'Short average hours can reflect lots of part-time or underemployed workers rather than a comfortable work-life balance.',
+      'Says nothing about commuting time, unpaid care work or job intensity.',
+      'This dashboard scores 35 hours or fewer as 100 and 50 hours as 0; that band is a judgement call.'
     ],
-    westernCentricity: 'Focuses on formal commercial mortgage markets, overlooking self-built housing and non-mortgaged community land trusts.',
-    realWorldImpact: 'Drives urban migration, youth political frustration, and municipal rent-control/zoning reforms.',
+    westernCentricity: 'The "shorter is better" assumption suits rich economies; in poorer ones, longer hours often reflect the need to earn enough to live.',
+    realWorldImpact: 'Used in work-life balance debates, four-day-week campaigns and labour regulation.',
     biasRisk: 'Medium'
   },
   {
     id: 'atlas_economic_complexity',
-    name: 'Economic Complexity Index (ECI)',
+    name: 'Economic Complexity Index',
     shortName: 'Economic Complexity',
     category: 'economy',
-    source: 'Harvard Growth Lab (Hausmann & Hidalgo)',
+    source: 'Harvard Growth Lab (Atlas of Economic Complexity)',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'The diversity and technical sophistication of knowledge embedded in a country\'s physical export basket.',
     pros: [
       'Purely empirical, mathematically derived metric based on United Nations Comtrade trade data.',
@@ -455,59 +434,16 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     realWorldImpact: 'Heavily utilised by sovereign wealth funds, industrial planning ministries, and development finance institutions to guide industrial subsidies.',
     biasRisk: 'Low'
   },
-  {
-    id: 'wb_purchasing_power',
-    name: 'Local Purchasing Power',
-    shortName: 'Purchasing Power',
-    category: 'economy',
-    source: 'World Bank International Comparison Programme (ICP)',
-    tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'How far median domestic earnings stretch to purchase a standardised basket of local goods, food, and housing.',
-    pros: [
-      'Corrects for the major flaw of market exchange rates, recognising that $1 goes much further in Hanoi than in Manhattan.',
-      'Focuses on real lived consumption capacity rather than nominal financial abstractions.'
-    ],
-    cons: [
-      'Constructing a single globally comparable "basket of goods" is fundamentally impossible. A consumer in rural Scandinavia requires heating, insulation, and winter apparel; a consumer in tropical West Africa requires ventilation, mosquito netting, and fresh water.',
-      'Fails to account for quality variations in public goods: high private purchasing power is less vital in countries where healthcare, university tuition, and transit are free.'
-    ],
-    westernCentricity: 'The "standardised basket" is implicitly designed around Western urban consumer lifestyles, measuring items like personal computers, processed groceries, and formal retail products rather than locally sourced subsistence goods.',
-    realWorldImpact: 'Forms the computational basis for global poverty thresholds ($2.15/day) and international living wage benchmarks.',
-    biasRisk: 'Medium'
-  },
-  {
-    id: 'gdp_per_capita_ppp',
-    name: 'GDP per Capita (PPP adjusted)',
-    shortName: 'GDP per Capita',
-    category: 'economy',
-    source: 'World Bank / IMF',
-    tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Gross Domestic Product per person adjusted for purchasing power parity.',
-    pros: [
-      'The foundational metric of modern macroeconomic accounts; highly correlated with technological capacity and public health infrastructure.'
-    ],
-    cons: [
-      'Distorted by extreme wealth inequality: a billionaire walking into a village raises the average GDP per capita without feeding anyone.',
-      'Completely ignores unpaid care labour, domestic housework, childcare, and volunteerism, which are disproportionately performed by women.',
-      'Counts environmental destruction as economic growth: an oil spill or a clearcut ancient forest increases GDP through cleanup expenditures and timber sales.'
-    ],
-    westernCentricity: 'Ignores the informal and communal economy. In Sub-Saharan Africa and South Asia, 50% to 80% of citizens work in informal, agrarian, or mutual aid networks that are invisible to tax collectors and thus omitted or heavily discounted in GDP calculations. Furthermore, corporate tax havens (Ireland, Luxembourg, Bermuda) experience phantom "Leprechaun GDP" spikes due to multinational intellectual property booking that does not benefit ordinary residents.',
-    realWorldImpact: 'Determines eligibility for concessional development loans (IDA), World Bank classification (Low, Middle, High Income), and international climate assistance.',
-    biasRisk: 'High'
-  },
-
   // --- HEALTH ---
   {
     id: 'who_hale',
     name: 'Healthy Life Expectancy (HALE)',
     shortName: 'Healthy Lifespan',
     category: 'health',
-    source: 'World Health Organisation (WHO) / IHME',
+    source: 'WHO Global Health Observatory',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'The average number of years a person is expected to live in "full health", subtracting years burdened by severe disability and chronic illness.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'The average number of years a newborn can expect to live in full health, after subtracting years lived with illness or disability.',
     pros: [
       'Far superior to crude life expectancy, which simply counts biological survival even if spent in vegetative or heavily medicated states.',
       'Integrates epidemiological burden of disease (DALYs) into a single intuitive metric.'
@@ -522,10 +458,10 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'who_uhc_coverage',
-    name: 'Universal Health Coverage (UHC Index)',
+    name: 'Universal Health Coverage Index',
     shortName: 'Healthcare Coverage',
     category: 'health',
-    source: 'WHO Sustainable Development Goal (SDG 3.8.1)',
+    source: 'WHO / World Bank (SDG 3.8.1)',
     tier: 2,
     tierLabel: 'Normative Consensus',
     whatItMeasures: 'Coverage of essential health services (prevention, treatment, maternal care, non-communicable diseases).',
@@ -542,34 +478,34 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'Medium'
   },
   {
-    id: 'kids_rights_index',
-    name: 'Child Welfare & Family Rights',
-    shortName: 'Child Welfare',
+    id: 'under5_mortality',
+    name: 'Under-5 Mortality Rate',
+    shortName: 'Child Survival',
     category: 'health',
-    source: 'KidsRights Foundation & Erasmus University Rotterdam',
-    tier: 2,
-    tierLabel: 'Normative Consensus',
-    whatItMeasures: 'Rights of children across health, education, protection, enabling environment, and parental statutory leave.',
+    source: 'UN IGME via World Bank WDI',
+    tier: 1,
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'The probability that a newborn dies before reaching age five, per 1,000 live births.',
     pros: [
-      'Focuses on society\'s most vulnerable demographic; reflects long-term intergenerational investment.',
-      'Combines practical child survival statistics with legal protections against exploitation.'
+      'Among the most robust health statistics in existence: UN agencies reconcile censuses, surveys and civil registration into one consistent series.',
+      'A sensitive summary of nutrition, sanitation, vaccination and basic health-care access.'
     ],
     cons: [
-      'Treaty ratification weighting allows nations to score well through symbolic legal compliance without field implementation.',
-      'Can penalise traditional family-run agrarian apprenticeships as labour violations.'
+      'In rich countries rates are all very low, so differences between them say little about overall family life.',
+      'Countries without full civil registration rely on modelled estimates with wide uncertainty.'
     ],
-    westernCentricity: 'Framed around the Western individualist legal conception of child rights; sometimes clashes with communal and extended-family care models.',
-    realWorldImpact: 'Influences UNICEF programming priorities, child protection grants, and international adoption standards.',
-    biasRisk: 'Medium'
+    westernCentricity: 'Low conceptual bias: child survival is valued universally.',
+    realWorldImpact: 'An SDG headline target (3.2) that drives global vaccination and maternal-health funding.',
+    biasRisk: 'Low'
   },
   {
     id: 'undp_education',
-    name: 'Education & Academic Attainment',
-    shortName: 'Education Attainment',
+    name: 'Education Index (HDI)',
+    shortName: 'Education',
     category: 'health',
-    source: 'UNDP Human Development Index / UNESCO',
+    source: 'UNDP Human Development Report 2025',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'Adult mean years of schooling and youth expected years of schooling.',
     pros: [
       'Foundational indicator of human cognitive capital, universal literacy, and developmental potential.',
@@ -583,14 +519,13 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     realWorldImpact: 'Key pillar of the UN Human Development Index (HDI), directly guiding global education aid.',
     biasRisk: 'Low'
   },
-
   // --- RIGHTS ---
   {
     id: 'rsf_press_freedom',
-    name: 'World Press Freedom Index',
+    name: 'World Press Freedom Index 2026',
     shortName: 'Press Freedom',
     category: 'rights',
-    source: 'Reporters Without Borders (RSF, Paris)',
+    source: 'Reporters Without Borders (RSF)',
     tier: 3,
     tierLabel: 'Expert Rights',
     whatItMeasures: 'Evaluates the legal framework, physical safety, and political independence of journalists and media outlets.',
@@ -608,10 +543,10 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'vdem_liberal_democracy',
-    name: 'V-Dem Liberal Democracy Index',
+    name: 'Liberal Democracy Index',
     shortName: 'Liberal Democracy',
     category: 'rights',
-    source: 'V-Dem Institute (University of Gothenburg)',
+    source: 'V-Dem Institute (v16)',
     tier: 3,
     tierLabel: 'Expert Academic',
     whatItMeasures: 'Protections for individual civil liberties, rule of law, independent judiciary checks, and transparent electoral competition.',
@@ -628,54 +563,53 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'High'
   },
   {
-    id: 'pew_religious_freedom',
-    name: 'Religious Freedom & Toleration',
-    shortName: 'Religious Freedom',
+    id: 'academic_freedom',
+    name: 'Academic Freedom Index',
+    shortName: 'Academic Freedom',
     category: 'rights',
-    source: 'Pew Research Centre / V-Dem Institute',
-    tier: 2,
-    tierLabel: 'Normative Consensus',
-    whatItMeasures: 'Evaluates government restrictions on religion (Pew GRI: laws, administrative bans, registration hurdles, apostasy/blasphemy penalties) and societal hostilities (Pew SHI: sectarian violence, mob harassment, religious riots, vigilante discrimination).',
+    source: 'V-Dem Institute / FAU Erlangen-Nürnberg',
+    tier: 3,
+    tierLabel: 'Expert Academic',
+    whatItMeasures: 'Freedom to research, teach, and publish, university institutional autonomy, and freedom of scholarly communication.',
     pros: [
-      'Empirically documents severe physical persecution, state atheism crackdowns, sectarian pogroms, and capital apostasy/blasphemy punishments worldwide.',
-      'Explicitly distinguishes between state oppression (GRI) and non-state societal mob violence (SHI), preventing regimes from evading responsibility for communal violence.',
-      'Acts as a vital international shield for vulnerable minority faiths (e.g. Ahmadiyya, Baha\'i, Rohingya, Uyghurs, Coptic Christians, Jehovah\'s Witnesses).'
+      'Critical early-warning barometer for wider civil authoritarian repression.',
+      'Assesses campus security and institutional autonomy from political interference.'
     ],
     cons: [
-      'Relies heavily on annual US State Department International Religious Freedom reports, human rights NGOs, and international media reporting, creating uneven observational density in remote or closed nations.',
-      'Can blur the line between legitimate protection of public health or secular civil rights (e.g. outlawing child marriage, female genital cutting, or discriminatory caste hierarchies) and state religious restriction.'
+      'Expert survey perceptions can be dominated by ideological campus debates.',
+      'Rarely accounts for corporate donor influence or commercial defence research contracts in Western private universities.'
     ],
-    westernCentricity: 'Anglo-American Evangelical & Individualist Framing: The concept of "religious freedom" in international metrics was codified largely through the US International Religious Freedom Act of 1998 (IRFA). It conceptualises religion through a Western Protestant-individualist lens—emphasising individual conscience and the unfettered right to proselytise/convert. Non-Western traditions and continental European secular republics (such as France\'s laïcité) often prioritise civic cohesion, communal harmony, or public sphere neutrality over competitive missionary activity. In many post-colonial Asian and African nations, aggressive foreign-funded missionary campaigns are perceived as geopolitical interference rather than benign religious worship.',
-    realWorldImpact: 'Directly triggers US diplomatic designations (Countries of Particular Concern - CPC), determines eligibility for security cooperation, impacts asylum and refugee status determinations, and guides targeted Magnitsky human rights sanctions.',
+    westernCentricity: 'Built on the 19th-century German Humboldtian university ideal, penalising states with national development curriculum coordination.',
+    realWorldImpact: 'Influences university international accreditations, researcher migration, and cross-border research grants.',
     biasRisk: 'High'
   },
   {
-    id: 'lgbtq_equality',
-    name: 'LGBTQ+ Equality & Legal Protections',
-    shortName: 'LGBTQ+ Equality',
+    id: 'vdem_religious_freedom',
+    name: 'Freedom of Religion',
+    shortName: 'Religious Freedom',
     category: 'rights',
-    source: 'ILGA-Europe / Franklin & Marshall Global Barometer',
-    tier: 2,
-    tierLabel: 'Normative Consensus',
-    whatItMeasures: 'Statutory non-discrimination protections, same-sex marriage/partnership, gender recognition, and freedom from state persecution.',
+    source: 'V-Dem Institute (v16)',
+    tier: 3,
+    tierLabel: 'Expert Academic',
+    whatItMeasures: 'Expert-coded freedom of individuals and groups to choose, practise and change their religion, including freedom from state religious repression.',
     pros: [
-      'Directly measures bodily integrity, legal equality, and personal security for sexual and gender minorities.',
-      'Tracks concrete legislative protections against hate crimes and workplace discrimination.'
+      'Coded by multiple country experts per country and combined with a statistical model that corrects for coder bias.',
+      'Updated every year for almost every country, with uncertainty estimates.'
     ],
     cons: [
-      'Focuses primarily on statutory law on the books; does not always capture public cultural tolerance or informal community acceptance.',
-      'Can overlook rural vs urban disparities within a nation.'
+      'Measures state behaviour more than social hostility between religious communities.',
+      'The latent scale (roughly -3 to +3) is hard to interpret on its own.'
     ],
-    westernCentricity: 'Modelled after late-20th century Western rights campaigns. Often overlooks traditional non-Western third-gender systems (e.g. Hijra, Fa\'afafine, Two-Spirit) that do not fit Anglo-American legal categories.',
-    realWorldImpact: 'Heavily influences international tourism boycotts, expat talent migration, and asylum court rulings.',
-    biasRisk: 'High'
+    westernCentricity: 'Rests on a liberal, individual-rights view of religion; established state churches or communal religious law can score lower even where most residents accept them.',
+    realWorldImpact: 'Cited in US and EU religious-freedom reports and in asylum decisions.',
+    biasRisk: 'Medium'
   },
   {
     id: 'georgetown_wps',
-    name: 'Women, Peace and Security Index (WPS)',
-    shortName: 'Women\'s Rights (WPS)',
+    name: 'Women, Peace and Security Index 2025',
+    shortName: 'Women\'s Status',
     category: 'rights',
-    source: 'Georgetown Institute for Women, Peace and Security',
+    source: 'Georgetown Institute for Women, Peace and Security & PRIO',
     tier: 2,
     tierLabel: 'Normative Consensus',
     whatItMeasures: 'Women\'s inclusion (education, employment, parliament), justice (legal equality), and security (intimate partner violence, safety).',
@@ -692,37 +626,36 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'Medium'
   },
   {
-    id: 'academic_freedom',
-    name: 'Academic Freedom Index (AFI)',
-    shortName: 'Academic Freedom',
+    id: 'lgbtq_equality',
+    name: 'LGBTQ+ Legal Equality Index',
+    shortName: 'LGBTQ+ Equality',
     category: 'rights',
-    source: 'V-Dem Institute & Friedrich-Alexander-Universität',
-    tier: 3,
-    tierLabel: 'Expert Academic',
-    whatItMeasures: 'Freedom to research, teach, and publish, university institutional autonomy, and freedom of scholarly communication.',
+    source: 'Equaldex Equality Index via Our World in Data',
+    tier: 2,
+    tierLabel: 'Normative Consensus',
+    whatItMeasures: 'Legal equality for LGBTQ+ people: legality of same-sex relationships, marriage, adoption, discrimination protections, gender-marker changes, conversion-therapy bans and censorship laws (Equaldex Legal Index).',
     pros: [
-      'Critical early-warning barometer for wider civil authoritarian repression.',
-      'Assesses campus security and institutional autonomy from political interference.'
+      'Directly measures bodily integrity, legal equality, and personal security for sexual and gender minorities.',
+      'Tracks concrete legislative protections against hate crimes and workplace discrimination.'
     ],
     cons: [
-      'Expert survey perceptions can be dominated by ideological campus debates.',
-      'Rarely accounts for corporate donor influence or commercial defence research contracts in Western private universities.'
+      'Measures laws on the books, not social acceptance or how laws are enforced.',
+      'Equaldex is a collaborative, citation-based database rather than an academic survey, so individual entries can lag behind recent legal changes.'
     ],
-    westernCentricity: 'Built on the 19th-century German Humboldtian university ideal, penalising states with national development curriculum coordination.',
-    realWorldImpact: 'Influences university international accreditations, researcher migration, and cross-border research grants.',
+    westernCentricity: 'Modelled after late-20th century Western rights campaigns. Often overlooks traditional non-Western third-gender systems (e.g. Hijra, Fa\'afafine, Two-Spirit) that do not fit Anglo-American legal categories.',
+    realWorldImpact: 'Heavily influences international tourism boycotts, expat talent migration, and asylum court rulings.',
     biasRisk: 'High'
   },
-
   // --- INFRASTRUCTURE ---
   {
     id: 'ookla_broadband',
-    name: 'Median Broadband Download Speed',
+    name: 'Fixed Broadband Download Speed',
     shortName: 'Broadband Speed',
     category: 'infrastructure',
-    source: 'Ookla Speedtest Open Data',
+    source: 'Ookla Open Data (Speedtest, Q3 2026)',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Real-world measured fixed and mobile download speeds experienced by everyday internet users.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'Test-weighted mean fixed-broadband download speed across every Speedtest map tile in the country (Ookla Open Data, Q3 2026).',
     pros: [
       'Based on billions of crowdsourced, empirical speed tests conducted on consumer devices across actual telecom networks.',
       'Free from government propaganda or theoretical claims of telecommunication coverage.'
@@ -736,33 +669,13 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'Medium'
   },
   {
-    id: 'wb_lpi_infrastructure',
-    name: 'Trade & Logistics Infrastructure (LPI)',
-    shortName: 'Logistics Quality',
-    category: 'infrastructure',
-    source: 'World Bank Logistics Performance Index',
-    tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Quality of trade and transport infrastructure (ports, freight rail, roads, customs clearance velocity).',
-    pros: [
-      'Essential for understanding a country\'s ability to integrate into global value chains and supply networks.'
-    ],
-    cons: [
-      'Inherently favours small, wealthy maritime entrepôts and transshipment hubs (Singapore, Netherlands, Hong Kong, UAE, Belgium) over vast continental nations with challenging topography (DR Congo, Brazil, India).',
-      'Surveyed primarily among multinational freight forwarders (DHL, Maersk, FedEx) who evaluate speed of commercial container movement, not whether rural farmers can get crops to local village markets.'
-    ],
-    westernCentricity: 'Focuses entirely on facilitating globalised maritime export trade rather than internal domestic self-sufficiency or rural connectivity.',
-    realWorldImpact: 'Determines priority corridors for multilateral infrastructure financing and sovereign port concessions.',
-    biasRisk: 'Low'
-  },
-  {
     id: 'itu_internet_penetration',
-    name: 'Internet User Penetration',
-    shortName: 'Internet Penetration',
+    name: 'Internet Users',
+    shortName: 'Internet Use',
     category: 'infrastructure',
-    source: 'International Telecommunication Union (ITU)',
+    source: 'ITU via World Bank WDI',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'The percentage of the total population who actively use the internet.',
     pros: [
       'Captures the democratisation of knowledge access, financial inclusion (mobile money), and civic connectivity.'
@@ -776,58 +689,79 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'Low'
   },
   {
-    id: 'public_transit_access',
-    name: 'Public Transit Access & Walkability',
-    shortName: 'Public Transit (SDG 11.2.1)',
+    id: 'electricity_access',
+    name: 'Access to Electricity',
+    shortName: 'Electricity Access',
     category: 'infrastructure',
-    source: 'UN-Habitat / UITP',
+    source: 'World Bank / SDG 7.1.1',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Share of urban residents within 500 metres walking distance of reliable public transit stops.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'The percentage of the population with access to electricity, from household surveys and utility data.',
     pros: [
-      'Measures pedestrian accessibility and freedom from car dependency.',
-      'Directly correlates with lower carbon emissions, lower traffic accidents, and affordable mobility.'
+      'A basic precondition for lighting, refrigeration, study and connectivity, measured for almost every country.',
+      'Separates countries sharply at the lower end, where it matters most.'
     ],
     cons: [
-      'Measures stop distance, not service frequency, overcrowding, or fare affordability.',
-      'Overlooks flexible informal transit networks (minibuses, jeepneys, shared vans) that serve millions.'
+      'Says nothing about reliability: a connection with daily blackouts counts the same as an uninterrupted grid.',
+      'Almost every rich country is at 100%, so it offers no differentiation among them.'
     ],
-    westernCentricity: 'Designed around formalised European municipal bus and metro networks, penalising decentralised transport solutions.',
-    realWorldImpact: 'Informs urban municipal master planning and multilateral green transit bond allocations.',
+    westernCentricity: 'Low conceptual bias; access to energy is a near-universal aspiration.',
+    realWorldImpact: 'Guides World Bank and development-bank energy lending under SDG 7.',
     biasRisk: 'Low'
   },
-
-  // --- CLIMATE ---
   {
-    id: 'climate_comfort',
-    name: 'Bioclimatic Quality & Comfort (Holiday Climate Index - HCI)',
-    shortName: 'Climate Quality (HCI)',
-    category: 'climate',
-    source: 'Copernicus ERA5 / WMO Climatology',
-    tier: 1,
-    tierLabel: 'Bioclimatic Standard',
-    whatItMeasures: 'Peer-reviewed bioclimatic comfort combining thermal comfort (Humidex), rainy day frequency, annual sunshine hours, and extreme heat/freezing penalties.',
+    id: 'wb_lpi_infrastructure',
+    name: 'Logistics Performance Index',
+    shortName: 'Logistics',
+    category: 'infrastructure',
+    source: 'World Bank LPI',
+    tier: 2,
+    tierLabel: 'Normative Consensus',
+    whatItMeasures: 'Efficiency of customs and border management, quality of trade and transport infrastructure, ease of shipping, logistics competence, tracking and timeliness, from a survey of logistics professionals.',
     pros: [
-      'Grounded in objective meteorological physics and peer-reviewed human bioclimatology.',
-      'Explicitly penalises dangerous heat-stress (Humidex > 35°C) and oppressive sultriness rather than relying on crude temperature averages.',
-      'Factors in sunshine hours, which have proven clinical impacts on seasonal affective disorder (SAD) and Vitamin D synthesis.'
+      'Essential for understanding a country\'s ability to integrate into global value chains and supply networks.'
     ],
     cons: [
-      'Originally conceived for European beach and leisure tourism (Holiday Climate Index), which introduces an implicit tourist gaze.',
-      'Averages across national territories: massive continental nations (Chile, US, China) have dozens of microclimates, making a single national score an oversimplification.'
+      'Inherently favours small, wealthy maritime entrepôts and transshipment hubs (Singapore, Netherlands, Hong Kong, UAE, Belgium) over vast continental nations with challenging topography (DR Congo, Brazil, India).',
+      'Surveyed primarily among multinational freight forwarders (DHL, Maersk, FedEx) who evaluate speed of commercial container movement, not whether rural farmers can get crops to local village markets.'
+    ],
+    westernCentricity: 'Focuses entirely on facilitating globalised maritime export trade rather than internal domestic self-sufficiency or rural connectivity.',
+    realWorldImpact: 'Determines priority corridors for multilateral infrastructure financing and sovereign port concessions.',
+    biasRisk: 'Low'
+  },
+  // --- WEATHER & CLIMATE ---
+  {
+    id: 'climate_comfort',
+    name: 'Climate Comfort (where people live)',
+    shortName: 'Climate Comfort',
+    category: 'climate',
+    source: 'Derived from WorldClim 2.1 normals + GeoNames city populations',
+    tier: 4,
+    tierLabel: 'Derived Empirical',
+    whatItMeasures: 'Population-weighted monthly climate (WorldClim 2.1 normals at every city of 15,000+ people): penalties for daytime highs below 20°C or above 28°C, cold nights, muggy dew points and heavy rain, plus a sunshine component.',
+    pros: [
+      'Weighted by where people live, so vast empty areas (Siberia, the Australian outback, northern Canada) do not distort the national figure.',
+      'Built from peer-reviewed gridded climate normals (WorldClim 2.1, Fick & Hijmans 2017), with every penalty published so you can disagree with it.',
+      'Penalises humidity (dew point) as well as temperature, which crude temperature averages miss.'
+    ],
+    cons: [
+      'The comfort thresholds (20–28°C daytime highs, dew point under 16°C, under 100 mm of rain a month) are one judgement call, not a scientific standard.',
+      'Uses 1970–2000 normals; recent warming makes many places hotter than shown.',
+      'Ignores air conditioning, heating and building quality, which change how a climate feels day to day.'
     ],
     westernCentricity: 'Assumes a temperate mid-latitude ideal (20°C–24°C, low humidity, clear skies). Populations native to tropical rainforests, arid savannas, or Arctic tundras possess physiological acclimatisation, distinct architectural cooling traditions, and cultural activity rhythms (such as mid-day siestas and vibrant nocturnal markets) that make their native climates comfortable and culturally rich.',
     realWorldImpact: 'Drives global retirement migration, digital nomad destinations, and seasonal tourism revenues.',
     biasRisk: 'High'
   },
+  // --- ENVIRONMENT ---
   {
     id: 'who_pm25',
-    name: 'Clean Air (Low Ambient PM2.5)',
-    shortName: 'Air Quality (PM2.5)',
-    category: 'climate',
-    source: 'WHO Ambient Air Quality Database',
+    name: 'Air Pollution (PM2.5)',
+    shortName: 'Clean Air',
+    category: 'environment',
+    source: 'WHO Global Health Observatory (SDG 11.6.2)',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'Population-weighted annual average exposure to fine inhalable particulate matter under 2.5 micrometers.',
     pros: [
       'PM2.5 is the single deadliest environmental carcinogen and cardiovascular hazard on Earth, causing an estimated 7 million premature deaths annually.',
@@ -842,33 +776,56 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     biasRisk: 'High'
   },
   {
-    id: 'yale_clean_water',
-    name: 'Clean Water & Sanitation Access',
-    shortName: 'Clean Water',
-    category: 'climate',
-    source: 'Yale Environmental Performance Index (EPI) / WHO-UNICEF JMP',
+    id: 'safe_drinking_water',
+    name: 'Safely Managed Drinking Water',
+    shortName: 'Safe Water',
+    category: 'environment',
+    source: 'WHO/UNICEF JMP via World Bank WDI',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
-    whatItMeasures: 'Percentage of the population with safely managed drinking water and hygienic sanitation on premises.',
+    tierLabel: 'Technocratic / Empirical',
+    whatItMeasures: 'Share of people using an improved water source that is on premises, available when needed and free from faecal and priority chemical contamination.',
     pros: [
-      'Access to uncontaminated water is the most fundamental prerequisite for human survival, preventing waterborne diarrheal epidemics.',
-      'High consensus across all international human rights frameworks.'
+      'The strictest international water standard, which also requires water-quality testing.',
+      'Compiled by the WHO/UNICEF JMP from national surveys, censuses and regulator data.'
     ],
     cons: [
-      'In rural areas, water testing for invisible industrial toxins (PFAS, heavy metals, microplastics) is rarely performed, leading to false-positive cleanliness ratings in some low-income nations and missed contamination in wealthy ones.'
+      'Coverage is the patchiest of any indicator here (about 130 countries) because many countries lack water-quality testing data.',
+      'National averages hide large urban/rural gaps.'
     ],
-    westernCentricity: 'Low ideological bias. Clean drinking water and basic sanitation are universal biological imperatives for all human beings.',
-    realWorldImpact: 'Directly influences public health infrastructure loans and United Nations SDG 6 compliance monitoring.',
+    westernCentricity: 'Assumes piped, regulated utilities; community-managed systems can be safe but hard to certify.',
+    realWorldImpact: 'The official measure for SDG target 6.1 and for water-sector investment.',
     biasRisk: 'Low'
   },
   {
+    id: 'yale_epi',
+    name: 'Environmental Performance Index 2026',
+    shortName: 'Environmental Performance',
+    category: 'environment',
+    source: 'Yale & Columbia (EPI)',
+    tier: 2,
+    tierLabel: 'Normative Consensus',
+    whatItMeasures: 'Dozens of indicators of environmental health, ecosystem vitality and climate-change mitigation, combined into one score.',
+    pros: [
+      'Transparent methodology with every indicator and weight published.',
+      'Broad coverage of issues that daily-life indicators miss: biodiversity, fisheries, waste and emissions trends.'
+    ],
+    cons: [
+      'Weighting choices strongly shape the ranking and change between editions, so scores are not comparable across years.',
+      'Partly overlaps with the PM2.5 and drinking-water indicators already in this dashboard.',
+      'Rich countries can score well while outsourcing polluting production abroad.'
+    ],
+    westernCentricity: 'Rewards regulatory and conservation approaches typical of rich democracies; low-consumption lifestyles get little credit.',
+    realWorldImpact: 'Widely cited by governments and in ESG investment screening.',
+    biasRisk: 'Medium'
+  },
+  {
     id: 'nd_gain_resilience',
-    name: 'Climate Change Resilience & Adaptation',
+    name: 'ND-GAIN Climate Adaptation Index',
     shortName: 'Climate Resilience',
-    category: 'climate',
-    source: 'Notre Dame Global Adaptation Initiative (ND-GAIN)',
+    category: 'environment',
+    source: 'Notre Dame Global Adaptation Initiative',
     tier: 1,
-    tierLabel: 'Empirical / Technocratic',
+    tierLabel: 'Technocratic / Empirical',
     whatItMeasures: 'A nation\'s vulnerability to severe climate impacts weighted against its institutional readiness to adapt.',
     pros: [
       'Connects physical climate disruption with sovereign fiscal and technological capacity to protect citizens.',
@@ -900,68 +857,68 @@ export interface CountryAnomalyCaseStudy {
 
 export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
   {
-    id: 'prk-terrorism',
-    countryName: 'North Korea',
-    flag: '🇰🇵',
-    iso3: 'PRK',
-    headline: '#1 in the World for Lack of Terrorism?',
-    metric: 'Terrorism Impact (GTI)',
-    rankText: 'Rank #1 / 199 (Raw: 0.0 GTI, Score: 99.0)',
-    whyItLooksWrong: 'North Korea is an isolated totalitarian dictatorship with nuclear tests, military parades, and extreme internal repression. Seeing it rank #1 in the world alongside peaceful nations like Iceland looks completely bizarre at first glance.',
-    theRealExplanation: 'The Global Terrorism Index (IEP) strictly tracks violent attacks, casualties, and hostage incidents committed by non-state insurgent groups (like ISIS or Al-Qaeda). Because North Korea enforces total border closure, pervasive internal surveillance, and strict travel permits, non-state insurgent cells simply cannot organise or operate inside the country. It recorded 0.0 attacks and 0 casualties, tying at #1 with 108 other nations.',
-    whereItBalancesOut: 'North Korea’s real danger—state-sponsored violence, massive militarism, and systemic internal repression—is captured under the Global Peace Index (GPI), where it ranks near the very bottom of the world: Rank 186 out of 199 (raw 3.15 / 5.0, score 35.5).',
-    relatedIndicatorId: 'global_terrorism_index'
-  },
-  {
-    id: 'chn-housing',
-    countryName: 'China',
-    flag: '🇨🇳',
-    iso3: 'CHN',
-    headline: 'Rank 197 / 199 for Housing Affordability?',
-    metric: 'Housing Affordability (Price-to-Income)',
-    rankText: 'Rank 197 / 199 (Raw: 14.5x Income, Score: 43.3)',
-    whyItLooksWrong: 'China is a manufacturing powerhouse with massive high-speed construction and state economic planning. Many people assume homes in Chinese cities are far cheaper than in London, New York, or Sydney.',
-    theRealExplanation: 'Housing affordability is not measured by raw dollar price; it is measured by the House-Price-to-Income Ratio (median home price divided by median annual household disposable income). Prior to recent market cooling, apartments in Tier-1 megacities (Shenzhen, Beijing, Shanghai) reached a staggering 35x to 40x annual household income—meaning it took 35–40 years of total household earnings to purchase a typical flat. Even averaged nationwide across lower-tier cities, the ratio is 14.5x, putting mainland China alongside Hong Kong (19x+) and Macao at the bottom of the globe.',
-    whereItBalancesOut: 'While home ownership is extremely stretched relative to local wages, China scores very high on modern infrastructure, high-speed rail connectivity, and public transit access.',
-    relatedIndicatorId: 'housing_affordability'
+    id: 'sgp-liberties',
+    countryName: 'Singapore',
+    flag: '🇸🇬',
+    iso3: 'SGP',
+    headline: '#1 for Government Effectiveness, #117 for Press Freedom',
+    metric: 'Public order vs. civil liberties',
+    rankText: 'WGI Government Effectiveness #1 of 184 · RSF Press Freedom #117 of 174 (44.6/100)',
+    whyItLooksWrong: 'Singapore is clean, safe and efficient, with one of the lowest homicide rates in the world (0.1 per 100k). Many visitors assume it must top every quality-of-life table.',
+    theRealExplanation: 'Indices of civil liberties reward a free, adversarial press, open protest and competitive elections. Singapore deliberately trades some of these for public order and policy continuity, so RSF and V-Dem (Liberal Democracy #85 of 174) mark it down while the World Bank governance indicators put it at the very top.',
+    whereItBalancesOut: 'With every dial at 50% Singapore ranks #19. Raise Safety, Governance and Infrastructure to 100% and it climbs to #7; raise Civil Liberties and Weather instead (it ranks #177 of 183 for climate comfort because of year-round heat and humidity) and it falls to #32.',
+    relatedIndicatorId: 'rsf_press_freedom'
   },
   {
     id: 'usa-paradox',
     countryName: 'United States',
     flag: '🇺🇸',
     iso3: 'USA',
-    headline: 'Top 5 for Wealth ($82k+ GDP), but #45+ for Life Expectancy & Safety?',
-    metric: 'GDP per Capita vs. Health & Safety',
-    rankText: 'Top 5 in Economic Output, but #45 in Healthy Lifespan & #100+ in Homicide',
-    whyItLooksWrong: 'The US has the world\'s largest economy, top research universities, and cutting-edge medical technology. Many expect towering GDP per capita to automatically translate into the world\'s best quality of life.',
-    theRealExplanation: 'Traditional economic output metrics like GDP measure dollars spent, not how health, safety, or daily well-being are experienced. The US has elevated violent crime (homicide rate of 5.8 per 100k vs ~1.0 in Western Europe and East Asia), high road traffic fatalities (12.7 per 100k), and healthcare coverage gaps that drag healthy life expectancy down to 69.0 years—below countries with less than half its income.',
-    whereItBalancesOut: 'When you weight pure Economic Complexity and Broadband Speed, the US ranks near the top. When you turn up sliders for Personal Safety, Healthy Lifespan, and Work-Life Balance, the US drops noticeably.',
+    headline: 'Top 10 for Income, but #142 for Road Safety',
+    metric: 'GDP per capita vs. health and safety',
+    rankText: 'GDP per capita (PPP) #9 of 182 ($90,027) · Road deaths #142 of 183 · Homicide #117 of 167',
+    whyItLooksWrong: 'The US has the largest economy in the world, leading universities and some of the fastest broadband anywhere (#6 of 163). High income is often assumed to buy the best quality of life.',
+    theRealExplanation: 'GDP measures output, not how safe or healthy daily life is. The US records 5.8 homicides and 18.4 road deaths per 100,000 people, several times Western European levels, and a healthy life expectancy of 64.6 years (#81 of 183), below many countries with half its income. The 2026 Global Peace Index also places it #134, citing political instability.',
+    whereItBalancesOut: 'With every dial at 50% the US ranks #36. Raising Economy and Infrastructure to 100% lifts it only to #33, while raising Safety and Health drops it to #40.',
     relatedIndicatorId: 'gdp_per_capita_ppp'
   },
   {
-    id: 'sgp-liberties',
-    countryName: 'Singapore',
-    flag: '🇸🇬',
-    iso3: 'SGP',
-    headline: '#1 for Safety & Transit, but Near the Bottom for Press Freedom?',
-    metric: 'Public Order vs. Western Civil Liberties',
-    rankText: '#1 in Public Transit & Broadband, #130+ in World Press Freedom',
-    whyItLooksWrong: 'Singapore is clean, safe, and boasts one of the highest standards of living anywhere. Western visitors often assume it should be near the very top of every quality-of-life league table.',
-    theRealExplanation: 'Western ranking systems define a "good society" as requiring aggressive investigative journalism, public demonstrations, and minimal government censorship. Singapore’s governing social contract deliberately trades public protests and unrestricted media for communal harmony, strict public order, and economic efficiency.',
-    whereItBalancesOut: 'This is the exact reason our Observatory gives you sliders: if you weight Physical Comfort, Safety, and Fast Transit, Singapore shoots to the top. If you prioritise Civil Liberties, it moves down.',
-    relatedIndicatorId: 'rsf_press_freedom'
-  },
-  {
     id: 'nor-nordic',
-    countryName: 'Norway & Switzerland',
+    countryName: 'Norway',
     flag: '🇳🇴',
     iso3: 'NOR',
-    headline: 'Why Are Nordic & Alpine Countries Almost Always #1?',
-    metric: 'The Western Welfare Benchmark Bias',
-    rankText: '#1 & #2 on Most Standard Global League Tables',
-    whyItLooksWrong: 'Are freezing Scandinavian winters, months of afternoon darkness, high living costs, and 50%+ income taxes really everyone’s idea of paradise?',
-    theRealExplanation: 'Traditional indexes are designed by economists in Geneva, Paris, and London who define the "ideal society" as a wealthy European social democracy. They heavily reward formal welfare systems and high GDP per person, but completely ignore weather comfort, seasonal depression, and high prices for everyday goods and dining out.',
-    whereItBalancesOut: 'Slide up the weighting for Climate Comfort & Sunshine, and Southern Europe (Spain, Portugal, Greece) and Latin America immediately leap ahead of the cold Nordics!',
+    headline: 'Near the Top Overall, #176 of 183 for Weather',
+    metric: 'Institutions vs. climate',
+    rankText: 'RSF Press Freedom #1 of 174 · WGI Rule of Law #3 of 184 · Climate comfort #176 of 183',
+    whyItLooksWrong: 'Are long dark winters and summers that rarely pass 20°C really everyone\'s idea of the best place on Earth?',
+    theRealExplanation: 'Most global league tables measure institutions, income and health, and simply leave out the weather. With every dial at 50%, Norway ranks #4 because it scores near the maximum on almost every institutional index.',
+    whereItBalancesOut: 'Raise Weather & Climate to 100% and Australia, New Zealand, Spain and Portugal all move ahead of Norway.',
     relatedIndicatorId: 'climate_comfort'
+  },
+  {
+    id: 'mex-climate',
+    countryName: 'Mexico',
+    flag: '🇲🇽',
+    iso3: 'MEX',
+    headline: '#7 for Climate, #180 of 182 for Organised Crime',
+    metric: 'Weather vs. safety',
+    rankText: 'Climate comfort #7 of 183 (91/100) · Organised crime #180 of 182 · Homicide 24.9 per 100k',
+    whyItLooksWrong: 'A country can hardly be both one of the most pleasant places to live and one of the most dangerous.',
+    theRealExplanation: 'Most Mexicans live on the high central plateau, where Mexico City and Guadalajara have spring-like weather all year, and the population-weighted climate score reflects this. The GI-TOC Organized Crime Index and UNODC homicide data, meanwhile, record cartel violence that is concentrated in particular states and cities. National averages hide that both are true at once.',
+    whereItBalancesOut: 'This is why one composite score can mislead: the same country swings from top 10 to bottom 10 depending on whether you weight Weather or Safety.',
+    relatedIndicatorId: 'organized_crime_index'
+  },
+  {
+    id: 'jpn-disasters',
+    countryName: 'Japan',
+    flag: '🇯🇵',
+    iso3: 'JPN',
+    headline: '#2 for Healthy Lifespan, #164 for Disaster Risk',
+    metric: 'Health vs. natural hazards',
+    rankText: 'Healthy life expectancy #2 of 183 (72.2 yrs) · WorldRiskIndex #164 of 182',
+    whyItLooksWrong: 'Japan has superb infrastructure, building codes and emergency services. How can it rank alongside much poorer countries for disaster risk?',
+    theRealExplanation: 'The WorldRiskIndex multiplies exposure (earthquakes, tsunamis, typhoons and floods affecting a large, coastal population) by societal vulnerability. Japan\'s vulnerability is low, but its exposure is among the highest on Earth, so its overall risk stays high. The Philippines, with both high exposure and higher vulnerability, ranks last.',
+    whereItBalancesOut: 'Disaster risk is one of five Safety indicators, so it drags Japan\'s Safety score down only modestly.',
+    relatedIndicatorId: 'world_risk_index'
   }
 ];

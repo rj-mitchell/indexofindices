@@ -7,6 +7,7 @@ import {
   Scale, 
   Cpu, 
   SunMedium, 
+  Leaf, 
   Sliders, 
   ChevronDown, 
   ChevronUp, 
@@ -56,7 +57,7 @@ export const PRESETS: Record<PresetType, {
   balanced: {
     label: 'Balanced',
     subtitle: 'Equal 50% All',
-    tooltip: 'Holistic baseline: equal 50% weighting across all 7 physical, economic, and institutional dimensions',
+    tooltip: 'Holistic baseline: equal 50% weighting across all 8 physical, economic, and institutional dimensions',
     icon: '🌐',
     weights: {
       safety: 50,
@@ -65,16 +66,18 @@ export const PRESETS: Record<PresetType, {
       health: 50,
       rights: 50,
       infrastructure: 50,
-      climate: 50
+      climate: 50,
+      environment: 50
     }
   },
   physical: {
     label: 'Physical',
     subtitle: 'Climate & Health',
-    tooltip: 'Prioritises physical and environmental well-being: bioclimatic comfort, clean air and water, healthy lifespan, disaster resilience, and physical safety',
+    tooltip: 'Prioritises physical and environmental well-being: pleasant weather, clean air and water, healthy lifespan, disaster resilience, and physical safety',
     icon: '🌿',
     weights: {
       climate: 100,
+      environment: 95,
       health: 85,
       infrastructure: 80,
       safety: 80,
@@ -86,7 +89,7 @@ export const PRESETS: Record<PresetType, {
   institutional: {
     label: 'Institutional',
     subtitle: 'Civic & Law',
-    tooltip: 'Prioritises institutional and civic quality of life: civil liberties, democratic governance, rule of law, anti-corruption, and economic complexity',
+    tooltip: 'Prioritises institutional and civic quality of life: civil liberties, democratic governance, rule of law, anti-corruption, and a sophisticated economy',
     icon: '🏛️',
     weights: {
       rights: 100,
@@ -95,17 +98,19 @@ export const PRESETS: Record<PresetType, {
       safety: 50,
       health: 35,
       infrastructure: 35,
-      climate: 10
+      climate: 10,
+      environment: 25
     }
   },
   digital_nomad: {
     label: 'Digital Nomad',
     subtitle: 'Broadband & Climate',
-    tooltip: 'Prioritises high-speed broadband & tech infrastructure, warm/sunny climate comfort, local purchasing power, personal safety, and international openness',
+    tooltip: 'Prioritises high-speed broadband & tech infrastructure, warm/sunny climate comfort, local purchasing power and personal safety',
     icon: '💻',
     weights: {
       infrastructure: 100,
       climate: 95,
+      environment: 40,
       economy: 80,
       safety: 80,
       health: 50,
@@ -116,12 +121,13 @@ export const PRESETS: Record<PresetType, {
   young_family: {
     label: 'Young Family',
     subtitle: 'Safety, Kids & Health',
-    tooltip: 'Prioritises safe communities, top-tier healthcare and child welfare, clean air and water, high-quality schools, and work-life balance',
+    tooltip: 'Prioritises safe communities, top-tier healthcare and child survival, clean air and water, schooling, and reasonable working hours',
     icon: '🏡',
     weights: {
       safety: 100,
       health: 100,
-      climate: 85,
+      climate: 60,
+      environment: 90,
       infrastructure: 80,
       economy: 80,
       governance: 60,
@@ -131,13 +137,14 @@ export const PRESETS: Record<PresetType, {
   ethics_rights: {
     label: 'Ethics & Rights',
     subtitle: 'Civil & Human Rights',
-    tooltip: 'Prioritises civil liberties, press freedom, LGBTQ+ equality, women’s peace and security, academic freedom, liberal democracy, and workers\' union protections',
+    tooltip: 'Prioritises civil liberties, press freedom, LGBTQ+ equality, women’s status, academic and religious freedom, and liberal democracy',
     icon: '⚖️',
     weights: {
       rights: 100,
       governance: 95,
       economy: 90,
-      climate: 75,
+      climate: 30,
+      environment: 75,
       health: 70,
       safety: 60,
       infrastructure: 30
@@ -152,7 +159,8 @@ const CATEGORY_ICONS: Record<MacroCategory, React.ComponentType<{ className?: st
   economy: TrendingUp,
   health: HeartPulse,
   infrastructure: Cpu,
-  climate: SunMedium
+  climate: SunMedium,
+  environment: Leaf
 };
 
 export const ControlSidebar: React.FC<ControlSidebarProps> = ({
@@ -332,7 +340,7 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
             }`}
           >
             <Trophy className="w-3.5 h-3.5 text-amber-500" />
-            <span>Live Ranks (<span className="font-mono tabular-nums">{countryList.length}</span>)</span>
+            <span>Live Ranks (<span className="font-mono tabular-nums">{countryList.filter(c => c.rank != null).length}</span>)</span>
           </button>
         </div>
       </div>
@@ -353,7 +361,7 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
             <div className="flex items-center justify-between px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
               <div className="flex items-center gap-1.5">
                 <span className="font-semibold text-slate-700 text-xs">Fine-Tune Sub-Indices</span>
-                <span className="text-[10px] text-slate-400 font-mono">(35 datasets)</span>
+                <span className="text-[10px] text-slate-400 font-mono">({indicators.length} datasets)</span>
               </div>
               <button
                 onClick={() => onToggleUseSubWeights(!useSubWeights)}
@@ -713,7 +721,7 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
       {/* Footer Info */}
       <div className="px-3 py-1.5 bg-slate-50/80 border-t border-slate-200 text-[10.5px] text-slate-400 flex items-center justify-between font-mono">
         <span>Global QoL Index</span>
-        <span>180+ Countries • 60fps</span>
+        <span>{countryList.filter(c => c.rank != null).length} ranked countries</span>
       </div>
     </aside>
   );

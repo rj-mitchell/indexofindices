@@ -5,7 +5,8 @@ export type MacroCategory =
   | 'economy'
   | 'health'
   | 'infrastructure'
-  | 'climate';
+  | 'climate'
+  | 'environment';
 
 export type SpectrumTier = 1 | 2 | 3 | 4;
 
@@ -20,6 +21,9 @@ export interface IndicatorMeta {
   tier: SpectrumTier;
   tierLabel: string;
   inverted: boolean;
+  sourceUrl?: string;
+  coverage?: number;
+  goalposts?: [number, number];
 }
 
 export interface IndicatorScore {
@@ -47,6 +51,7 @@ export interface CountryData {
   region: string;
   flag: string;
   hasData?: boolean;
+  coverage?: string;
   isDependency?: boolean;
   parentIso?: string;
   parentName?: string;
@@ -57,31 +62,9 @@ export interface CountryData {
   standoutWeaknesses: StandoutFact[];
   rawFacts: {
     note?: string;
-    homicidePer100k?: number | string;
-    trafficDeathsPer100k?: number | string;
-    healthyLifeYears?: number | string;
-    airQualityPM25?: number | string;
-    broadbandMbps?: number | string;
-    avgTempCelsius?: number | string;
-    annualSunnyHours?: number | string;
-    annualRainfallMm?: number | string;
-    rainyDaysPerYr?: number | string;
-    relativeHumidity?: number | string;
-    gdpPerCapitaPpp?: string;
-    pressFreedomScore?: number | string;
-    religiousFreedomScore?: number | string;
-    lgbtqScore?: number | string;
-    womenPeaceSecurity?: number | string;
-    giniCoefficient?: number | string;
-    naturalDisasterRisk?: number | string;
-    workerRightsRating?: number | string;
-    academicFreedomScore?: number | string;
-    transitAccessPct?: number | string;
-    childWelfareScore?: number | string;
-    climateResilience?: number | string;
-    daysAbove30C?: number | string;
-    daysBelow0C?: number | string;
+    keyFacts?: { label: string; value: string }[];
   };
+
 }
 
 export interface MacroCategoryConfig {

@@ -157,7 +157,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
             >
               <span>🎯 Odd Results</span>
               <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-rose-100 text-rose-700 font-bold">
-                North Korea &amp; China
+                Singapore &amp; USA
               </span>
             </button>
             <button
@@ -168,7 +168,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              🔍 35 Indices Explained
+              🔍 {INDICATOR_CRITIQUES.length} Indices Explained
             </button>
             <button
               onClick={() => setActiveTab('manifesto')}
@@ -199,17 +199,17 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
               Why No Country Is Simply "The Best in the World"
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-              Every year, headlines claim one country has the "best quality of life". But deciding what makes a good life is personal: one person prioritises warm sunshine and affordable housing; another wants top healthcare and clean air; another values freedom of speech above all else. 
-              This guide pulls back the curtain on all 35 indicators we track—explaining where the numbers come from, what they get right, their hidden blind spots, and why we put the control sliders directly in your hands.
+              Every year, headlines claim one country has the "best quality of life". But deciding what makes a good life is personal: one person prioritises warm sunshine and a short working week; another wants top healthcare and clean air; another values freedom of speech above all else. 
+              This guide pulls back the curtain on all {INDICATOR_CRITIQUES.length} indicators we track—explaining where the numbers come from, what they get right, their hidden blind spots, and why we put the control sliders directly in your hands.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-slate-300">
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>35 Indices Audited</span>
+                <span>{INDICATOR_CRITIQUES.length} Indices Audited</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-                <span>7 Real-Life Domains</span>
+                <span>{categories.length} Real-Life Domains</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-rose-400"></span>
@@ -223,7 +223,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                 onClick={() => setActiveTab('anomalies')}
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-200 text-xs font-medium transition-all active:scale-98 cursor-pointer"
               >
-                <span>🎯 Why is North Korea #1 for lack of terrorism &amp; China 197th for housing?</span>
+                <span>🎯 Why is Singapore #1 for government effectiveness but #117 for press freedom?</span>
                 <span className="font-bold underline text-white">See Case Studies &rarr;</span>
               </button>
             </div>
@@ -254,7 +254,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                   onClick={() => setActiveTab('indicators')}
                   className="text-xs font-semibold text-teal-700 hover:text-teal-800 flex items-center gap-1 cursor-pointer"
                 >
-                  <span>35 Indices</span>
+                  <span>{INDICATOR_CRITIQUES.length} Indices</span>
                   <span>→</span>
                 </button>
               </div>
@@ -320,7 +320,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                   </span>
                 </h3>
                 <p className="text-xs text-slate-500">
-                  Why North Korea ranks #1 for lack of terrorism, China ranks 197th for housing, and other famous ranking paradoxes.
+                  Why Singapore tops governance but not press freedom, why the US is rich but ranks #142 for road safety, and other ranking paradoxes.
                 </p>
               </div>
 
@@ -328,7 +328,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                 onClick={() => setActiveTab('indicators')}
                 className="text-xs font-semibold text-teal-700 hover:text-teal-800 flex items-center gap-1 cursor-pointer self-start sm:self-auto"
               >
-                <span>Browse All 35 Indices</span>
+                <span>Browse All {INDICATOR_CRITIQUES.length} Indices</span>
                 <span>→</span>
               </button>
             </div>
@@ -416,7 +416,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
                   <h3 className="text-base font-bold text-slate-900">
-                    Plain-English Guide to All 35 Indices
+                    Plain-English Guide to All {INDICATOR_CRITIQUES.length} Indices
                   </h3>
                   <p className="text-xs text-slate-500">
                     What each index measures, what it does well, its hidden flaws, and how it affects people on the ground.
@@ -667,7 +667,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                     <span>3. You Decide What "#1" Means</span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Instead of locking you into someone else's idea of a good life, our tool lets you pick from real-life presets (like <strong>Young Family</strong>, <strong>Digital Nomad</strong>, or <strong>Physical Comfort</strong>) or fine-tune all 35 sliders yourself. When you move a slider, the entire world map recalculates in real time to match your priorities.
+                    Instead of locking you into someone else's idea of a good life, our tool lets you pick from real-life presets (like <strong>Young Family</strong>, <strong>Digital Nomad</strong>, or <strong>Physical Comfort</strong>) or fine-tune all {INDICATOR_CRITIQUES.length} sliders yourself. When you move a slider, the entire world map recalculates in real time to match your priorities.
                   </p>
                 </div>
               </div>
@@ -678,7 +678,7 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
                     Ready to see how your priorities reshape the map?
                   </h4>
                   <p className="text-xs text-slate-600">
-                    Adjust the 7 life domains and 35 indicators to see which countries match what you actually care about.
+                    Adjust the {categories.length} life domains and {INDICATOR_CRITIQUES.length} indicators to see which countries match what you actually care about.
                   </p>
                 </div>
                 <button

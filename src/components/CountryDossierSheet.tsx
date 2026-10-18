@@ -11,6 +11,7 @@ import {
   Scale, 
   Cpu, 
   SunMedium, 
+  Leaf, 
   ExternalLink,
   ChevronRight,
   Info,
@@ -35,7 +36,8 @@ const CATEGORY_ICONS: Record<MacroCategory, React.ComponentType<{ className?: st
   health: HeartPulse,
   rights: Scale,
   infrastructure: Cpu,
-  climate: SunMedium
+  climate: SunMedium,
+  environment: Leaf
 };
 
 export const CountryDossierSheet: React.FC<CountryDossierSheetProps> = ({
@@ -115,7 +117,7 @@ export const CountryDossierSheet: React.FC<CountryDossierSheetProps> = ({
       {/* Action Bar */}
       <div className="px-5 py-2.5 bg-white border-b border-slate-100 flex items-center justify-between">
         <span className="text-xs text-slate-500">
-          {country.compositeScore != null ? 'Ranked under your active category dials' : 'Territory not benchmarked by sovereign indices'}
+          {country.compositeScore != null ? 'Ranked under your active category dials' : (country.rawFacts.note || 'Not covered by enough indices to rank')}
         </span>
         {country.hasData !== false && (
           <button
@@ -242,6 +244,7 @@ export const CountryDossierSheet: React.FC<CountryDossierSheetProps> = ({
               <option value="1">Tier 1: Empirical ({indicators.filter(i => i.tier === 1).length})</option>
               <option value="2">Tier 2: Normative ({indicators.filter(i => i.tier === 2).length})</option>
               <option value="3">Tier 3: Expert / Survey ({indicators.filter(i => i.tier === 3).length})</option>
+              <option value="4">Tier 4: Derived ({indicators.filter(i => i.tier === 4).length})</option>
             </select>
           </div>
 
@@ -261,7 +264,9 @@ export const CountryDossierSheet: React.FC<CountryDossierSheetProps> = ({
                           {ind.name}
                         </div>
                         <div className="text-[10px] text-slate-400 mt-0.5">
-                          {ind.source} • <span className="font-mono tabular-nums">{ind.tierLabel}</span>
+                          {ind.sourceUrl ? (
+                            <a href={ind.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-slate-300 hover:text-teal-700">{ind.source}</a>
+                          ) : ind.source} • <span className="font-mono tabular-nums">{ind.tierLabel}</span>
                         </div>
                       </div>
 
@@ -288,128 +293,26 @@ export const CountryDossierSheet: React.FC<CountryDossierSheetProps> = ({
           </div>
         </section>
 
-        {/* Section 5: Key Measured Facts with Concentric Radii (Outer 12px, Inner 8px) */}
-        <section className="space-y-2">
-          <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
-            Verified Baseline Metrics
-          </h3>
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-              <span className="text-[10px] text-slate-400 block">Intentional Homicides</span>
-              <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.homicidePer100k} / 100k</span>
+        {/* Section 5: Key Measured Facts */}
+        {country.rawFacts.keyFacts && country.rawFacts.keyFacts.length > 0 && (
+          <section className="space-y-2">
+            <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+              Key Measured Facts
+            </h3>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              {country.rawFacts.keyFacts.map((fact) => (
+                <div key={fact.label} className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
+                  <span className="text-[10px] text-slate-400 block">{fact.label}</span>
+                  <span className="font-mono tabular-nums font-bold text-slate-800">{fact.value}</span>
+                </div>
+              ))}
             </div>
-            <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-              <span className="text-[10px] text-slate-400 block">Traffic Fatality Rate</span>
-              <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.trafficDeathsPer100k} / 100k</span>
-            </div>
-            <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-              <span className="text-[10px] text-slate-400 block">Healthy Lifespan (HALE)</span>
-              <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.healthyLifeYears}</span>
-            </div>
-            <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-              <span className="text-[10px] text-slate-400 block">Median Broadband Speed</span>
-              <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.broadbandMbps}</span>
-            </div>
-            <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-              <span className="text-[10px] text-slate-400 block">Average Mean Temp</span>
-              <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.avgTempCelsius || 'N/A'}</span>
-            </div>
-            <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-              <span className="text-[10px] text-slate-400 block">Annual Sunshine</span>
-              <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.annualSunnyHours || 'N/A'}</span>
-            </div>
-            {country.rawFacts.rainyDaysPerYr && (
-              <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-                <span className="text-[10px] text-slate-400 block">Rainy Days (≥1mm)</span>
-                <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.rainyDaysPerYr}</span>
-              </div>
-            )}
-            {country.rawFacts.relativeHumidity && (
-              <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-                <span className="text-[10px] text-slate-400 block">Relative Humidity</span>
-                <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.relativeHumidity}</span>
-              </div>
-            )}
-            {country.rawFacts.annualRainfallMm && (
-              <div className="p-2.5 bg-slate-50 rounded-[8px] border border-slate-200">
-                <span className="text-[10px] text-slate-400 block">Annual Precipitation</span>
-                <span className="font-mono tabular-nums font-bold text-slate-800">{country.rawFacts.annualRainfallMm}</span>
-              </div>
-            )}
-            {country.rawFacts.daysAbove30C && (
-              <div className="p-2.5 bg-rose-50/70 rounded-[8px] border border-rose-200">
-                <span className="text-[10px] text-rose-700 font-semibold block">Extreme Heat Days (&gt;30°C)</span>
-                <span className="font-mono tabular-nums font-bold text-rose-900">{country.rawFacts.daysAbove30C}</span>
-              </div>
-            )}
-            {country.rawFacts.daysBelow0C && (
-              <div className="p-2.5 bg-sky-50/70 rounded-[8px] border border-sky-200">
-                <span className="text-[10px] text-sky-700 font-semibold block">Freezing Winter Days (&lt;0°C)</span>
-                <span className="font-mono font-bold text-sky-900">{country.rawFacts.daysBelow0C}</span>
-              </div>
-            )}
-            {country.rawFacts.religiousFreedomScore && (
-              <div className="p-2.5 bg-purple-50/70 rounded-lg border border-purple-200">
-                <span className="text-[10px] text-purple-700 font-semibold block">Religious Freedom</span>
-                <span className="font-mono font-bold text-purple-900">{country.rawFacts.religiousFreedomScore}</span>
-              </div>
-            )}
-            {country.rawFacts.lgbtqScore && (
-              <div className="p-2.5 bg-fuchsia-50/70 rounded-lg border border-fuchsia-200">
-                <span className="text-[10px] text-fuchsia-700 font-semibold block">LGBTQ+ Equality (ILGA)</span>
-                <span className="font-mono font-bold text-fuchsia-900">{country.rawFacts.lgbtqScore}</span>
-              </div>
-            )}
-            {country.rawFacts.womenPeaceSecurity && (
-              <div className="p-2.5 bg-pink-50/70 rounded-lg border border-pink-200">
-                <span className="text-[10px] text-pink-700 font-semibold block">Women's Rights (WPS)</span>
-                <span className="font-mono font-bold text-pink-900">{country.rawFacts.womenPeaceSecurity}</span>
-              </div>
-            )}
-            {country.rawFacts.giniCoefficient && (
-              <div className="p-2.5 bg-amber-50/70 rounded-lg border border-amber-200">
-                <span className="text-[10px] text-amber-700 font-semibold block">Income Inequality</span>
-                <span className="font-mono font-bold text-amber-900">{country.rawFacts.giniCoefficient}</span>
-              </div>
-            )}
-            {country.rawFacts.naturalDisasterRisk && (
-              <div className="p-2.5 bg-orange-50/70 rounded-lg border border-orange-200">
-                <span className="text-[10px] text-orange-700 font-semibold block">Disaster Hazard Risk</span>
-                <span className="font-mono font-bold text-orange-900">{country.rawFacts.naturalDisasterRisk}</span>
-              </div>
-            )}
-            {country.rawFacts.workerRightsRating && (
-              <div className="p-2.5 bg-indigo-50/70 rounded-lg border border-indigo-200">
-                <span className="text-[10px] text-indigo-700 font-semibold block">Workers' Rights (ITUC)</span>
-                <span className="font-mono font-bold text-indigo-900">{country.rawFacts.workerRightsRating}</span>
-              </div>
-            )}
-            {country.rawFacts.academicFreedomScore && (
-              <div className="p-2.5 bg-violet-50/70 rounded-lg border border-violet-200">
-                <span className="text-[10px] text-violet-700 font-semibold block">Academic Freedom</span>
-                <span className="font-mono font-bold text-violet-900">{country.rawFacts.academicFreedomScore}</span>
-              </div>
-            )}
-            {country.rawFacts.transitAccessPct && (
-              <div className="p-2.5 bg-cyan-50/70 rounded-lg border border-cyan-200">
-                <span className="text-[10px] text-cyan-700 font-semibold block">Walkable Transit (500m)</span>
-                <span className="font-mono font-bold text-cyan-900">{country.rawFacts.transitAccessPct}</span>
-              </div>
-            )}
-            {country.rawFacts.childWelfareScore && (
-              <div className="p-2.5 bg-emerald-50/70 rounded-lg border border-emerald-200">
-                <span className="text-[10px] text-emerald-700 font-semibold block">Child Welfare Index</span>
-                <span className="font-mono font-bold text-emerald-900">{country.rawFacts.childWelfareScore}</span>
-              </div>
-            )}
-            {country.rawFacts.climateResilience && (
-              <div className="p-2.5 bg-teal-50/70 rounded-lg border border-teal-200">
-                <span className="text-[10px] text-teal-700 font-semibold block">Climate Adaptation</span>
-                <span className="font-mono font-bold text-teal-900">{country.rawFacts.climateResilience}</span>
-              </div>
-            )}
-          </div>
-        </section>
+            <p className="text-[10px] text-slate-400 leading-snug">
+              Climate figures are 1970–2000 WorldClim normals averaged over the country's cities, weighted by population.
+              {country.coverage && <> Covered by {country.coverage} indices.</>}
+            </p>
+          </section>
+        )}
 
         {/* Index Biases Callout */}
         <div className="p-3 bg-amber-50/80 border border-amber-200/90 rounded-xl flex items-center justify-between gap-3 text-xs">

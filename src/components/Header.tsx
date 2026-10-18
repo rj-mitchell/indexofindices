@@ -77,11 +77,12 @@ export const Header: React.FC<HeaderProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-sm sm:text-base font-bold tracking-tight text-slate-900 font-sans whitespace-nowrap">
-                Global Quality of Life Index of Indices
+                <span className="sm:hidden">Index of Indices</span>
+                <span className="hidden sm:inline">Global Quality of Life Index of Indices</span>
               </h1>
             </div>
             <p className="text-[10.5px] text-slate-500 font-sans hidden 2xl:block leading-tight">
-              Dynamic user-weighted multi-dimensional country index (35 empirical &amp; institutional indices)
+              User-weighted country index built from published indices
             </p>
           </div>
         </div>
@@ -102,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
         )}
 
         {/* Search Box */}
-        <div className="relative w-40 sm:w-48 md:w-56 lg:w-60 shrink-0">
+        <div className="relative w-28 sm:w-48 md:w-56 lg:w-60 shrink-0">
           <div className="absolute inset-y-0 start-0 ps-2.5 flex items-center pointer-events-none text-slate-400">
             <Search className="w-3.5 h-3.5" />
           </div>
@@ -110,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search 180+ countries..."
+            placeholder="Search countries..."
             className="w-full ps-8 pl-8 pe-2.5 py-1.5 text-xs bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all font-sans"
           />
           {/* Search Dropdown with Concentric Nested Radii (Outer 12px, Padding 4px, Inner 8px) */}
@@ -160,7 +161,6 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <BookOpen className="w-3.5 h-3.5 text-amber-700" />
             <span className="hidden sm:inline whitespace-nowrap">Index Biases &amp; Critique</span>
-            <span className="sm:hidden whitespace-nowrap">Biases</span>
           </button>
 
           {/* Compare Button */}
@@ -170,7 +170,7 @@ export const Header: React.FC<HeaderProps> = ({
             title="Side-by-side comparison of 2 countries"
           >
             <GitCompare className="w-3.5 h-3.5" />
-            <span>Compare</span>
+            <span className="hidden sm:inline">Compare</span>
           </button>
 
           {/* Reset Weights Button */}

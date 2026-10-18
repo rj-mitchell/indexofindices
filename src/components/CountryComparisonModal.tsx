@@ -11,6 +11,7 @@ import {
   Scale, 
   Cpu, 
   SunMedium, 
+  Leaf, 
   CheckCircle, 
   HelpCircle,
   Search,
@@ -39,7 +40,8 @@ const CATEGORY_ICONS: Record<MacroCategory, React.ComponentType<{ className?: st
   health: HeartPulse,
   rights: Scale,
   infrastructure: Cpu,
-  climate: SunMedium
+  climate: SunMedium,
+  environment: Leaf
 };
 
 /**
@@ -501,7 +503,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
                 Country Head-to-Head Comparison
               </h2>
               <p className="text-xs text-slate-500">
-                Direct benchmark comparison with relative win-margin bars across all 7 macro dimensions and 35 underlying indices
+                Direct benchmark comparison with relative win-margin bars across all {categories.length} macro dimensions and {indicators.length} underlying indices
               </p>
             </div>
           </div>

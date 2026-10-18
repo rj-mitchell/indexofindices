@@ -33,3 +33,10 @@ dist-ssr
 # Temporary / Scratch data
 extracted_conversation.txt
 wb_cached.json.bak
+
+# Python
+__pycache__/
+*.pyc
+
+# Large raw downloads (re-fetch with scripts/fetch_sources.sh)
+data/raw/
