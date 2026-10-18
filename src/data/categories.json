@@ -1,0 +1,100 @@
+[
+  {
+    "id": "safety",
+    "name": "Safety & Peace",
+    "description": "Protection from violent crime, traffic danger, terrorism, armed conflicts, natural disaster vulnerability, and organised crime.",
+    "iconName": "ShieldAlert",
+    "color": "#0d9488",
+    "indicators": [
+      "unodc_homicide",
+      "global_peace_index",
+      "global_terrorism_index",
+      "who_traffic_safety",
+      "world_risk_index",
+      "organized_crime_index"
+    ]
+  },
+  {
+    "id": "governance",
+    "name": "Governance & Rule of Law",
+    "description": "Control of public graft, predictable contract enforcement, civil service effectiveness, and physical/intellectual property rights.",
+    "iconName": "Landmark",
+    "color": "#2563eb",
+    "indicators": [
+      "ti_cpi",
+      "wgi_rule_of_law",
+      "wgi_gov_effectiveness",
+      "ipri_property_rights"
+    ]
+  },
+  {
+    "id": "rights",
+    "name": "Civil Liberties & Inclusion",
+    "description": "Press freedom, liberal democracy checks, religious freedom, LGBTQ+ equality, women's peace & security, and academic freedom.",
+    "iconName": "Scale",
+    "color": "#7c3aed",
+    "indicators": [
+      "rsf_press_freedom",
+      "vdem_liberal_democracy",
+      "pew_religious_freedom",
+      "lgbtq_equality",
+      "georgetown_wps",
+      "academic_freedom"
+    ]
+  },
+  {
+    "id": "economy",
+    "name": "Economy, Labour & Living Costs",
+    "description": "Domestic purchasing power, industrial complexity, income equality, workers' union rights, work-life balance & leisure, and housing affordability.",
+    "iconName": "TrendingUp",
+    "color": "#d97706",
+    "indicators": [
+      "gdp_per_capita_ppp",
+      "wb_purchasing_power",
+      "atlas_economic_complexity",
+      "cri_inequality",
+      "ituc_worker_rights",
+      "work_life_balance",
+      "housing_affordability"
+    ]
+  },
+  {
+    "id": "health",
+    "name": "Health, Well-being & Family",
+    "description": "Healthy lifespan (HALE), universal healthcare coverage (UHC), child welfare and family protections, and educational attainment.",
+    "iconName": "HeartPulse",
+    "color": "#e11d48",
+    "indicators": [
+      "who_hale",
+      "who_uhc_coverage",
+      "kids_rights_index",
+      "undp_education"
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "name": "Infrastructure, Transit & Tech",
+    "description": "High-speed broadband download speeds, trade & transport logistics, universal internet penetration, and walkable public transit access.",
+    "iconName": "Cpu",
+    "color": "#0891b2",
+    "indicators": [
+      "ookla_broadband",
+      "wb_lpi_infrastructure",
+      "itu_internet_penetration",
+      "public_transit_access"
+    ]
+  },
+  {
+    "id": "climate",
+    "name": "Climate, Ecology & Environment",
+    "description": "Bioclimatic comfort (Holiday Climate Index - HCI), clean ambient air (low PM2.5), safely managed drinking water, and climate change adaptation readiness.",
+    "iconName": "SunMedium",
+    "color": "#16a34a",
+    "indicators": [
+      "climate_comfort",
+      "who_pm25",
+      "yale_clean_water",
+      "nd_gain_resilience"
+    ]
+  }
+]
