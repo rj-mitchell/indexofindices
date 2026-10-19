@@ -2,98 +2,105 @@
   {
     "id": "safety",
     "name": "Safety & Peace",
-    "description": "Protection from violent crime, traffic danger, terrorism, armed conflicts, natural disaster vulnerability, and organised crime.",
     "iconName": "ShieldAlert",
     "color": "#0d9488",
+    "description": "Lethal violence, road danger, armed conflict and militarisation, organised crime, and exposure to natural disasters.",
     "indicators": [
       "unodc_homicide",
-      "global_peace_index",
-      "global_terrorism_index",
       "who_traffic_safety",
-      "world_risk_index",
-      "organized_crime_index"
+      "global_peace_index",
+      "organized_crime_index",
+      "world_risk_index"
     ]
   },
   {
     "id": "governance",
     "name": "Governance & Rule of Law",
-    "description": "Control of public graft, predictable contract enforcement, civil service effectiveness, and physical/intellectual property rights.",
     "iconName": "Landmark",
     "color": "#2563eb",
+    "description": "Clean government, courts and contracts that work, effective public services, and sound regulation.",
     "indicators": [
       "ti_cpi",
       "wgi_rule_of_law",
       "wgi_gov_effectiveness",
-      "ipri_property_rights"
+      "wgi_regulatory_quality"
     ]
   },
   {
     "id": "rights",
     "name": "Civil Liberties & Inclusion",
-    "description": "Press freedom, liberal democracy checks, religious freedom, LGBTQ+ equality, women's peace & security, and academic freedom.",
     "iconName": "Scale",
     "color": "#7c3aed",
+    "description": "Press freedom, liberal democracy, academic and religious freedom, women's status, and LGBTQ+ legal equality.",
     "indicators": [
       "rsf_press_freedom",
       "vdem_liberal_democracy",
-      "pew_religious_freedom",
-      "lgbtq_equality",
+      "academic_freedom",
+      "vdem_religious_freedom",
       "georgetown_wps",
-      "academic_freedom"
+      "lgbtq_equality"
     ]
   },
   {
     "id": "economy",
     "name": "Economy, Labour & Living Costs",
-    "description": "Domestic purchasing power, industrial complexity, income equality, workers' union rights, work-life balance & leisure, and housing affordability.",
     "iconName": "TrendingUp",
     "color": "#d97706",
+    "description": "Income levels adjusted for local prices, inequality, joblessness, working hours, and economic sophistication.",
     "indicators": [
       "gdp_per_capita_ppp",
-      "wb_purchasing_power",
-      "atlas_economic_complexity",
-      "cri_inequality",
-      "ituc_worker_rights",
-      "work_life_balance",
-      "housing_affordability"
+      "gini_inequality",
+      "ilo_unemployment",
+      "ilo_working_hours",
+      "atlas_economic_complexity"
     ]
   },
   {
     "id": "health",
-    "name": "Health, Well-being & Family",
-    "description": "Healthy lifespan (HALE), universal healthcare coverage (UHC), child welfare and family protections, and educational attainment.",
+    "name": "Health, Education & Family",
     "iconName": "HeartPulse",
     "color": "#e11d48",
+    "description": "Healthy lifespan, access to essential health care, child survival, and schooling.",
     "indicators": [
       "who_hale",
       "who_uhc_coverage",
-      "kids_rights_index",
+      "under5_mortality",
       "undp_education"
     ]
   },
   {
     "id": "infrastructure",
-    "name": "Infrastructure, Transit & Tech",
-    "description": "High-speed broadband download speeds, trade & transport logistics, universal internet penetration, and walkable public transit access.",
+    "name": "Infrastructure & Tech",
     "iconName": "Cpu",
     "color": "#0891b2",
+    "description": "Measured broadband speeds, internet use, electricity access, and logistics quality.",
     "indicators": [
       "ookla_broadband",
-      "wb_lpi_infrastructure",
       "itu_internet_penetration",
-      "public_transit_access"
+      "electricity_access",
+      "wb_lpi_infrastructure"
     ]
   },
   {
     "id": "climate",
-    "name": "Climate, Ecology & Environment",
-    "description": "Bioclimatic comfort (Holiday Climate Index - HCI), clean ambient air (low PM2.5), safely managed drinking water, and climate change adaptation readiness.",
-    "iconName": "SunMedium",
-    "color": "#16a34a",
+    "name": "Weather & Climate",
+    "iconName": "Sun",
+    "color": "#ea580c",
+    "description": "How pleasant the weather is where people actually live: mild days and nights, low mugginess, moderate rain, and sunshine.",
     "indicators": [
-      "climate_comfort",
+      "climate_comfort"
+    ]
+  },
+  {
+    "id": "environment",
+    "name": "Environment & Resilience",
+    "iconName": "Leaf",
+    "color": "#16a34a",
+    "description": "Clean air, safe drinking water, environmental performance, and readiness to cope with climate change.",
+    "indicators": [
       "who_pm25",
-      "yale_clean_water",
+      "safe_drinking_water",
+      "yale_epi",
       "nd_gain_resilience"
     ]
   }

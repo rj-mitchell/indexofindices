@@ -10,7 +10,7 @@ import {
   RegionalScaleInfo 
 } from '../data/regions';
 
-const GEO_URL = '/world-50m.json';
+const GEO_URL = `${import.meta.env.BASE_URL}world-50m.json`;
 
 interface ChoroplethMapProps {
   computedCountries: Record<string, ComputedCountry>;
@@ -107,14 +107,14 @@ export const ChoroplethMap: React.FC<ChoroplethMapProps> = ({
     <div className="relative flex-1 w-full h-full bg-[#f8fafc] overflow-hidden select-none">
       {/* Regional Viewport Selector Bar with Concentric Nested Radii (Outer 16px, Padding 6px, Inner 10px) */}
       <div className="absolute top-4 start-4 z-20 flex flex-wrap items-center gap-1.5 bg-white/95 backdrop-blur-md border border-slate-200 p-1.5 rounded-2xl shadow-md max-w-[calc(100%-80px)]">
-        <div className="flex items-center gap-1 overflow-x-auto py-0.5 px-0.5 no-scrollbar">
+        <div className="flex items-center gap-1 overflow-x-auto py-0.5 px-0.5 no-scrollbar min-w-0 max-w-full">
           {REGIONS.map(reg => {
             const isActive = activeRegion === reg.id;
             return (
               <button
                 key={reg.id}
                 onClick={() => handleSelectRegion(reg.id)}
-                className={`px-2.5 py-1 rounded-[10px] text-xs font-medium active:scale-95 transition-all whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
+                className={`shrink-0 px-2.5 py-1 rounded-[10px] text-xs font-medium active:scale-95 transition-all whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
                   isActive
                     ? 'bg-teal-600 text-white shadow-2xs font-semibold'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'

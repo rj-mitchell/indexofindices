@@ -15,7 +15,8 @@ const DEFAULT_MACRO_WEIGHTS: Record<MacroCategory, number> = {
   economy: 50,
   health: 50,
   infrastructure: 50,
-  climate: 50
+  climate: 50,
+  environment: 50
 };
 
 import { RegionId, REGIONS, isCountryInRegion, computeRegionalScale, RegionalScaleInfo } from '../data/regions';
@@ -83,7 +84,8 @@ export function useQualityOfLifeIndex() {
       health: [],
       rights: [],
       infrastructure: [],
-      climate: []
+      climate: [],
+      environment: []
     };
     for (const ind of indicators) {
       const cat = ind.category as MacroCategory;
@@ -103,7 +105,8 @@ export function useQualityOfLifeIndex() {
             health: null,
             rights: null,
             infrastructure: null,
-            climate: null
+            climate: null,
+            environment: null
           },
           compositeScore: null,
           rank: null,
@@ -179,7 +182,7 @@ export function useQualityOfLifeIndex() {
             shortName: indMeta?.shortName || id,
             score: val.score,
             rank: val.rank,
-            total: val.total || 232,
+            total: val.total || 0,
             formatted: val.formatted,
             priority
           };
@@ -261,7 +264,7 @@ export function useQualityOfLifeIndex() {
 
     // Compute dimension ranks across all scored countries
     const dimensionRanksRecord: Record<MacroCategory, Record<string, { rank: number; total: number; percentile: number }>> = {
-      safety: {}, governance: {}, economy: {}, health: {}, rights: {}, infrastructure: {}, climate: {}
+      safety: {}, governance: {}, economy: {}, health: {}, rights: {}, infrastructure: {}, climate: {}, environment: {}
     };
 
     for (const cat of macroCats) {
