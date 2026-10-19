@@ -57,4 +57,4 @@ npm run preview
 `npm run build` produces a fully static site in `dist/`. It uses relative paths, so it works at a domain root or under a sub-path.
 
 - **Cloudflare Pages / Netlify / Vercel**: import the GitHub repo, set the build command to `npm run build` and the output directory to `dist`.
-- **GitHub Pages**: `.github/workflows/deploy.yml` builds and publishes on every push to `main`. Turn it on under *Settings → Pages → Source: GitHub Actions*.
+- **Cloudflare Workers** (current setup): `wrangler.jsonc` serves `dist/`; set the build command to `npm run build` and the deploy command to `npx wrangler deploy`.
