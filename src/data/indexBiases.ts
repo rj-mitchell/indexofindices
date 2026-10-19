@@ -866,7 +866,7 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     rankText: 'WGI Government Effectiveness #1 of 184 · RSF Press Freedom #117 of 174 (44.6/100)',
     whyItLooksWrong: 'Singapore is clean, safe and efficient, with one of the lowest homicide rates in the world (0.1 per 100k). Many visitors assume it must top every quality-of-life table.',
     theRealExplanation: 'Indices of civil liberties reward a free, adversarial press, open protest and competitive elections. Singapore deliberately trades some of these for public order and policy continuity, so RSF and V-Dem (Liberal Democracy #85 of 174) mark it down while the World Bank governance indicators put it at the very top.',
-    whereItBalancesOut: 'With every dial at 50% Singapore ranks #19. Raise Safety, Governance and Infrastructure to 100% and it climbs to #7; raise Civil Liberties and Weather instead (it ranks #177 of 183 for climate comfort because of year-round heat and humidity) and it falls to #32.',
+    whereItBalancesOut: 'With every dial at 50% Singapore ranks #25. Raise Safety, Governance and Infrastructure to 100% and it climbs to #12; raise Civil Liberties and Weather instead (it ranks #177 of 183 for climate comfort because of year-round heat and humidity) and it falls to #35.',
     relatedIndicatorId: 'rsf_press_freedom'
   },
   {
@@ -879,7 +879,7 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     rankText: 'GDP per capita (PPP) #9 of 182 ($90,027) · Road deaths #142 of 183 · Homicide #117 of 167',
     whyItLooksWrong: 'The US has the largest economy in the world, leading universities and some of the fastest broadband anywhere (#6 of 163). High income is often assumed to buy the best quality of life.',
     theRealExplanation: 'GDP measures output, not how safe or healthy daily life is. The US records 5.8 homicides and 18.4 road deaths per 100,000 people, several times Western European levels, and a healthy life expectancy of 64.6 years (#81 of 183), below many countries with half its income. The 2026 Global Peace Index also places it #134, citing political instability.',
-    whereItBalancesOut: 'With every dial at 50% the US ranks #36. Raising Economy and Infrastructure to 100% lifts it only to #33, while raising Safety and Health drops it to #40.',
+    whereItBalancesOut: 'With every dial at 50% the US ranks #34. Raising Economy and Infrastructure to 100% lifts it only to #32, while raising Safety and Health drops it to #39.',
     relatedIndicatorId: 'gdp_per_capita_ppp'
   },
   {
@@ -891,7 +891,7 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     metric: 'Institutions vs. climate',
     rankText: 'RSF Press Freedom #1 of 174 · WGI Rule of Law #3 of 184 · Climate comfort #176 of 183',
     whyItLooksWrong: 'Are long dark winters and summers that rarely pass 20°C really everyone\'s idea of the best place on Earth?',
-    theRealExplanation: 'Most global league tables measure institutions, income and health, and simply leave out the weather. With every dial at 50%, Norway ranks #4 because it scores near the maximum on almost every institutional index.',
+    theRealExplanation: 'Most global league tables measure institutions, income and health, and simply leave out the weather. With every dial at 50%, Norway ranks #3 because it scores near the maximum on almost every institutional index.',
     whereItBalancesOut: 'Raise Weather & Climate to 100% and Australia, New Zealand, Spain and Portugal all move ahead of Norway.',
     relatedIndicatorId: 'climate_comfort'
   },

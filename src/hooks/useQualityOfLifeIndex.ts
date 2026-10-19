@@ -8,6 +8,9 @@ const categories = rawCategories as unknown as MacroCategoryConfig[];
 const indicators = rawIndicators as unknown as IndicatorMeta[];
 const countries = rawCountries as unknown as Record<string, CountryData>;
 
+// Score a missing indicator contributes to its dimension (see scripts/build_dataset.py)
+const NEUTRAL_SCORE = 50;
+
 const DEFAULT_MACRO_WEIGHTS: Record<MacroCategory, number> = {
   safety: 50,
   governance: 50,
@@ -137,10 +140,10 @@ export function useQualityOfLifeIndex() {
             for (const ind of catInds) {
               const sw = subWeights[ind.id] ?? 50;
               const indVal = country.indicators[ind.id];
-              if (indVal && indVal.score != null) {
-                catWeightedSum += indVal.score * sw;
-                catTotalSubWeight += sw;
-              }
+              // Missing indicators count as neutral, matching the precomputed dimension scores
+              const score = indVal && indVal.score != null ? indVal.score : NEUTRAL_SCORE;
+              catWeightedSum += score * sw;
+              catTotalSubWeight += sw;
             }
             if (catTotalSubWeight > 0) {
               dynamicDimensions[cat] = Math.round((catWeightedSum / catTotalSubWeight) * 10) / 10;

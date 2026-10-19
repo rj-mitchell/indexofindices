@@ -20,7 +20,7 @@ Built with **React 18**, **TypeScript**, **Tailwind CSS** and **react-simple-map
 Every value comes from its publisher's own release. See **[SOURCES.md](SOURCES.md)** for each indicator's publisher, data year, coverage and scoring goalposts.
 
 - **184 countries** are ranked. A country needs at least 20 of the 33 indicators. Observations older than 2015 are dropped and **nothing is imputed**: a missing value stays missing and shows as "N/A".
-- **Scoring**: each indicator is rescaled to 0–100 between the 2.5th and 97.5th percentile of country values (log scale for skewed data such as GDP or homicide), and flipped where lower is better. A dimension is the plain average of its indicators.
+- **Scoring**: each indicator is rescaled to 0–100 between the 2.5th and 97.5th percentile of country values (log scale for skewed data such as GDP or homicide), and flipped where lower is better. A dimension is the average of its indicators, with a missing indicator counted as a neutral 50 so that one available value can't stand in for the whole dimension.
 - **Weather & Climate** is the one derived indicator. It is computed from WorldClim 2.1 monthly climate normals at every city of 15,000+ people (GeoNames), weighted by population, so it reflects the climate where people actually live. The comfort thresholds are documented in `scripts/derive_climate.py`.
 
 ### Rebuilding the data

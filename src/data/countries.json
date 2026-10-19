@@ -290,7 +290,7 @@
     "explanation": "Ranks #141 of 149 in Income Equality (50.3 Gini · 2019)."
    }
   ],
-  "divergenceStory": "Zimbabwe is strongest on Weather & Climate (#3 of 183, 95.0/100) and weakest on Economy, Labour & Living Costs (#174 of 183, 32.7/100).",
+  "divergenceStory": "Zimbabwe is strongest on Weather & Climate (#3 of 184, 95.0/100) and weakest on Economy, Labour & Living Costs (#179 of 184, 32.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -593,7 +593,7 @@
    "health": 31.5,
    "infrastructure": 26.2,
    "climate": 84.7,
-   "environment": 36.1
+   "environment": 39.6
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -636,7 +636,7 @@
     "explanation": "Ranks #174 of 182 in Internet Use (17.1% · 2024)."
    }
   ],
-  "divergenceStory": "Zambia is strongest on Weather & Climate (#28 of 183, 84.7/100) and weakest on Infrastructure & Tech (#164 of 183, 26.2/100).",
+  "divergenceStory": "Zambia is strongest on Weather & Climate (#28 of 184, 84.7/100) and weakest on Economy, Labour & Living Costs (#168 of 184, 40.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -897,14 +897,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 9.2,
+   "safety": 17.3,
    "governance": 2.5,
    "rights": 6.3,
-   "economy": 21.1,
+   "economy": 38.4,
    "health": 19.9,
    "infrastructure": 27.8,
    "climate": 91.9,
-   "environment": 11.2
+   "environment": 30.6
   },
   "coverage": "27/33",
   "standoutStrengths": [
@@ -947,7 +947,7 @@
     "explanation": "Ranks #172 of 174 in Religious Freedom (-2.89 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Yemen is strongest on Weather & Climate (#6 of 183, 91.9/100) and weakest on Safety & Peace (#184 of 183, 9.2/100).",
+  "divergenceStory": "Yemen is strongest on Weather & Climate (#6 of 184, 91.9/100) and weakest on Civil Liberties & Inclusion (#183 of 184, 6.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -1231,7 +1231,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 36.4,
+   "safety": 39.2,
    "governance": 47.6,
    "rights": 27.6,
    "economy": 70.1,
@@ -1281,7 +1281,7 @@
     "explanation": "Ranks #168 of 174 in Press Freedom (21.1 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Vietnam is strongest on Infrastructure & Tech (#59 of 184, 81.1/100) and weakest on Civil Liberties & Inclusion (#149 of 184, 27.6/100).",
+  "divergenceStory": "Vietnam is strongest on Infrastructure & Tech (#50 of 184, 81.1/100) and weakest on Civil Liberties & Inclusion (#152 of 184, 27.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -1548,11 +1548,11 @@
    "safety": 27.2,
    "governance": 3.2,
    "rights": 30.1,
-   "economy": 50.2,
+   "economy": 50.1,
    "health": 55.1,
    "infrastructure": 63.7,
    "climate": 69.5,
-   "environment": 40.7
+   "environment": 45.4
   },
   "coverage": "28/33",
   "standoutStrengths": [
@@ -1595,7 +1595,7 @@
     "explanation": "Ranks #182 of 184 in Regulatory Quality (-1.99 WGI · 2025)."
    }
   ],
-  "divergenceStory": "Venezuela is strongest on Weather & Climate (#64 of 183, 69.5/100) and weakest on Governance & Rule of Law (#179 of 183, 3.2/100).",
+  "divergenceStory": "Venezuela is strongest on Weather & Climate (#64 of 184, 69.5/100) and weakest on Governance & Rule of Law (#179 of 184, 3.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -1881,12 +1881,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 67.3,
+   "safety": 63.8,
    "governance": 47.2,
-   "rights": 70.4,
-   "economy": 69.5,
+   "rights": 67.0,
+   "economy": 65.6,
    "health": 38.3,
-   "infrastructure": 33.0,
+   "infrastructure": 41.5,
    "climate": 59.5,
    "environment": 36.4
   },
@@ -1931,7 +1931,7 @@
     "explanation": "Ranks #164 of 182 in Internet Use (22.4% · 2015)."
    }
   ],
-  "divergenceStory": "Vanuatu is strongest on Safety & Peace (#35 of 184, 67.3/100) and weakest on Infrastructure & Tech (#151 of 184, 33.0/100).",
+  "divergenceStory": "Vanuatu is strongest on Safety & Peace (#44 of 184, 63.8/100) and weakest on Infrastructure & Tech (#141 of 184, 41.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -2226,7 +2226,7 @@
    "safety": 66.6,
    "governance": 35.4,
    "rights": 28.0,
-   "economy": 68.6,
+   "economy": 64.9,
    "health": 67.3,
    "infrastructure": 72.9,
    "climate": 65.1,
@@ -2273,7 +2273,7 @@
     "explanation": "Ranks #141 of 174 in Press Freedom (35.0 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Uzbekistan is strongest on Safety & Peace (#38 of 184, 66.6/100) and weakest on Civil Liberties & Inclusion (#148 of 184, 28.0/100).",
+  "divergenceStory": "Uzbekistan is strongest on Safety & Peace (#36 of 184, 66.6/100) and weakest on Civil Liberties & Inclusion (#151 of 184, 28.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -2572,7 +2572,7 @@
    "health": 80.1,
    "infrastructure": 79.5,
    "climate": 86.2,
-   "environment": 52.9
+   "environment": 52.2
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -2615,7 +2615,7 @@
     "explanation": "Ranks #113 of 149 in Income Equality (40.0 Gini · 2024)."
    }
   ],
-  "divergenceStory": "Uruguay is strongest on Civil Liberties & Inclusion (#19 of 184, 88.0/100) and weakest on Safety & Peace (#82 of 184, 55.9/100).",
+  "divergenceStory": "Uruguay is strongest on Civil Liberties & Inclusion (#19 of 184, 88.0/100) and weakest on Safety & Peace (#80 of 184, 55.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -3165,7 +3165,7 @@
     "explanation": "Ranks #132 of 161 in Peace Index (2.535 / 5 (GPI) · 2026)."
    }
   ],
-  "divergenceStory": "United States is strongest on Infrastructure & Tech (#9 of 184, 94.7/100) and weakest on Safety & Peace (#158 of 184, 28.1/100).",
+  "divergenceStory": "United States is strongest on Infrastructure & Tech (#8 of 184, 94.7/100) and weakest on Safety & Peace (#161 of 184, 28.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -3895,7 +3895,7 @@
     "explanation": "Ranks #116 of 174 in Religious Freedom (+0.70 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "United Kingdom is strongest on Environment & Resilience (#6 of 184, 95.7/100) and weakest on Weather & Climate (#108 of 184, 57.7/100).",
+  "divergenceStory": "United Kingdom is strongest on Environment & Resilience (#5 of 184, 95.7/100) and weakest on Weather & Climate (#108 of 184, 57.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -4248,7 +4248,7 @@
     "explanation": "Ranks #133 of 135 in Working Hours (50.5 h/week · 2025)."
    }
   ],
-  "divergenceStory": "United Arab Emirates is strongest on Infrastructure & Tech (#6 of 184, 97.6/100) and weakest on Civil Liberties & Inclusion (#144 of 184, 29.9/100).",
+  "divergenceStory": "United Arab Emirates is strongest on Infrastructure & Tech (#5 of 184, 97.6/100) and weakest on Civil Liberties & Inclusion (#148 of 184, 29.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -4547,7 +4547,7 @@
    "safety": 33.3,
    "governance": 35.4,
    "rights": 43.3,
-   "economy": 71.4,
+   "economy": 67.1,
    "health": 67.2,
    "infrastructure": 70.5,
    "climate": 50.5,
@@ -4594,7 +4594,7 @@
     "explanation": "Ranks #152 of 174 in Religious Freedom (-0.91 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Ukraine is strongest on Environment & Resilience (#40 of 184, 70.6/100) and weakest on Safety & Peace (#147 of 184, 33.3/100).",
+  "divergenceStory": "Ukraine is strongest on Environment & Resilience (#39 of 184, 70.6/100) and weakest on Safety & Peace (#151 of 184, 33.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -4943,7 +4943,7 @@
     "explanation": "Ranks #179 of 182 in LGBTQ+ Equality (1 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Uganda is strongest on Weather & Climate (#24 of 183, 85.0/100) and weakest on Infrastructure & Tech (#167 of 183, 24.3/100).",
+  "divergenceStory": "Uganda is strongest on Weather & Climate (#24 of 184, 85.0/100) and weakest on Environment & Resilience (#175 of 184, 17.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -5235,7 +5235,7 @@
    "safety": 71.9,
    "governance": 9.3,
    "rights": 14.4,
-   "economy": 59.4,
+   "economy": 55.7,
    "health": 55.4,
    "infrastructure": 41.5,
    "climate": 64.9,
@@ -5282,7 +5282,7 @@
     "explanation": "Ranks #170 of 174 in Religious Freedom (-2.53 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Turkmenistan is strongest on Safety & Peace (#25 of 184, 71.9/100) and weakest on Civil Liberties & Inclusion (#176 of 184, 14.4/100).",
+  "divergenceStory": "Turkmenistan is strongest on Safety & Peace (#22 of 184, 71.9/100) and weakest on Civil Liberties & Inclusion (#176 of 184, 14.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -5581,7 +5581,7 @@
    "health": 71.5,
    "infrastructure": 82.5,
    "climate": 74.7,
-   "environment": 41.6
+   "environment": 43.7
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -5624,7 +5624,7 @@
     "explanation": "Ranks #160 of 174 in Academic Freedom (0.09 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Turkey is strongest on Infrastructure & Tech (#51 of 184, 82.5/100) and weakest on Civil Liberties & Inclusion (#158 of 184, 24.6/100).",
+  "divergenceStory": "Turkey is strongest on Infrastructure & Tech (#44 of 184, 82.5/100) and weakest on Civil Liberties & Inclusion (#159 of 184, 24.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -5977,7 +5977,7 @@
     "explanation": "Ranks #165 of 180 in Unemployment (15.1% · 2025)."
    }
   ],
-  "divergenceStory": "Tunisia is strongest on Weather & Climate (#36 of 183, 82.0/100) and weakest on Infrastructure & Tech (#129 of 183, 51.4/100).",
+  "divergenceStory": "Tunisia is strongest on Weather & Climate (#36 of 184, 82.0/100) and weakest on Infrastructure & Tech (#129 of 184, 51.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -6269,7 +6269,7 @@
    "safety": 50.2,
    "governance": 46.5,
    "rights": 72.0,
-   "economy": 76.0,
+   "economy": 65.6,
    "health": 57.1,
    "infrastructure": 69.9,
    "climate": 51.5,
@@ -6559,12 +6559,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 64.5,
-   "governance": 55.3,
-   "rights": 44.0,
-   "economy": 81.5,
+   "safety": 61.6,
+   "governance": 54.0,
+   "rights": 47.0,
+   "economy": 75.2,
    "health": 68.7,
-   "infrastructure": 81.2,
+   "infrastructure": 65.6,
    "climate": 65.8,
    "environment": 38.9
   },
@@ -6609,7 +6609,7 @@
     "explanation": "Ranks #153 of 182 in LGBTQ+ Equality (9 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Tonga is strongest on Economy, Labour & Living Costs (#36 of 184, 81.5/100) and weakest on Environment & Resilience (#111 of 184, 38.9/100).",
+  "divergenceStory": "Tonga is strongest on Economy, Labour & Living Costs (#41 of 184, 75.2/100) and weakest on Environment & Resilience (#118 of 184, 38.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -6894,10 +6894,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 45.2,
+   "safety": 46.2,
    "governance": 32.0,
    "rights": 39.9,
-   "economy": 54.2,
+   "economy": 53.4,
    "health": 20.7,
    "infrastructure": 28.7,
    "climate": 46.4,
@@ -6944,7 +6944,7 @@
     "explanation": "Ranks #169 of 183 in Healthcare Coverage (42 / 100 · 2023)."
    }
   ],
-  "divergenceStory": "Togo is strongest on Safety & Peace (#114 of 184, 45.2/100) and weakest on Environment & Resilience (#164 of 184, 19.3/100).",
+  "divergenceStory": "Togo is strongest on Safety & Peace (#112 of 184, 46.2/100) and weakest on Environment & Resilience (#174 of 184, 19.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -7214,11 +7214,11 @@
    "safety": 52.4,
    "governance": 36.5,
    "rights": 68.1,
-   "economy": 73.9,
+   "economy": 64.3,
    "health": 32.1,
-   "infrastructure": 53.8,
+   "infrastructure": 52.9,
    "climate": 67.9,
-   "environment": 40.8
+   "environment": 43.1
   },
   "coverage": "29/33",
   "standoutStrengths": [
@@ -7261,7 +7261,7 @@
     "explanation": "Ranks #149 of 179 in GDP per Capita ($4,809 · 2025)."
    }
   ],
-  "divergenceStory": "Timor-Leste is strongest on Civil Liberties & Inclusion (#54 of 184, 68.1/100) and weakest on Health, Education & Family (#141 of 184, 32.1/100).",
+  "divergenceStory": "Timor-Leste is strongest on Civil Liberties & Inclusion (#53 of 184, 68.1/100) and weakest on Health, Education & Family (#141 of 184, 32.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -7550,14 +7550,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 28.6,
+   "safety": 32.9,
    "governance": 47.4,
    "rights": 55.7,
    "economy": 74.3,
    "health": 75.1,
    "infrastructure": 88.9,
    "climate": 42.2,
-   "environment": 38.3
+   "environment": 41.2
   },
   "coverage": "31/33",
   "standoutStrengths": [
@@ -7600,7 +7600,7 @@
     "explanation": "Ranks #160 of 182 in Disaster Risk (21.15 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Thailand is strongest on Infrastructure & Tech (#32 of 184, 88.9/100) and weakest on Weather & Climate (#170 of 184, 42.2/100).",
+  "divergenceStory": "Thailand is strongest on Infrastructure & Tech (#28 of 184, 88.9/100) and weakest on Weather & Climate (#171 of 184, 42.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -7949,7 +7949,7 @@
     "explanation": "Ranks #159 of 183 in Education (0.441 / 1 · 2023)."
    }
   ],
-  "divergenceStory": "Tanzania is strongest on Weather & Climate (#41 of 183, 78.6/100) and weakest on Infrastructure & Tech (#150 of 183, 33.8/100).",
+  "divergenceStory": "Tanzania is strongest on Weather & Climate (#41 of 184, 78.6/100) and weakest on Infrastructure & Tech (#151 of 184, 33.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -8248,7 +8248,7 @@
    "safety": 60.7,
    "governance": 21.7,
    "rights": 22.7,
-   "economy": 47.2,
+   "economy": 47.8,
    "health": 56.2,
    "infrastructure": 51.4,
    "climate": 66.8,
@@ -8295,7 +8295,7 @@
     "explanation": "Ranks #163 of 174 in Academic Freedom (0.08 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Tajikistan is strongest on Safety & Peace (#61 of 184, 60.7/100) and weakest on Civil Liberties & Inclusion (#164 of 184, 22.7/100).",
+  "divergenceStory": "Tajikistan is strongest on Safety & Peace (#57 of 184, 60.7/100) and weakest on Civil Liberties & Inclusion (#165 of 184, 22.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -8578,14 +8578,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 12.0,
+   "safety": 19.6,
    "governance": 66.0,
    "rights": 14.1,
-   "economy": 53.4,
+   "economy": 52.1,
    "health": 42.7,
-   "infrastructure": 40.3,
+   "infrastructure": 42.7,
    "climate": 77.4,
-   "environment": 24.3
+   "environment": 37.1
   },
   "coverage": "27/33",
   "standoutStrengths": [
@@ -8628,7 +8628,7 @@
     "explanation": "Ranks #176 of 183 in Road Deaths (31.7 / 100k · 2023)."
    }
   ],
-  "divergenceStory": "Syria is strongest on Weather & Climate (#44 of 183, 77.4/100) and weakest on Safety & Peace (#182 of 183, 12.0/100).",
+  "divergenceStory": "Syria is strongest on Weather & Climate (#44 of 184, 77.4/100) and weakest on Safety & Peace (#177 of 184, 19.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -8969,7 +8969,7 @@
     "explanation": "Ranks #82 of 180 in Unemployment (4.9% · 2025)."
    }
   ],
-  "divergenceStory": "Switzerland is strongest on Governance & Rule of Law (#2 of 184, 99.8/100) and weakest on Weather & Climate (#117 of 184, 56.2/100).",
+  "divergenceStory": "Switzerland is strongest on Infrastructure & Tech (#1 of 184, 99.1/100) and weakest on Weather & Climate (#117 of 184, 56.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -9322,7 +9322,7 @@
     "explanation": "Ranks #136 of 180 in Unemployment (8.7% · 2025)."
    }
   ],
-  "divergenceStory": "Sweden is strongest on Health, Education & Family (#2 of 184, 97.2/100) and weakest on Weather & Climate (#169 of 184, 42.3/100).",
+  "divergenceStory": "Sweden is strongest on Health, Education & Family (#2 of 184, 97.2/100) and weakest on Weather & Climate (#170 of 184, 42.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -9623,7 +9623,7 @@
    "rights": 32.0,
    "economy": 37.4,
    "health": 38.3,
-   "infrastructure": 60.5,
+   "infrastructure": 57.9,
    "climate": 91.1,
    "environment": 34.3
   },
@@ -9668,7 +9668,7 @@
     "explanation": "Ranks #147 of 149 in Income Equality (54.6 Gini · 2016)."
    }
   ],
-  "divergenceStory": "Eswatini is strongest on Weather & Climate (#9 of 183, 91.1/100) and weakest on Economy, Labour & Living Costs (#169 of 183, 37.4/100).",
+  "divergenceStory": "Eswatini is strongest on Weather & Climate (#9 of 184, 91.1/100) and weakest on Economy, Labour & Living Costs (#173 of 184, 37.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -9943,12 +9943,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 41.6,
+   "safety": 43.3,
    "governance": 40.2,
    "rights": 78.4,
-   "economy": 60.5,
+   "economy": 56.3,
    "health": 52.8,
-   "infrastructure": 89.7,
+   "infrastructure": 79.8,
    "climate": 45.9,
    "environment": 53.2
   },
@@ -9993,7 +9993,7 @@
     "explanation": "Ranks #144 of 184 in Regulatory Quality (-0.80 WGI · 2025)."
    }
   ],
-  "divergenceStory": "Suriname is strongest on Infrastructure & Tech (#28 of 184, 89.7/100) and weakest on Weather & Climate (#157 of 184, 45.9/100).",
+  "divergenceStory": "Suriname is strongest on Civil Liberties & Inclusion (#36 of 184, 78.4/100) and weakest on Weather & Climate (#158 of 184, 45.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -10243,14 +10243,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 24.4,
+   "safety": 29.5,
    "governance": 0.0,
    "rights": 19.2,
-   "economy": 27.1,
+   "economy": 36.3,
    "health": 4.0,
-   "infrastructure": 7.2,
+   "infrastructure": 17.9,
    "climate": 55.1,
-   "environment": 37.4
+   "environment": 46.9
   },
   "coverage": "26/33",
   "standoutStrengths": [
@@ -10293,7 +10293,7 @@
     "explanation": "Ranks #182 of 182 in Internet Use (6.7% · 2019)."
    }
   ],
-  "divergenceStory": "South Sudan is strongest on Environment & Resilience (#115 of 184, 37.4/100) and weakest on Governance & Rule of Law (#184 of 184, 0.0/100).",
+  "divergenceStory": "South Sudan is strongest on Environment & Resilience (#91 of 184, 46.9/100) and weakest on Governance & Rule of Law (#184 of 184, 0.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -10567,14 +10567,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 20.9,
+   "safety": 26.7,
    "governance": 0.8,
    "rights": 11.3,
-   "economy": 20.7,
+   "economy": 26.5,
    "health": 18.0,
    "infrastructure": 30.1,
    "climate": 58.5,
-   "environment": 13.7
+   "environment": 22.8
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -10617,7 +10617,7 @@
     "explanation": "Ranks #134 of 135 in Working Hours (50.7 h/week · 2022)."
    }
   ],
-  "divergenceStory": "Sudan is strongest on Weather & Climate (#106 of 183, 58.5/100) and weakest on Governance & Rule of Law (#182 of 183, 0.8/100).",
+  "divergenceStory": "Sudan is strongest on Weather & Climate (#106 of 184, 58.5/100) and weakest on Economy, Labour & Living Costs (#183 of 184, 26.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -10966,7 +10966,7 @@
     "explanation": "Ranks #106 of 135 in Working Hours (43.0 h/week · 2024)."
    }
   ],
-  "divergenceStory": "Sri Lanka is strongest on Health, Education & Family (#66 of 184, 71.4/100) and weakest on Weather & Climate (#156 of 184, 46.0/100).",
+  "divergenceStory": "Sri Lanka is strongest on Health, Education & Family (#65 of 184, 71.4/100) and weakest on Weather & Climate (#157 of 184, 46.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -11319,7 +11319,7 @@
     "explanation": "Ranks #134 of 182 in Organised Crime (6.05 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Spain is strongest on Infrastructure & Tech (#10 of 184, 94.4/100) and weakest on Safety & Peace (#57 of 184, 61.8/100).",
+  "divergenceStory": "Spain is strongest on Infrastructure & Tech (#9 of 184, 94.4/100) and weakest on Safety & Peace (#52 of 184, 61.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -12025,7 +12025,7 @@
     "explanation": "Ranks #143 of 146 in Homicide Rate (43.7 / 100k · 2022)."
    }
   ],
-  "divergenceStory": "South Africa is strongest on Weather & Climate (#2 of 183, 95.1/100) and weakest on Safety & Peace (#176 of 183, 17.6/100).",
+  "divergenceStory": "South Africa is strongest on Weather & Climate (#2 of 184, 95.1/100) and weakest on Safety & Peace (#179 of 184, 17.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -12293,14 +12293,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 16.4,
+   "safety": 23.2,
    "governance": 0.7,
    "rights": 22.1,
-   "economy": 38.7,
+   "economy": 43.2,
    "health": 0.0,
    "infrastructure": 23.7,
    "climate": 67.1,
-   "environment": 25.1
+   "environment": 37.5
   },
   "coverage": "28/33",
   "standoutStrengths": [
@@ -12343,7 +12343,7 @@
     "explanation": "Ranks #182 of 183 in Education (0.271 / 1 · 2023)."
    }
   ],
-  "divergenceStory": "Somalia is strongest on Weather & Climate (#72 of 183, 67.1/100) and weakest on Health, Education & Family (#184 of 183, 0.0/100).",
+  "divergenceStory": "Somalia is strongest on Weather & Climate (#72 of 184, 67.1/100) and weakest on Health, Education & Family (#184 of 184, 0.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -12586,14 +12586,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 45.2,
+   "safety": 47.1,
    "governance": 38.6,
-   "rights": 63.6,
-   "economy": 54.5,
+   "rights": 61.4,
+   "economy": 51.8,
    "health": 30.3,
-   "infrastructure": 43.3,
+   "infrastructure": 45.0,
    "climate": 49.4,
-   "environment": 43.4
+   "environment": 45.1
   },
   "coverage": "25/33",
   "standoutStrengths": [
@@ -12636,7 +12636,7 @@
     "explanation": "Ranks #160 of 182 in Internet Use (29.0% · 2024)."
    }
   ],
-  "divergenceStory": "Solomon Islands is strongest on Civil Liberties & Inclusion (#66 of 184, 63.6/100) and weakest on Weather & Climate (#147 of 184, 49.4/100).",
+  "divergenceStory": "Solomon Islands is strongest on Civil Liberties & Inclusion (#70 of 184, 61.4/100) and weakest on Weather & Climate (#148 of 184, 49.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -12977,7 +12977,7 @@
     "explanation": "Ranks #113 of 174 in Religious Freedom (+0.80 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Slovakia is strongest on Economy, Labour & Living Costs (#18 of 184, 87.3/100) and weakest on Weather & Climate (#129 of 184, 54.5/100).",
+  "divergenceStory": "Slovakia is strongest on Economy, Labour & Living Costs (#13 of 184, 87.3/100) and weakest on Weather & Climate (#129 of 184, 54.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -13330,7 +13330,7 @@
     "explanation": "Ranks #75 of 182 in Disaster Risk (3.70 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Slovenia is strongest on Economy, Labour & Living Costs (#7 of 184, 91.0/100) and weakest on Weather & Climate (#120 of 184, 55.7/100).",
+  "divergenceStory": "Slovenia is strongest on Economy, Labour & Living Costs (#4 of 184, 91.0/100) and weakest on Weather & Climate (#120 of 184, 55.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -13622,7 +13622,7 @@
    "safety": 95.1,
    "governance": 98.4,
    "rights": 54.3,
-   "economy": 97.1,
+   "economy": 78.3,
    "health": 96.2,
    "infrastructure": 98.5,
    "climate": 37.1,
@@ -13669,7 +13669,7 @@
     "explanation": "Ranks #117 of 174 in Press Freedom (44.6 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Singapore is strongest on Safety & Peace (#1 of 184, 95.1/100) and weakest on Weather & Climate (#177 of 184, 37.1/100).",
+  "divergenceStory": "Singapore is strongest on Safety & Peace (#1 of 184, 95.1/100) and weakest on Weather & Climate (#178 of 184, 37.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -13964,7 +13964,7 @@
    "safety": 48.5,
    "governance": 26.1,
    "rights": 54.6,
-   "economy": 57.4,
+   "economy": 55.9,
    "health": 9.7,
    "infrastructure": 16.4,
    "climate": 44.9,
@@ -14011,7 +14011,7 @@
     "explanation": "Ranks #162 of 167 in Logistics (2.1 / 5 · 2018)."
    }
   ],
-  "divergenceStory": "Sierra Leone is strongest on Civil Liberties & Inclusion (#85 of 184, 54.6/100) and weakest on Environment & Resilience (#182 of 184, 9.2/100).",
+  "divergenceStory": "Sierra Leone is strongest on Civil Liberties & Inclusion (#83 of 184, 54.6/100) and weakest on Environment & Resilience (#183 of 184, 9.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -14286,12 +14286,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 62.9,
+   "safety": 60.3,
    "governance": 70.0,
    "rights": 81.4,
-   "economy": 70.4,
+   "economy": 62.2,
    "health": 74.7,
-   "infrastructure": 83.0,
+   "infrastructure": 74.8,
    "climate": 57.9,
    "environment": 60.0
   },
@@ -14689,7 +14689,7 @@
     "explanation": "Ranks #123 of 180 in Unemployment (7.1% · 2025)."
    }
   ],
-  "divergenceStory": "Serbia is strongest on Health, Education & Family (#55 of 184, 75.0/100) and weakest on Governance & Rule of Law (#93 of 184, 44.1/100).",
+  "divergenceStory": "Serbia is strongest on Economy, Labour & Living Costs (#45 of 184, 72.6/100) and weakest on Governance & Rule of Law (#93 of 184, 44.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -15042,7 +15042,7 @@
     "explanation": "Ranks #127 of 135 in Working Hours (47.3 h/week · 2025)."
    }
   ],
-  "divergenceStory": "Senegal is strongest on Weather & Climate (#69 of 183, 67.6/100) and weakest on Environment & Resilience (#162 of 183, 19.4/100).",
+  "divergenceStory": "Senegal is strongest on Weather & Climate (#69 of 184, 67.6/100) and weakest on Environment & Resilience (#173 of 184, 19.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -15327,11 +15327,11 @@
    "safety": 45.3,
    "governance": 66.2,
    "rights": 14.7,
-   "economy": 86.3,
+   "economy": 71.8,
    "health": 81.8,
    "infrastructure": 84.9,
    "climate": 69.7,
-   "environment": 31.1
+   "environment": 35.8
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -15374,7 +15374,7 @@
     "explanation": "Ranks #167 of 174 in Religious Freedom (-1.72 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Saudi Arabia is strongest on Economy, Labour & Living Costs (#22 of 184, 86.3/100) and weakest on Civil Liberties & Inclusion (#175 of 184, 14.7/100).",
+  "divergenceStory": "Saudi Arabia is strongest on Infrastructure & Tech (#37 of 184, 84.9/100) and weakest on Civil Liberties & Inclusion (#175 of 184, 14.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -15631,12 +15631,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 81.6,
+   "safety": 69.0,
    "governance": 35.2,
-   "rights": 61.8,
-   "economy": 46.3,
+   "rights": 59.8,
+   "economy": 47.8,
    "health": 48.9,
-   "infrastructure": 51.0,
+   "infrastructure": 50.8,
    "climate": 55.2,
    "environment": 31.3
   },
@@ -15681,7 +15681,7 @@
     "explanation": "Ranks #106 of 132 in Safe Water (36.7% · 2024)."
    }
   ],
-  "divergenceStory": "Sao Tome and Principe is strongest on Safety & Peace (#10 of 184, 81.6/100) and weakest on Economy, Labour & Living Costs (#152 of 184, 46.3/100).",
+  "divergenceStory": "Sao Tome and Principe is strongest on Safety & Peace (#27 of 184, 69.0/100) and weakest on Economy, Labour & Living Costs (#151 of 184, 47.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -15928,12 +15928,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 59.0,
-   "governance": 62.0,
-   "rights": 50.2,
-   "economy": 63.3,
+   "safety": 57.2,
+   "governance": 59.0,
+   "rights": 50.1,
+   "economy": 58.0,
    "health": 56.6,
-   "infrastructure": 100.0,
+   "infrastructure": 62.5,
    "climate": 39.6,
    "environment": 53.5
   },
@@ -15978,7 +15978,7 @@
     "explanation": "Ranks #134 of 181 in Climate Resilience (40.1 / 100 · 2024)."
    }
   ],
-  "divergenceStory": "Samoa is strongest on Infrastructure & Tech (#1 of 184, 100.0/100) and weakest on Weather & Climate (#174 of 184, 39.6/100).",
+  "divergenceStory": "Samoa is strongest on Governance & Rule of Law (#62 of 184, 59.0/100) and weakest on Weather & Climate (#175 of 184, 39.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -16193,14 +16193,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 56.0,
+   "safety": 54.8,
    "governance": 63.2,
-   "rights": 22.7,
-   "economy": 41.6,
+   "rights": 45.4,
+   "economy": 46.7,
    "health": 68.0,
-   "infrastructure": 86.4,
+   "infrastructure": 68.2,
    "climate": 53.6,
-   "environment": 62.4
+   "environment": 59.3
   },
   "coverage": "21/33",
   "standoutStrengths": [
@@ -16243,7 +16243,7 @@
     "explanation": "Ranks #170 of 180 in Unemployment (18.0% · 2025)."
    }
   ],
-  "divergenceStory": "St. Vincent and the Grenadines is strongest on Infrastructure & Tech (#38 of 184, 86.4/100) and weakest on Civil Liberties & Inclusion (#165 of 184, 22.7/100).",
+  "divergenceStory": "St. Vincent and the Grenadines is strongest on Governance & Rule of Law (#49 of 184, 63.2/100) and weakest on Economy, Labour & Living Costs (#154 of 184, 46.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -16475,14 +16475,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 50.7,
+   "safety": 50.5,
    "governance": 63.0,
-   "rights": 51.3,
-   "economy": 58.2,
+   "rights": 50.2,
+   "economy": 56.6,
    "health": 55.9,
-   "infrastructure": 80.1,
+   "infrastructure": 72.6,
    "climate": 58.8,
-   "environment": 61.6
+   "environment": 58.7
   },
   "coverage": "24/33",
   "standoutStrengths": [
@@ -16525,7 +16525,7 @@
     "explanation": "Ranks #128 of 149 in Income Equality (43.7 Gini · 2015)."
    }
   ],
-  "divergenceStory": "Saint Lucia is strongest on Environment & Resilience (#50 of 184, 61.6/100) and weakest on Economy, Labour & Living Costs (#113 of 184, 58.2/100).",
+  "divergenceStory": "Saint Lucia is strongest on Governance & Rule of Law (#51 of 184, 63.0/100) and weakest on Economy, Labour & Living Costs (#112 of 184, 56.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -16854,7 +16854,7 @@
    "health": 35.2,
    "infrastructure": 39.1,
    "climate": 87.5,
-   "environment": 19.4
+   "environment": 27.0
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -16897,7 +16897,7 @@
     "explanation": "Ranks #158 of 174 in Academic Freedom (0.10 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Rwanda is strongest on Weather & Climate (#17 of 183, 87.5/100) and weakest on Environment & Resilience (#163 of 183, 19.4/100).",
+  "divergenceStory": "Rwanda is strongest on Weather & Climate (#17 of 184, 87.5/100) and weakest on Environment & Resilience (#153 of 184, 27.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -17198,7 +17198,7 @@
    "rights": 27.0,
    "economy": 78.2,
    "health": 72.9,
-   "infrastructure": 73.4,
+   "infrastructure": 67.5,
    "climate": 40.7,
    "environment": 66.1
   },
@@ -17243,7 +17243,7 @@
     "explanation": "Ranks #175 of 182 in Disaster Risk (30.58 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Russia is strongest on Economy, Labour & Living Costs (#43 of 184, 78.2/100) and weakest on Weather & Climate (#172 of 184, 40.7/100).",
+  "divergenceStory": "Russia is strongest on Economy, Labour & Living Costs (#34 of 184, 78.2/100) and weakest on Safety & Peace (#175 of 184, 21.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -17592,7 +17592,7 @@
     "explanation": "Ranks #103 of 183 in Climate Comfort (59 / 100)."
    }
   ],
-  "divergenceStory": "Romania is strongest on Economy, Labour & Living Costs (#37 of 184, 81.1/100) and weakest on Weather & Climate (#103 of 184, 59.4/100).",
+  "divergenceStory": "Romania is strongest on Economy, Labour & Living Costs (#26 of 184, 81.1/100) and weakest on Weather & Climate (#103 of 184, 59.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -17891,7 +17891,7 @@
    "safety": 76.5,
    "governance": 72.6,
    "rights": 26.1,
-   "economy": 82.4,
+   "economy": 75.9,
    "health": 80.8,
    "infrastructure": 92.2,
    "climate": 61.5,
@@ -17938,7 +17938,7 @@
     "explanation": "Ranks #166 of 174 in Religious Freedom (-1.66 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Qatar is strongest on Safety & Peace (#17 of 184, 76.5/100) and weakest on Civil Liberties & Inclusion (#155 of 184, 26.1/100).",
+  "divergenceStory": "Qatar is strongest on Safety & Peace (#11 of 184, 76.5/100) and weakest on Civil Liberties & Inclusion (#157 of 184, 26.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -18287,7 +18287,7 @@
     "explanation": "Ranks #106 of 174 in Religious Freedom (+0.95 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "Portugal is strongest on Environment & Resilience (#20 of 184, 88.2/100) and weakest on Economy, Labour & Living Costs (#42 of 184, 78.9/100).",
+  "divergenceStory": "Portugal is strongest on Environment & Resilience (#18 of 184, 88.2/100) and weakest on Governance & Rule of Law (#34 of 184, 72.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -18640,7 +18640,7 @@
     "explanation": "Ranks #102 of 182 in Disaster Risk (5.77 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Poland is strongest on Economy, Labour & Living Costs (#26 of 184, 85.2/100) and weakest on Weather & Climate (#146 of 184, 50.4/100).",
+  "divergenceStory": "Poland is strongest on Economy, Labour & Living Costs (#17 of 184, 85.2/100) and weakest on Weather & Climate (#146 of 184, 50.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -18993,7 +18993,7 @@
     "explanation": "Ranks #179 of 183 in Climate Comfort (36 / 100)."
    }
   ],
-  "divergenceStory": "Philippines is strongest on Economy, Labour & Living Costs (#81 of 184, 67.1/100) and weakest on Weather & Climate (#179 of 184, 36.3/100).",
+  "divergenceStory": "Philippines is strongest on Economy, Labour & Living Costs (#66 of 184, 67.1/100) and weakest on Weather & Climate (#180 of 184, 36.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -19346,7 +19346,7 @@
     "explanation": "Ranks #152 of 182 in Organised Crime (6.62 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Peru is strongest on Weather & Climate (#16 of 183, 87.8/100) and weakest on Safety & Peace (#150 of 183, 33.0/100).",
+  "divergenceStory": "Peru is strongest on Weather & Climate (#16 of 184, 87.8/100) and weakest on Safety & Peace (#152 of 184, 33.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -19699,7 +19699,7 @@
     "explanation": "Ranks #132 of 149 in Income Equality (44.2 Gini · 2024)."
    }
   ],
-  "divergenceStory": "Paraguay is strongest on Weather & Climate (#54 of 183, 73.2/100) and weakest on Safety & Peace (#128 of 183, 40.5/100).",
+  "divergenceStory": "Paraguay is strongest on Weather & Climate (#54 of 184, 73.2/100) and weakest on Safety & Peace (#128 of 184, 40.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -19974,14 +19974,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 35.6,
+   "safety": 38.5,
    "governance": 30.0,
    "rights": 53.8,
-   "economy": 41.9,
+   "economy": 45.1,
    "health": 21.5,
    "infrastructure": 29.3,
    "climate": 55.4,
-   "environment": 38.6
+   "environment": 41.5
   },
   "coverage": "29/33",
   "standoutStrengths": [
@@ -20024,7 +20024,7 @@
     "explanation": "Ranks #138 of 144 in Economic Complexity (-2.14 ECI · 2024)."
    }
   ],
-  "divergenceStory": "Papua New Guinea is strongest on Civil Liberties & Inclusion (#91 of 184, 53.8/100) and weakest on Economy, Labour & Living Costs (#159 of 184, 41.9/100).",
+  "divergenceStory": "Papua New Guinea is strongest on Civil Liberties & Inclusion (#89 of 184, 53.8/100) and weakest on Infrastructure & Tech (#158 of 184, 29.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -20319,7 +20319,7 @@
    "health": 70.9,
    "infrastructure": 75.6,
    "climate": 45.4,
-   "environment": 52.3
+   "environment": 51.7
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -20362,7 +20362,7 @@
     "explanation": "Ranks #162 of 182 in Organised Crime (6.93 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Panama is strongest on Civil Liberties & Inclusion (#47 of 184, 70.4/100) and weakest on Weather & Climate (#160 of 184, 45.4/100).",
+  "divergenceStory": "Panama is strongest on Civil Liberties & Inclusion (#46 of 184, 70.4/100) and weakest on Weather & Climate (#161 of 184, 45.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -20741,7 +20741,7 @@
     "explanation": "Ranks #173 of 183 in Education (0.363 / 1 · 2023)."
    }
   ],
-  "divergenceStory": "Pakistan is strongest on Weather & Climate (#80 of 183, 65.3/100) and weakest on Safety & Peace (#161 of 183, 25.9/100).",
+  "divergenceStory": "Pakistan is strongest on Weather & Climate (#80 of 184, 65.3/100) and weakest on Environment & Resilience (#171 of 184, 20.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -21033,7 +21033,7 @@
    "safety": 67.3,
    "governance": 63.7,
    "rights": 31.5,
-   "economy": 71.9,
+   "economy": 63.1,
    "health": 72.1,
    "infrastructure": 82.2,
    "climate": 66.5,
@@ -21080,7 +21080,7 @@
     "explanation": "Ranks #149 of 183 in Clean Air (30.0 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Oman is strongest on Safety & Peace (#36 of 184, 67.3/100) and weakest on Civil Liberties & Inclusion (#138 of 184, 31.5/100).",
+  "divergenceStory": "Oman is strongest on Safety & Peace (#34 of 184, 67.3/100) and weakest on Civil Liberties & Inclusion (#142 of 184, 31.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -21429,7 +21429,7 @@
     "explanation": "Ranks #78 of 180 in Unemployment (4.6% · 2025)."
    }
   ],
-  "divergenceStory": "Norway is strongest on Health, Education & Family (#1 of 184, 98.7/100) and weakest on Weather & Climate (#176 of 184, 39.2/100).",
+  "divergenceStory": "Norway is strongest on Health, Education & Family (#1 of 184, 98.7/100) and weakest on Weather & Climate (#177 of 184, 39.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -21655,14 +21655,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 27.3,
+   "safety": 31.9,
    "governance": 7.0,
-   "rights": 6.6,
-   "economy": 88.0,
-   "health": 60.5,
-   "infrastructure": 51.3,
+   "rights": 13.8,
+   "economy": 57.6,
+   "health": 57.9,
+   "infrastructure": 50.3,
    "climate": 51.1,
-   "environment": 43.1
+   "environment": 44.8
   },
   "coverage": "22/33",
   "standoutStrengths": [
@@ -21705,7 +21705,7 @@
     "explanation": "Ranks #183 of 184 in Regulatory Quality (-1.99 WGI · 2025)."
    }
   ],
-  "divergenceStory": "North Korea is strongest on Economy, Labour & Living Costs (#16 of 184, 88.0/100) and weakest on Civil Liberties & Inclusion (#181 of 184, 6.6/100).",
+  "divergenceStory": "North Korea is strongest on Health, Education & Family (#99 of 184, 57.9/100) and weakest on Civil Liberties & Inclusion (#178 of 184, 13.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -22042,7 +22042,7 @@
     "explanation": "Ranks #182 of 183 in Clean Air (54.3 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Nigeria is strongest on Economy, Labour & Living Costs (#101 of 184, 60.6/100) and weakest on Environment & Resilience (#170 of 184, 15.1/100).",
+  "divergenceStory": "Nigeria is strongest on Economy, Labour & Living Costs (#95 of 184, 60.6/100) and weakest on Environment & Resilience (#177 of 184, 15.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -22324,14 +22324,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 33.1,
+   "safety": 36.5,
    "governance": 25.9,
    "rights": 43.9,
-   "economy": 54.5,
+   "economy": 53.6,
    "health": 2.3,
    "infrastructure": 4.8,
    "climate": 56.5,
-   "environment": 10.3
+   "environment": 20.2
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -22374,7 +22374,7 @@
     "explanation": "Ranks #181 of 183 in Education (0.278 / 1 · 2023)."
    }
   ],
-  "divergenceStory": "Niger is strongest on Civil Liberties & Inclusion (#106 of 184, 43.9/100) and weakest on Infrastructure & Tech (#184 of 184, 4.8/100).",
+  "divergenceStory": "Niger is strongest on Civil Liberties & Inclusion (#109 of 184, 43.9/100) and weakest on Infrastructure & Tech (#184 of 184, 4.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -22651,11 +22651,11 @@
    "safety": 34.0,
    "governance": 14.9,
    "rights": 21.3,
-   "economy": 53.7,
+   "economy": 52.2,
    "health": 61.6,
    "infrastructure": 55.2,
    "climate": 62.7,
-   "environment": 40.6
+   "environment": 42.9
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -22698,7 +22698,7 @@
     "explanation": "Ranks #170 of 174 in Liberal Democracy (0.02 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Nicaragua is strongest on Health, Education & Family (#90 of 184, 61.6/100) and weakest on Civil Liberties & Inclusion (#169 of 184, 21.3/100).",
+  "divergenceStory": "Nicaragua is strongest on Health, Education & Family (#89 of 184, 61.6/100) and weakest on Civil Liberties & Inclusion (#169 of 184, 21.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -22986,7 +22986,7 @@
    "safety": 62.7,
    "governance": 99.0,
    "rights": 94.0,
-   "economy": 80.9,
+   "economy": 68.5,
    "health": 91.0,
    "infrastructure": 88.5,
    "climate": 79.0,
@@ -23033,7 +23033,7 @@
     "explanation": "Ranks #90 of 180 in Unemployment (5.1% · 2025)."
    }
   ],
-  "divergenceStory": "New Zealand is strongest on Governance & Rule of Law (#4 of 184, 99.0/100) and weakest on Safety & Peace (#54 of 184, 62.7/100).",
+  "divergenceStory": "New Zealand is strongest on Governance & Rule of Law (#4 of 184, 99.0/100) and weakest on Economy, Labour & Living Costs (#61 of 184, 68.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -23440,7 +23440,7 @@
     "explanation": "Ranks #91 of 182 in Organised Crime (5.17 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Netherlands is strongest on Economy, Labour & Living Costs (#3 of 184, 93.3/100) and weakest on Weather & Climate (#113 of 184, 57.0/100).",
+  "divergenceStory": "Netherlands is strongest on Economy, Labour & Living Costs (#1 of 184, 93.3/100) and weakest on Weather & Climate (#113 of 184, 57.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -23797,7 +23797,7 @@
    "safety": 40.5,
    "governance": 34.2,
    "rights": 62.6,
-   "economy": 57.1,
+   "economy": 55.7,
    "health": 41.2,
    "infrastructure": 53.1,
    "climate": 71.7,
@@ -23844,7 +23844,7 @@
     "explanation": "Ranks #175 of 183 in Clean Air (46.6 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Nepal is strongest on Weather & Climate (#57 of 183, 71.7/100) and weakest on Environment & Resilience (#171 of 183, 14.9/100).",
+  "divergenceStory": "Nepal is strongest on Weather & Climate (#57 of 184, 71.7/100) and weakest on Environment & Resilience (#178 of 184, 14.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -24169,7 +24169,7 @@
    "health": 36.4,
    "infrastructure": 37.8,
    "climate": 94.2,
-   "environment": 44.6
+   "environment": 46.0
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -24212,7 +24212,7 @@
     "explanation": "Ranks #158 of 163 in Broadband Speed (25 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Namibia is strongest on Weather & Climate (#5 of 183, 94.2/100) and weakest on Economy, Labour & Living Costs (#179 of 183, 28.9/100).",
+  "divergenceStory": "Namibia is strongest on Weather & Climate (#5 of 184, 94.2/100) and weakest on Economy, Labour & Living Costs (#182 of 184, 28.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -24508,7 +24508,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 22.8,
+   "safety": 28.2,
    "governance": 22.2,
    "rights": 44.4,
    "economy": 41.0,
@@ -24558,7 +24558,7 @@
     "explanation": "Ranks #176 of 182 in Disaster Risk (30.92 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Mozambique is strongest on Weather & Climate (#58 of 183, 71.3/100) and weakest on Health, Education & Family (#169 of 183, 15.8/100).",
+  "divergenceStory": "Mozambique is strongest on Weather & Climate (#58 of 184, 71.3/100) and weakest on Health, Education & Family (#169 of 184, 15.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -24846,7 +24846,7 @@
    "safety": 46.6,
    "governance": 46.5,
    "rights": 34.7,
-   "economy": 56.3,
+   "economy": 53.8,
    "health": 54.8,
    "infrastructure": 63.6,
    "climate": 90.2,
@@ -24893,7 +24893,7 @@
     "explanation": "Ranks #149 of 182 in LGBTQ+ Equality (10 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Morocco is strongest on Weather & Climate (#11 of 183, 90.2/100) and weakest on Civil Liberties & Inclusion (#126 of 183, 34.7/100).",
+  "divergenceStory": "Morocco is strongest on Weather & Climate (#11 of 184, 90.2/100) and weakest on Economy, Labour & Living Costs (#129 of 184, 53.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -25214,7 +25214,7 @@
    "safety": 59.8,
    "governance": 56.6,
    "rights": 73.1,
-   "economy": 57.5,
+   "economy": 56.0,
    "health": 79.8,
    "infrastructure": 74.8,
    "climate": 67.9,
@@ -25261,7 +25261,7 @@
     "explanation": "Ranks #100 of 135 in Working Hours (42.9 h/week · 2024)."
    }
   ],
-  "divergenceStory": "Montenegro is strongest on Civil Liberties & Inclusion (#44 of 184, 73.1/100) and weakest on Economy, Labour & Living Costs (#115 of 184, 57.5/100).",
+  "divergenceStory": "Montenegro is strongest on Health, Education & Family (#43 of 184, 79.8/100) and weakest on Economy, Labour & Living Costs (#117 of 184, 56.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -25614,7 +25614,7 @@
     "explanation": "Ranks #126 of 135 in Working Hours (46.9 h/week · 2025)."
    }
   ],
-  "divergenceStory": "Mongolia is strongest on Safety & Peace (#53 of 184, 62.8/100) and weakest on Weather & Climate (#171 of 184, 41.9/100).",
+  "divergenceStory": "Mongolia is strongest on Safety & Peace (#47 of 184, 62.8/100) and weakest on Weather & Climate (#172 of 184, 41.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -25967,7 +25967,7 @@
     "explanation": "Ranks #105 of 173 in Environmental Performance (38.0 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Moldova is strongest on Civil Liberties & Inclusion (#41 of 184, 73.7/100) and weakest on Weather & Climate (#114 of 184, 56.7/100).",
+  "divergenceStory": "Moldova is strongest on Economy, Labour & Living Costs (#36 of 184, 77.7/100) and weakest on Weather & Climate (#114 of 184, 56.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -26346,7 +26346,7 @@
     "explanation": "Ranks #178 of 182 in Disaster Risk (39.18 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Mexico is strongest on Weather & Climate (#7 of 183, 91.3/100) and weakest on Safety & Peace (#178 of 183, 15.7/100).",
+  "divergenceStory": "Mexico is strongest on Weather & Climate (#7 of 184, 91.3/100) and weakest on Safety & Peace (#181 of 184, 15.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -26649,7 +26649,7 @@
    "health": 62.5,
    "infrastructure": 59.3,
    "climate": 75.4,
-   "environment": 58.2
+   "environment": 56.1
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -26692,7 +26692,7 @@
     "explanation": "Ranks #91 of 149 in Income Equality (36.8 Gini · 2017)."
    }
   ],
-  "divergenceStory": "Mauritius is strongest on Governance & Rule of Law (#40 of 184, 68.3/100) and weakest on Infrastructure & Tech (#113 of 184, 59.3/100).",
+  "divergenceStory": "Mauritius is strongest on Governance & Rule of Law (#40 of 184, 68.3/100) and weakest on Infrastructure & Tech (#111 of 184, 59.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -26995,7 +26995,7 @@
    "health": 23.0,
    "infrastructure": 29.4,
    "climate": 70.4,
-   "environment": 6.3
+   "environment": 17.2
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -27038,7 +27038,7 @@
     "explanation": "Ranks #174 of 182 in LGBTQ+ Equality (4 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Mauritania is strongest on Weather & Climate (#61 of 183, 70.4/100) and weakest on Environment & Resilience (#183 of 183, 6.3/100).",
+  "divergenceStory": "Mauritania is strongest on Weather & Climate (#61 of 184, 70.4/100) and weakest on Environment & Resilience (#176 of 184, 17.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -27327,10 +27327,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 81.1,
+   "safety": 74.9,
    "governance": 64.2,
    "rights": 84.2,
-   "economy": 86.0,
+   "economy": 78.8,
    "health": 87.9,
    "infrastructure": 85.0,
    "climate": 83.5,
@@ -27377,7 +27377,7 @@
     "explanation": "Ranks #63 of 174 in Press Freedom (61.4 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Malta is strongest on Safety & Peace (#12 of 184, 81.1/100) and weakest on Governance & Rule of Law (#48 of 184, 64.2/100).",
+  "divergenceStory": "Malta is strongest on Safety & Peace (#15 of 184, 74.9/100) and weakest on Governance & Rule of Law (#47 of 184, 64.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -27666,14 +27666,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 32.5,
+   "safety": 36.0,
    "governance": 20.8,
    "rights": 31.1,
    "economy": 51.9,
    "health": 7.8,
    "infrastructure": 28.2,
    "climate": 51.8,
-   "environment": 10.2
+   "environment": 20.2
   },
   "coverage": "31/33",
   "standoutStrengths": [
@@ -27716,7 +27716,7 @@
     "explanation": "Ranks #170 of 173 in Environmental Performance (23.6 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Mali is strongest on Weather & Climate (#137 of 183, 51.8/100) and weakest on Environment & Resilience (#181 of 183, 10.2/100).",
+  "divergenceStory": "Mali is strongest on Economy, Labour & Living Costs (#136 of 184, 51.9/100) and weakest on Health, Education & Family (#179 of 184, 7.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -27994,14 +27994,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 82.5,
+   "safety": 76.0,
    "governance": 43.4,
    "rights": 35.1,
-   "economy": 64.9,
+   "economy": 61.9,
    "health": 70.7,
    "infrastructure": 60.6,
    "climate": 42.8,
-   "environment": 37.0
+   "environment": 40.2
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -28044,7 +28044,7 @@
     "explanation": "Ranks #167 of 173 in Environmental Performance (25.1 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Maldives is strongest on Safety & Peace (#9 of 184, 82.5/100) and weakest on Weather & Climate (#166 of 184, 42.8/100).",
+  "divergenceStory": "Maldives is strongest on Safety & Peace (#13 of 184, 76.0/100) and weakest on Weather & Climate (#167 of 184, 42.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -28343,7 +28343,7 @@
    "safety": 52.3,
    "governance": 66.8,
    "rights": 39.1,
-   "economy": 73.8,
+   "economy": 69.1,
    "health": 71.3,
    "infrastructure": 89.7,
    "climate": 35.1,
@@ -28390,7 +28390,7 @@
     "explanation": "Ranks #155 of 182 in LGBTQ+ Equality (8 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Malaysia is strongest on Infrastructure & Tech (#29 of 184, 89.7/100) and weakest on Weather & Climate (#181 of 184, 35.1/100).",
+  "divergenceStory": "Malaysia is strongest on Infrastructure & Tech (#26 of 184, 89.7/100) and weakest on Weather & Climate (#182 of 184, 35.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -28675,12 +28675,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 53.4,
+   "safety": 52.7,
    "governance": 37.0,
    "rights": 53.6,
    "economy": 54.4,
    "health": 22.3,
-   "infrastructure": 10.4,
+   "infrastructure": 20.3,
    "climate": 84.3,
    "environment": 24.6
   },
@@ -28725,7 +28725,7 @@
     "explanation": "Ranks #174 of 179 in GDP per Capita ($1,899 · 2025)."
    }
   ],
-  "divergenceStory": "Malawi is strongest on Weather & Climate (#30 of 183, 84.3/100) and weakest on Infrastructure & Tech (#180 of 183, 10.4/100).",
+  "divergenceStory": "Malawi is strongest on Weather & Climate (#30 of 184, 84.3/100) and weakest on Infrastructure & Tech (#174 of 184, 20.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -29013,7 +29013,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 33.2,
+   "safety": 36.6,
    "governance": 24.4,
    "rights": 44.1,
    "economy": 57.4,
@@ -29063,7 +29063,7 @@
     "explanation": "Ranks #172 of 179 in GDP per Capita ($1,952 · 2025)."
    }
   ],
-  "divergenceStory": "Madagascar is strongest on Weather & Climate (#43 of 183, 78.3/100) and weakest on Infrastructure & Tech (#174 of 183, 18.1/100).",
+  "divergenceStory": "Madagascar is strongest on Weather & Climate (#43 of 184, 78.3/100) and weakest on Infrastructure & Tech (#176 of 184, 18.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -29412,7 +29412,7 @@
     "explanation": "Ranks #117 of 183 in Clean Air (22.2 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "North Macedonia is strongest on Safety & Peace (#34 of 184, 67.4/100) and weakest on Economy, Labour & Living Costs (#83 of 184, 65.9/100).",
+  "divergenceStory": "North Macedonia is strongest on Safety & Peace (#33 of 184, 67.4/100) and weakest on Weather & Climate (#83 of 184, 64.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -29701,10 +29701,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 85.5,
+   "safety": 78.4,
    "governance": 98.9,
    "rights": 93.4,
-   "economy": 85.8,
+   "economy": 78.7,
    "health": 92.8,
    "infrastructure": 92.2,
    "climate": 56.0,
@@ -30104,7 +30104,7 @@
     "explanation": "Ranks #118 of 180 in Unemployment (6.7% · 2025)."
    }
   ],
-  "divergenceStory": "Lithuania is strongest on Governance & Rule of Law (#20 of 184, 84.4/100) and weakest on Weather & Climate (#165 of 184, 43.7/100).",
+  "divergenceStory": "Lithuania is strongest on Governance & Rule of Law (#20 of 184, 84.4/100) and weakest on Weather & Climate (#166 of 184, 43.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -30398,14 +30398,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 19.4,
+   "safety": 25.5,
    "governance": 5.0,
    "rights": 23.1,
-   "economy": 30.1,
+   "economy": 38.1,
    "health": 52.9,
    "infrastructure": 37.8,
    "climate": 84.7,
-   "environment": 30.0
+   "environment": 40.0
   },
   "coverage": "28/33",
   "standoutStrengths": [
@@ -30448,7 +30448,7 @@
     "explanation": "Ranks #160 of 163 in Broadband Speed (23 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Libya is strongest on Weather & Climate (#29 of 183, 84.7/100) and weakest on Economy, Labour & Living Costs (#177 of 183, 30.1/100).",
+  "divergenceStory": "Libya is strongest on Weather & Climate (#29 of 184, 84.7/100) and weakest on Governance & Rule of Law (#176 of 184, 5.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -30722,14 +30722,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 47.2,
+   "safety": 47.7,
    "governance": 24.0,
    "rights": 49.2,
-   "economy": 40.1,
+   "economy": 42.1,
    "health": 16.4,
    "infrastructure": 22.2,
    "climate": 36.7,
-   "environment": 14.3
+   "environment": 23.2
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -30772,7 +30772,7 @@
     "explanation": "Ranks #140 of 144 in Economic Complexity (-2.28 ECI · 2024)."
    }
   ],
-  "divergenceStory": "Liberia is strongest on Civil Liberties & Inclusion (#101 of 184, 49.2/100) and weakest on Weather & Climate (#178 of 184, 36.7/100).",
+  "divergenceStory": "Liberia is strongest on Civil Liberties & Inclusion (#101 of 184, 49.2/100) and weakest on Weather & Climate (#179 of 184, 36.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -31046,12 +31046,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 59.1,
+   "safety": 57.3,
    "governance": 36.2,
    "rights": 60.6,
-   "economy": 19.8,
+   "economy": 25.8,
    "health": 22.2,
-   "infrastructure": 34.9,
+   "infrastructure": 38.7,
    "climate": 90.1,
    "environment": 31.2
   },
@@ -31096,7 +31096,7 @@
     "explanation": "Ranks #132 of 135 in Working Hours (49.3 h/week · 2024)."
    }
   ],
-  "divergenceStory": "Lesotho is strongest on Weather & Climate (#13 of 183, 90.1/100) and weakest on Economy, Labour & Living Costs (#183 of 183, 19.8/100).",
+  "divergenceStory": "Lesotho is strongest on Weather & Climate (#13 of 184, 90.1/100) and weakest on Economy, Labour & Living Costs (#184 of 184, 25.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -31441,7 +31441,7 @@
     "explanation": "Ranks #128 of 135 in Working Hours (47.6 h/week · 2019)."
    }
   ],
-  "divergenceStory": "Lebanon is strongest on Weather & Climate (#32 of 183, 83.5/100) and weakest on Governance & Rule of Law (#158 of 183, 21.3/100).",
+  "divergenceStory": "Lebanon is strongest on Weather & Climate (#32 of 184, 83.5/100) and weakest on Governance & Rule of Law (#158 of 184, 21.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -31794,7 +31794,7 @@
     "explanation": "Ranks #116 of 180 in Unemployment (6.6% · 2025)."
    }
   ],
-  "divergenceStory": "Latvia is strongest on Civil Liberties & Inclusion (#22 of 184, 87.3/100) and weakest on Weather & Climate (#167 of 184, 42.8/100).",
+  "divergenceStory": "Latvia is strongest on Civil Liberties & Inclusion (#22 of 184, 87.3/100) and weakest on Weather & Climate (#168 of 184, 42.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -32090,7 +32090,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 51.1,
+   "safety": 50.9,
    "governance": 33.0,
    "rights": 29.6,
    "economy": 61.9,
@@ -32140,7 +32140,7 @@
     "explanation": "Ranks #155 of 174 in Academic Freedom (0.12 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Laos is strongest on Safety & Peace (#93 of 184, 51.1/100) and weakest on Environment & Resilience (#154 of 184, 22.2/100).",
+  "divergenceStory": "Laos is strongest on Economy, Labour & Living Costs (#91 of 184, 61.9/100) and weakest on Environment & Resilience (#165 of 184, 22.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -32489,7 +32489,7 @@
     "explanation": "Ranks #140 of 174 in Press Freedom (35.1 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Kyrgyzstan is strongest on Economy, Labour & Living Costs (#59 of 184, 72.6/100) and weakest on Governance & Rule of Law (#136 of 184, 28.2/100).",
+  "divergenceStory": "Kyrgyzstan is strongest on Economy, Labour & Living Costs (#46 of 184, 72.6/100) and weakest on Governance & Rule of Law (#137 of 184, 28.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -32781,7 +32781,7 @@
    "safety": 70.1,
    "governance": 56.2,
    "rights": 32.0,
-   "economy": 83.5,
+   "economy": 70.1,
    "health": 77.7,
    "infrastructure": 84.7,
    "climate": 60.9,
@@ -32828,7 +32828,7 @@
     "explanation": "Ranks #167 of 182 in LGBTQ+ Equality (5 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Kuwait is strongest on Safety & Peace (#28 of 184, 70.1/100) and weakest on Civil Liberties & Inclusion (#135 of 184, 32.0/100).",
+  "divergenceStory": "Kuwait is strongest on Safety & Peace (#25 of 184, 70.1/100) and weakest on Civil Liberties & Inclusion (#139 of 184, 32.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -33076,12 +33076,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 79.3,
-   "governance": 52.0,
-   "rights": 38.0,
-   "economy": 73.2,
+   "safety": 67.6,
+   "governance": 51.5,
+   "rights": 46.0,
+   "economy": 63.9,
    "health": 26.6,
-   "infrastructure": 92.7,
+   "infrastructure": 71.3,
    "climate": 45.8,
    "environment": 40.1
   },
@@ -33126,7 +33126,7 @@
     "explanation": "Ranks #165 of 183 in Healthy Lifespan (54.5 yrs · 2023)."
    }
   ],
-  "divergenceStory": "Kiribati is strongest on Safety & Peace (#14 of 184, 79.3/100) and weakest on Weather & Climate (#158 of 184, 45.8/100).",
+  "divergenceStory": "Kiribati is strongest on Safety & Peace (#32 of 184, 67.6/100) and weakest on Weather & Climate (#159 of 184, 45.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -33421,7 +33421,7 @@
    "health": 36.4,
    "infrastructure": 37.7,
    "climate": 91.2,
-   "environment": 33.1
+   "environment": 37.3
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -33464,7 +33464,7 @@
     "explanation": "Ranks #172 of 182 in Organised Crime (7.18 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Kenya is strongest on Weather & Climate (#8 of 183, 91.2/100) and weakest on Safety & Peace (#167 of 183, 22.7/100).",
+  "divergenceStory": "Kenya is strongest on Weather & Climate (#8 of 184, 91.2/100) and weakest on Safety & Peace (#172 of 184, 22.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -33763,7 +33763,7 @@
    "safety": 61.0,
    "governance": 45.5,
    "rights": 34.9,
-   "economy": 79.5,
+   "economy": 73.6,
    "health": 74.2,
    "infrastructure": 73.0,
    "climate": 50.6,
@@ -33810,7 +33810,7 @@
     "explanation": "Ranks #144 of 183 in Climate Comfort (51 / 100)."
    }
   ],
-  "divergenceStory": "Kazakhstan is strongest on Economy, Labour & Living Costs (#41 of 184, 79.5/100) and weakest on Weather & Climate (#144 of 184, 50.6/100).",
+  "divergenceStory": "Kazakhstan is strongest on Economy, Labour & Living Costs (#44 of 184, 73.6/100) and weakest on Weather & Climate (#144 of 184, 50.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -34105,7 +34105,7 @@
    "safety": 56.6,
    "governance": 56.5,
    "rights": 34.6,
-   "economy": 38.2,
+   "economy": 40.6,
    "health": 69.0,
    "infrastructure": 77.2,
    "climate": 84.8,
@@ -34152,7 +34152,7 @@
     "explanation": "Ranks #168 of 180 in Unemployment (16.5% · 2025)."
    }
   ],
-  "divergenceStory": "Jordan is strongest on Weather & Climate (#27 of 183, 84.8/100) and weakest on Economy, Labour & Living Costs (#167 of 183, 38.2/100).",
+  "divergenceStory": "Jordan is strongest on Weather & Climate (#27 of 184, 84.8/100) and weakest on Economy, Labour & Living Costs (#167 of 184, 40.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -34451,7 +34451,7 @@
    "safety": 73.8,
    "governance": 92.1,
    "rights": 79.9,
-   "economy": 88.0,
+   "economy": 80.4,
    "health": 95.6,
    "infrastructure": 91.3,
    "climate": 61.3,
@@ -34797,7 +34797,7 @@
    "health": 57.7,
    "infrastructure": 67.3,
    "climate": 70.2,
-   "environment": 52.6
+   "environment": 51.9
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -34840,7 +34840,7 @@
     "explanation": "Ranks #147 of 183 in Road Deaths (19.6 / 100k · 2023)."
    }
   ],
-  "divergenceStory": "Jamaica is strongest on Civil Liberties & Inclusion (#43 of 184, 73.3/100) and weakest on Safety & Peace (#138 of 184, 36.0/100).",
+  "divergenceStory": "Jamaica is strongest on Civil Liberties & Inclusion (#43 of 184, 73.3/100) and weakest on Safety & Peace (#145 of 184, 36.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -35193,7 +35193,7 @@
     "explanation": "Ranks #132 of 182 in Disaster Risk (10.98 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Italy is strongest on Health, Education & Family (#17 of 184, 91.8/100) and weakest on Safety & Peace (#73 of 184, 57.6/100).",
+  "divergenceStory": "Italy is strongest on Health, Education & Family (#17 of 184, 91.8/100) and weakest on Safety & Peace (#69 of 184, 57.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -35793,14 +35793,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 58.1,
-   "governance": 26.7,
-   "rights": 26.4,
-   "economy": 34.9,
+   "safety": 54.8,
+   "governance": 32.5,
+   "rights": 30.3,
+   "economy": 37.9,
    "health": 38.0,
-   "infrastructure": 89.7,
+   "infrastructure": 79.8,
    "climate": 88.9,
-   "environment": 59.2
+   "environment": 54.6
   },
   "coverage": "25/33",
   "standoutStrengths": [
@@ -35843,7 +35843,7 @@
     "explanation": "Ranks #161 of 175 in Women's Status (0.469 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Palestine is strongest on Weather & Climate (#14 of 183, 88.9/100) and weakest on Economy, Labour & Living Costs (#172 of 183, 34.9/100).",
+  "divergenceStory": "Palestine is strongest on Weather & Climate (#14 of 184, 88.9/100) and weakest on Economy, Labour & Living Costs (#172 of 184, 37.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -36196,7 +36196,7 @@
     "explanation": "Ranks #77 of 180 in Unemployment (4.6% · 2025)."
    }
   ],
-  "divergenceStory": "Ireland is strongest on Civil Liberties & Inclusion (#5 of 184, 95.1/100) and weakest on Weather & Climate (#121 of 184, 55.5/100).",
+  "divergenceStory": "Ireland is strongest on Economy, Labour & Living Costs (#2 of 184, 92.5/100) and weakest on Weather & Climate (#121 of 184, 55.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -36492,7 +36492,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 22.4,
+   "safety": 27.9,
    "governance": 20.2,
    "rights": 31.8,
    "economy": 58.1,
@@ -36542,7 +36542,7 @@
     "explanation": "Ranks #171 of 182 in Organised Crime (7.17 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Iraq is strongest on Weather & Climate (#75 of 183, 66.6/100) and weakest on Safety & Peace (#168 of 183, 22.4/100).",
+  "divergenceStory": "Iraq is strongest on Weather & Climate (#75 of 184, 66.6/100) and weakest on Environment & Resilience (#166 of 184, 21.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -36827,12 +36827,12 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 18.3,
+   "safety": 24.7,
    "governance": 16.9,
    "rights": 12.2,
    "economy": 53.9,
    "health": 71.0,
-   "infrastructure": 64.9,
+   "infrastructure": 61.2,
    "climate": 71.9,
    "environment": 47.7
   },
@@ -36877,7 +36877,7 @@
     "explanation": "Ranks #168 of 174 in Academic Freedom (0.06 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Iran is strongest on Weather & Climate (#56 of 183, 71.9/100) and weakest on Civil Liberties & Inclusion (#178 of 183, 12.2/100).",
+  "divergenceStory": "Iran is strongest on Weather & Climate (#56 of 184, 71.9/100) and weakest on Civil Liberties & Inclusion (#179 of 184, 12.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -37222,7 +37222,7 @@
     "explanation": "Ranks #164 of 173 in Environmental Performance (26.2 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Indonesia is strongest on Economy, Labour & Living Costs (#62 of 184, 71.8/100) and weakest on Weather & Climate (#159 of 184, 45.8/100).",
+  "divergenceStory": "Indonesia is strongest on Economy, Labour & Living Costs (#52 of 184, 71.8/100) and weakest on Weather & Climate (#160 of 184, 45.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -37575,7 +37575,7 @@
     "explanation": "Ranks #172 of 173 in Environmental Performance (22.5 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "India is strongest on Economy, Labour & Living Costs (#76 of 184, 68.5/100) and weakest on Safety & Peace (#155 of 184, 30.6/100).",
+  "divergenceStory": "India is strongest on Economy, Labour & Living Costs (#62 of 184, 68.5/100) and weakest on Safety & Peace (#157 of 184, 30.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -37874,7 +37874,7 @@
    "safety": 86.6,
    "governance": 91.0,
    "rights": 92.0,
-   "economy": 93.7,
+   "economy": 84.9,
    "health": 97.1,
    "infrastructure": 93.0,
    "climate": 31.1,
@@ -37921,7 +37921,7 @@
     "explanation": "Ranks #55 of 146 in Homicide Rate (1.3 / 100k · 2023)."
    }
   ],
-  "divergenceStory": "Iceland is strongest on Economy, Labour & Living Costs (#2 of 184, 93.7/100) and weakest on Weather & Climate (#182 of 184, 31.1/100).",
+  "divergenceStory": "Iceland is strongest on Safety & Peace (#2 of 184, 86.6/100) and weakest on Weather & Climate (#183 of 184, 31.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -38274,7 +38274,7 @@
     "explanation": "Ranks #100 of 183 in Climate Comfort (60 / 100)."
    }
   ],
-  "divergenceStory": "Hungary is strongest on Safety & Peace (#16 of 184, 78.3/100) and weakest on Weather & Climate (#100 of 184, 60.2/100).",
+  "divergenceStory": "Hungary is strongest on Safety & Peace (#10 of 184, 78.3/100) and weakest on Weather & Climate (#100 of 184, 60.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -38627,7 +38627,7 @@
     "explanation": "Ranks #172 of 182 in Disaster Risk (27.68 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Honduras is strongest on Weather & Climate (#50 of 183, 74.8/100) and weakest on Safety & Peace (#171 of 183, 21.1/100).",
+  "divergenceStory": "Honduras is strongest on Weather & Climate (#50 of 184, 74.8/100) and weakest on Safety & Peace (#176 of 184, 21.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -38912,11 +38912,11 @@
    "safety": 12.3,
    "governance": 4.8,
    "rights": 41.9,
-   "economy": 32.2,
+   "economy": 39.3,
    "health": 18.2,
    "infrastructure": 28.5,
    "climate": 62.1,
-   "environment": 19.0
+   "environment": 26.7
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -38959,7 +38959,7 @@
     "explanation": "Ranks #182 of 183 in Road Deaths (41.8 / 100k · 2023)."
    }
   ],
-  "divergenceStory": "Haiti is strongest on Weather & Climate (#91 of 183, 62.1/100) and weakest on Safety & Peace (#181 of 183, 12.3/100).",
+  "divergenceStory": "Haiti is strongest on Weather & Climate (#91 of 184, 62.1/100) and weakest on Safety & Peace (#183 of 184, 12.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -39247,7 +39247,7 @@
    "safety": 37.3,
    "governance": 44.1,
    "rights": 58.2,
-   "economy": 58.4,
+   "economy": 55.0,
    "health": 40.3,
    "infrastructure": 65.2,
    "climate": 46.5,
@@ -39294,7 +39294,7 @@
     "explanation": "Ranks #131 of 146 in Homicide Rate (19.1 / 100k · 2023)."
    }
   ],
-  "divergenceStory": "Guyana is strongest on Civil Liberties & Inclusion (#77 of 184, 58.2/100) and weakest on Weather & Climate (#154 of 184, 46.5/100).",
+  "divergenceStory": "Guyana is strongest on Civil Liberties & Inclusion (#76 of 184, 58.2/100) and weakest on Weather & Climate (#155 of 184, 46.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -39586,9 +39586,9 @@
    "safety": 51.2,
    "governance": 13.9,
    "rights": 43.0,
-   "economy": 56.1,
+   "economy": 54.9,
    "health": 10.2,
-   "infrastructure": 24.5,
+   "infrastructure": 30.9,
    "climate": 51.5,
    "environment": 12.0
   },
@@ -39633,7 +39633,7 @@
     "explanation": "Ranks #172 of 181 in Climate Resilience (32.7 / 100 · 2024)."
    }
   ],
-  "divergenceStory": "Guinea-Bissau is strongest on Safety & Peace (#92 of 184, 51.2/100) and weakest on Health, Education & Family (#176 of 184, 10.2/100).",
+  "divergenceStory": "Guinea-Bissau is strongest on Safety & Peace (#92 of 184, 51.2/100) and weakest on Environment & Resilience (#180 of 184, 12.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -39911,14 +39911,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 40.7,
+   "safety": 42.6,
    "governance": 21.9,
    "rights": 32.5,
-   "economy": 51.1,
+   "economy": 50.9,
    "health": 8.1,
    "infrastructure": 25.5,
    "climate": 42.7,
-   "environment": 20.6
+   "environment": 27.9
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -39961,7 +39961,7 @@
     "explanation": "Ranks #135 of 144 in Economic Complexity (-1.79 ECI · 2024)."
    }
   ],
-  "divergenceStory": "Guinea is strongest on Safety & Peace (#126 of 184, 40.7/100) and weakest on Health, Education & Family (#178 of 184, 8.1/100).",
+  "divergenceStory": "Guinea is strongest on Safety & Peace (#124 of 184, 42.6/100) and weakest on Health, Education & Family (#178 of 184, 8.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -40306,7 +40306,7 @@
     "explanation": "Ranks #135 of 149 in Income Equality (45.2 Gini · 2023)."
    }
   ],
-  "divergenceStory": "Guatemala is strongest on Weather & Climate (#22 of 183, 85.3/100) and weakest on Safety & Peace (#157 of 183, 28.3/100).",
+  "divergenceStory": "Guatemala is strongest on Weather & Climate (#22 of 184, 85.3/100) and weakest on Safety & Peace (#159 of 184, 28.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -40546,13 +40546,13 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 64.0,
+   "safety": 61.2,
    "governance": 58.1,
-   "rights": 50.5,
-   "economy": 48.9,
+   "rights": 50.1,
+   "economy": 49.4,
    "health": 63.5,
-   "infrastructure": 60.4,
-   "climate": null,
+   "infrastructure": 57.8,
+   "climate": 50.0,
    "environment": 64.4
   },
   "coverage": "24/33",
@@ -40596,7 +40596,7 @@
     "explanation": "Ranks #130 of 149 in Income Equality (43.8 Gini · 2018)."
    }
   ],
-  "divergenceStory": "Grenada is strongest on Environment & Resilience (#45 of 184, 64.4/100) and weakest on Economy, Labour & Living Costs (#147 of 184, 48.9/100).",
+  "divergenceStory": "Grenada is strongest on Environment & Resilience (#44 of 184, 64.4/100) and weakest on Weather & Climate (#147 of 184, 50.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -40945,7 +40945,7 @@
     "explanation": "Ranks #127 of 182 in Disaster Risk (10.10 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Greece is strongest on Environment & Resilience (#27 of 184, 80.6/100) and weakest on Safety & Peace (#75 of 184, 57.3/100).",
+  "divergenceStory": "Greece is strongest on Environment & Resilience (#25 of 184, 80.6/100) and weakest on Safety & Peace (#71 of 184, 57.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -41298,7 +41298,7 @@
     "explanation": "Ranks #168 of 183 in Clean Air (41.5 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Ghana is strongest on Civil Liberties & Inclusion (#67 of 184, 62.8/100) and weakest on Environment & Resilience (#151 of 184, 23.4/100).",
+  "divergenceStory": "Ghana is strongest on Civil Liberties & Inclusion (#66 of 184, 62.8/100) and weakest on Environment & Resilience (#159 of 184, 23.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -41651,7 +41651,7 @@
     "explanation": "Ranks #101 of 182 in Organised Crime (5.35 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Germany is strongest on Environment & Resilience (#8 of 184, 94.5/100) and weakest on Weather & Climate (#128 of 184, 54.9/100).",
+  "divergenceStory": "Germany is strongest on Environment & Resilience (#7 of 184, 94.5/100) and weakest on Weather & Climate (#128 of 184, 54.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -42004,7 +42004,7 @@
     "explanation": "Ranks #139 of 163 in Broadband Speed (52 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Georgia is strongest on Governance & Rule of Law (#61 of 184, 59.5/100) and weakest on Infrastructure & Tech (#112 of 184, 60.2/100).",
+  "divergenceStory": "Georgia is strongest on Governance & Rule of Law (#60 of 184, 59.5/100) and weakest on Infrastructure & Tech (#110 of 184, 60.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -42293,10 +42293,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 53.0,
+   "safety": 52.4,
    "governance": 36.9,
    "rights": 55.6,
-   "economy": 46.8,
+   "economy": 47.5,
    "health": 24.1,
    "infrastructure": 28.4,
    "climate": 57.3,
@@ -42343,7 +42343,7 @@
     "explanation": "Ranks #178 of 182 in LGBTQ+ Equality (2 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Gambia is strongest on Civil Liberties & Inclusion (#83 of 184, 55.6/100) and weakest on Infrastructure & Tech (#160 of 184, 28.4/100).",
+  "divergenceStory": "Gambia is strongest on Civil Liberties & Inclusion (#81 of 184, 55.6/100) and weakest on Environment & Resilience (#167 of 184, 20.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -42628,14 +42628,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 51.6,
+   "safety": 51.3,
    "governance": 28.2,
    "rights": 50.6,
    "economy": 33.5,
    "health": 34.3,
    "infrastructure": 50.2,
    "climate": 40.1,
-   "environment": 41.5
+   "environment": 43.6
   },
   "coverage": "31/33",
   "standoutStrengths": [
@@ -42678,7 +42678,7 @@
     "explanation": "Ranks #173 of 183 in Climate Comfort (40 / 100)."
    }
   ],
-  "divergenceStory": "Gabon is strongest on Safety & Peace (#91 of 184, 51.6/100) and weakest on Economy, Labour & Living Costs (#173 of 184, 33.5/100).",
+  "divergenceStory": "Gabon is strongest on Safety & Peace (#91 of 184, 51.3/100) and weakest on Economy, Labour & Living Costs (#177 of 184, 33.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -43027,7 +43027,7 @@
     "explanation": "Ranks #126 of 182 in Organised Crime (5.92 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "France is strongest on Environment & Resilience (#10 of 184, 92.6/100) and weakest on Safety & Peace (#83 of 184, 55.9/100).",
+  "divergenceStory": "France is strongest on Environment & Resilience (#9 of 184, 92.6/100) and weakest on Safety & Peace (#81 of 184, 55.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -43583,7 +43583,7 @@
     "explanation": "Ranks #144 of 180 in Unemployment (9.5% · 2025)."
    }
   ],
-  "divergenceStory": "Finland is strongest on Environment & Resilience (#2 of 184, 99.9/100) and weakest on Weather & Climate (#180 of 184, 35.6/100).",
+  "divergenceStory": "Finland is strongest on Environment & Resilience (#1 of 184, 99.9/100) and weakest on Weather & Climate (#181 of 184, 35.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -43872,10 +43872,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 61.8,
+   "safety": 59.5,
    "governance": 60.5,
    "rights": 65.5,
-   "economy": 74.6,
+   "economy": 69.7,
    "health": 49.6,
    "infrastructure": 58.3,
    "climate": 53.8,
@@ -43922,7 +43922,7 @@
     "explanation": "Ranks #132 of 183 in Healthy Lifespan (59.3 yrs · 2023)."
    }
   ],
-  "divergenceStory": "Fiji is strongest on Economy, Labour & Living Costs (#53 of 184, 74.6/100) and weakest on Weather & Climate (#131 of 184, 53.8/100).",
+  "divergenceStory": "Fiji is strongest on Governance & Rule of Law (#58 of 184, 60.5/100) and weakest on Weather & Climate (#131 of 184, 53.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -44218,7 +44218,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 35.0,
+   "safety": 38.0,
    "governance": 31.7,
    "rights": 22.7,
    "economy": 63.8,
@@ -44268,7 +44268,7 @@
     "explanation": "Ranks #179 of 183 in Healthcare Coverage (33 / 100 · 2023)."
    }
   ],
-  "divergenceStory": "Ethiopia is strongest on Weather & Climate (#4 of 183, 94.8/100) and weakest on Infrastructure & Tech (#176 of 183, 17.4/100).",
+  "divergenceStory": "Ethiopia is strongest on Weather & Climate (#4 of 184, 94.8/100) and weakest on Infrastructure & Tech (#180 of 184, 17.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -44617,7 +44617,7 @@
     "explanation": "Ranks #131 of 180 in Unemployment (8.3% · 2025)."
    }
   ],
-  "divergenceStory": "Estonia is strongest on Environment & Resilience (#5 of 184, 95.8/100) and weakest on Weather & Climate (#175 of 184, 39.6/100).",
+  "divergenceStory": "Estonia is strongest on Environment & Resilience (#4 of 184, 95.8/100) and weakest on Weather & Climate (#176 of 184, 39.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -44857,14 +44857,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 49.0,
+   "safety": 49.2,
    "governance": 3.0,
-   "rights": 3.1,
-   "economy": 76.7,
+   "rights": 10.9,
+   "economy": 55.3,
    "health": 16.4,
-   "infrastructure": 14.9,
+   "infrastructure": 23.7,
    "climate": 97.4,
-   "environment": 16.7
+   "environment": 33.4
   },
   "coverage": "24/33",
   "standoutStrengths": [
@@ -44907,7 +44907,7 @@
     "explanation": "Ranks #174 of 174 in Press Freedom (10.2 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Eritrea is strongest on Weather & Climate (#1 of 183, 97.4/100) and weakest on Civil Liberties & Inclusion (#183 of 183, 3.1/100).",
+  "divergenceStory": "Eritrea is strongest on Weather & Climate (#1 of 184, 97.4/100) and weakest on Civil Liberties & Inclusion (#182 of 184, 10.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -45166,14 +45166,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 65.0,
+   "safety": 62.0,
    "governance": 9.9,
-   "rights": 31.4,
+   "rights": 34.5,
    "economy": 41.1,
    "health": 24.2,
-   "infrastructure": 42.0,
+   "infrastructure": 44.0,
    "climate": 45.4,
-   "environment": 26.3
+   "environment": 32.2
   },
   "coverage": "29/33",
   "standoutStrengths": [
@@ -45216,7 +45216,7 @@
     "explanation": "Ranks #169 of 179 in Anti-Corruption (15 / 100 · 2025)."
    }
   ],
-  "divergenceStory": "Equatorial Guinea is strongest on Safety & Peace (#42 of 184, 65.0/100) and weakest on Governance & Rule of Law (#171 of 184, 9.9/100).",
+  "divergenceStory": "Equatorial Guinea is strongest on Safety & Peace (#51 of 184, 62.0/100) and weakest on Governance & Rule of Law (#171 of 184, 9.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -45511,7 +45511,7 @@
    "health": 59.0,
    "infrastructure": 64.9,
    "climate": 70.6,
-   "environment": 26.8
+   "environment": 32.6
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -45554,7 +45554,7 @@
     "explanation": "Ranks #149 of 174 in Academic Freedom (0.17 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "El Salvador is strongest on Weather & Climate (#59 of 183, 70.6/100) and weakest on Safety & Peace (#151 of 183, 32.8/100).",
+  "divergenceStory": "El Salvador is strongest on Weather & Climate (#59 of 184, 70.6/100) and weakest on Safety & Peace (#154 of 184, 32.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -45907,7 +45907,7 @@
     "explanation": "Ranks #164 of 174 in Academic Freedom (0.07 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Egypt is strongest on Weather & Climate (#23 of 183, 85.1/100) and weakest on Civil Liberties & Inclusion (#174 of 183, 16.1/100).",
+  "divergenceStory": "Egypt is strongest on Weather & Climate (#23 of 184, 85.1/100) and weakest on Civil Liberties & Inclusion (#174 of 184, 16.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -46260,7 +46260,7 @@
     "explanation": "Ranks #178 of 182 in Organised Crime (7.48 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Ecuador is strongest on Weather & Climate (#37 of 183, 81.8/100) and weakest on Safety & Peace (#180 of 183, 14.0/100).",
+  "divergenceStory": "Ecuador is strongest on Weather & Climate (#37 of 184, 81.8/100) and weakest on Safety & Peace (#182 of 184, 14.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -46613,7 +46613,7 @@
     "explanation": "Ranks #159 of 183 in Clean Air (33.3 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Dominican Rep. is strongest on Civil Liberties & Inclusion (#58 of 184, 67.4/100) and weakest on Safety & Peace (#146 of 184, 33.5/100).",
+  "divergenceStory": "Dominican Rep. is strongest on Civil Liberties & Inclusion (#57 of 184, 67.4/100) and weakest on Safety & Peace (#150 of 184, 33.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -46921,14 +46921,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 44.3,
+   "safety": 45.4,
    "governance": 28.1,
    "rights": 27.1,
-   "economy": 29.4,
+   "economy": 33.5,
    "health": 17.6,
    "infrastructure": 43.7,
    "climate": 52.4,
-   "environment": 17.1
+   "environment": 25.3
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -46971,7 +46971,7 @@
     "explanation": "Ranks #180 of 183 in Education (0.304 / 1 · 2023)."
    }
   ],
-  "divergenceStory": "Djibouti is strongest on Safety & Peace (#119 of 184, 44.3/100) and weakest on Economy, Labour & Living Costs (#178 of 184, 29.4/100).",
+  "divergenceStory": "Djibouti is strongest on Safety & Peace (#116 of 184, 45.4/100) and weakest on Economy, Labour & Living Costs (#178 of 184, 33.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -47349,7 +47349,7 @@
     "explanation": "Ranks #102 of 180 in Unemployment (5.5% · 2025)."
    }
   ],
-  "divergenceStory": "Denmark is strongest on Governance & Rule of Law (#1 of 184, 100.0/100) and weakest on Weather & Climate (#149 of 184, 49.3/100).",
+  "divergenceStory": "Denmark is strongest on Governance & Rule of Law (#1 of 184, 100.0/100) and weakest on Weather & Climate (#150 of 184, 49.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -47702,7 +47702,7 @@
     "explanation": "Ranks #69 of 163 in Broadband Speed (186 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Czechia is strongest on Economy, Labour & Living Costs (#8 of 184, 90.5/100) and weakest on Weather & Climate (#134 of 184, 52.5/100).",
+  "divergenceStory": "Czechia is strongest on Economy, Labour & Living Costs (#5 of 184, 90.5/100) and weakest on Weather & Climate (#134 of 184, 52.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -48081,7 +48081,7 @@
     "explanation": "Ranks #84 of 180 in Unemployment (4.9% · 2025)."
    }
   ],
-  "divergenceStory": "Cyprus is strongest on Safety & Peace (#27 of 184, 70.7/100) and weakest on Infrastructure & Tech (#55 of 184, 81.7/100).",
+  "divergenceStory": "Cyprus is strongest on Safety & Peace (#24 of 184, 70.7/100) and weakest on Infrastructure & Tech (#48 of 184, 81.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -48337,12 +48337,12 @@
   "dimensions": {
    "safety": 62.3,
    "governance": 26.7,
-   "rights": 29.7,
-   "economy": 65.8,
+   "rights": 33.1,
+   "economy": 56.3,
    "health": 75.6,
-   "infrastructure": 57.5,
+   "infrastructure": 55.6,
    "climate": 63.2,
-   "environment": 49.9
+   "environment": 50.0
   },
   "coverage": "26/33",
   "standoutStrengths": [
@@ -48385,7 +48385,7 @@
     "explanation": "Ranks #156 of 167 in Logistics (2.2 / 5 · 2022)."
    }
   ],
-  "divergenceStory": "Cuba is strongest on Health, Education & Family (#53 of 184, 75.6/100) and weakest on Civil Liberties & Inclusion (#145 of 184, 29.7/100).",
+  "divergenceStory": "Cuba is strongest on Safety & Peace (#50 of 184, 62.3/100) and weakest on Governance & Rule of Law (#141 of 184, 26.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -48726,7 +48726,7 @@
     "explanation": "Ranks #92 of 182 in Disaster Risk (4.84 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Croatia is strongest on Economy, Labour & Living Costs (#32 of 184, 82.5/100) and weakest on Weather & Climate (#79 of 184, 65.4/100).",
+  "divergenceStory": "Croatia is strongest on Economy, Labour & Living Costs (#23 of 184, 82.5/100) and weakest on Weather & Climate (#79 of 184, 65.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -49022,7 +49022,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 45.1,
+   "safety": 46.1,
    "governance": 42.9,
    "rights": 49.6,
    "economy": 56.5,
@@ -49421,7 +49421,7 @@
     "explanation": "Ranks #130 of 146 in Homicide Rate (17.7 / 100k · 2023)."
    }
   ],
-  "divergenceStory": "Costa Rica is strongest on Civil Liberties & Inclusion (#17 of 184, 88.4/100) and weakest on Safety & Peace (#142 of 184, 35.2/100).",
+  "divergenceStory": "Costa Rica is strongest on Civil Liberties & Inclusion (#17 of 184, 88.4/100) and weakest on Safety & Peace (#147 of 184, 35.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -49717,7 +49717,7 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 14.5,
+   "safety": 21.6,
    "governance": 8.8,
    "rights": 29.4,
    "economy": 43.6,
@@ -49767,7 +49767,7 @@
     "explanation": "Ranks #159 of 161 in Peace Index (3.189 / 5 (GPI) · 2026)."
    }
   ],
-  "divergenceStory": "Dem. Rep. Congo is strongest on Weather & Climate (#87 of 183, 63.7/100) and weakest on Safety & Peace (#179 of 183, 14.5/100).",
+  "divergenceStory": "Dem. Rep. Congo is strongest on Weather & Climate (#87 of 184, 63.7/100) and weakest on Environment & Resilience (#182 of 184, 10.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -50045,10 +50045,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 57.5,
+   "safety": 56.0,
    "governance": 17.0,
    "rights": 39.5,
-   "economy": 15.4,
+   "economy": 29.3,
    "health": 27.6,
    "infrastructure": 27.1,
    "climate": 52.9,
@@ -50095,7 +50095,7 @@
     "explanation": "Ranks #174 of 180 in Unemployment (19.9% · 2025)."
    }
   ],
-  "divergenceStory": "Congo is strongest on Safety & Peace (#74 of 184, 57.5/100) and weakest on Economy, Labour & Living Costs (#184 of 184, 15.4/100).",
+  "divergenceStory": "Congo is strongest on Safety & Peace (#79 of 184, 56.0/100) and weakest on Economy, Labour & Living Costs (#181 of 184, 29.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -50355,14 +50355,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 46.7,
+   "safety": 48.0,
    "governance": 18.5,
    "rights": 33.0,
-   "economy": 67.7,
+   "economy": 64.2,
    "health": 34.9,
-   "infrastructure": 45.1,
+   "infrastructure": 46.3,
    "climate": 78.6,
-   "environment": 36.8
+   "environment": 40.1
   },
   "coverage": "28/33",
   "standoutStrengths": [
@@ -50405,7 +50405,7 @@
     "explanation": "Ranks #160 of 179 in Anti-Corruption (20 / 100 · 2025)."
    }
   ],
-  "divergenceStory": "Comoros is strongest on Weather & Climate (#42 of 183, 78.6/100) and weakest on Governance & Rule of Law (#162 of 183, 18.5/100).",
+  "divergenceStory": "Comoros is strongest on Weather & Climate (#42 of 184, 78.6/100) and weakest on Governance & Rule of Law (#162 of 184, 18.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -50750,7 +50750,7 @@
     "explanation": "Ranks #179 of 182 in Disaster Risk (39.80 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Colombia is strongest on Weather & Climate (#38 of 183, 81.7/100) and weakest on Safety & Peace (#183 of 183, 12.0/100).",
+  "divergenceStory": "Colombia is strongest on Weather & Climate (#38 of 184, 81.7/100) and weakest on Safety & Peace (#184 of 184, 12.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -51042,11 +51042,11 @@
    "safety": 38.2,
    "governance": 49.7,
    "rights": 16.2,
-   "economy": 77.4,
+   "economy": 71.9,
    "health": 78.7,
    "infrastructure": 91.7,
    "climate": 64.4,
-   "environment": 34.2
+   "environment": 38.1
   },
   "coverage": "31/33",
   "standoutStrengths": [
@@ -51089,7 +51089,7 @@
     "explanation": "Ranks #169 of 174 in Religious Freedom (-2.50 V-Dem · 2025)."
    }
   ],
-  "divergenceStory": "China is strongest on Infrastructure & Tech (#20 of 184, 91.7/100) and weakest on Civil Liberties & Inclusion (#173 of 184, 16.2/100).",
+  "divergenceStory": "China is strongest on Infrastructure & Tech (#18 of 184, 91.7/100) and weakest on Civil Liberties & Inclusion (#173 of 184, 16.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -51323,14 +51323,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 89.5,
+   "safety": 57.9,
    "governance": 89.9,
-   "rights": 40.8,
-   "economy": 92.8,
-   "health": 91.5,
+   "rights": 42.3,
+   "economy": 75.7,
+   "health": 60.4,
    "infrastructure": 97.7,
    "climate": 57.6,
-   "environment": 100.0
+   "environment": 62.5
   },
   "coverage": "20/33",
   "standoutStrengths": [
@@ -51373,7 +51373,7 @@
     "explanation": "Ranks #134 of 174 in Press Freedom (39.5 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Hong Kong is strongest on Environment & Resilience (#1 of 184, 100.0/100) and weakest on Civil Liberties & Inclusion (#117 of 184, 40.8/100).",
+  "divergenceStory": "Hong Kong is strongest on Infrastructure & Tech (#4 of 184, 97.7/100) and weakest on Civil Liberties & Inclusion (#115 of 184, 42.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -51710,7 +51710,7 @@
     "explanation": "Ranks #144 of 182 in Disaster Risk (14.46 WRI · 2026)."
    }
   ],
-  "divergenceStory": "Chile is strongest on Civil Liberties & Inclusion (#24 of 184, 85.3/100) and weakest on Safety & Peace (#118 of 184, 44.4/100).",
+  "divergenceStory": "Chile is strongest on Civil Liberties & Inclusion (#24 of 184, 85.3/100) and weakest on Safety & Peace (#119 of 184, 44.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -51999,10 +51999,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 32.7,
+   "safety": 36.1,
    "governance": 16.9,
    "rights": 24.5,
-   "economy": 42.1,
+   "economy": 43.7,
    "health": 0.3,
    "infrastructure": 13.0,
    "climate": 54.3,
@@ -52049,7 +52049,7 @@
     "explanation": "Ranks #183 of 183 in Healthcare Coverage (26 / 100 · 2023)."
    }
   ],
-  "divergenceStory": "Chad is strongest on Weather & Climate (#130 of 183, 54.3/100) and weakest on Environment & Resilience (#184 of 183, 2.4/100).",
+  "divergenceStory": "Chad is strongest on Weather & Climate (#130 of 184, 54.3/100) and weakest on Environment & Resilience (#184 of 184, 2.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -52326,9 +52326,9 @@
    "safety": 22.8,
    "governance": 10.5,
    "rights": 31.1,
-   "economy": 37.8,
+   "economy": 42.7,
    "health": 2.9,
-   "infrastructure": 7.0,
+   "infrastructure": 17.8,
    "climate": 61.8,
    "environment": 11.9
   },
@@ -52373,7 +52373,7 @@
     "explanation": "Ranks #183 of 183 in Healthy Lifespan (44.7 yrs · 2023)."
    }
   ],
-  "divergenceStory": "Central African Rep. is strongest on Weather & Climate (#92 of 183, 61.8/100) and weakest on Infrastructure & Tech (#183 of 183, 7.0/100).",
+  "divergenceStory": "Central African Rep. is strongest on Weather & Climate (#92 of 184, 61.8/100) and weakest on Health, Education & Family (#181 of 184, 2.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -52633,14 +52633,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 55.1,
+   "safety": 54.1,
    "governance": 63.0,
    "rights": 76.5,
-   "economy": 45.4,
+   "economy": 47.2,
    "health": 57.5,
-   "infrastructure": 67.8,
+   "infrastructure": 63.4,
    "climate": 87.3,
-   "environment": 28.3
+   "environment": 33.8
   },
   "coverage": "28/33",
   "standoutStrengths": [
@@ -52683,7 +52683,7 @@
     "explanation": "Ranks #122 of 149 in Income Equality (42.4 Gini · 2015)."
    }
   ],
-  "divergenceStory": "Cabo Verde is strongest on Weather & Climate (#18 of 183, 87.3/100) and weakest on Economy, Labour & Living Costs (#153 of 183, 45.4/100).",
+  "divergenceStory": "Cabo Verde is strongest on Weather & Climate (#18 of 184, 87.3/100) and weakest on Economy, Labour & Living Costs (#153 of 184, 47.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -53032,7 +53032,7 @@
     "explanation": "Ranks #147 of 183 in Climate Comfort (49 / 100)."
    }
   ],
-  "divergenceStory": "Canada is strongest on Infrastructure & Tech (#8 of 184, 96.0/100) and weakest on Weather & Climate (#148 of 184, 49.4/100).",
+  "divergenceStory": "Canada is strongest on Infrastructure & Tech (#7 of 184, 96.0/100) and weakest on Weather & Climate (#149 of 184, 49.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -53324,11 +53324,11 @@
    "safety": 39.0,
    "governance": 23.9,
    "rights": 24.3,
-   "economy": 44.6,
+   "economy": 45.7,
    "health": 20.9,
    "infrastructure": 29.4,
    "climate": 57.2,
-   "environment": 16.8
+   "environment": 25.1
   },
   "coverage": "31/33",
   "standoutStrengths": [
@@ -53371,7 +53371,7 @@
     "explanation": "Ranks #173 of 182 in LGBTQ+ Equality (4 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Cameroon is strongest on Weather & Climate (#112 of 183, 57.2/100) and weakest on Environment & Resilience (#168 of 183, 16.8/100).",
+  "divergenceStory": "Cameroon is strongest on Weather & Climate (#112 of 184, 57.2/100) and weakest on Civil Liberties & Inclusion (#161 of 184, 24.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -53656,10 +53656,10 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 36.4,
+   "safety": 39.1,
    "governance": 26.7,
    "rights": 31.6,
-   "economy": 68.0,
+   "economy": 64.4,
    "health": 43.5,
    "infrastructure": 55.4,
    "climate": 44.3,
@@ -53706,7 +53706,7 @@
     "explanation": "Ranks #165 of 182 in Organised Crime (7.02 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Cambodia is strongest on Economy, Labour & Living Costs (#78 of 184, 68.0/100) and weakest on Weather & Climate (#163 of 184, 44.3/100).",
+  "divergenceStory": "Cambodia is strongest on Economy, Labour & Living Costs (#76 of 184, 64.4/100) and weakest on Weather & Climate (#164 of 184, 44.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -54055,7 +54055,7 @@
     "explanation": "Ranks #173 of 174 in Academic Freedom (0.02 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Myanmar is strongest on Economy, Labour & Living Costs (#127 of 184, 54.7/100) and weakest on Civil Liberties & Inclusion (#180 of 184, 11.3/100).",
+  "divergenceStory": "Myanmar is strongest on Economy, Labour & Living Costs (#126 of 184, 54.7/100) and weakest on Civil Liberties & Inclusion (#181 of 184, 11.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -54340,11 +54340,11 @@
    "safety": 46.3,
    "governance": 15.3,
    "rights": 21.3,
-   "economy": 52.2,
+   "economy": 51.3,
    "health": 19.2,
    "infrastructure": 9.4,
    "climate": 84.9,
-   "environment": 13.9
+   "environment": 22.9
   },
   "coverage": "30/33",
   "standoutStrengths": [
@@ -54387,7 +54387,7 @@
     "explanation": "Ranks #178 of 179 in GDP per Capita ($1,248 · 2025)."
    }
   ],
-  "divergenceStory": "Burundi is strongest on Weather & Climate (#26 of 183, 84.9/100) and weakest on Infrastructure & Tech (#181 of 183, 9.4/100).",
+  "divergenceStory": "Burundi is strongest on Weather & Climate (#26 of 184, 84.9/100) and weakest on Infrastructure & Tech (#183 of 184, 9.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -54686,7 +54686,7 @@
    "health": 11.0,
    "infrastructure": 18.5,
    "climate": 55.0,
-   "environment": 19.8
+   "environment": 27.4
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -54729,7 +54729,7 @@
     "explanation": "Ranks #131 of 135 in Working Hours (48.9 h/week · 2025)."
    }
   ],
-  "divergenceStory": "Burkina Faso is strongest on Weather & Climate (#127 of 183, 55.0/100) and weakest on Health, Education & Family (#174 of 183, 11.0/100).",
+  "divergenceStory": "Burkina Faso is strongest on Weather & Climate (#127 of 184, 55.0/100) and weakest on Infrastructure & Tech (#175 of 184, 18.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -55082,7 +55082,7 @@
     "explanation": "Ranks #111 of 182 in Organised Crime (5.58 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Bulgaria is strongest on Environment & Resilience (#35 of 184, 76.0/100) and weakest on Weather & Climate (#88 of 184, 63.6/100).",
+  "divergenceStory": "Bulgaria is strongest on Environment & Resilience (#34 of 184, 76.0/100) and weakest on Weather & Climate (#88 of 184, 63.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -55322,14 +55322,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 88.6,
+   "safety": 73.1,
    "governance": 74.3,
-   "rights": 24.8,
-   "economy": 69.8,
+   "rights": 41.6,
+   "economy": 61.9,
    "health": 72.4,
    "infrastructure": 71.2,
    "climate": 28.2,
-   "environment": 60.5
+   "environment": 57.9
   },
   "coverage": "24/33",
   "standoutStrengths": [
@@ -55372,7 +55372,7 @@
     "explanation": "Ranks #177 of 182 in LGBTQ+ Equality (3 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Brunei is strongest on Safety & Peace (#3 of 184, 88.6/100) and weakest on Weather & Climate (#183 of 184, 28.2/100).",
+  "divergenceStory": "Brunei is strongest on Safety & Peace (#21 of 184, 73.1/100) and weakest on Weather & Climate (#184 of 184, 28.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -55721,7 +55721,7 @@
     "explanation": "Ranks #169 of 182 in Organised Crime (7.07 / 10 · 2025)."
    }
   ],
-  "divergenceStory": "Brazil is strongest on Civil Liberties & Inclusion (#33 of 184, 79.6/100) and weakest on Safety & Peace (#163 of 184, 25.4/100).",
+  "divergenceStory": "Brazil is strongest on Civil Liberties & Inclusion (#33 of 184, 79.6/100) and weakest on Safety & Peace (#168 of 184, 25.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -56074,7 +56074,7 @@
     "explanation": "Ranks #177 of 180 in Unemployment (24.5% · 2025)."
    }
   ],
-  "divergenceStory": "Botswana is strongest on Weather & Climate (#15 of 183, 88.9/100) and weakest on Economy, Labour & Living Costs (#175 of 183, 32.4/100).",
+  "divergenceStory": "Botswana is strongest on Weather & Climate (#15 of 184, 88.9/100) and weakest on Economy, Labour & Living Costs (#180 of 184, 32.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -56427,7 +56427,7 @@
     "explanation": "Ranks #123 of 163 in Broadband Speed (64 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Bosnia and Herz. is strongest on Civil Liberties & Inclusion (#69 of 184, 62.4/100) and weakest on Governance & Rule of Law (#114 of 184, 37.7/100).",
+  "divergenceStory": "Bosnia and Herz. is strongest on Economy, Labour & Living Costs (#63 of 184, 68.3/100) and weakest on Governance & Rule of Law (#114 of 184, 37.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -56730,7 +56730,7 @@
    "health": 59.0,
    "infrastructure": 60.6,
    "climate": 90.5,
-   "environment": 40.2
+   "environment": 42.7
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -56773,7 +56773,7 @@
     "explanation": "Ranks #164 of 184 in Regulatory Quality (-1.22 WGI · 2025)."
    }
   ],
-  "divergenceStory": "Bolivia is strongest on Weather & Climate (#10 of 183, 90.5/100) and weakest on Governance & Rule of Law (#157 of 183, 21.6/100).",
+  "divergenceStory": "Bolivia is strongest on Weather & Climate (#10 of 184, 90.5/100) and weakest on Governance & Rule of Law (#157 of 184, 21.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -57072,7 +57072,7 @@
    "safety": 68.4,
    "governance": 68.8,
    "rights": 43.2,
-   "economy": 58.9,
+   "economy": 57.1,
    "health": 54.0,
    "infrastructure": 57.6,
    "climate": 76.0,
@@ -57119,7 +57119,7 @@
     "explanation": "Ranks #148 of 163 in Broadband Speed (40 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Bhutan is strongest on Safety & Peace (#32 of 184, 68.4/100) and weakest on Infrastructure & Tech (#116 of 184, 57.6/100).",
+  "divergenceStory": "Bhutan is strongest on Safety & Peace (#30 of 184, 68.4/100) and weakest on Infrastructure & Tech (#116 of 184, 57.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -57418,7 +57418,7 @@
    "safety": 47.2,
    "governance": 43.7,
    "rights": 52.2,
-   "economy": 56.4,
+   "economy": 55.1,
    "health": 11.1,
    "infrastructure": 36.1,
    "climate": 48.2,
@@ -57465,7 +57465,7 @@
     "explanation": "Ranks #125 of 132 in Safe Water (17.7% · 2024)."
    }
   ],
-  "divergenceStory": "Benin is strongest on Civil Liberties & Inclusion (#93 of 184, 52.2/100) and weakest on Health, Education & Family (#173 of 184, 11.1/100).",
+  "divergenceStory": "Benin is strongest on Civil Liberties & Inclusion (#92 of 184, 52.2/100) and weakest on Health, Education & Family (#173 of 184, 11.1/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -57715,14 +57715,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 35.7,
+   "safety": 38.5,
    "governance": 39.0,
-   "rights": 56.9,
-   "economy": 59.6,
+   "rights": 53.4,
+   "economy": 57.7,
    "health": 54.7,
-   "infrastructure": 71.7,
+   "infrastructure": 66.3,
    "climate": 51.3,
-   "environment": 47.4
+   "environment": 48.1
   },
   "coverage": "26/33",
   "standoutStrengths": [
@@ -57765,7 +57765,7 @@
     "explanation": "Ranks #141 of 183 in Climate Comfort (51 / 100)."
    }
   ],
-  "divergenceStory": "Belize is strongest on Civil Liberties & Inclusion (#80 of 184, 56.9/100) and weakest on Weather & Climate (#141 of 184, 51.3/100).",
+  "divergenceStory": "Belize is strongest on Environment & Resilience (#87 of 184, 48.1/100) and weakest on Weather & Climate (#141 of 184, 51.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -58419,7 +58419,7 @@
    "rights": 25.5,
    "economy": 88.8,
    "health": 81.5,
-   "infrastructure": 75.0,
+   "infrastructure": 68.7,
    "climate": 43.8,
    "environment": 70.1
   },
@@ -58464,7 +58464,7 @@
     "explanation": "Ranks #167 of 174 in Liberal Democracy (0.04 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Belarus is strongest on Economy, Labour & Living Costs (#14 of 184, 88.8/100) and weakest on Weather & Climate (#164 of 184, 43.8/100).",
+  "divergenceStory": "Belarus is strongest on Economy, Labour & Living Costs (#11 of 184, 88.8/100) and weakest on Weather & Climate (#165 of 184, 43.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -58721,14 +58721,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 59.1,
+   "safety": 57.3,
    "governance": 70.5,
-   "rights": 78.4,
-   "economy": 69.4,
+   "rights": 73.7,
+   "economy": 61.6,
    "health": 76.6,
-   "infrastructure": 81.5,
+   "infrastructure": 73.6,
    "climate": 57.5,
-   "environment": 62.0
+   "environment": 59.0
   },
   "coverage": "27/33",
   "standoutStrengths": [
@@ -59120,7 +59120,7 @@
     "explanation": "Ranks #172 of 183 in Clean Air (43.9 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Bangladesh is strongest on Economy, Labour & Living Costs (#124 of 184, 56.3/100) and weakest on Environment & Resilience (#161 of 184, 19.8/100).",
+  "divergenceStory": "Bangladesh is strongest on Economy, Labour & Living Costs (#116 of 184, 56.3/100) and weakest on Environment & Resilience (#172 of 184, 19.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -59412,7 +59412,7 @@
    "safety": 73.3,
    "governance": 63.2,
    "rights": 27.3,
-   "economy": 86.8,
+   "economy": 72.1,
    "health": 78.0,
    "infrastructure": 86.8,
    "climate": 65.5,
@@ -59459,7 +59459,7 @@
     "explanation": "Ranks #164 of 174 in Press Freedom (24.8 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Bahrain is strongest on Economy, Labour & Living Costs (#20 of 184, 86.8/100) and weakest on Civil Liberties & Inclusion (#150 of 184, 27.3/100).",
+  "divergenceStory": "Bahrain is strongest on Safety & Peace (#20 of 184, 73.3/100) and weakest on Civil Liberties & Inclusion (#153 of 184, 27.3/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -59695,14 +59695,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 40.9,
+   "safety": 42.7,
    "governance": 62.4,
-   "rights": 43.5,
-   "economy": 70.3,
+   "rights": 48.9,
+   "economy": 62.2,
    "health": 67.8,
    "infrastructure": 73.0,
    "climate": 67.2,
-   "environment": 59.0
+   "environment": 56.8
   },
   "coverage": "24/33",
   "standoutStrengths": [
@@ -59745,7 +59745,7 @@
     "explanation": "Ranks #141 of 180 in Unemployment (9.2% · 2025)."
    }
   ],
-  "divergenceStory": "Bahamas is strongest on Governance & Rule of Law (#54 of 184, 62.4/100) and weakest on Safety & Peace (#125 of 184, 40.9/100).",
+  "divergenceStory": "Bahamas is strongest on Governance & Rule of Law (#53 of 184, 62.4/100) and weakest on Safety & Peace (#123 of 184, 42.7/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -60030,9 +60030,9 @@
    "safety": 53.7,
    "governance": 42.6,
    "rights": 21.9,
-   "economy": 65.6,
+   "economy": 59.4,
    "health": 59.8,
-   "infrastructure": 88.4,
+   "infrastructure": 78.8,
    "climate": 67.3,
    "environment": 43.2
   },
@@ -60077,7 +60077,7 @@
     "explanation": "Ranks #159 of 174 in Academic Freedom (0.09 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Azerbaijan is strongest on Infrastructure & Tech (#35 of 184, 88.4/100) and weakest on Civil Liberties & Inclusion (#168 of 184, 21.9/100).",
+  "divergenceStory": "Azerbaijan is strongest on Infrastructure & Tech (#56 of 184, 78.8/100) and weakest on Civil Liberties & Inclusion (#168 of 184, 21.9/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -60426,7 +60426,7 @@
     "explanation": "Ranks #103 of 180 in Unemployment (5.6% · 2025)."
    }
   ],
-  "divergenceStory": "Austria is strongest on Safety & Peace (#13 of 184, 80.2/100) and weakest on Weather & Climate (#116 of 184, 56.5/100).",
+  "divergenceStory": "Austria is strongest on Safety & Peace (#7 of 184, 80.2/100) and weakest on Weather & Climate (#116 of 184, 56.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -60718,11 +60718,11 @@
    "safety": 64.5,
    "governance": 95.2,
    "rights": 92.6,
-   "economy": 77.9,
+   "economy": 72.4,
    "health": 94.8,
    "infrastructure": 90.1,
    "climate": 90.2,
-   "environment": 89.6
+   "environment": 79.7
   },
   "coverage": "31/33",
   "standoutStrengths": [
@@ -60765,7 +60765,7 @@
     "explanation": "Ranks #72 of 144 in Economic Complexity (+0.13 ECI · 2024)."
    }
   ],
-  "divergenceStory": "Australia is strongest on Governance & Rule of Law (#9 of 184, 95.2/100) and weakest on Safety & Peace (#47 of 184, 64.5/100).",
+  "divergenceStory": "Australia is strongest on Governance & Rule of Law (#9 of 184, 95.2/100) and weakest on Economy, Labour & Living Costs (#47 of 184, 72.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -61143,7 +61143,7 @@
     "explanation": "Ranks #150 of 183 in Clean Air (30.1 μg/m³ · 2023)."
    }
   ],
-  "divergenceStory": "Armenia is strongest on Safety & Peace (#39 of 184, 65.9/100) and weakest on Weather & Climate (#99 of 184, 60.4/100).",
+  "divergenceStory": "Armenia is strongest on Safety & Peace (#37 of 184, 65.9/100) and weakest on Weather & Climate (#99 of 184, 60.4/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -61446,7 +61446,7 @@
    "health": 77.8,
    "infrastructure": 74.0,
    "climate": 86.7,
-   "environment": 54.7
+   "environment": 53.5
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -61489,7 +61489,7 @@
     "explanation": "Ranks #122 of 149 in Income Equality (42.4 Gini · 2024)."
    }
   ],
-  "divergenceStory": "Argentina is strongest on Weather & Climate (#20 of 183, 86.7/100) and weakest on Safety & Peace (#116 of 183, 45.2/100).",
+  "divergenceStory": "Argentina is strongest on Weather & Climate (#20 of 184, 86.7/100) and weakest on Safety & Peace (#118 of 184, 45.2/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -61715,14 +61715,14 @@
   },
   "hasData": true,
   "dimensions": {
-   "safety": 63.1,
-   "governance": 66.2,
-   "rights": 60.1,
-   "economy": 69.7,
+   "safety": 60.5,
+   "governance": 62.1,
+   "rights": 51.7,
+   "economy": 57.9,
    "health": 76.8,
    "infrastructure": 61.0,
    "climate": 63.9,
-   "environment": 59.5
+   "environment": 57.1
   },
   "coverage": "22/33",
   "standoutStrengths": [
@@ -61765,7 +61765,7 @@
     "explanation": "Ranks #125 of 163 in Broadband Speed (64 Mbps · 2026)."
    }
   ],
-  "divergenceStory": "Antigua and Barbuda is strongest on Governance & Rule of Law (#45 of 184, 66.2/100) and weakest on Infrastructure & Tech (#107 of 184, 61.0/100).",
+  "divergenceStory": "Antigua and Barbuda is strongest on Health, Education & Family (#49 of 184, 76.8/100) and weakest on Infrastructure & Tech (#107 of 184, 61.0/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -62068,7 +62068,7 @@
    "health": 21.6,
    "infrastructure": 23.1,
    "climate": 70.5,
-   "environment": 30.1
+   "environment": 35.1
   },
   "coverage": "32/33",
   "standoutStrengths": [
@@ -62111,7 +62111,7 @@
     "explanation": "Ranks #158 of 167 in Logistics (2.1 / 5 · 2022)."
    }
   ],
-  "divergenceStory": "Angola is strongest on Weather & Climate (#60 of 183, 70.5/100) and weakest on Economy, Labour & Living Costs (#170 of 183, 35.6/100).",
+  "divergenceStory": "Angola is strongest on Weather & Climate (#60 of 184, 70.5/100) and weakest on Economy, Labour & Living Costs (#175 of 184, 35.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -62429,7 +62429,7 @@
    "safety": 50.4,
    "governance": 34.6,
    "rights": 20.8,
-   "economy": 48.3,
+   "economy": 49.0,
    "health": 59.6,
    "infrastructure": 65.8,
    "climate": 82.8,
@@ -62476,7 +62476,7 @@
     "explanation": "Ranks #160 of 182 in LGBTQ+ Equality (7 / 100 · 2026)."
    }
   ],
-  "divergenceStory": "Algeria is strongest on Weather & Climate (#35 of 183, 82.8/100) and weakest on Civil Liberties & Inclusion (#171 of 183, 20.8/100).",
+  "divergenceStory": "Algeria is strongest on Weather & Climate (#35 of 184, 82.8/100) and weakest on Civil Liberties & Inclusion (#171 of 184, 20.8/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -62825,7 +62825,7 @@
     "explanation": "Ranks #85 of 135 in Working Hours (41.3 h/week · 2024)."
    }
   ],
-  "divergenceStory": "Albania is strongest on Weather & Climate (#49 of 183, 75.1/100) and weakest on Infrastructure & Tech (#91 of 183, 67.5/100).",
+  "divergenceStory": "Albania is strongest on Weather & Climate (#49 of 184, 75.1/100) and weakest on Infrastructure & Tech (#87 of 184, 67.5/100).",
   "rawFacts": {
    "keyFacts": [
     {
@@ -63124,7 +63124,7 @@
    "safety": 25.7,
    "governance": 3.8,
    "rights": 0.6,
-   "economy": 39.5,
+   "economy": 41.6,
    "health": 10.7,
    "infrastructure": 21.8,
    "climate": 69.0,
@@ -63171,7 +63171,7 @@
     "explanation": "Ranks #175 of 175 in Women's Status (0.279 / 1 · 2025)."
    }
   ],
-  "divergenceStory": "Afghanistan is strongest on Weather & Climate (#65 of 183, 69.0/100) and weakest on Civil Liberties & Inclusion (#184 of 183, 0.6/100).",
+  "divergenceStory": "Afghanistan is strongest on Weather & Climate (#65 of 184, 69.0/100) and weakest on Civil Liberties & Inclusion (#184 of 184, 0.6/100).",
   "rawFacts": {
    "keyFacts": [
     {
