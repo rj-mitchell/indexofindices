@@ -80,8 +80,8 @@
     "sourceUrl": "https://weltrisikobericht.de/en/",
     "unit": "Risk score 0-100 (lower = safer)",
     "description": "Exposure to earthquakes, tsunamis, floods, cyclones, drought and sea-level rise, combined with societal vulnerability.",
-    "tier": 1,
-    "tierLabel": "Technocratic / Empirical",
+    "tier": 2,
+    "tierLabel": "Normative Consensus",
     "inverted": true,
     "goalposts": [
       0.86,
@@ -584,8 +584,8 @@
     "sourceUrl": "https://gain.nd.edu/our-work/country-index/",
     "unit": "Score 0-100",
     "description": "Vulnerability to climate change combined with readiness (economic, governance, social) to adapt.",
-    "tier": 1,
-    "tierLabel": "Technocratic / Empirical",
+    "tier": 2,
+    "tierLabel": "Normative Consensus",
     "inverted": false,
     "goalposts": [
       29.309,

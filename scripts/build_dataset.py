@@ -187,7 +187,7 @@ ind('organized_crime_index', 'Organised Crime: Criminality Score', 'Organised Cr
 ind('world_risk_index', 'WorldRiskIndex 2026 (Disaster Risk)', 'Disaster Risk', 'safety',
     'Bündnis Entwicklung Hilft & IFHV Ruhr University Bochum', 'https://weltrisikobericht.de/en/', 'Risk score 0-100 (lower = safer)',
     'Exposure to earthquakes, tsunamis, floods, cyclones, drought and sea-level rise, combined with societal vulnerability.',
-    1, EMP, True, wri, lambda v: f'{v:.2f} WRI', 'log')
+    2, NORM, True, wri, lambda v: f'{v:.2f} WRI', 'log')
 
 # Governance
 ind('ti_cpi', 'Corruption Perceptions Index 2025', 'Anti-Corruption', 'governance',
@@ -314,7 +314,7 @@ ind('yale_epi', 'Environmental Performance Index 2026', 'Environmental Performan
 ind('nd_gain_resilience', 'ND-GAIN Climate Adaptation Index', 'Climate Resilience', 'environment',
     'Notre Dame Global Adaptation Initiative', 'https://gain.nd.edu/our-work/country-index/', 'Score 0-100',
     'Vulnerability to climate change combined with readiness (economic, governance, social) to adapt.',
-    1, EMP, False, ndgain, lambda v: f'{v:.1f} / 100')
+    2, NORM, False, ndgain, lambda v: f'{v:.1f} / 100')
 
 CATEGORIES = [
     dict(id='safety', name='Safety & Peace', iconName='ShieldAlert', color='#0d9488',
