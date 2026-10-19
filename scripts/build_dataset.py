@@ -6,8 +6,8 @@ Nothing is imputed: a country that a source does not cover simply has no value f
 Scoring: each indicator is rescaled to 0-100 between "goalposts" set at the 2.5th and 97.5th
 percentile of all countries' values (on a log scale where the data are heavily skewed), and
 flipped where lower raw values are better. Values beyond the goalposts are clipped to 0 or 100.
-A dimension score is the average of its indicator scores, with any missing indicator counted as a
-neutral 50.
+A dimension score is the average of the indicator scores a country has in it; if it has fewer than half
+of that dimension's indicators, the dimension is N/A and the overall score uses the remaining dimensions.
 
 Run from the repo root:  python3 scripts/build_dataset.py
 """
@@ -22,7 +22,7 @@ from country_names import to_iso3
 
 MIN_INDICATORS = 20  # countries with fewer indicator values are shown as "insufficient data"
 MIN_YEAR = 2015      # older observations are treated as missing
-NEUTRAL_SCORE = 50   # score a missing indicator contributes to its dimension average
+MIN_DIM_SHARE = 0.5  # a dimension needs at least this share of its indicators, otherwise it is N/A
 
 
 def src(name):
@@ -421,9 +421,10 @@ def main():
         c['hasData'] = k in eligible
         c['dimensions'] = {}
         for cid, ids in cat_inds.items():
-            # A missing indicator counts as neutral, so one strong value can't stand in for a whole dimension
-            vals = [c['indicators'][i]['score'] if i in c['indicators'] else NEUTRAL_SCORE for i in ids]
-            c['dimensions'][cid] = round(sum(vals) / len(vals), 1) if c['hasData'] else None
+            # Missing indicators are skipped, but a dimension backed by too few of them is left out entirely,
+            # so a single value can't stand in for the whole dimension
+            vals = [c['indicators'][i]['score'] for i in ids if i in c['indicators']]
+            c['dimensions'][cid] = round(sum(vals) / len(vals), 1) if vals and len(vals) >= MIN_DIM_SHARE * len(ids) else None
         c['coverage'] = f"{sum(1 for d in I if k in raw[d['id']])}/{len(I)}"
         countries[k] = c
 
@@ -504,7 +505,7 @@ def write_sources_md(inds, cats, n_ranked):
              f'{MIN_INDICATORS} of the {len(inds)} indicators to be ranked. Observations older than {MIN_YEAR} are dropped, and nothing is imputed — a country a source does not cover has no value for it.', '',
              '**Scoring.** Each indicator is rescaled to 0–100 between goalposts at the 2.5th and 97.5th percentile of country values '
              '(log scale for skewed data) and flipped where lower is better; values beyond the goalposts are clipped. '
-             'Ranks use the raw values. A dimension score is the mean of its indicator scores, with a missing indicator counted as a neutral 50.', '',
+             'Ranks use the raw values. A dimension score is the mean of the indicator scores a country has in it; with fewer than half of its indicators the dimension is N/A, and the overall score is averaged over the remaining dimensions.', '',
              'Raw snapshots of every source are in `data/sources/`; `scripts/fetch_sources.sh` re-downloads them from the publishers.', '']
     for c in cats:
         lines += [f"## {c['name']}", '', '| Indicator | Publisher | Data year(s) | Countries | Lower is better | Goalposts (0 → 100) |', '|---|---|---|---|---|---|']
