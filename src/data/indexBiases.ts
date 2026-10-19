@@ -866,7 +866,7 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     rankText: 'WGI Government Effectiveness #1 of 184 · RSF Press Freedom #117 of 174 (44.6/100)',
     whyItLooksWrong: 'Singapore is clean, safe and efficient, with one of the lowest homicide rates in the world (0.1 per 100k). Many visitors assume it must top every quality-of-life table.',
     theRealExplanation: 'Indices of civil liberties reward a free, adversarial press, open protest and competitive elections. Singapore deliberately trades some of these for public order and policy continuity, so RSF and V-Dem (Liberal Democracy #85 of 174) mark it down while the World Bank governance indicators put it at the very top.',
-    whereItBalancesOut: 'With every dial at 50% Singapore ranks #19. Raise Safety, Governance and Infrastructure to 100% and it climbs to #7; raise Civil Liberties and Weather instead (it ranks #177 of 183 for climate comfort because of year-round heat and humidity) and it falls to #32.',
+    whereItBalancesOut: 'With every dial at 50% Singapore ranks #18. Raise Safety, Governance and Infrastructure to 100% and it climbs to #7; raise Civil Liberties and Weather instead (it ranks #177 of 183 for climate comfort because of year-round heat and humidity) and it falls to #31.',
     relatedIndicatorId: 'rsf_press_freedom'
   },
   {

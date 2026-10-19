@@ -8,6 +8,9 @@ const categories = rawCategories as unknown as MacroCategoryConfig[];
 const indicators = rawIndicators as unknown as IndicatorMeta[];
 const countries = rawCountries as unknown as Record<string, CountryData>;
 
+// A dimension needs at least this share of its indicators, otherwise it is N/A (see scripts/build_dataset.py)
+const MIN_DIM_SHARE = 0.5;
+
 const DEFAULT_MACRO_WEIGHTS: Record<MacroCategory, number> = {
   safety: 50,
   governance: 50,
@@ -134,15 +137,19 @@ export function useQualityOfLifeIndex() {
           if (!isUniform) {
             let catWeightedSum = 0;
             let catTotalSubWeight = 0;
+            let available = 0;
             for (const ind of catInds) {
               const sw = subWeights[ind.id] ?? 50;
               const indVal = country.indicators[ind.id];
               if (indVal && indVal.score != null) {
                 catWeightedSum += indVal.score * sw;
                 catTotalSubWeight += sw;
+                available++;
               }
             }
-            if (catTotalSubWeight > 0) {
+            if (available < MIN_DIM_SHARE * catInds.length) {
+              dynamicDimensions[cat] = null;
+            } else if (catTotalSubWeight > 0) {
               dynamicDimensions[cat] = Math.round((catWeightedSum / catTotalSubWeight) * 10) / 10;
             }
           }

@@ -20,7 +20,7 @@ Built with **React 18**, **TypeScript**, **Tailwind CSS** and **react-simple-map
 Every value comes from its publisher's own release. See **[SOURCES.md](SOURCES.md)** for each indicator's publisher, data year, coverage and scoring goalposts.
 
 - **184 countries** are ranked. A country needs at least 20 of the 33 indicators. Observations older than 2015 are dropped and **nothing is imputed**: a missing value stays missing and shows as "N/A".
-- **Scoring**: each indicator is rescaled to 0–100 between the 2.5th and 97.5th percentile of country values (log scale for skewed data such as GDP or homicide), and flipped where lower is better. A dimension is the plain average of its indicators.
+- **Scoring**: each indicator is rescaled to 0–100 between the 2.5th and 97.5th percentile of country values (log scale for skewed data such as GDP or homicide), and flipped where lower is better. A dimension is the average of the indicators a country has; if it has fewer than half of them, the dimension shows N/A and the overall score uses the remaining dimensions, so one available value can't stand in for a whole dimension.
 - **Weather & Climate** is the one derived indicator. It is computed from WorldClim 2.1 monthly climate normals at every city of 15,000+ people (GeoNames), weighted by population, so it reflects the climate where people actually live. The comfort thresholds are documented in `scripts/derive_climate.py`.
 
 ### Rebuilding the data
@@ -57,4 +57,4 @@ npm run preview
 `npm run build` produces a fully static site in `dist/`. It uses relative paths, so it works at a domain root or under a sub-path.
 
 - **Cloudflare Pages / Netlify / Vercel**: import the GitHub repo, set the build command to `npm run build` and the output directory to `dist`.
-- **GitHub Pages**: `.github/workflows/deploy.yml` builds and publishes on every push to `main`. Turn it on under *Settings → Pages → Source: GitHub Actions*.
+- **Cloudflare Workers** (current setup): `wrangler.jsonc` serves `dist/`; set the build command to `npm run build` and the deploy command to `npx wrangler deploy`.
