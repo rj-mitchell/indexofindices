@@ -20,7 +20,6 @@ import {
   Info, 
   Trophy, 
   ListOrdered,
-  Sparkles,
   HelpCircle
 } from 'lucide-react';
 import type { MacroCategory, ComputedCountry, IndicatorMeta, MacroCategoryConfig } from '../types';
@@ -322,6 +321,7 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
         <div className="grid grid-cols-2 p-0.5 bg-slate-200/80 rounded-lg text-xs font-medium">
           <button
             onClick={() => setActiveTab('weights')}
+            title="Dial any category up or down to recolour the map. Click a category name to see its datasets."
             className={`py-1 rounded-md flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all cursor-pointer ${
               activeTab === 'weights'
                 ? 'bg-white text-slate-900 shadow-2xs font-semibold'
@@ -346,17 +346,9 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
       </div>
 
       {/* Main Tab Content with Overflow Clip Protection */}
-      <div className="flex-1 overflow-y-auto overflow-x-clip p-2.5 sm:p-3 space-y-2">
+      <div className="flex-1 overflow-y-auto overflow-x-clip p-2.5 space-y-1.5">
         {activeTab === 'weights' ? (
           <>
-            {/* Context Note */}
-            <div className="text-[11px] text-slate-600 bg-teal-50/70 border border-teal-200/60 rounded-lg p-2.5 flex items-start gap-2 leading-relaxed">
-              <Sparkles className="w-3.5 h-3.5 text-teal-600 shrink-0 mt-0.5" />
-              <div>
-                Dial any category up or down to immediately recolour the world map. Click the pop-out arrow on any index to inspect its datasets or fine-tune individual weights.
-              </div>
-            </div>
-
             {/* Sub-Weights Mode Toggle */}
             <div className="flex items-center justify-between px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
               <div className="flex items-center gap-1.5">
@@ -378,8 +370,8 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
               </button>
             </div>
 
-            {/* Macro Category Sliders - Compact and all fitting on screen */}
-            <div className="space-y-1.5">
+            {/* Macro Category Sliders - compact so all eight fit on a laptop screen */}
+            <div className="space-y-1">
               {categories.map((cat) => {
                 const IconComponent = CATEGORY_ICONS[cat.id] || HelpCircle;
                 const weight = macroWeights[cat.id] ?? 50;
@@ -389,12 +381,12 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
                 return (
                   <div 
                     key={cat.id} 
-                    className={`p-2 sm:p-2.5 bg-white border rounded-xl transition-all shadow-2xs ${
+                    className={`px-2.5 pt-1.5 pb-1 bg-white border rounded-xl transition-all shadow-2xs ${
                       isExpanded ? 'border-teal-400/60 ring-1 ring-teal-400/20' : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
                     {/* Category Header Row with Pop-Out Arrow */}
-                    <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center justify-between">
                       <button
                         type="button"
                         onClick={() => toggleCategoryExpand(cat.id)}
@@ -430,7 +422,7 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
                     </div>
 
                     {/* Macro Slider */}
-                    <div className="flex items-center">
+                    <div className="flex items-center h-4">
                       <input
                         type="range"
                         min="0"
