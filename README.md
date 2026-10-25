@@ -1,4 +1,6 @@
-# Global Quality of Life Index of Indices 🌍
+# Where Lives Stand 🌍
+
+*Formerly the Global Quality of Life Index of Indices.*
 
 An interactive world map that ranks countries by quality of life using **your** weights. It combines 33 indicators from the publishers' own releases: the World Bank, WHO, UNDP, Transparency International, RSF, V-Dem, IEP, Yale, Notre Dame, Ookla and others.
 
