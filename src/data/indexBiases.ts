@@ -225,9 +225,9 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'who_uhc_coverage',
-    whatItMeasures: 'Coverage of essential health services: maternal and child care, infectious and chronic disease.',
+    whatItMeasures: 'Whether essential health services reach people: maternal and child care, vaccination, and treatment for infectious and chronic disease (the UN\'s Universal Health Coverage service index).',
     pros: ['Measures access to care rather than spending.'],
-    cons: ['Says nothing about quality or out-of-pocket cost.', 'Uses basic services, so rich countries bunch near the top.'],
+    cons: ['Not insurance coverage or affordability: the US scores 88, level with the UK, despite its gaps in insurance and high costs.', 'Uses basic services, so rich countries bunch near the top.'],
     blindSpot: 'Low.',
     biasRisk: 'Low'
   },
