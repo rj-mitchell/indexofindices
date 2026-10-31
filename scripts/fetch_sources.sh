@@ -46,7 +46,8 @@ import pyreadr
 df = list(pyreadr.read_r('$RAW/vdemdata/data/vdem.RData').values())[0]
 cols = ['country_name','country_text_id','year','v2x_libdem','v2xca_academ','v2clrelig','v2clrelig_osp','v2x_gencl',
         'v2x_freexp_altinf','v2x_rule','v2x_clphy','v2x_civlib','v2x_polyarchy','v2mecenefm','v2mecenefm_osp','v2cldiscm','v2cldiscw','v2clacfree']
-df[df.year == df.year.max()][[c for c in cols if c in df.columns]].to_csv('$OUT/vdem_v16_2025.csv', index=False)
+# last three years: religious freedom is averaged over them (see build_dataset.py)
+df[df.year >= df.year.max() - 2][[c for c in cols if c in df.columns]].to_csv('$OUT/vdem_v16_2023_2025.csv', index=False)
 PY
 
 # Climate: WorldClim 2.1 normals sampled at GeoNames cities (population-weighted)

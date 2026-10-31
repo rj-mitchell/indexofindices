@@ -41,7 +41,7 @@ export const MACRO_THEMES: MacroCritiqueTheme[] = [
     icon: 'Layers',
     points: [
       'Any "best country" ranking rests on a choice of what matters. Change the weights and the order changes.',
-      'With every dial at 50%, Switzerland comes first. Turn Weather & Climate up to 100% and Australia does.'
+      'With every dial at 50%, Denmark comes first, just ahead of Switzerland. Turn Weather & Climate up to 100% and Australia does.'
     ],
     takeaway: 'A ranking describes the priorities of whoever set the weights.'
   },
@@ -50,8 +50,8 @@ export const MACRO_THEMES: MacroCritiqueTheme[] = [
     title: 'Almost everything tracks income',
     icon: 'TrendingDown',
     points: [
-      'Money buys hospitals, courts, broadband and clean water, so most indicators move with GDP per capita: its correlation with the Health dimension is 0.92, Infrastructure 0.88 and Governance 0.77.',
-      'Weather is the exception (−0.15). Raise any other single dial to 100% and Switzerland or Denmark still comes first.'
+      'Money buys hospitals, courts, broadband and clean water, so most indicators move with GDP per capita: its correlation with the Health dimension is 0.92, Infrastructure 0.88 and Governance 0.78.',
+      'Weather is the exception (−0.16). Raise any other single dial to 100% and Switzerland or Denmark still comes first.'
     ],
     takeaway: 'Most dials reward the same rich countries; Weather is the one that reshuffles the top.'
   },
@@ -60,7 +60,7 @@ export const MACRO_THEMES: MacroCritiqueTheme[] = [
     title: 'Measured counts vs. expert judgement',
     icon: 'Scale',
     points: [
-      '15 of the 33 indicators are measured counts or rates, such as homicides, road deaths or broadband speed. Nine are expert assessments, including corruption, rule of law, press freedom and democracy. The rest are composite indices.',
+      '15 of the 34 indicators are measured counts or rates, such as homicides, road deaths or broadband speed. Ten are expert assessments, including corruption, rule of law, organised crime, press freedom and democracy. The rest are composite indices.',
       'Expert scores share sources and reputations. Corruption Perceptions and WGI Rule of Law correlate at 0.93, so weighting both mostly counts the same opinion twice.'
     ],
     takeaway: 'Use the "Data type" label on each index to see how much rests on judgement.'
@@ -71,7 +71,7 @@ export const MACRO_THEMES: MacroCritiqueTheme[] = [
     icon: 'ShieldAlert',
     points: [
       'Values come from different years (2015–2026), and some are model estimates rather than measurements: ILO unemployment, WHO road deaths, healthy life expectancy.',
-      'Nothing is filled in. A country needs 20 of 33 indicators to be ranked, and a dimension needs half its indicators, otherwise it shows N/A. Taiwan, Kosovo and most micro-states lack UN-system data, so they are not ranked.'
+      'Nothing is filled in. A country needs 20 of 34 indicators to be ranked, and a dimension needs half its indicators, otherwise it shows N/A. Taiwan, Kosovo and most micro-states lack UN-system data, so they are not ranked.'
     ],
     takeaway: 'Check the year and coverage beside each value before trusting a close comparison.'
   },
@@ -93,7 +93,7 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     id: 'unodc_homicide',
     whatItMeasures: 'Intentional killings per 100,000 people.',
     pros: ['The hardest crime statistic to hide or redefine, so the most comparable across countries.'],
-    cons: ['Misses non-lethal violence, domestic abuse and fear of crime.', 'Weak death registration can undercount, and only 146 ranked countries have a figure from 2015 or later.'],
+    cons: ['Misses non-lethal violence, domestic abuse and fear of crime.', 'Weak death registration can undercount, and only 148 ranked countries have a figure from 2015 or later.'],
     blindSpot: 'Little cultural bias, but data quality follows state capacity.',
     biasRisk: 'Low'
   },
@@ -115,9 +115,9 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'organized_crime_index',
-    whatItMeasures: 'Expert-rated scale of 15 criminal markets and 5 types of criminal actor (criminality score only).',
+    whatItMeasures: 'Expert-rated scale of 15 criminal markets and 5 types of criminal actor. How well a country fights back is scored separately, as Crime Resilience under Governance.',
     pros: ['The only global measure of organised crime, covering 193 countries.'],
-    cons: ['Expert judgement of activity that is hidden by nature.', 'Transit and financial hubs score badly because illicit flows pass through them: the UK ranks #122 of 182.'],
+    cons: ['Expert judgement of activity that is hidden by nature.', 'Transit and financial hubs score badly because illicit flows pass through them: the UK ranks #124 of 184.'],
     blindSpot: 'Rates markets, not how much ordinary residents feel them.',
     biasRisk: 'Medium'
   },
@@ -125,7 +125,7 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     id: 'world_risk_index',
     whatItMeasures: 'Exposure to earthquakes, floods, storms, drought and sea-level rise, multiplied by social vulnerability.',
     pros: ['Combines the hazard with a country\'s ability to cope; open, peer-reviewed method.'],
-    cons: ['Exposure dominates, so well-prepared but hazard-prone countries still score badly (Japan #164 of 182).'],
+    cons: ['Exposure dominates, so well-prepared but hazard-prone countries still score badly (Japan #166 of 184).'],
     blindSpot: 'Measures risk of catastrophe, not day-to-day safety.',
     biasRisk: 'Low'
   },
@@ -161,6 +161,14 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     pros: ['Captures red tape and regulatory burden that people and firms face.'],
     cons: ['"Good regulation" leans towards what investors want rather than workers or consumers.'],
     blindSpot: 'Market-liberal: protective regulation can score as a negative.',
+    biasRisk: 'Medium'
+  },
+  {
+    id: 'organized_crime_resilience',
+    whatItMeasures: 'How well a country withstands organised crime: leadership, laws, courts, policing, anti-money-laundering, prevention and civil society.',
+    pros: ['Credits what a country does about crime, which the criminality score ignores: the UK ranks #124 for criminality but #10 for resilience.'],
+    cons: ['Expert judgement, and overlaps with the rule-of-law and government-effectiveness measures.'],
+    blindSpot: 'Rewards formal institutions and international cooperation.',
     biasRisk: 'Medium'
   },
 
@@ -267,9 +275,9 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   },
   {
     id: 'vdem_religious_freedom',
-    whatItMeasures: 'Freedom to choose, practise and change religion without state repression.',
+    whatItMeasures: 'Freedom to choose, practise and change religion without state repression, averaged over 2023–2025.',
     pros: ['Annual expert coding, corrected for coder bias.'],
-    cons: ['Measures state behaviour more than hostility between communities.', 'The scale (about −3 to +3) is hard to read on its own.'],
+    cons: ['A single question rated by only a handful of experts per country (six for the UK), so one year can swing sharply; hence the three-year average.', 'Measures state behaviour more than hostility between communities.'],
     blindSpot: 'Individual-rights view: state churches and religious law can score lower.',
     biasRisk: 'Medium'
   },
@@ -284,7 +292,7 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   {
     id: 'lgbtq_equality',
     whatItMeasures: 'Laws on same-sex relationships, marriage, adoption, discrimination, gender recognition and conversion therapy.',
-    pros: ['Current (2026) and covers 182 countries.'],
+    pros: ['Current (2026) and covers 184 countries.'],
     cons: ['Laws on the books, not social acceptance or enforcement.', 'Equaldex is a collaborative database, so recent legal changes can lag.'],
     blindSpot: 'Benchmarks against the most liberal legal regimes.',
     biasRisk: 'High'
@@ -347,7 +355,7 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
     id: 'safe_drinking_water',
     whatItMeasures: 'Share of people with clean water on premises, available when needed.',
     pros: ['The strictest international standard, including water-quality testing.'],
-    cons: ['Only 132 ranked countries report it.', 'National averages hide urban–rural gaps.'],
+    cons: ['Only 134 ranked countries report it.', 'National averages hide urban–rural gaps.'],
     blindSpot: 'Assumes piped, regulated utilities.',
     biasRisk: 'Low'
   },
@@ -362,7 +370,7 @@ export const INDICATOR_CRITIQUES: IndicatorCritique[] = [
   {
     id: 'nd_gain_resilience',
     whatItMeasures: 'Vulnerability to climate change combined with readiness to adapt.',
-    pros: ['Covers 181 countries over many years.'],
+    pros: ['Covers 183 countries over many years.'],
     cons: ['Half of it is "readiness" (economy, governance), which overlaps other dials.'],
     blindSpot: 'Rich countries score well almost automatically.',
     biasRisk: 'Medium'
@@ -375,11 +383,11 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     countryName: 'Singapore',
     flag: '🇸🇬',
     iso3: 'SGP',
-    headline: '#1 for government effectiveness, #117 for press freedom',
-    rankText: 'Gov. Effectiveness #1 of 184 · Press Freedom #117 of 174',
+    headline: '#1 for government effectiveness, #118 for press freedom',
+    rankText: 'Gov. Effectiveness #1 of 186 · Press Freedom #118 of 175',
     whyItLooksWrong: 'Singapore is clean, efficient and has the lowest homicide rate in the data (0.1 per 100,000).',
     theRealExplanation: 'Governance indices reward effective administration; rights indices reward a free press and political competition. Singapore leads on the first and trades away some of the second.',
-    whereItBalancesOut: 'It ranks #18 overall at 50%. Its humid climate also costs it: #177 of 183 for weather.',
+    whereItBalancesOut: 'It ranks #19 overall at 50%. Its humid climate also costs it: #178 of 184 for weather.',
     relatedIndicatorId: 'rsf_press_freedom'
   },
   {
@@ -388,10 +396,10 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     flag: '🇺🇸',
     iso3: 'USA',
     headline: '#9 for income, #142 for road safety',
-    rankText: 'GDP per capita #9 of 179 · Road deaths #142 of 183',
+    rankText: 'GDP per capita #9 of 181 · Road deaths #142 of 183',
     whyItLooksWrong: 'The world\'s largest economy, with broadband among the fastest anywhere (#6).',
     theRealExplanation: 'Income doesn\'t buy everything: 18.4 road deaths and 5.8 homicides per 100,000, and healthy life expectancy of 64.6 years (#81). The Peace Index adds political instability (#132 of 161).',
-    whereItBalancesOut: '#36 overall at 50%. Weighting Economy and Infrastructure lifts it; Safety and Health pull it down.',
+    whereItBalancesOut: '#35 overall at 50%. Weighting Economy and Infrastructure lifts it; Safety and Health pull it down.',
     relatedIndicatorId: 'gdp_per_capita_ppp'
   },
   {
@@ -399,8 +407,8 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     countryName: 'Norway',
     flag: '🇳🇴',
     iso3: 'NOR',
-    headline: 'Top five overall, #176 for weather',
-    rankText: 'Press Freedom #1 · Rule of Law #3 · Climate comfort #176 of 183',
+    headline: 'Top five overall, #177 for weather',
+    rankText: 'Press Freedom #1 · Rule of Law #3 · Climate comfort #177 of 184',
     whyItLooksWrong: 'Long dark winters and cool summers aren\'t everyone\'s idea of the best place to live.',
     theRealExplanation: 'Most league tables leave the weather out. Norway is near the top of almost every institutional index, so it ranks #4 at 50%.',
     whereItBalancesOut: 'Turn Weather & Climate up to 100% and Australia, New Zealand, Spain and Portugal move ahead of it.',
@@ -411,11 +419,11 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     countryName: 'Mexico',
     flag: '🇲🇽',
     iso3: 'MEX',
-    headline: '#7 for weather, #180 for organised crime',
-    rankText: 'Climate comfort #7 of 183 · Organised crime #180 of 182',
+    headline: '#7 for weather, #182 for organised crime',
+    rankText: 'Climate comfort #7 of 184 · Organised crime #182 of 184',
     whyItLooksWrong: 'One country appears to be both among the most pleasant and among the most dangerous.',
     theRealExplanation: 'Most Mexicans live on the central plateau, where Mexico City and Guadalajara are mild all year. Cartel violence is concentrated in particular states. National averages hide both.',
-    whereItBalancesOut: 'It ranks #7 of 183 on the Weather & Climate dimension and #177 on Safety & Peace, so the dials you raise decide where it lands.',
+    whereItBalancesOut: 'It ranks #7 of 184 on the Weather & Climate dimension and #179 of 185 on Safety & Peace, so the dials you raise decide where it lands.',
     relatedIndicatorId: 'organized_crime_index'
   },
   {
@@ -423,8 +431,8 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
     countryName: 'Japan',
     flag: '🇯🇵',
     iso3: 'JPN',
-    headline: '#2 for healthy lifespan, #164 for disaster risk',
-    rankText: 'Healthy life expectancy #2 (72.2 yrs) · WorldRiskIndex #164 of 182',
+    headline: '#2 for healthy lifespan, #166 for disaster risk',
+    rankText: 'Healthy life expectancy #2 (72.2 yrs) · WorldRiskIndex #166 of 184',
     whyItLooksWrong: 'Japan has some of the best building codes and emergency services in the world.',
     theRealExplanation: 'The WorldRiskIndex multiplies exposure by vulnerability. Japan\'s vulnerability is low, but its exposure to earthquakes, tsunamis and typhoons is among the highest on Earth.',
     whereItBalancesOut: 'It is one of five Safety indicators, so Japan still ranks #14 overall.',

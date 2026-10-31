@@ -2,7 +2,7 @@
 
 *Formerly the Global Quality of Life Index of Indices.*
 
-An interactive world map that ranks countries by quality of life using **your** weights. It combines 33 indicators from the publishers' own releases: the World Bank, WHO, UNDP, Transparency International, RSF, V-Dem, IEP, Yale, Notre Dame, Ookla and others.
+An interactive world map that ranks countries by quality of life using **your** weights. It combines 34 indicators from the publishers' own releases: the World Bank, WHO, UNDP, Transparency International, RSF, V-Dem, IEP, Yale, Notre Dame, Ookla and others.
 
 Built with **React 18**, **TypeScript**, **Tailwind CSS** and **react-simple-maps**. All scoring runs in the browser, so the map recolours as you move a slider.
 
@@ -10,7 +10,7 @@ Built with **React 18**, **TypeScript**, **Tailwind CSS** and **react-simple-map
 
 ## Features
 
-- **Eight dials**: Safety & Peace, Governance & Rule of Law, Civil Liberties & Inclusion, Economy & Labour, Health & Education, Infrastructure & Tech, Weather & Climate, Environment & Resilience. Turn on **Fine-Tune Sub-Indices** to weight each of the 33 indicators separately.
+- **Eight dials**: Safety & Peace, Governance & Rule of Law, Civil Liberties & Inclusion, Economy & Labour, Health & Education, Infrastructure & Tech, Weather & Climate, Environment & Resilience. Turn on **Fine-Tune Sub-Indices** to weight each of the 34 indicators separately.
 - **Presets** for common priorities (Balanced, Physical, Institutional, Digital Nomad, Young Family, Ethics & Rights).
 - **Country dossier**: hover for rank and standout strengths and weaknesses, or click for every indicator's raw value, data year, global rank and a link to the source.
 - **Head-to-head comparison** of any two countries, indicator by indicator.
@@ -21,7 +21,7 @@ Built with **React 18**, **TypeScript**, **Tailwind CSS** and **react-simple-map
 
 Every value comes from its publisher's own release. See **[SOURCES.md](SOURCES.md)** for each indicator's publisher, data year, coverage and scoring goalposts.
 
-- **184 countries** are ranked. A country needs at least 20 of the 33 indicators. Observations older than 2015 are dropped and **nothing is imputed**: a missing value stays missing and shows as "N/A".
+- **186 countries** are ranked. A country needs at least 20 of the 34 indicators. Observations older than 2015 are dropped and **nothing is imputed**: a missing value stays missing and shows as "N/A". V-Dem's religious-freedom score is the one value averaged over three years (2023–2025), because it rests on a single question rated by a handful of experts per country.
 - **Scoring**: each indicator is rescaled to 0–100 between the 2.5th and 97.5th percentile of country values (log scale for skewed data such as GDP or homicide), and flipped where lower is better. A dimension is the average of the indicators a country has; if it has fewer than half of them, the dimension shows N/A and the overall score uses the remaining dimensions, so one available value can't stand in for a whole dimension.
 - **Weather & Climate** is the one derived indicator. It is computed from WorldClim 2.1 monthly climate normals at every city of 15,000+ people (GeoNames), weighted by population, so it reflects the climate where people actually live. The comfort thresholds are documented in `scripts/derive_climate.py`.
 
