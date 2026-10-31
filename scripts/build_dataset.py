@@ -249,9 +249,10 @@ ind('who_hale', 'Healthy Life Expectancy (HALE)', 'Healthy Lifespan', 'health',
     'WHO Global Health Observatory', 'https://www.who.int/data/gho/data/indicators/indicator-details/GHO/gho-ghe-hale-healthy-life-expectancy-at-birth',
     'years', 'Average number of years a newborn can expect to live in full health.',
     1, EMP, False, lambda: who('WHOSIS_000002'), lambda v: f'{v:.1f} yrs')
-ind('who_uhc_coverage', 'Universal Health Coverage Index', 'Healthcare Coverage', 'health',
+ind('who_uhc_coverage', 'Essential Health Services Coverage', 'Essential Health Services', 'health',
     'WHO / World Bank (SDG 3.8.1)', 'https://www.who.int/data/gho/data/indicators/indicator-details/GHO/uhc-index-of-service-coverage',
-    'Index 0-100', 'Coverage of essential health services: reproductive and child health, infectious and non-communicable disease, service capacity.',
+    'Index 0-100', 'Coverage of essential health services (the UN Universal Health Coverage service index): reproductive and child health, '
+    'infectious and non-communicable disease, service capacity. It does not measure insurance coverage or what care costs.',
     2, NORM, False, lambda: who('UHC_INDEX_REPORTED'), lambda v: f'{v:.0f} / 100')
 ind('under5_mortality', 'Under-5 Mortality Rate', 'Child Survival', 'health',
     'UN IGME via World Bank WDI', 'https://data.worldbank.org/indicator/SH.DYN.MORT', 'per 1,000 live births',

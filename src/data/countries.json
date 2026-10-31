@@ -3191,12 +3191,12 @@
   "standoutStrengths": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 99.2,
     "rank": 6,
     "totalCountries": 185,
     "badgeText": "Rank #6 of 185",
-    "explanation": "Ranks #6 of 185 in Healthcare Coverage (88 / 100 · 2023)."
+    "explanation": "Ranks #6 of 185 in Essential Health Services (88 / 100 · 2023)."
    },
    {
     "indicatorId": "ookla_broadband",
@@ -7069,12 +7069,12 @@
    },
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 11.5,
     "rank": 171,
     "totalCountries": 185,
     "badgeText": "Rank #171 of 185",
-    "explanation": "Ranks #171 of 185 in Healthcare Coverage (42 / 100 · 2023)."
+    "explanation": "Ranks #171 of 185 in Essential Health Services (42 / 100 · 2023)."
    }
   ],
   "divergenceStory": "Togo is strongest on Civil Liberties & Inclusion (#114 of 177, 39.9/100) and weakest on Environment & Resilience (#164 of 177, 19.2/100).",
@@ -20413,12 +20413,12 @@
   "standoutWeaknesses": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 0.0,
     "rank": 183,
     "totalCountries": 185,
     "badgeText": "Rank #183 of 185",
-    "explanation": "Ranks #183 of 185 in Healthcare Coverage (32 / 100 · 2023)."
+    "explanation": "Ranks #183 of 185 in Essential Health Services (32 / 100 · 2023)."
    },
    {
     "indicatorId": "atlas_economic_complexity",
@@ -29830,12 +29830,12 @@
   "standoutWeaknesses": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 0.0,
     "rank": 181,
     "totalCountries": 185,
     "badgeText": "Rank #181 of 185",
-    "explanation": "Ranks #181 of 185 in Healthcare Coverage (33 / 100 · 2023)."
+    "explanation": "Ranks #181 of 185 in Essential Health Services (33 / 100 · 2023)."
    },
    {
     "indicatorId": "gdp_per_capita_ppp",
@@ -34664,12 +34664,12 @@
    },
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 89.7,
     "rank": 32,
     "totalCountries": 185,
     "badgeText": "Rank #32 of 185",
-    "explanation": "Ranks #32 of 185 in Healthcare Coverage (83 / 100 · 2023)."
+    "explanation": "Ranks #32 of 185 in Essential Health Services (83 / 100 · 2023)."
    }
   ],
   "standoutWeaknesses": [
@@ -37778,12 +37778,12 @@
   "standoutStrengths": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 85.9,
     "rank": 46,
     "totalCountries": 185,
     "badgeText": "Rank #46 of 185",
-    "explanation": "Ranks #46 of 185 in Healthcare Coverage (81 / 100 · 2023)."
+    "explanation": "Ranks #46 of 185 in Essential Health Services (81 / 100 · 2023)."
    },
    {
     "indicatorId": "climate_comfort",
@@ -45345,12 +45345,12 @@
    },
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 0.0,
     "rank": 181,
     "totalCountries": 185,
     "badgeText": "Rank #181 of 185",
-    "explanation": "Ranks #181 of 185 in Healthcare Coverage (33 / 100 · 2023)."
+    "explanation": "Ranks #181 of 185 in Essential Health Services (33 / 100 · 2023)."
    }
   ],
   "divergenceStory": "Ethiopia is strongest on Weather & Climate (#4 of 184, 94.8/100) and weakest on Infrastructure & Tech (#176 of 184, 17.4/100).",
@@ -49517,12 +49517,12 @@
   "standoutStrengths": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 95.4,
     "rank": 12,
     "totalCountries": 185,
     "badgeText": "Rank #12 of 185",
-    "explanation": "Ranks #12 of 185 in Healthcare Coverage (86 / 100 · 2023)."
+    "explanation": "Ranks #12 of 185 in Essential Health Services (86 / 100 · 2023)."
    },
    {
     "indicatorId": "ilo_unemployment",
@@ -50247,12 +50247,12 @@
    },
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 19.1,
     "rank": 164,
     "totalCountries": 185,
     "badgeText": "Rank #164 of 185",
-    "explanation": "Ranks #164 of 185 in Healthcare Coverage (46 / 100 · 2023)."
+    "explanation": "Ranks #164 of 185 in Essential Health Services (46 / 100 · 2023)."
    }
   ],
   "divergenceStory": "Côte d'Ivoire is strongest on Governance & Rule of Law (#96 of 186, 44.9/100) and weakest on Health, Education & Family (#162 of 186, 19.1/100).",
@@ -53280,12 +53280,12 @@
    },
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 0.0,
     "rank": 185,
     "totalCountries": 185,
     "badgeText": "Rank #185 of 185",
-    "explanation": "Ranks #185 of 185 in Healthcare Coverage (26 / 100 · 2023)."
+    "explanation": "Ranks #185 of 185 in Essential Health Services (26 / 100 · 2023)."
    }
   ],
   "divergenceStory": "Chad is strongest on Weather & Climate (#130 of 184, 54.3/100) and weakest on Health, Education & Family (#184 of 184, 0.3/100).",
@@ -54255,12 +54255,12 @@
   "standoutStrengths": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 100.0,
     "rank": 1,
     "totalCountries": 185,
     "badgeText": "Rank #1 of 185",
-    "explanation": "Ranks #1 of 185 in Healthcare Coverage (92 / 100 · 2023)."
+    "explanation": "Ranks #1 of 185 in Essential Health Services (92 / 100 · 2023)."
    },
    {
     "indicatorId": "lgbtq_equality",
@@ -58799,12 +58799,12 @@
   "standoutWeaknesses": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 3.8,
     "rank": 180,
     "totalCountries": 185,
     "badgeText": "Rank #180 of 185",
-    "explanation": "Ranks #180 of 185 in Healthcare Coverage (38 / 100 · 2023)."
+    "explanation": "Ranks #180 of 185 in Essential Health Services (38 / 100 · 2023)."
    },
    {
     "indicatorId": "safe_drinking_water",
@@ -62149,12 +62149,12 @@
   "standoutStrengths": [
    {
     "indicatorId": "who_uhc_coverage",
-    "indicatorName": "Healthcare Coverage",
+    "indicatorName": "Essential Health Services",
     "score": 100.0,
     "rank": 3,
     "totalCountries": 185,
     "badgeText": "Rank #3 of 185",
-    "explanation": "Ranks #3 of 185 in Healthcare Coverage (89 / 100 · 2023)."
+    "explanation": "Ranks #3 of 185 in Essential Health Services (89 / 100 · 2023)."
    },
    {
     "indicatorId": "wgi_regulatory_quality",

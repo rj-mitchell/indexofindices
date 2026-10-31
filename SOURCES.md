@@ -54,7 +54,7 @@ Raw snapshots of every source are in `data/sources/`; `scripts/fetch_sources.sh`
 | Indicator | Publisher | Data year(s) | Countries | Lower is better | Goalposts (0 → 100) |
 |---|---|---|---|---|---|
 | [Healthy Life Expectancy (HALE)](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/gho-ghe-hale-healthy-life-expectancy-at-birth) | WHO Global Health Observatory | 2023 | 183 |  | 52.555 → 71.2 years |
-| [Universal Health Coverage Index](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/uhc-index-of-service-coverage) | WHO / World Bank (SDG 3.8.1) | 2023 | 185 |  | 36 → 88.4 Index 0-100 |
+| [Essential Health Services Coverage](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/uhc-index-of-service-coverage) | WHO / World Bank (SDG 3.8.1) | 2023 | 185 |  | 36 → 88.4 Index 0-100 |
 | [Under-5 Mortality Rate](https://data.worldbank.org/indicator/SH.DYN.MORT) | UN IGME via World Bank WDI | 2024 | 185 | yes | 93.913 → 2.4 per 1,000 live births |
 | [Education Index (HDI)](https://hdr.undp.org/data-center/documentation-and-downloads) | UNDP Human Development Report 2025 | 2023 | 185 |  | 0.315 → 0.933 Index 0-1 |
 
