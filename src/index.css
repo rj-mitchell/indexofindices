@@ -159,19 +159,31 @@ a[role="button"]:active,
    Custom civic scrollbars
    ========================================================================== */
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* Only restyle scrollbars for mouse users: on touch screens a styled ::-webkit-scrollbar
+   turns Android's thin auto-hiding overlay bars into permanent grey ones. */
+@media (hover: hover) and (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
 }
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+
+/* Horizontal strips (e.g. the map's region tabs) that scroll by swipe without a visible bar */
+.no-scrollbar {
+  scrollbar-width: none;
 }
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Map SVG styling */

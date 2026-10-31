@@ -40,3 +40,6 @@ __pycache__/
 
 # Large raw downloads (re-fetch with scripts/fetch_sources.sh)
 data/raw/
+
+# Wrangler local dev state
+.wrangler/
