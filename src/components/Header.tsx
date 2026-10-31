@@ -77,8 +77,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-sm sm:text-base font-bold tracking-tight text-slate-900 font-sans whitespace-nowrap">
-                <span className="sm:hidden">Index of Indices</span>
-                <span className="hidden sm:inline">Global Quality of Life Index of Indices</span>
+                Where Lives Stand
               </h1>
             </div>
             <p className="text-[10.5px] text-slate-500 font-sans hidden 2xl:block leading-tight">
