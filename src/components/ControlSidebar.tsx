@@ -712,7 +712,7 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
 
       {/* Footer Info */}
       <div className="px-3 py-1.5 bg-slate-50/80 border-t border-slate-200 text-[10.5px] text-slate-400 flex items-center justify-between font-mono">
-        <span>Global QoL Index</span>
+        <span>Where Lives Stand</span>
         <span>{countryList.filter(c => c.rank != null).length} ranked countries</span>
       </div>
     </aside>

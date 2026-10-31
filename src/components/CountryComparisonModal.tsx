@@ -231,7 +231,7 @@ const CountrySearchCombobox: React.FC<CountrySearchComboboxProps> = ({
   const badgeColor = isTeal ? 'bg-teal-50 text-teal-700 border-teal-200' : 'bg-indigo-50 text-indigo-700 border-indigo-200';
 
   return (
-    <div ref={containerRef} className={`relative bg-white p-4 rounded-xl border ${borderColor} shadow-xs flex flex-col justify-between`}>
+    <div ref={containerRef} className={`relative bg-white p-3 sm:p-4 rounded-xl border ${borderColor} shadow-xs flex flex-col justify-between`}>
       {/* Card Header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1.5">
@@ -276,8 +276,8 @@ const CountrySearchCombobox: React.FC<CountrySearchComboboxProps> = ({
         </div>
       </button>
 
-      {/* Active Score Summary */}
-      <div className="flex items-center justify-between pt-2 mt-3 border-t border-slate-100">
+      {/* Active Score Summary (the badge above already shows it on phones) */}
+      <div className="hidden md:flex items-center justify-between pt-2 mt-3 border-t border-slate-100">
         <span className="text-xs text-slate-500">Active Score:</span>
         <span className={`text-lg font-extrabold ${scoreTextColor} font-mono tabular-nums`}>
           {selectedCountry.compositeScore != null ? selectedCountry.compositeScore : 'N/A'}
@@ -286,7 +286,7 @@ const CountrySearchCombobox: React.FC<CountrySearchComboboxProps> = ({
 
       {/* Dropdown Popover with Concentric Radii (Outer 12px, Inner 8px) */}
       {isOpen && (
-        <div className="absolute top-full inset-inline-0 mt-2 z-50 bg-white rounded-xl shadow-2xl border border-slate-200 p-2.5 flex flex-col gap-2 animate-fadeIn font-sans max-h-[min(420px,calc(85vh-160px))]">
+        <div className="absolute top-full inset-x-0 mt-2 z-50 bg-white rounded-xl shadow-2xl border border-slate-200 p-2.5 flex flex-col gap-2 animate-fadeIn font-sans max-h-[min(420px,calc(85vh-160px))]">
           {/* Search Box */}
           <div className="relative">
             <div className="absolute inset-y-0 start-0 ps-2.5 flex items-center pointer-events-none text-slate-400">
@@ -500,9 +500,10 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
             </div>
             <div>
               <h2 className="text-base sm:text-lg font-bold text-slate-900">
-                Country Head-to-Head Comparison
+                <span className="sm:hidden">Compare countries</span>
+                <span className="hidden sm:inline">Country Head-to-Head Comparison</span>
               </h2>
-              <p className="text-xs text-slate-500">
+              <p className="hidden sm:block text-xs text-slate-500">
                 Direct benchmark comparison with relative win-margin bars across all {categories.length} macro dimensions and {indicators.length} underlying indices
               </p>
             </div>
@@ -518,8 +519,10 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
         </div>
 
         {/* Country Selector Header Cards */}
-        <div className="relative p-4 sm:p-6 bg-slate-100/70 border-b border-slate-200">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* On phones the whole modal scrolls as one; from md up only the body below scrolls */}
+        <div className="flex-1 min-h-0 overflow-y-auto md:overflow-visible md:flex md:flex-col">
+        <div className="relative p-3 sm:p-6 bg-slate-100/70 border-b border-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {/* Country A Combobox */}
             <CountrySearchCombobox
               label="Country A (Left)"
@@ -561,7 +564,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
         </div>
 
         {/* Winner Banner & Overall Relative Head-to-Head Bar with Tabular Numerics */}
-        <div className="px-6 py-3.5 bg-slate-50/90 border-b border-slate-200 text-xs flex flex-col gap-2 font-sans">
+        <div className="px-4 sm:px-6 py-3.5 bg-slate-50/90 border-b border-slate-200 text-xs flex flex-col gap-2 font-sans">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2">
               <Trophy className="w-4 h-4 text-amber-500 shrink-0" />
@@ -603,14 +606,14 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
         </div>
 
         {/* Modal Scrollable Body with Overflow Clip Protection */}
-        <div className="flex-1 overflow-y-auto overflow-x-clip p-4 sm:p-6 space-y-6">
+        <div className="md:flex-1 md:min-h-0 md:overflow-y-auto overflow-x-clip p-4 sm:p-6 space-y-6">
           {/* Macro Dimensions Comparison */}
           <section className="space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
                 Macro Dimensions Comparison
               </h3>
-              <span className="text-[11px] text-slate-400 font-mono">
+              <span className="hidden sm:inline text-[11px] text-slate-400 font-mono">
                 Bars diverge toward winner (50% centre = tie)
               </span>
             </div>
@@ -632,7 +635,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
 
                 return (
                   <div key={cat.id} className="p-3.5 bg-white border border-slate-200 rounded-xl text-xs shadow-xs space-y-2.5">
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
                       <div className="flex items-center gap-2">
                         <div 
                           className="w-5 h-5 rounded flex items-center justify-center text-white shadow-xs"
@@ -643,7 +646,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
                         <span className="font-bold text-slate-800 font-sans">{cat.name}</span>
                       </div>
 
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 self-end sm:self-auto whitespace-nowrap">
                         <div className="flex items-center gap-1">
                           <span className={`font-mono tabular-nums font-bold text-sm ${aWins ? 'text-teal-700 font-extrabold' : 'text-slate-600'}`}>
                             {hasA ? rawA : 'N/A'}
@@ -710,13 +713,13 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
 
             <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-xs">
               <div className="grid grid-cols-12 bg-slate-50 p-2.5 text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-200">
-                <div className="col-span-4">Index &amp; Source</div>
-                <div className="col-span-2 text-center text-teal-800 flex items-center justify-center gap-1">
+                <div className="hidden sm:block sm:col-span-4">Index &amp; Source</div>
+                <div className="col-span-3 sm:col-span-2 text-center text-teal-800 flex items-center justify-center gap-1">
                   <span>{countryA.flag}</span>
                   <span className="font-bold">{countryA.name}</span>
                 </div>
-                <div className="col-span-4 text-center">Relative Win Extent</div>
-                <div className="col-span-2 text-center text-indigo-800 flex items-center justify-center gap-1">
+                <div className="col-span-6 sm:col-span-4 text-center">Relative Win Extent</div>
+                <div className="col-span-3 sm:col-span-2 text-center text-indigo-800 flex items-center justify-center gap-1">
                   <span>{countryB.flag}</span>
                   <span className="font-bold">{countryB.name}</span>
                 </div>
@@ -735,7 +738,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
 
                   return (
                     <div key={ind.id} className="grid grid-cols-12 p-2.5 items-center hover:bg-slate-50/70 transition-colors">
-                      <div className="col-span-4 pe-2">
+                      <div className="col-span-12 sm:col-span-4 sm:pe-2 pb-1 sm:pb-0">
                         <div className="font-semibold text-slate-800 text-[11px] leading-tight">
                           {ind.name}
                         </div>
@@ -744,7 +747,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
                         </div>
                       </div>
 
-                      <div className="col-span-2 text-center">
+                      <div className="col-span-3 sm:col-span-2 text-center">
                         <div className="flex items-center justify-center gap-1">
                           <span className={`font-mono tabular-nums font-bold text-xs ${aLeads ? 'text-teal-700 font-extrabold' : 'text-slate-700'}`}>
                             {hasA ? valA : 'N/A'}
@@ -760,7 +763,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
                         </span>
                       </div>
 
-                      <div className="col-span-4 px-2">
+                      <div className="col-span-6 sm:col-span-4 px-2">
                         <RelativeWinBar
                           scoreA={valA}
                           scoreB={valB}
@@ -771,7 +774,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
                         />
                       </div>
 
-                      <div className="col-span-2 text-center">
+                      <div className="col-span-3 sm:col-span-2 text-center">
                         <div className="flex items-center justify-center gap-1">
                           <span className={`font-mono tabular-nums font-bold text-xs ${bLeads ? 'text-indigo-700 font-extrabold' : 'text-slate-700'}`}>
                             {hasB ? valB : 'N/A'}
@@ -792,6 +795,7 @@ export const CountryComparisonModal: React.FC<CountryComparisonModalProps> = ({
               </div>
             </div>
           </section>
+        </div>
         </div>
       </div>
     </div>

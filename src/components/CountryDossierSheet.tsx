@@ -122,10 +122,10 @@ export const CountryDossierSheet: React.FC<CountryDossierSheetProps> = ({
         {country.hasData !== false && (
           <button
             onClick={() => onOpenCompareWith(country.iso3)}
-            className="min-h-[36px] flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-50 border border-teal-200 hover:bg-teal-100 text-teal-800 active:scale-95 text-xs font-medium transition-all cursor-pointer"
+            className="min-h-[36px] shrink-0 whitespace-nowrap flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-50 border border-teal-200 hover:bg-teal-100 text-teal-800 active:scale-95 text-xs font-medium transition-all cursor-pointer"
           >
             <GitCompare className="w-3.5 h-3.5" />
-            <span>Compare this country</span>
+            <span>Compare</span>
           </button>
         )}
       </div>

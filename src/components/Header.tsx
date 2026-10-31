@@ -37,7 +37,8 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 px-3 sm:px-4 py-2 transition-all shadow-xs">
-      <div className="w-full flex items-center justify-start gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar">
+      {/* Wraps on phones: title and buttons on one row, search full-width below. No overflow clipping, so the search dropdown can show. */}
+      <div className="w-full flex flex-wrap sm:flex-nowrap items-center justify-start gap-x-2.5 gap-y-2 sm:gap-3">
         {/* Logo and Titles */}
         <div className="flex items-center gap-2.5 shrink-0">
           <div className="w-8 h-8 rounded-lg overflow-hidden shadow-xs shrink-0 ring-1 ring-slate-800/80 flex items-center justify-center bg-black">
@@ -102,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
         )}
 
         {/* Search Box */}
-        <div className="relative w-28 sm:w-48 md:w-56 lg:w-60 shrink-0">
+        <div className="relative order-last sm:order-none w-full sm:w-48 md:w-56 lg:w-60 shrink-0">
           <div className="absolute inset-y-0 start-0 ps-2.5 flex items-center pointer-events-none text-slate-400">
             <Search className="w-3.5 h-3.5" />
           </div>
@@ -115,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
           />
           {/* Search Dropdown with Concentric Nested Radii (Outer 12px, Padding 4px, Inner 8px) */}
           {searchResults.length > 0 && (
-            <div className="absolute inset-inline-0 top-full mt-1.5 bg-white border border-slate-200 rounded-xl p-1 shadow-xl overflow-hidden z-50 max-h-[min(380px,calc(100vh-80px))] overflow-y-auto">
+            <div className="absolute inset-x-0 sm:right-auto sm:w-80 top-full mt-1.5 bg-white border border-slate-200 rounded-xl p-1 shadow-xl overflow-hidden z-50 max-h-[min(380px,calc(100vh-80px))] overflow-y-auto">
               {searchResults.map(c => (
                 <button
                   key={c.iso3}
@@ -147,7 +148,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Action Buttons Grouped on the Left */}
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center gap-1.5 shrink-0 ms-auto sm:ms-0">
           {/* Index Biases & Critique Button */}
           <button
             onClick={() => onToggleView(activeView === 'biases' ? 'map' : 'biases')}
