@@ -7,6 +7,7 @@ import { CountryDossierSheet } from './components/CountryDossierSheet';
 import { CountryComparisonModal } from './components/CountryComparisonModal';
 import { SlidersHorizontal, Map as MapIcon } from 'lucide-react';
 import { BiasesCritiquePage } from './components/BiasesCritiquePage';
+import { BetaBanner } from './components/BetaBanner';
 
 export function App() {
   const {
@@ -52,6 +53,8 @@ export function App() {
 
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden bg-[#f8fafc] text-slate-800 font-sans">
+      <BetaBanner />
+
       {/* Top Application Header */}
       <Header
         countryList={countryList}

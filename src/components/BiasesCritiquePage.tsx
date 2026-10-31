@@ -23,6 +23,7 @@ import {
   type BiasRisk
 } from '../data/indexBiases';
 import rawIndicators from '../data/indicators.json';
+import { feedbackMailto } from '../config';
 import type { IndicatorMeta, MacroCategory, MacroCategoryConfig } from '../types';
 
 const indicatorMeta = new Map((rawIndicators as unknown as IndicatorMeta[]).map(i => [i.id, i]));
@@ -421,9 +422,15 @@ export const BiasesCritiquePage: React.FC<BiasesCritiquePageProps> = ({
               </li>
             </ul>
             <div className="p-4 rounded-xl bg-gradient-to-r from-teal-50 to-indigo-50 border border-teal-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <p className="text-sm font-semibold text-slate-900">
-                See how your priorities reshape the map.
-              </p>
+              <div className="text-center sm:text-left">
+                <p className="text-sm font-semibold text-slate-900">See how your priorities reshape the map.</p>
+                {feedbackMailto() && (
+                  <p className="text-xs text-slate-600 mt-0.5">
+                    This site is in beta. Disagree with an index we chose or how we scored it?{' '}
+                    <a href={feedbackMailto()!} className="font-semibold text-teal-700 underline">Tell us</a>.
+                  </p>
+                )}
+              </div>
               <button
                 onClick={onBackToMap}
                 className="px-5 py-2.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold shadow-xs transition-colors shrink-0 flex items-center gap-2 cursor-pointer"

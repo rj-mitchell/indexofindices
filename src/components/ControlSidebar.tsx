@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import type { MacroCategory, ComputedCountry, IndicatorMeta, MacroCategoryConfig } from '../types';
 import { RegionId, REGIONS } from '../data/regions';
+import { feedbackMailto } from '../config';
 
 interface ControlSidebarProps {
   categories: MacroCategoryConfig[];
@@ -712,7 +713,15 @@ export const ControlSidebar: React.FC<ControlSidebarProps> = ({
 
       {/* Footer Info */}
       <div className="px-3 py-1.5 bg-slate-50/80 border-t border-slate-200 text-[10.5px] text-slate-400 flex items-center justify-between font-mono">
-        <span>Where Lives Stand</span>
+        <span>
+          Where Lives Stand · Beta
+          {feedbackMailto() && (
+            <>
+              {' · '}
+              <a href={feedbackMailto()!} className="underline hover:text-teal-700">Feedback</a>
+            </>
+          )}
+        </span>
         <span>{countryList.filter(c => c.rank != null).length} ranked countries</span>
       </div>
     </aside>
