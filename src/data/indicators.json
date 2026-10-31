@@ -12,10 +12,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": true,
     "goalposts": [
-      0.216,
-      42.097
+      0.218,
+      41.97
     ],
-    "coverage": 146
+    "coverage": 148
   },
   {
     "id": "who_traffic_safety",
@@ -66,10 +66,10 @@
     "tierLabel": "Expert / Institutional",
     "inverted": true,
     "goalposts": [
-      2.736,
-      7.475
+      2.712,
+      7.474
     ],
-    "coverage": 182
+    "coverage": 184
   },
   {
     "id": "world_risk_index",
@@ -84,10 +84,10 @@
     "tierLabel": "Normative Consensus",
     "inverted": true,
     "goalposts": [
-      0.86,
-      38.294
+      0.837,
+      38.211
     ],
-    "coverage": 182
+    "coverage": 184
   },
   {
     "id": "ti_cpi",
@@ -120,10 +120,10 @@
     "tierLabel": "Expert / Institutional",
     "inverted": false,
     "goalposts": [
-      -1.854,
-      1.72
+      -1.853,
+      1.719
     ],
-    "coverage": 184
+    "coverage": 186
   },
   {
     "id": "wgi_gov_effectiveness",
@@ -138,10 +138,10 @@
     "tierLabel": "Expert / Institutional",
     "inverted": false,
     "goalposts": [
-      -1.887,
-      1.949
+      -1.885,
+      1.948
     ],
-    "coverage": 184
+    "coverage": 186
   },
   {
     "id": "wgi_regulatory_quality",
@@ -156,8 +156,26 @@
     "tierLabel": "Expert / Institutional",
     "inverted": false,
     "goalposts": [
-      -1.802,
-      1.654
+      -1.795,
+      1.653
+    ],
+    "coverage": 186
+  },
+  {
+    "id": "organized_crime_resilience",
+    "name": "Organised Crime: Resilience Score",
+    "shortName": "Crime Resilience",
+    "category": "governance",
+    "source": "Global Initiative Against Transnational Organized Crime",
+    "sourceUrl": "https://ocindex.net/",
+    "unit": "Score 1-10 (higher = more resilient)",
+    "description": "Expert-assessed ability to withstand and disrupt organised crime: leadership, transparency, international cooperation, laws, courts, policing, territorial control, anti-money-laundering, regulation, victim support, prevention and civil society (Global Organized Crime Index 2025).",
+    "tier": 3,
+    "tierLabel": "Expert / Institutional",
+    "inverted": false,
+    "goalposts": [
+      1.88,
+      8.0
     ],
     "coverage": 184
   },
@@ -174,10 +192,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": false,
     "goalposts": [
-      1785.762,
-      103352.216
+      1795.797,
+      103275.672
     ],
-    "coverage": 179
+    "coverage": 181
   },
   {
     "id": "gini_inequality",
@@ -231,7 +249,7 @@
       35,
       50
     ],
-    "coverage": 135
+    "coverage": 136
   },
   {
     "id": "atlas_economic_complexity",
@@ -282,10 +300,10 @@
     "tierLabel": "Normative Consensus",
     "inverted": false,
     "goalposts": [
-      35.75,
-      88.45
+      36.0,
+      88.4
     ],
-    "coverage": 183
+    "coverage": 185
   },
   {
     "id": "under5_mortality",
@@ -301,9 +319,9 @@
     "inverted": true,
     "goalposts": [
       2.4,
-      94.142
+      93.913
     ],
-    "coverage": 183
+    "coverage": 185
   },
   {
     "id": "undp_education",
@@ -318,10 +336,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": false,
     "goalposts": [
-      0.314,
+      0.315,
       0.933
     ],
-    "coverage": 183
+    "coverage": 185
   },
   {
     "id": "rsf_press_freedom",
@@ -336,10 +354,10 @@
     "tierLabel": "Expert Rights",
     "inverted": false,
     "goalposts": [
-      19.24,
-      87.158
+      19.25,
+      87.124
     ],
-    "coverage": 174
+    "coverage": 175
   },
   {
     "id": "vdem_liberal_democracy",
@@ -385,7 +403,7 @@
     "source": "V-Dem Institute (v16)",
     "sourceUrl": "https://www.v-dem.net/data/the-v-dem-dataset/",
     "unit": "Latent scale (≈ -3 to +3)",
-    "description": "Expert-coded freedom to choose, practise and change religion, including freedom from state religious repression.",
+    "description": "Expert-coded freedom to choose, practise and change religion, including freedom from state religious repression. Averaged over the last three years, because this single question is rated by only a handful of experts per country.",
     "tier": 3,
     "tierLabel": "Expert Academic",
     "inverted": false,
@@ -411,7 +429,7 @@
       0.398,
       0.92
     ],
-    "coverage": 175
+    "coverage": 176
   },
   {
     "id": "lgbtq_equality",
@@ -426,10 +444,10 @@
     "tierLabel": "Normative Consensus",
     "inverted": false,
     "goalposts": [
-      2.132,
-      97.754
+      2.176,
+      97.551
     ],
-    "coverage": 182
+    "coverage": 184
   },
   {
     "id": "ookla_broadband",
@@ -444,10 +462,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": false,
     "goalposts": [
-      23.587,
-      412.917
+      23.63,
+      412.626
     ],
-    "coverage": 163
+    "coverage": 164
   },
   {
     "id": "itu_internet_penetration",
@@ -462,10 +480,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": false,
     "goalposts": [
-      14.08,
-      99.433
+      14.108,
+      99.401
     ],
-    "coverage": 182
+    "coverage": 184
   },
   {
     "id": "electricity_access",
@@ -480,10 +498,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": false,
     "goalposts": [
-      20.79,
+      20.85,
       100.0
     ],
-    "coverage": 184
+    "coverage": 186
   },
   {
     "id": "wb_lpi_infrastructure",
@@ -519,7 +537,7 @@
       0,
       100
     ],
-    "coverage": 183
+    "coverage": 184
   },
   {
     "id": "who_pm25",
@@ -534,10 +552,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": true,
     "goalposts": [
-      5.463,
-      49.954
+      5.483,
+      49.887
     ],
-    "coverage": 183
+    "coverage": 185
   },
   {
     "id": "safe_drinking_water",
@@ -552,10 +570,10 @@
     "tierLabel": "Technocratic / Empirical",
     "inverted": false,
     "goalposts": [
-      12.333,
+      12.417,
       100.0
     ],
-    "coverage": 132
+    "coverage": 134
   },
   {
     "id": "yale_epi",
@@ -570,10 +588,10 @@
     "tierLabel": "Normative Consensus",
     "inverted": false,
     "goalposts": [
-      23.991,
-      70.322
+      24.005,
+      70.308
     ],
-    "coverage": 173
+    "coverage": 174
   },
   {
     "id": "nd_gain_resilience",
@@ -588,9 +606,9 @@
     "tierLabel": "Normative Consensus",
     "inverted": false,
     "goalposts": [
-      29.309,
-      68.549
+      29.415,
+      68.544
     ],
-    "coverage": 181
+    "coverage": 183
   }
 ]

@@ -54,11 +54,20 @@ def rsf():
     return {r['ISO']: (float(str(r['Score 2026']).replace(',', '.')), 2026) for _, r in df.iterrows()}
 
 
-VDEM = pd.read_csv(src('vdem_v16_2025.csv'))
+VDEM = pd.read_csv(src('vdem_v16_2023_2025.csv'))
+VDEM_YEAR = int(VDEM.year.max())
 
 
 def vdem(col):
-    return {r['country_text_id']: (float(r[col]), 2025) for _, r in VDEM.iterrows() if pd.notna(r[col])}
+    latest = VDEM[VDEM.year == VDEM_YEAR]
+    return {r['country_text_id']: (float(r[col]), VDEM_YEAR) for _, r in latest.iterrows() if pd.notna(r[col])}
+
+
+def vdem_3yr(col):
+    # Single expert-coded questions (rated by ~3-10 experts per country) can swing sharply in one year,
+    # so average the last three years; V-Dem's composite indices are stable enough to use as is.
+    g = VDEM.dropna(subset=[col]).groupby('country_text_id')[col].mean()
+    return {k: (float(v), VDEM_YEAR) for k, v in g.items()}
 
 
 HDR = pd.read_csv(src('hdr25.csv'), encoding='latin1')
@@ -80,14 +89,14 @@ def gpi():
     return {k: (v['v'], 2026) for k, v in d.items()}
 
 
-def ocindex():
+def ocindex(col='Criminality avg.'):
     df = pd.read_excel(src('ocindex.xlsx'), '2025_dataset', engine='calamine')
     out = {}
     for _, r in df.iterrows():
         iso = to_iso3(r['Country'])
         if iso is None:
             raise SystemExit(f"OC Index: unmatched country {r['Country']!r}")
-        out[iso] = (float(r['Criminality avg.']), 2025)
+        out[iso] = (float(r[col]), 2025)
     return out
 
 
@@ -206,6 +215,12 @@ ind('wgi_regulatory_quality', 'Regulatory Quality (WGI)', 'Regulatory Quality', 
     'World Bank Worldwide Governance Indicators', 'https://www.worldbank.org/en/publication/worldwide-governance-indicators', 'Estimate -2.5 to +2.5',
     'Ability of government to formulate and implement sound policies and regulations that permit and promote private-sector development.',
     3, EXP, False, lambda: wb('GOV_WGI_RQ.EST'), lambda v: f'{v:+.2f} WGI')
+ind('organized_crime_resilience', 'Organised Crime: Resilience Score', 'Crime Resilience', 'governance',
+    'Global Initiative Against Transnational Organized Crime', 'https://ocindex.net/', 'Score 1-10 (higher = more resilient)',
+    'Expert-assessed ability to withstand and disrupt organised crime: leadership, transparency, international cooperation, '
+    'laws, courts, policing, territorial control, anti-money-laundering, regulation, victim support, prevention and civil society '
+    '(Global Organized Crime Index 2025).',
+    3, EXP, False, lambda: ocindex('Resilience avg.'), lambda v: f'{v:.2f} / 10')
 
 # Economy
 ind('gdp_per_capita_ppp', 'GDP per Capita (PPP)', 'GDP per Capita', 'economy',
@@ -262,8 +277,9 @@ ind('academic_freedom', 'Academic Freedom Index', 'Academic Freedom', 'rights',
     3, 'Expert Academic', False, lambda: vdem('v2xca_academ'), lambda v: f'{v:.2f} / 1')
 ind('vdem_religious_freedom', 'Freedom of Religion', 'Religious Freedom', 'rights',
     'V-Dem Institute (v16)', 'https://www.v-dem.net/data/the-v-dem-dataset/', 'Latent scale (≈ -3 to +3)',
-    'Expert-coded freedom to choose, practise and change religion, including freedom from state religious repression.',
-    3, 'Expert Academic', False, lambda: vdem('v2clrelig'), lambda v: f'{v:+.2f} V-Dem')
+    'Expert-coded freedom to choose, practise and change religion, including freedom from state religious repression. '
+    'Averaged over the last three years, because this single question is rated by only a handful of experts per country.',
+    3, 'Expert Academic', False, lambda: vdem_3yr('v2clrelig'), lambda v: f'{v:+.2f} V-Dem (3-yr avg)')
 ind('georgetown_wps', 'Women, Peace and Security Index 2025', "Women's Status", 'rights',
     'Georgetown Institute for Women, Peace and Security & PRIO', 'https://giwps.georgetown.edu/the-index/', 'Index 0-1',
     "Women's inclusion (education, jobs, finance, politics), justice (legal discrimination, son bias) and security (intimate partner violence, community safety).",
@@ -506,6 +522,7 @@ def write_sources_md(inds, cats, n_ranked):
              '**Scoring.** Each indicator is rescaled to 0–100 between goalposts at the 2.5th and 97.5th percentile of country values '
              '(log scale for skewed data) and flipped where lower is better; values beyond the goalposts are clipped. '
              'Ranks use the raw values. A dimension score is the mean of the indicator scores a country has in it; with fewer than half of its indicators the dimension is N/A, and the overall score is averaged over the remaining dimensions.', '',
+             'V-Dem\'s freedom-of-religion score is averaged over its last three years (2023–2025), because that single question is rated by only a handful of experts per country and swings sharply year to year.', '',
              'Raw snapshots of every source are in `data/sources/`; `scripts/fetch_sources.sh` re-downloads them from the publishers.', '']
     for c in cats:
         lines += [f"## {c['name']}", '', '| Indicator | Publisher | Data year(s) | Countries | Lower is better | Goalposts (0 → 100) |', '|---|---|---|---|---|---|']
@@ -522,7 +539,7 @@ def write_sources_md(inds, cats, n_ranked):
               '- **International Property Rights Index** — published by an advocacy group and largely duplicates the WGI rule-of-law measure.',
               '- **ITUC Global Rights Index** — the site was offline when this dataset was built. ILO SDG 8.8.2 was also left out because the ILO states it "is not intended as a tool to compare compliance among ILO member States".',
               '- **Housing affordability, public-transit access, KidsRights Index** — no source covers most countries.',
-              '- **Taiwan, Kosovo, Monaco, Andorra and other small states** are shown but not ranked: UN-system sources (World Bank, WHO, UNDP) do not report them, leaving fewer than the minimum number of indicators.', '']
+              '- **Taiwan, Kosovo, Monaco, Liechtenstein and other small states** are shown but not ranked: UN-system sources (World Bank, WHO, UNDP) do not report them, leaving fewer than the minimum number of indicators.', '']
     open(os.path.join(ROOT, 'SOURCES.md'), 'w').write('\n'.join(lines))
 
 
