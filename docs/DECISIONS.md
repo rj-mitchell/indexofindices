@@ -1,0 +1,32 @@
+# Decisions
+
+Product decisions for Where Lives Stand. The owner's decisions override anything else in this repository. Add new
+decisions here once they are made, with who made them and when.
+
+6 November 2026. Decisions 1 to 6 are the owner's. Decisions 7 to 14 were made while the site was redesigned
+(pull request #10, merged 6 November 2026) or kept from before it, and are **proposed, for the owner to confirm**.
+Once confirmed, move each one up to "Made by the owner" and keep its number.
+
+## Made by the owner
+
+| # | Topic | Decision |
+|---|---|---|
+| 1 | The look | **A full redesign** in the family's printed-record style (Bound Volume), not a redress of the old dashboard. Every feature stays: the weights, presets and per-indicator dials, the map, the table, the dossiers, the comparison and Behind the rankings (owner, 6 November 2026; the family plan's decision 5). See [DESIGN.md](DESIGN.md). |
+| 2 | Headings | Headings in **Source Serif 4**, the family's typeface, as on every Where They Stand site, so the sites look more alike. The body type, palette and layout stay the site's own (owner, 6 November 2026; the family plan's decision 1). |
+| 3 | Licence for the code | **AGPL-3.0**, as the sister sites ([LICENSE](../LICENSE)). The publishers' figures stay under their own terms; the name and mark are not covered (owner, 6 November 2026). |
+| 4 | Name | **Where Lives Stand**, at wherelivesstand.com, a Where They Stand project; formerly the Index of Indices. The repository was renamed from `indexofindices` on 6 November 2026; the Cloudflare Worker keeps the name `indexofindices` (owner, 6 November 2026; the family plan's decision 7). |
+| 5 | The map's projection | **Mercator**, chosen so that smaller, densely populated countries such as those in Europe are large enough to see and select. **Antarctica, Greenland and the far-northern Arctic islands are left off the map**, because Mercator makes them enormous. Greenland is not ranked separately in any case: it is not in the data. The family audit's finding that the map "silently drops Greenland", and the plan's suggestion of an equal-area projection, are set aside: leaving them off was by design (owner, 6 November 2026). The redesign had moved the map to Equal Earth and the unedited Natural Earth file; both are undone, and the geometry is again the file the site used before the redesign (`src/data/world-50m.json`, checked by `test/map.test.ts`). |
+| 6 | The map comes first | **As little text as reasonably possible above the map.** On the map and rankings view: a one-line beta banner (with its link to report a problem), a compact masthead (the name and the endorsement line, the navigation and search on the same row at desktop; on phones the navigation scrolls along one row), no visible heading or introduction above the map (the page's heading is kept for screen readers), the data date and "Copy a link to this view" under the map, the region tabs and zoom in one row, and the weights beside the map at desktop and under it on phones. At 1280 by 900 the map's top edge is at 191 px; at 390 by 844, at 285 px, with the whole map on the first screen (owner, 6 November 2026). |
+
+## Proposed, for the owner to confirm
+
+| # | Topic | Decision |
+|---|---|---|
+| 7 | Preset names | Two presets renamed in plain words: "Ethics & Rights" became **Rights and liberties** and "Digital Nomad" became **Remote worker**. Their names in addresses are `rights` and `remote-worker` (`?preset=rights`). The weights are unchanged (proposed by the redesign, 6 November 2026). |
+| 8 | Territories | Territories of another country (the Faroe Islands, Jersey, Puerto Rico and the like) are **not ranked separately**: most sources report them under the country they belong to. On the map they are hatched, their hover card says "not ranked separately", and selecting one opens the dossier of the country it belongs to. Their addresses (`/country/FRO`) redirect to that country's (`/country/DNK`) (proposed by the redesign, 6 November 2026). |
+| 9 | The colour scale | One hue, heather, by lightness, so the order reads from lightness alone whatever a reader's colour vision: on paper, **low scores pale and high scores dark**; in dark mode the scale is flipped, low dark and high bright. The world scale runs from 20 or less to 90 or more; in a region it can be stretched over the region's own range. It replaced the old red-to-green scale (proposed by the redesign, 6 November 2026, following the family plan's section 3). |
+| 10 | Country addresses | Every country has a canonical address, **`/country/<ISO3>`**, with the ISO 3166-1 alpha-3 code in capitals (`/country/GBR`). Lower-case codes and the old `/?country=` form are rewritten to it. This is the address sister sites link to ([URLS.md](URLS.md)) (proposed by the redesign, 6 November 2026). |
+| 11 | No imputation | **Nothing is imputed.** A country a source does not cover has no value for that indicator, and shows "n/a"; observations older than 2015 are dropped (made before the redesign and kept by it; recorded 6 November 2026). |
+| 12 | Who is ranked | A country is ranked only if it has **at least 20 of the 34 indicators**. A dimension with fewer than half of its indicators is left out of that country's score rather than resting on one value (made before the redesign and kept by it; recorded 6 November 2026). |
+| 13 | V-Dem's religious-freedom score | **Averaged over V-Dem's last three years** (2023 to 2025), because it rests on a single question rated by a handful of experts per country and swings from year to year. It is the only averaged value; V-Dem's composite indices are used as published (made before the redesign and kept by it; recorded 6 November 2026). |
+| 14 | Licence for the site's own text | The text the site writes (its pages, the method and Behind the rankings) is licensed under **CC BY 4.0**, as on Where MPs Stand and Where Landlords Stand. The figures stay under their publishers' terms, and the name and mark are not covered. Stated on the Terms page (proposed 6 November 2026). |
