@@ -100,7 +100,15 @@ npm run preview
 ## Checks
 
 GitHub Actions (`.github/workflows/ci.yml`) runs on every push and pull request: `npm ci`, the type-check, the
-tests, `npm run check:family` and the build, then checks that the build wrote every page. It deploys nothing.
+tests, `npm run check:family` and the build, then checks that the build wrote every page, then runs
+`npm run check:a11y`. It deploys nothing.
+
+`npm run check:a11y` (`scripts/a11y.mjs`) serves `dist/` as the Worker does, with its 404 page and the headers
+in `public/_headers`, and opens the home page, Norway's dossier, the comparison, Behind the rankings, About and
+Press in Chromium, at 1280 and 390 pixels wide, in light and dark mode. It runs axe-core against WCAG 2.2 A and AA
+and fails on any serious or critical finding, and on any console error, content-security-policy violation or
+request to another host. It needs a browser: `npx playwright install chromium` once, or point `CHROME_PATH` at an
+installed Chrome. `--shots <dir>` also saves a screenshot of each.
 
 `npm run check:family` checks the family kit's copy in `public/family/` on its own: that `VERSION` is there, for
 this site, from the kit version the build expects (`KIT` in `scripts/check-family.mjs`), and that no copy has been
@@ -113,7 +121,7 @@ From a checkout with the charity's repository beside this one:
 
 ```bash
 node ../wheretheystand-charity/family/kit/sync.mjs --site lives --out public/family --check
-npm run typecheck && npm test && npm run build
+npm run typecheck && npm test && npm run build && npm run check:a11y
 npx wrangler dev   # then look at the changed pages, light and dark, at desktop and phone widths
 ```
 

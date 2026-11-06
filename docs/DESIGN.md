@@ -51,7 +51,9 @@ Tokens are CSS variables in `src/index.css`, with a dark-mode value for each, fo
 
 The map comes first ([DECISIONS.md](DECISIONS.md), 6). Above it there are only the one-line beta banner, the
 compact masthead (the name and endorsement, the navigation and the search, on one row at desktop) and the region
-tabs and zoom buttons, in one row that scrolls sideways on a phone. The page's heading is visually hidden. The
+tabs and zoom buttons, in one row that scrolls sideways on a phone. Where more tabs lie off either end of the
+row, that end fades out under an arrow, which scrolls the row along when tapped, and the chosen region's tab is
+always scrolled into view; on a wide screen every tab fits and neither shows. The page's heading is visually hidden. The
 count of countries, the data date and "Copy a link to this view" sit under the map; the weights are beside it at
 desktop and under it on phones.
 

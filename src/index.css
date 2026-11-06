@@ -124,6 +124,9 @@
   .prose-page li {
     @apply my-1.5;
   }
+  .prose-page blockquote {
+    @apply my-4 pl-4 border-l-2 border-gilt;
+  }
   .prose-page h2 {
     @apply text-2xl mt-12 mb-3;
   }
@@ -242,6 +245,34 @@ input[type='range']::-moz-range-thumb {
 }
 .sheet-in {
   animation: sheet-in 0.18s ease-out;
+}
+
+/* The region tabs' faded edges (RegionTabs.tsx): more tabs lie off this side of the row */
+.region-more {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(var(--heather));
+}
+.region-more-right {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(to right, rgb(var(--paper) / 0), rgb(var(--paper)) 60%);
+}
+.region-more-left {
+  left: 0;
+  justify-content: flex-start;
+  background: linear-gradient(to left, rgb(var(--paper) / 0), rgb(var(--paper)) 60%);
+}
+.region-tabs {
+  scrollbar-width: none;
+}
+.region-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
