@@ -3,7 +3,7 @@
 Product decisions for Where Lives Stand. The owner's decisions override anything else in this repository. Add new
 decisions here once they are made, with who made them and when.
 
-6 November 2026. Decisions 1 to 6 are the owner's. Decisions 7 to 14 were made while the site was redesigned
+6 November 2026. Decisions 1 to 6 and 15 are the owner's. Decisions 7 to 14 were made while the site was redesigned
 (pull request #10, merged 6 November 2026) or kept from before it, and are **proposed, for the owner to confirm**.
 Once confirmed, move each one up to "Made by the owner" and keep its number.
 
@@ -17,6 +17,7 @@ Once confirmed, move each one up to "Made by the owner" and keep its number.
 | 4 | Name | **Where Lives Stand**, at wherelivesstand.com, a Where They Stand project; formerly the Index of Indices. The repository was renamed from `indexofindices` on 6 November 2026; the Cloudflare Worker keeps the name `indexofindices` (owner, 6 November 2026; the family plan's decision 7). |
 | 5 | The map's projection | **Mercator**, chosen so that smaller, densely populated countries such as those in Europe are large enough to see and select. **Antarctica, Greenland and the far-northern Arctic islands are left off the map**, because Mercator makes them enormous. Greenland is not ranked separately in any case: it is not in the data. The family audit's finding that the map "silently drops Greenland", and the plan's suggestion of an equal-area projection, are set aside: leaving them off was by design (owner, 6 November 2026). The redesign had moved the map to Equal Earth and the unedited Natural Earth file; both are undone, and the geometry is again the file the site used before the redesign (`src/data/world-50m.json`, checked by `test/map.test.ts`). |
 | 6 | The map comes first | **As little text as reasonably possible above the map.** On the map and rankings view: a one-line beta banner (with its link to report a problem), a compact masthead (the name and the endorsement line, the navigation and search on the same row at desktop; on phones the navigation scrolls along one row), no visible heading or introduction above the map (the page's heading is kept for screen readers), the data date and "Copy a link to this view" under the map, the region tabs and zoom in one row, and the weights beside the map at desktop and under it on phones. At 1280 by 900 the map's top edge is at 191 px; at 390 by 844, at 285 px, with the whole map on the first screen (owner, 6 November 2026). |
+| 15 | The mark | **The site has a picture mark beside its name, like its sister sites.** The redesign had dropped the old teal map-pin logo, leaving only the name and the endorsement. The mark is a desk globe on its stand, in gilt, on a heather tile with a fine gilt edge, three of its cells shaded as countries are on the map. It sits beside the name and the endorsement in the masthead, no taller than they are, so the map's top edge stays where decision 6 puts it, and is offered on the press page. The favicons come from the family kit; the owner has asked for them to show the mark too, which is to be done in the kit, and `public/mark-small.svg` is drawn for 16 to 32 pixels for that (owner's request, 6 November 2026; [DESIGN.md](DESIGN.md), "The mark"). |
 
 ## Proposed, for the owner to confirm
 
