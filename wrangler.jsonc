@@ -1,12 +1,15 @@
 // Cloudflare Workers config: serves the static Vite build in dist/ (no server code).
-// "name" must match the Worker's name in the Cloudflare dashboard.
+// "name" must match the Worker's name in the Cloudflare dashboard; it keeps the project's old name.
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "indexofindices",
   "compatibility_date": "2025-09-01",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
+    // Every address the app answers has its own HTML file (scripts/postbuild.mjs), so anything else is a
+    // real "not found": dist/404.html with status 404, rather than the app with status 200.
+    "not_found_handling": "404-page",
+    // /country/NOR is served from country/NOR.html; /about from about.html
+    "html_handling": "auto-trailing-slash"
   },
   // The site's address (attached 31 October 2026); listed here so a deploy keeps it
   "routes": [{ "pattern": "wherelivesstand.com", "custom_domain": true }],
