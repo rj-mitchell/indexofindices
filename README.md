@@ -34,6 +34,7 @@ for that country, until that site has country pages); sister sites can link to a
 | Document | What it covers |
 |---|---|
 | [SOURCES.md](SOURCES.md) | Every indicator: publisher, years, coverage, direction and goalposts; what was left out and why. Generated, and shown on the site's How it works page |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | The owner's product decisions, and those proposed for the owner to confirm |
 | [docs/URLS.md](docs/URLS.md) | The address of every view, for sharing and for links from sister sites |
 | [docs/DESIGN.md](docs/DESIGN.md) | The look, the family kit, the colour scale and the map |
 
@@ -92,6 +93,29 @@ npm run preview
 
 `npx wrangler dev` serves `dist/` as Cloudflare will, with the 404 page, redirects and response headers
 (`public/_headers`).
+
+## Checks
+
+GitHub Actions (`.github/workflows/ci.yml`) runs on every push and pull request: `npm ci`, the type-check, the
+tests, `npm run check:family` and the build, then checks that the build wrote every page. It deploys nothing.
+
+`npm run check:family` checks the family kit's copy in `public/family/` on its own: that `VERSION` is there, for
+this site, from the kit version the build expects (`KIT` in `scripts/check-family.mjs`), and that no copy has been
+edited since it was synced. Whether the copy matches the kit itself can only be checked with the charity's
+repository, which is private, so CI can't.
+
+### Before merging
+
+From a checkout with the charity's repository beside this one:
+
+```bash
+node ../wheretheystand-charity/family/kit/sync.mjs --site lives --out public/family --check
+npm run typecheck && npm test && npm run build
+npx wrangler dev   # then look at the changed pages, light and dark, at desktop and phone widths
+```
+
+If the kit check fails, sync the kit (`docs/DESIGN.md`), commit the copies, and update `KIT` in
+`scripts/check-family.mjs` if the kit's version changed. Merging to `main` deploys the site.
 
 ## Deploying
 
