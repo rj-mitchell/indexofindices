@@ -18,8 +18,10 @@ A Where They Stand project. Where They Stand is applying to register as a charit
 ## Status
 
 6 November 2026. Live in beta at wherelivesstand.com. Redesigned in the family's Bound Volume style, with
-addresses for every view, a real 404, security headers and the standard pages. Next: check each publisher's terms
-for the files in `data/sources/`, and test with screen-reader users.
+addresses for every view, a real 404, security headers and the standard pages, including terms of use. The map is
+Mercator and comes first on the page, as the owner decided ([docs/DECISIONS.md](docs/DECISIONS.md)). Next: the
+owner to confirm the proposed decisions; check each publisher's terms for the files in `data/sources/`; test with
+screen-reader users.
 
 ## In the family
 
