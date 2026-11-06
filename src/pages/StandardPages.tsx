@@ -347,6 +347,14 @@ export const Press: React.FC<{ rankedCount: number; indicatorCount: number }> = 
     </p>
     <ul>
       <li>
+        <a href="/mark.svg">The site's mark (SVG)</a>: a desk globe on its stand, on heather, as beside the name at
+        the top of every page; <a href="/mark-dark.svg">for dark backgrounds (SVG)</a>, and{' '}
+        <a href="/mark-512.png">as a picture, 512 by 512 pixels (PNG)</a>
+      </li>
+      <li>
+        <a href="/mark-small.svg">The mark for small sizes (SVG)</a>, 16 to 32 pixels: the same globe, simpler
+      </li>
+      <li>
         <a href="/family/icon.svg">Icon (SVG)</a>: the site's spine, as in the Where They Stand family
       </li>
       <li>
@@ -358,6 +366,7 @@ export const Press: React.FC<{ rankedCount: number; indicatorCount: number }> = 
       </li>
     </ul>
     <p className="flex flex-wrap items-end gap-6">
+      <img src="/mark.svg" width={64} height={64} alt="The Where Lives Stand mark: a desk globe on its stand, in gilt, on a heather tile" />
       <img src="/family/icon.svg" width={64} height={64} alt="The Where Lives Stand icon: a pale spine on heather" />
       <img
         src="/family/card.png"

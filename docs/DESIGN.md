@@ -23,6 +23,31 @@ node ../wheretheystand-charity/family/kit/sync.mjs --site lives --out public/fam
 - `<body class="wts-headings">` sets headings in Source Serif 4. `scripts/postbuild.mjs` copies
   `family/favicon.ico` to `/favicon.ico`.
 
+## The mark
+
+The site's picture mark sits beside its name in the masthead, as each sister site's does (Where MPs Stand's open
+book, Where Countries Stand's horseshoe of seats, Where Landlords Stand's roof over a book). It is **a desk globe on
+its stand**: an ivory globe with a graticule, its parallels curved so that it reads as round, held in a gilt
+meridian ring on a gilt stand, on a rounded heather tile with a fine gilt edge. Three of the globe's cells are
+shaded in heather, pale to dark, as countries are on the map: quality of life, country by country, and a world
+that "stands".
+
+- **Colours:** the tile is heather `#5E3F63` (in dark mode `#7F5585`, the family kit's lifted cloth, so that it
+  stands clear of the dark page); the edge, ring and stand are the kit's spine gilt `#D9BC72`; the globe is ivory
+  `#F3EAD6`, as Where MPs Stand's book; the graticule is heather, and the cells `#DCCADD`, `#B99CBD` and `#8A6590`.
+  In forced colours the tile and globe are drawn in `Canvas` and everything else in `CanvasText` (`src/index.css`).
+- **Drawing:** `scripts/mark.mjs` draws it on a 64-unit grid and writes `public/mark.svg` and `mark-dark.svg` (for
+  40 pixels and up), `mark-small.svg` and `mark-small-dark.svg` (for 16 to 32 pixels: no gilt edge or shaded cells,
+  fewer and heavier lines, on a 4-unit grid so that the stem and ring land on whole pixels at 16), and, with
+  `--png`, `mark-512.png`. `src/components/Mark.tsx` draws the same shapes in the page, and `test/mark.test.ts`
+  checks that the files are what the script draws and that the component agrees. Change the script, not the files.
+- **In the masthead:** 56 pixels at desktop and 52 on phones, as tall as the name and the endorsement together, so
+  the masthead is no taller and the map's top edge stays where [DECISIONS.md](DECISIONS.md), 6, puts it. It links
+  home, like the name, but is hidden from screen readers and takes no focus, so the name is announced once.
+- **Press:** `/press` lists the mark's files beside the family icon and the sharing image.
+- The favicons come from the family kit (still the spine). The owner has asked for them to show the mark; that is
+  to be done in the kit, from `mark-small.svg`, not by editing `public/family/` here.
+
 ## Type
 
 - **Source Serif 4** (from the kit) for the name, headings and running text on the text pages.
