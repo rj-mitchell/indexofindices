@@ -17,6 +17,7 @@ export const SiteFooter: React.FC = () => (
           <li><Link href="/accessibility">Accessibility</Link></li>
           <li><Link href="/privacy">Privacy</Link></li>
           <li><Link href="/terms">Terms</Link></li>
+          <li><Link href="/press">Press</Link></li>
           <li><a href={REPO_URL}>Source code</a></li>
         </ul>
       </nav>

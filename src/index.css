@@ -124,6 +124,9 @@
   .prose-page li {
     @apply my-1.5;
   }
+  .prose-page blockquote {
+    @apply my-4 pl-4 border-l-2 border-gilt;
+  }
   .prose-page h2 {
     @apply text-2xl mt-12 mb-3;
   }

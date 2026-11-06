@@ -29,7 +29,7 @@ over the map. Other forms are accepted and rewritten to it:
 | `/country/NOR` | The same, with Norway's dossier open |
 | `/compare?a=ESP&b=NOR` | The same, with Spain and Norway compared (`a` and `b` are ISO3 codes) |
 | `/behind-the-rankings` | The limits of the indices (sections `#traps`, `#odd-results`, `#every-index`, `#your-weights`) |
-| `/about`, `/method`, `/privacy`, `/terms`, `/accessibility`, `/corrections` | The standard pages |
+| `/about`, `/method`, `/privacy`, `/terms`, `/accessibility`, `/corrections`, `/press` | The standard pages |
 | anything else | "Page not found", status 404 |
 
 ## Weights and region

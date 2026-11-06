@@ -31,7 +31,7 @@ jobs:
       - name: The build wrote a page for each address, the 404 page and the sitemap
         run: |
           for f in index.html 404.html sitemap.xml _redirects about.html method.html privacy.html terms.html \
-                   accessibility.html corrections.html behind-the-rankings.html country/GBR.html favicon.ico \
+                   accessibility.html corrections.html press.html behind-the-rankings.html country/GBR.html favicon.ico \
                    family/VERSION; do
             test -s "dist/$f" || { echo "dist/$f is missing"; exit 1; }
           done

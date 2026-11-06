@@ -66,6 +66,7 @@ const pages = [
   { path: '/privacy', file: 'privacy.html', title: `Privacy: ${SITE}`, description: `${SITE} uses no cookies, analytics or advertising.` },
   { path: '/terms', file: 'terms.html', title: `Terms of use: ${SITE}`, description: `The terms for using ${SITE} and reusing its work: the code, the site's own text and the publishers' figures.` },
   { path: '/accessibility', file: 'accessibility.html', title: `Accessibility statement: ${SITE}`, description: `How accessible ${SITE} is, how we tested it, and its known limits.` },
+  { path: '/press', file: 'press.html', title: `Press and citing: ${SITE}`, description: `Contact, how to cite ${SITE} and its figures, the site in brief, and its logo files.` },
   { path: '/corrections', file: 'corrections.html', title: `Corrections and problems: ${SITE}`, description: `How to report a problem with ${SITE}, and the corrections made.` },
 ];
 for (const p of pages) write(p.file, page(p));

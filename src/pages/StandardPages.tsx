@@ -1,5 +1,5 @@
 // The standard pages every Where They Stand site carries: about, how it works, privacy, accessibility,
-// corrections, and not found.
+// corrections, press, and not found.
 import React from 'react';
 import { Page } from './Page';
 import { Link } from '../lib/nav';
@@ -29,6 +29,8 @@ const Email = () => <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>;
 // Who runs the site until the charity is registered, in the family's words (the family glossary, "Who runs it")
 const RUNS_THE_SITES =
   'Where They Stand is applying to register as a charity in England and Wales. Until it is registered, the sites are run by its founder, Rob Mitchell, who is the data controller for the personal information described here. Once it is registered, the charity will be.';
+const RUNS_THE_SITES_SHORT =
+  'Where They Stand is applying to register as a charity in England and Wales; until then the site is run by its founder, Rob Mitchell.';
 const TERMS_UPDATED = '2026-11-06';
 
 export const About: React.FC<{ rankedCount: number; indicatorCount: number }> = ({ rankedCount, indicatorCount }) => (
@@ -272,6 +274,99 @@ export const Corrections: React.FC = () => (
     </p>
     <h2>Corrections made</h2>
     <p>None recorded yet.</p>
+  </Page>
+);
+
+export const Press: React.FC<{ rankedCount: number; indicatorCount: number }> = ({ rankedCount, indicatorCount }) => (
+  <Page title="Press and citing" kicker="Press">
+    <p className="text-lg">
+      Where Lives Stand ranks {rankedCount} countries on quality of life from {indicatorCount} published indicators,
+      under weights the reader chooses. This page is for journalists, researchers and anyone quoting the site.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      Email <a href={`mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent('Where Lives Stand: press')}`}>{FEEDBACK_EMAIL}</a>{' '}
+      for press, research or anything else. To report a figure that looks wrong, please follow{' '}
+      <Link href="/corrections">Corrections</Link>, so that the correction is checked and recorded.
+    </p>
+    <h2>How to cite</h2>
+    <p>
+      Every figure on the site comes from a publisher, such as the World Bank or the World Health Organization. Where
+      you can, quote and cite the publisher's own figure: each country's dossier gives every indicator's publisher and
+      year, and <Link href="/method">How it works</Link> links to each source.
+    </p>
+    <p>
+      The scores and ranks are the site's own arithmetic, and <strong>they change with the weights</strong>: the same
+      country can rank very differently under another preset. So say which weights you used, or cite the link, which
+      holds them. A country's address with no weights in it, such as <a href="/country/NOR">{SITE_URL}/country/NOR</a>,
+      uses the balanced weights (every dimension at 50%). "Copy a link to this view", under the map, copies the address
+      with your weights, region and the country you have open.
+    </p>
+    <p>To cite a country's figures:</p>
+    <blockquote className="cite-template">
+      Where Lives Stand (2026). "Norway". Quality-of-life score and rank under the balanced weights.{' '}
+      {SITE_URL}/country/NOR (data updated {formatDate(DATA_UPDATED)}; accessed 6 November 2026).
+    </blockquote>
+    <p>With other weights, name them and give the link that holds them:</p>
+    <blockquote className="cite-template">
+      Where Lives Stand (2026). "Norway". Quality-of-life score and rank under the Young family weights.{' '}
+      {SITE_URL}/country/NOR?preset=young-family (data updated {formatDate(DATA_UPDATED)}; accessed 6 November 2026).
+    </blockquote>
+    <p>
+      The site's own text is licensed under CC BY 4.0; the figures stay under their publishers' terms. See the{' '}
+      <Link href="/terms">terms of use</Link>.
+    </p>
+    <h2>The site in brief</h2>
+    <ul>
+      <li>
+        {rankedCount} countries ranked on {indicatorCount} indicators in eight dimensions: safety, governance, rights,
+        economy, health, infrastructure, climate and environment.
+      </li>
+      <li>
+        A country is ranked only if it has at least 20 of the {indicatorCount} indicators. Nothing is imputed: a
+        country a source does not cover shows "n/a" for it.
+      </li>
+      <li>
+        Data last updated {formatDate(DATA_UPDATED)}. Every source, with its publisher, year and coverage, is listed in{' '}
+        <Link href="/method">How it works</Link> and in <a href={SOURCES_URL}>SOURCES.md</a>.
+      </li>
+      <li>
+        Its limits, and the traps in combining indices, are set out in{' '}
+        <Link href="/behind-the-rankings">Behind the rankings</Link>.
+      </li>
+      <li>
+        A Where They Stand project. {RUNS_THE_SITES_SHORT} No advertising, no analytics and no cookies. See{' '}
+        <Link href="/about">About</Link>.
+      </li>
+    </ul>
+    <p>{INDEPENDENCE_LINE}</p>
+    <h2>Logo and images</h2>
+    <p>
+      You may use these to refer to the site. Please do not change them or use them in a way that suggests the site
+      endorses you or your work.
+    </p>
+    <ul>
+      <li>
+        <a href="/family/icon.svg">Icon (SVG)</a>: the site's spine, as in the Where They Stand family
+      </li>
+      <li>
+        <a href="/family/icon-512.png">Icon (PNG, 512 pixels)</a>
+      </li>
+      <li>
+        <a href="/family/card.png">Sharing image (PNG, 1200 by 630 pixels)</a>: the card shown when the site is linked
+        to
+      </li>
+    </ul>
+    <p className="flex flex-wrap items-end gap-6">
+      <img src="/family/icon.svg" width={64} height={64} alt="The Where Lives Stand icon: a pale spine on heather" />
+      <img
+        src="/family/card.png"
+        width={240}
+        height={126}
+        alt="The Where Lives Stand sharing image: the spine, the name and A Where They Stand project"
+        className="border border-rule"
+      />
+    </p>
   </Page>
 );
 

@@ -6,7 +6,7 @@
 //   /country/NOR               the same, with Norway's dossier open (ISO 3166-1 alpha-3, upper case)
 //   /compare?a=ESP&b=NOR       the same, with the comparison open
 //   /behind-the-rankings       the page on the limits of the indices
-//   /about /method /privacy /terms /accessibility /corrections
+//   /about /method /privacy /terms /accessibility /corrections /press
 //
 // Any page may carry the weights and region as query parameters:
 //   ?preset=young-family       a preset's weights, or
@@ -24,7 +24,7 @@ import { CATEGORY_ORDER, DEFAULT_WEIGHT, defaultMacroWeights } from './scoring.t
 import { presetById, matchingPreset } from '../data/presets.ts';
 import { regionById, type RegionId } from '../data/regions.ts';
 
-export const PAGES = ['behind-the-rankings', 'about', 'method', 'privacy', 'terms', 'accessibility', 'corrections'] as const;
+export const PAGES = ['behind-the-rankings', 'about', 'method', 'privacy', 'terms', 'accessibility', 'corrections', 'press'] as const;
 export type Page = (typeof PAGES)[number];
 export type View = 'map' | Page | 'not-found';
 

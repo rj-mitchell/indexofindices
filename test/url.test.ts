@@ -100,7 +100,7 @@ test('the comparison', () => {
 });
 
 test('pages, and everything else is not found', () => {
-  for (const p of ['behind-the-rankings', 'about', 'method', 'privacy', 'terms', 'accessibility', 'corrections']) {
+  for (const p of ['behind-the-rankings', 'about', 'method', 'privacy', 'terms', 'accessibility', 'corrections', 'press']) {
     assert.equal(parse(`/${p}`).view, p);
     assert.equal(buildUrl({ ...defaultUrlState(), view: p as never }), `/${p}`);
   }
