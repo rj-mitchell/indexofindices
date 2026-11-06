@@ -26,6 +26,11 @@ const SISTERS = [
 
 const Email = () => <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>;
 
+// Who runs the site until the charity is registered, in the family's words (the family glossary, "Who runs it")
+const RUNS_THE_SITES =
+  'Where They Stand is applying to register as a charity in England and Wales. Until it is registered, the sites are run by its founder, Rob Mitchell, who is the data controller for the personal information described here. Once it is registered, the charity will be.';
+const TERMS_UPDATED = '2026-11-06';
+
 export const About: React.FC<{ rankedCount: number; indicatorCount: number }> = ({ rankedCount, indicatorCount }) => (
   <Page title="About Where Lives Stand" kicker="About">
     <p className="text-lg">
@@ -43,7 +48,8 @@ export const About: React.FC<{ rankedCount: number; indicatorCount: number }> = 
     <h2>Who runs it</h2>
     <p>
       Where Lives Stand is a project of <a href={HUB_URL}>Where They Stand</a>, which is applying to register as a
-      charity in England and Wales. Until 6 November 2026 it was called the Index of Indices.
+      charity in England and Wales. Until it is registered, the site is run by its founder, Rob Mitchell; once it is
+      registered, the charity will run it. Until 6 November 2026 the site was called the Index of Indices.
     </p>
     <p>{INDEPENDENCE_LINE}</p>
     <h2>In the family</h2>
@@ -70,8 +76,9 @@ export const About: React.FC<{ rankedCount: number; indicatorCount: number }> = 
     </p>
     <h2>Licence</h2>
     <p>
-      The code is open source under the GNU Affero General Public License 3.0, at <a href={REPO_URL}>GitHub</a>. The
-      figures are not covered by that licence: each belongs to its publisher and is used under the publisher's terms.
+      The code is open source under the GNU Affero General Public License 3.0, at <a href={REPO_URL}>GitHub</a>, and
+      the site's own text is under CC BY 4.0. The figures are not covered by either licence: each belongs to its
+      publisher and is used under the publisher's terms. See the <Link href="/terms">terms of use</Link>.
     </p>
   </Page>
 );
@@ -128,8 +135,80 @@ export const Privacy: React.FC = () => (
     </p>
     <h2>Who is responsible</h2>
     <p>
-      Where They Stand, which is applying to register as a charity in England and Wales, is responsible for this site.
-      You can ask what we hold about you, or complain to the Information Commissioner's Office (ico.org.uk).
+      Where Lives Stand is a Where They Stand project. {RUNS_THE_SITES} You can ask what we hold about you, or
+      complain to the Information Commissioner's Office (ico.org.uk).
+    </p>
+  </Page>
+);
+
+export const Terms: React.FC = () => (
+  <Page title="Terms of use" kicker="Terms">
+    <p className="text-lg">
+      The short version: use it freely, check the sources, and credit the site if you reuse its work.
+    </p>
+    <p className="text-sm text-muted">Last updated {formatDate(TERMS_UPDATED)}.</p>
+    <h2>About these terms</h2>
+    <p>
+      Where Lives Stand (wherelivesstand.com) is a Where They Stand project. Where They Stand is applying to register as
+      a charity in England and Wales. Until it is registered, the site is run by its founder, Rob Mitchell; once it is
+      registered, the charity will run it. By using the site you agree to these terms. Contact: <Email />.
+    </p>
+    <h2>What the site is, and is not</h2>
+    <p>
+      The site shows figures published by others, such as the World Bank, the World Health Organization and the UN
+      Development Programme, rescales them to a common scale and combines them under the weights you choose. Every
+      figure carries its year and links to its publisher. Always check the source before relying on a figure.
+    </p>
+    <p>
+      The scores and ranks are this site's arithmetic on those figures, not an official ranking by any publisher. They
+      are general information, not advice on where to live, work, invest or travel.
+    </p>
+    <p>{INDEPENDENCE_LINE}</p>
+    <p>The service is free and provided "as is". It may change, be paused or stop.</p>
+    <h2>Reusing our work</h2>
+    <p>
+      The text the site writes (its pages, the method and Behind the rankings) is licensed under the{' '}
+      <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence</a>{' '}
+      (CC BY 4.0). You may copy, share and adapt it for any purpose, including commercially, as long as you credit
+      Where Lives Stand, link to the page, and say if you changed it. For example: "From Where Lives Stand
+      (wherelivesstand.com), CC BY 4.0."
+    </p>
+    <p>
+      The code is open source under the <a href={`${REPO_URL}/blob/main/LICENSE`}>GNU Affero General Public License
+      3.0</a>, at <a href={REPO_URL}>GitHub</a>. Anyone who runs a changed copy as a public website must offer its
+      source code to that site's visitors.
+    </p>
+    <p>Other material is under its own terms:</p>
+    <ul>
+      <li>
+        Each indicator's figures belong to its publisher and are used under that publisher's terms.{' '}
+        <Link href="/method">How it works</Link> names the publisher of each indicator and links to its source (the
+        same list is in <a href={SOURCES_URL}>SOURCES.md</a>). The scores and ranks are worked out from those figures,
+        so check the publishers' terms before reusing them too.
+      </li>
+      <li>The map is drawn from Natural Earth, which is in the public domain.</li>
+      <li>
+        The name Where Lives Stand and its mark are not covered by these licences. Please don't use them in a way that
+        suggests the site endorses you or your work.
+      </li>
+    </ul>
+    <h2>Fair use of the service</h2>
+    <p>
+      Please don't send automated requests in bulk: every figure is in the <a href={REPO_URL}>repository</a>. Please
+      don't try to break, overload or gain unauthorised access to the site, or present its figures as saying something
+      they do not. Access may be limited or blocked to protect the service.
+    </p>
+    <h2>Responsibility</h2>
+    <p>
+      Every effort is made to keep the site accurate and fair, and our mistakes are corrected when found and listed on
+      the <Link href="/corrections">corrections page</Link>. The site makes no promise that the figures are complete,
+      correct or up to date. To the extent the law allows, Where They Stand is not liable for any loss arising from use
+      of, or reliance on, the site. Nothing in these terms limits liability that cannot be limited by law.
+    </p>
+    <h2>Changes and law</h2>
+    <p>
+      These terms may be updated; the date above shows when. They are governed by the law of England and Wales, and
+      the courts of England and Wales have jurisdiction, without affecting any rights you have where you live.
     </p>
   </Page>
 );

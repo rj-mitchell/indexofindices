@@ -137,6 +137,9 @@ The repository was called `indexofindices` until 6 November 2026 (GitHub forward
 Code: GNU Affero General Public License 3.0 ([LICENSE](LICENSE)). Anyone who runs a changed copy as a public website
 must offer its source code to that site's visitors.
 
+Text written by the site (its pages, the method and Behind the rankings): Creative Commons Attribution 4.0 (CC BY
+4.0), as set out on the site's [terms of use](https://wherelivesstand.com/terms).
+
 Data: each indicator belongs to its publisher and is used under the publisher's own terms; [SOURCES.md](SOURCES.md)
 names the publisher of each. `data/sources/` keeps a copy of each publisher's file as downloaded, so that the dataset
 can be rebuilt exactly; those copies stay under their publishers' terms. A file whose terms don't allow it to be

@@ -15,7 +15,7 @@ import { RankingsTable } from './components/RankingsTable';
 import { CountryDossier } from './components/CountryDossier';
 import { CompareDialog } from './components/CompareDialog';
 import { BehindTheRankings } from './pages/BehindTheRankings';
-import { About, Method, Privacy, Accessibility, Corrections, NotFound } from './pages/StandardPages';
+import { About, Method, Privacy, Terms, Accessibility, Corrections, NotFound } from './pages/StandardPages';
 import { DATA_UPDATED, formatDate, SITE_NAME, TAGLINE } from './config';
 import rawIndicators from './data/indicators.json';
 import rawCategories from './data/categories.json';
@@ -28,6 +28,7 @@ const PAGE_TITLES: Record<Exclude<View, 'map'>, string> = {
   about: 'About',
   method: 'How it works',
   privacy: 'Privacy',
+  terms: 'Terms of use',
   accessibility: 'Accessibility statement',
   corrections: 'Corrections and problems',
   'not-found': 'Page not found',
@@ -215,6 +216,7 @@ export default function App({ countries }: { countries: Record<string, CountryDa
         {s.view === 'about' && <About rankedCount={rankedCount} indicatorCount={indicators.length} />}
         {s.view === 'method' && <Method />}
         {s.view === 'privacy' && <Privacy />}
+        {s.view === 'terms' && <Terms />}
         {s.view === 'accessibility' && <Accessibility />}
         {s.view === 'corrections' && <Corrections />}
         {s.view === 'not-found' && <NotFound mapHref={mapHref} />}

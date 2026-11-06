@@ -64,6 +64,7 @@ const pages = [
   { path: '/about', file: 'about.html', title: `About: ${SITE}`, description: `What ${SITE} is, who runs it and how to contact us.` },
   { path: '/method', file: 'method.html', title: `How it works: ${SITE}`, description: `How ${SITE} scores and combines ${indicators.length} published indicators, and the publisher, year and coverage of each.` },
   { path: '/privacy', file: 'privacy.html', title: `Privacy: ${SITE}`, description: `${SITE} uses no cookies, analytics or advertising.` },
+  { path: '/terms', file: 'terms.html', title: `Terms of use: ${SITE}`, description: `The terms for using ${SITE} and reusing its work: the code, the site's own text and the publishers' figures.` },
   { path: '/accessibility', file: 'accessibility.html', title: `Accessibility statement: ${SITE}`, description: `How accessible ${SITE} is, how we tested it, and its known limits.` },
   { path: '/corrections', file: 'corrections.html', title: `Corrections and problems: ${SITE}`, description: `How to report a problem with ${SITE}, and the corrections made.` },
 ];
