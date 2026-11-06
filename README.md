@@ -41,7 +41,7 @@ for that country, until that site has country pages); sister sites can link to a
 
 - **Weights:** eight dimension dials, six presets (Balanced, Physical, Institutional, Remote worker, Young family,
   Rights and liberties), and a dial for each of the 34 indicators if you want them.
-- **Map and table:** an equal-area map coloured on a single-hue scale, regions, and a sortable table of every ranked
+- **Map and table:** a world map (Mercator) coloured on a single-hue scale, regions, and a sortable table of every ranked
   country.
 - **Country dossier:** score and rank under your weights, the indicators that lift and hold back that score, the
   eight dimensions, and every indicator with its value, year, world rank and publisher.

@@ -99,8 +99,9 @@ export const Method: React.FC = () => (
       The map uses one hue, heather, from pale to dark (light to bright in dark mode), so the order can be read from
       lightness alone, whatever a reader's colour vision. On the world scale, 20 or less is the palest and 90 or more
       the darkest. In a region you can stretch the scale over that region's own range. The legend is drawn from the
-      same scale as the map. The map uses the Equal Earth projection, which shows every country at its true relative
-      size.
+      same scale as the map. The map uses the Mercator projection, so that smaller countries are large enough to see and
+      select; it makes countries far from the equator look bigger than they are, and Antarctica, Greenland and the
+      far-northern Arctic islands are left off it for that reason.
     </p>
     <div className="method-sources">{renderMarkdown(sourcesMd, { skipTitle: true })}</div>
   </Page>

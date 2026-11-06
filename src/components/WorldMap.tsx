@@ -1,5 +1,7 @@
-// The world map: an equal-area projection (Equal Earth), so no country looks bigger than it is, coloured
-// by overall score. Every country in the data is a keyboard stop with a name; Enter opens its dossier.
+// The world map, coloured by overall score. Mercator, by the owner's choice (docs/DECISIONS.md, 5), so that small,
+// densely populated countries such as Europe's are big enough to see and select; Antarctica, Greenland and the
+// far-northern Arctic islands are left out of the geometry (src/data/world-50m.json) because Mercator makes them
+// enormous. Every country in the data is a keyboard stop with a name; Enter opens its dossier.
 import React, { useMemo, useState, useCallback } from 'react';
 import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
 import type { ComputedCountry } from '../types';
@@ -33,8 +35,9 @@ const SPECIAL_GEOMETRIES: Record<string, string> = {
   'Indian Ocean Ter.': 'IOT',
 };
 
+// The geometry runs from about 56°S to 78°N. At this scale and size it fills the frame edge to edge.
 const WIDTH = 960;
-const HEIGHT = 410;
+const HEIGHT = 520;
 
 const ordinal = (n: number) => {
   const s = ['th', 'st', 'nd', 'rd'];
@@ -131,10 +134,10 @@ export const WorldMap: React.FC<Props> = ({ byIso, rankedCount, scale, region, r
       </a>
       <div className="relative border border-rule bg-sheet" onMouseLeave={() => setHover(null)}>
         <ComposableMap
-          projection="geoEqualEarth"
+          projection="geoMercator"
           width={WIDTH}
           height={HEIGHT}
-          projectionConfig={{ scale: 172, center: [0, 7.5], rotate: [-10, 0, 0] }}
+          projectionConfig={{ scale: 150, center: [-10.6, 22], rotate: [-10.6, 0, 0] }}
           className="map-svg"
           role="group"
           aria-label={`World map of overall scores${region !== 'global' ? `, showing ${regionDef.name}` : ''}. Each country is a button that opens its dossier; the table below lists the same figures.`}
@@ -160,61 +163,59 @@ export const WorldMap: React.FC<Props> = ({ byIso, rankedCount, scale, region, r
           >
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
-                geographies
-                  .filter(geo => String(geo.id) !== '010' && geo.properties?.name !== 'Antarctica')
-                  .map(geo => {
-                    const c = lookup(geo);
-                    const parent = c?.isDependency && c.parentIso ? byIso[c.parentIso] : undefined;
-                    const target = parent ?? c;
-                    const inRegion = c ? isCountryInRegion(parent ?? c, region) : region === 'global';
-                    let fill = 'url(#nodata)';
-                    let cls = '';
-                    if (c && !c.isDependency && c.compositeScore != null) {
-                      fill = inRegion || region === 'global' ? scale.colour(c.compositeScore, mode) : '';
-                      if (!fill) cls = 'map-outside';
-                    } else if (!inRegion && region !== 'global') {
-                      cls = 'map-outside';
-                      fill = '';
-                    }
-                    const selected = target && target.iso3 === selectedIso;
-                    const label = c ? describeCountry(c, rankedCount, parent?.name) : undefined;
-                    const show = (e: React.MouseEvent | React.FocusEvent) => {
-                      if (!c) return setHover({ name: geo.properties?.name ?? 'Unknown', note: 'Not covered by the sources separately; not ranked.', anchor: anchorFrom(e) });
-                      setHover({
-                        name: c.name,
-                        country: c,
-                        parentName: parent?.name,
-                        regionRank: region !== 'global' && !c.isDependency ? regionRanks[c.iso3] : undefined,
-                        regionName: regionDef.name,
-                        rankedCount,
-                        anchor: anchorFrom(e),
-                      });
-                    };
-                    return (
-                      <Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        fill={fill || undefined}
-                        className={`${cls} ${selected ? 'is-selected' : ''}`}
-                        tabIndex={target ? 0 : -1}
-                        role={target ? 'button' : undefined}
-                        aria-label={label}
-                        aria-hidden={target ? undefined : true}
-                        onMouseEnter={show}
-                        onMouseMove={e => setHover(h => (h ? { ...h, anchor: { x: e.clientX, y: e.clientY } } : h))}
-                        onMouseLeave={() => setHover(null)}
-                        onFocus={show}
-                        onBlur={() => setHover(null)}
-                        onClick={() => target && onSelect(target.iso3)}
-                        onKeyDown={e => {
-                          if (target && (e.key === 'Enter' || e.key === ' ')) {
-                            e.preventDefault();
-                            onSelect(target.iso3);
-                          }
-                        }}
-                      />
-                    );
-                  })
+                geographies.map(geo => {
+                  const c = lookup(geo);
+                  const parent = c?.isDependency && c.parentIso ? byIso[c.parentIso] : undefined;
+                  const target = parent ?? c;
+                  const inRegion = c ? isCountryInRegion(parent ?? c, region) : region === 'global';
+                  let fill = 'url(#nodata)';
+                  let cls = '';
+                  if (c && !c.isDependency && c.compositeScore != null) {
+                    fill = inRegion || region === 'global' ? scale.colour(c.compositeScore, mode) : '';
+                    if (!fill) cls = 'map-outside';
+                  } else if (!inRegion && region !== 'global') {
+                    cls = 'map-outside';
+                    fill = '';
+                  }
+                  const selected = target && target.iso3 === selectedIso;
+                  const label = c ? describeCountry(c, rankedCount, parent?.name) : undefined;
+                  const show = (e: React.MouseEvent | React.FocusEvent) => {
+                    if (!c) return setHover({ name: geo.properties?.name ?? 'Unknown', note: 'Not covered by the sources separately; not ranked.', anchor: anchorFrom(e) });
+                    setHover({
+                      name: c.name,
+                      country: c,
+                      parentName: parent?.name,
+                      regionRank: region !== 'global' && !c.isDependency ? regionRanks[c.iso3] : undefined,
+                      regionName: regionDef.name,
+                      rankedCount,
+                      anchor: anchorFrom(e),
+                    });
+                  };
+                  return (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill={fill || undefined}
+                      className={`${cls} ${selected ? 'is-selected' : ''}`}
+                      tabIndex={target ? 0 : -1}
+                      role={target ? 'button' : undefined}
+                      aria-label={label}
+                      aria-hidden={target ? undefined : true}
+                      onMouseEnter={show}
+                      onMouseMove={e => setHover(h => (h ? { ...h, anchor: { x: e.clientX, y: e.clientY } } : h))}
+                      onMouseLeave={() => setHover(null)}
+                      onFocus={show}
+                      onBlur={() => setHover(null)}
+                      onClick={() => target && onSelect(target.iso3)}
+                      onKeyDown={e => {
+                        if (target && (e.key === 'Enter' || e.key === ' ')) {
+                          e.preventDefault();
+                          onSelect(target.iso3);
+                        }
+                      }}
+                    />
+                  );
+                })
               }
             </Geographies>
           </ZoomableGroup>
@@ -224,8 +225,8 @@ export const WorldMap: React.FC<Props> = ({ byIso, rankedCount, scale, region, r
       <MapLegend scale={scale} mode={mode} regionName={regionDef.name} hoverScore={hover?.country && !hover.country.isDependency ? hover.country.compositeScore : null} />
       <figcaption id="map-caption" className="mt-2 text-sm text-muted">
         Overall score under your weights, from 0 to 100. Select a country, or tab to it and press Enter, for its full
-        record. Hatched areas are not ranked: territories of another country, places too few indices cover, and
-        Greenland, which the sources do not cover separately. Antarctica is not shown. Drag to pan; pinch or use the
+        record. Hatched areas are not ranked: territories of another country, and places too few indices cover.
+        Antarctica, Greenland and the far-northern Arctic islands are left off the map. Drag to pan; pinch or use the
         buttons to zoom.
       </figcaption>
     </figure>

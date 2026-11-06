@@ -13,20 +13,22 @@ export type RegionId =
 export interface RegionDefinition {
   id: RegionId;
   name: string;
-  /** Map centre [longitude, latitude] and zoom for the Equal Earth projection. */
+  /** Map centre [longitude, latitude] and zoom, for the Mercator projection in WorldMap.tsx. */
   center: [number, number];
   zoom: number;
 }
 
+// The regional views are those used before the redesign (Mercator), with Europe and North America eased out a
+// little to fit the shorter frame. The world view is centred on the land, which runs from about 56°S to 78°N.
 export const REGIONS: RegionDefinition[] = [
-  { id: 'global', name: 'World', center: [10, 7.5], zoom: 1 },
-  { id: 'europe', name: 'Europe', center: [14, 52], zoom: 4 },
-  { id: 'middle-east', name: 'Middle East', center: [44, 28], zoom: 4 },
-  { id: 'north-america', name: 'North America', center: [-90, 38], zoom: 2.2 },
-  { id: 'south-america', name: 'South America', center: [-62, -20], zoom: 2.4 },
-  { id: 'asia', name: 'Asia', center: [95, 26], zoom: 2.2 },
-  { id: 'africa', name: 'Africa', center: [18, 2], zoom: 2.3 },
-  { id: 'oceania', name: 'Oceania', center: [150, -22], zoom: 2.8 },
+  { id: 'global', name: 'World', center: [10.6, 28.5], zoom: 1 },
+  { id: 'europe', name: 'Europe', center: [16, 54], zoom: 2.8 },
+  { id: 'middle-east', name: 'Middle East', center: [44, 28], zoom: 3.6 },
+  { id: 'north-america', name: 'North America', center: [-98, 46], zoom: 1.9 },
+  { id: 'south-america', name: 'South America', center: [-60, -22], zoom: 2.1 },
+  { id: 'asia', name: 'Asia', center: [95, 26], zoom: 2 },
+  { id: 'africa', name: 'Africa', center: [20, 2], zoom: 2 },
+  { id: 'oceania', name: 'Oceania', center: [142, -26], zoom: 2.5 },
 ];
 
 export const regionById = (id: string): RegionDefinition | undefined => REGIONS.find(r => r.id === id);
