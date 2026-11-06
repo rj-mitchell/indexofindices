@@ -355,7 +355,8 @@ export const Press: React.FC<{ rankedCount: number; indicatorCount: number }> = 
         <a href="/mark-small.svg">The mark for small sizes (SVG)</a>, 16 to 32 pixels: the same globe, simpler
       </li>
       <li>
-        <a href="/family/icon.svg">Icon (SVG)</a>: the site's spine, as in the Where They Stand family
+        <a href="/family/icon.svg">Icon (SVG)</a>: the browser-tab icon from the Where They Stand family kit, the mark
+        for small sizes
       </li>
       <li>
         <a href="/family/icon-512.png">Icon (PNG, 512 pixels)</a>
@@ -367,12 +368,12 @@ export const Press: React.FC<{ rankedCount: number; indicatorCount: number }> = 
     </ul>
     <p className="flex flex-wrap items-end gap-6">
       <img src="/mark.svg" width={64} height={64} alt="The Where Lives Stand mark: a desk globe on its stand, in gilt, on a heather tile" />
-      <img src="/family/icon.svg" width={64} height={64} alt="The Where Lives Stand icon: a pale spine on heather" />
+      <img src="/family/icon.svg" width={64} height={64} alt="The Where Lives Stand icon: the desk globe, simpler, on heather" />
       <img
         src="/family/card.png"
         width={240}
         height={126}
-        alt="The Where Lives Stand sharing image: the spine, the name and A Where They Stand project"
+        alt="The Where Lives Stand sharing image: the mark, the name and A Where They Stand project"
         className="border border-rule"
       />
     </p>

@@ -8,7 +8,7 @@ capitals for labels, and no emoji or decorative icons.
 ## The family kit
 
 The binding every Where They Stand site shares comes from the charity's family kit, copied into `public/family/`
-(kit 1.0.0) and committed. Don't edit those files: change the kit and sync again.
+(kit 1.1.0) and committed. Don't edit those files: change the kit and sync again.
 
 ```bash
 node ../wheretheystand-charity/family/kit/sync.mjs --site lives --out public/family           # update
@@ -45,8 +45,11 @@ that "stands".
   the masthead is no taller and the map's top edge stays where [DECISIONS.md](DECISIONS.md), 6, puts it. It links
   home, like the name, but is hidden from screen readers and takes no focus, so the name is announced once.
 - **Press:** `/press` lists the mark's files beside the family icon and the sharing image.
-- The favicons come from the family kit (still the spine). The owner has asked for them to show the mark; that is
-  to be done in the kit, from `mark-small.svg`, not by editing `public/family/` here.
+- **Favicons and link card:** since the family kit 1.1.0 they show the mark (family decision 4, amended at the
+  owner's request on 6 November 2026): the kit draws `icon.svg` and the 16, 32 and 48 pixel icons from
+  `mark-small.svg`, and the 180 and 512 pixel icons and the link card from `mark.svg`, from copies in the charity's
+  `brand/assets/marks/lives/`. When the mark changes, copy the new files there and rebuild the kit; don't edit
+  `public/family/` here.
 
 ## Type
 
