@@ -60,3 +60,20 @@ npm run preview
 
 - **Cloudflare Pages / Netlify / Vercel**: import the GitHub repo, set the build command to `npm run build` and the output directory to `dist`.
 - **Cloudflare Workers** (current setup): `wrangler.jsonc` serves `dist/`; set the build command to `npm run build` and the deploy command to `npx wrangler deploy`.
+
+The repository was called `indexofindices` until 6 November 2026 (GitHub forwards the old address). The Cloudflare
+Worker that serves wherelivesstand.com keeps its old name, `indexofindices`, which `wrangler.jsonc` must match.
+
+## Licence
+
+The code is open source, under the GNU Affero General Public License, version 3 ([LICENSE](LICENSE)). Anyone who runs
+a changed copy as a public website must offer its source code to that site's visitors.
+
+The data isn't covered by that licence. Each indicator belongs to its publisher and is used under the publisher's own
+terms; [SOURCES.md](SOURCES.md) names the publisher of each. `data/sources/` keeps a copy of each publisher's file as
+downloaded, so that the dataset can be rebuilt exactly. Those copies stay under their publishers' terms, which are
+still being checked one by one. A file whose terms don't allow it to be shared will be removed from the repository
+and downloaded at build time instead.
+
+The name Where Lives Stand isn't covered by the licence either. It is a project of Where They Stand, which is applying
+to register as a charity in England and Wales.
