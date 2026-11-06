@@ -85,6 +85,7 @@ export function standouts(
   dimensions: Record<MacroCategory, number | null>,
   indicators: IndicatorMeta[],
   weights: Weights,
+  ties: TieCounts = new Map(),
   count = 2,
 ): { strengths: StandoutFact[]; weaknesses: StandoutFact[] } {
   const shares = indicatorShares(country, dimensions, indicators, weights);
@@ -92,8 +93,11 @@ export function standouts(
     const v = country.indicators[ind.id];
     const share = shares[ind.id] ?? 0;
     if (!v || v.score == null || v.rank == null || !v.total || share <= 0) return [];
-    const standing = v.total > 1 ? 1 - (v.rank - 1) / (v.total - 1) : 0.5;
-    return [{ ind, v, share, standing, pull: share * (standing - 0.5) }];
+    // Countries sharing a rank stand at the middle of the places they share
+    const shared = ties.get(`${ind.id}|${v.rank}`) ?? 1;
+    const midRank = v.rank + (shared - 1) / 2;
+    const standing = v.total > 1 ? 1 - (midRank - 1) / (v.total - 1) : 0.5;
+    return [{ ind, v, share, shared, standing, pull: share * (standing - 0.5) }];
   });
   const fact = (r: (typeof rows)[number]): StandoutFact => ({
     indicatorId: r.ind.id,
@@ -102,13 +106,30 @@ export function standouts(
     rank: r.v.rank,
     totalCountries: r.v.total,
     share: r.share,
-    badgeText: `#${r.v.rank} of ${r.v.total}`,
+    badgeText: `#${r.v.rank} of ${r.v.total}${r.shared > 1 ? `, shared by ${r.shared}` : ''}`,
     explanation: `${r.v.formatted}. Counts for ${(r.share * 100).toFixed(1)}% of the overall score under these weights.`,
   });
   const strengths = rows.filter(r => r.pull > 0).sort((a, b) => b.pull - a.pull).slice(0, count).map(fact);
   const weaknesses = rows.filter(r => r.pull < 0).sort((a, b) => a.pull - b.pull).slice(0, count).map(fact);
   return { strengths, weaknesses };
 }
+
+/** How many countries share each rank on each indicator, keyed "indicatorId|rank". */
+export type TieCounts = Map<string, number>;
+
+export function tieCounts(countries: Record<string, CountryData>): TieCounts {
+  const ties: TieCounts = new Map();
+  for (const c of Object.values(countries)) {
+    for (const [id, v] of Object.entries(c.indicators ?? {})) {
+      if (v?.rank == null) continue;
+      const k = `${id}|${v.rank}`;
+      ties.set(k, (ties.get(k) ?? 0) + 1);
+    }
+  }
+  return ties;
+}
+
+const tieCache = new WeakMap<object, TieCounts>();
 
 /** Dimension scores for one country; per-indicator weights apply only where a dimension's weights differ. */
 export function dimensionScores(
@@ -156,6 +177,11 @@ export function computeRankings(
 ): Rankings {
   const totalMacro = CATEGORY_ORDER.reduce((s, c) => s + (weights.macro[c] ?? DEFAULT_WEIGHT), 0);
   const byIso: Record<string, ComputedCountry> = {};
+  let ties = tieCache.get(countries);
+  if (!ties) {
+    ties = tieCounts(countries);
+    tieCache.set(countries, ties);
+  }
 
   for (const [iso3, country] of Object.entries(countries)) {
     if (country.hasData === false) {
@@ -181,7 +207,7 @@ export function computeRankings(
         wsum += w;
       }
     }
-    const { strengths, weaknesses } = standouts(country, dims, indicators, weights);
+    const { strengths, weaknesses } = standouts(country, dims, indicators, weights, ties);
     byIso[iso3] = {
       ...country,
       dimensions: dims,

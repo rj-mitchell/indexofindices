@@ -1,0 +1,239 @@
+// The world map: an equal-area projection (Equal Earth), so no country looks bigger than it is, coloured
+// by overall score. Every country in the data is a keyboard stop with a name; Enter opens its dossier.
+import React, { useMemo, useState, useCallback } from 'react';
+import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
+import type { ComputedCountry } from '../types';
+import { REGIONS, isCountryInRegion, type RegionId } from '../data/regions';
+import type { ColourScale } from '../lib/colour';
+import { useColourMode } from '../lib/useColourMode';
+import { MapLegend } from './MapLegend';
+import { HoverCard, type HoverInfo } from './HoverCard';
+import { Icon } from './Icon';
+import geoUrl from '../data/world-50m.json?url';
+
+interface Props {
+  byIso: Record<string, ComputedCountry>;
+  rankedCount: number;
+  scale: ColourScale;
+  region: RegionId;
+  relative: boolean;
+  regionRanks: Record<string, number>;
+  selectedIso: string | null;
+  onSelect: (iso3: string) => void;
+  onRegion: (region: RegionId) => void;
+  onRelative: (relative: boolean) => void;
+}
+
+// Natural Earth shapes with no numeric code of their own
+const SPECIAL_GEOMETRIES: Record<string, string> = {
+  'Siachen Glacier': 'IND',
+  Somaliland: 'SOM',
+  Kosovo: 'XKX',
+  'N. Cyprus': 'CYN',
+  'Indian Ocean Ter.': 'IOT',
+};
+
+const WIDTH = 960;
+const HEIGHT = 410;
+
+const ordinal = (n: number) => {
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+};
+
+export function describeCountry(c: ComputedCountry, rankedCount: number, parentName?: string): string {
+  if (c.isDependency) return `${c.name}: a territory of ${parentName ?? c.parentName ?? c.parentIso}, not ranked separately`;
+  if (c.compositeScore == null || c.rank == null) return `${c.name}: not ranked. ${c.rawFacts?.note ?? ''}`.trim();
+  return `${c.name}: score ${c.compositeScore}, ${ordinal(c.rank)} of ${rankedCount}`;
+}
+
+export const WorldMap: React.FC<Props> = ({ byIso, rankedCount, scale, region, relative, regionRanks, selectedIso, onSelect, onRegion, onRelative }) => {
+  const mode = useColourMode();
+  const regionDef = REGIONS.find(r => r.id === region) ?? REGIONS[0];
+  const [position, setPosition] = useState({ coordinates: regionDef.center, zoom: regionDef.zoom });
+  const [hover, setHover] = useState<HoverInfo | null>(null);
+
+  // Follow region changes made elsewhere (the table's filter, the address bar)
+  const [shownRegion, setShownRegion] = useState(region);
+  if (shownRegion !== region) {
+    setShownRegion(region);
+    setPosition({ coordinates: regionDef.center, zoom: regionDef.zoom });
+  }
+
+  const byNumeric = useMemo(() => {
+    const map: Record<string, ComputedCountry> = {};
+    for (const c of Object.values(byIso)) {
+      if (c.numeric) map[String(parseInt(c.numeric, 10))] = c;
+    }
+    return map;
+  }, [byIso]);
+
+  const lookup = useCallback(
+    (geo: { id?: string | number; properties?: { name?: string } }) => {
+      const name = geo.properties?.name ?? '';
+      if (geo.id != null && !Number.isNaN(parseInt(String(geo.id), 10))) {
+        const c = byNumeric[String(parseInt(String(geo.id), 10))];
+        if (c) return c;
+      }
+      return SPECIAL_GEOMETRIES[name] ? byIso[SPECIAL_GEOMETRIES[name]] : undefined;
+    },
+    [byIso, byNumeric],
+  );
+
+  const zoomBy = (f: number) => setPosition(p => ({ ...p, zoom: Math.max(1, Math.min(8, p.zoom * f)) }));
+
+  return (
+    <figure className="m-0" aria-labelledby="map-caption">
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-2 no-print">
+        <div role="group" aria-label="Show a region" className="flex flex-wrap gap-1">
+          {REGIONS.map(r => (
+            <button
+              key={r.id}
+              type="button"
+              aria-pressed={region === r.id}
+              onClick={() => onRegion(r.id)}
+              className={`min-h-[36px] px-2.5 text-sm border cursor-pointer ${region === r.id ? 'bg-heather text-on-heather border-heather font-semibold' : 'bg-sheet border-rule hover:border-heather'}`}
+            >
+              {r.name}
+            </button>
+          ))}
+        </div>
+        <div role="group" aria-label="Zoom" className="flex gap-1">
+          <button type="button" className="btn w-9 px-0 min-h-[36px]" onClick={() => zoomBy(1.5)} aria-label="Zoom in">
+            <Icon name="plus" />
+          </button>
+          <button type="button" className="btn w-9 px-0 min-h-[36px]" onClick={() => zoomBy(1 / 1.5)} aria-label="Zoom out">
+            <Icon name="minus" />
+          </button>
+          <button type="button" className="btn w-9 px-0 min-h-[36px]" onClick={() => setPosition({ coordinates: regionDef.center, zoom: regionDef.zoom })} aria-label={`Reset the view to ${regionDef.name}`}>
+            <Icon name="reset" />
+          </button>
+        </div>
+      </div>
+
+      {region !== 'global' && (
+        <div className="mb-2 text-sm flex flex-wrap items-center gap-x-4 gap-y-1 no-print" role="group" aria-label="Colour scale">
+          <span className="text-muted">Colour countries</span>
+          <label className="inline-flex items-center gap-1.5 cursor-pointer">
+            <input type="radio" name="scale" checked={relative} onChange={() => onRelative(true)} className="accent-[rgb(var(--heather))]" />
+            within {regionDef.name}
+          </label>
+          <label className="inline-flex items-center gap-1.5 cursor-pointer">
+            <input type="radio" name="scale" checked={!relative} onChange={() => onRelative(false)} className="accent-[rgb(var(--heather))]" />
+            on the world scale
+          </label>
+        </div>
+      )}
+
+      <a href="#rankings" className="skip-link">
+        Skip the map: go to the table of rankings
+      </a>
+      <div className="relative border border-rule bg-sheet" onMouseLeave={() => setHover(null)}>
+        <ComposableMap
+          projection="geoEqualEarth"
+          width={WIDTH}
+          height={HEIGHT}
+          projectionConfig={{ scale: 172, center: [0, 7.5], rotate: [-10, 0, 0] }}
+          className="map-svg"
+          role="group"
+          aria-label={`World map of overall scores${region !== 'global' ? `, showing ${regionDef.name}` : ''}. Each country is a button that opens its dossier; the table below lists the same figures.`}
+        >
+          <defs>
+            <pattern id="nodata" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+              <rect width="5" height="5" className="map-nodata" />
+              <line x1="0" y1="0" x2="0" y2="5" className="map-hatch" />
+            </pattern>
+          </defs>
+          <ZoomableGroup
+            center={position.coordinates}
+            zoom={position.zoom}
+            minZoom={1}
+            maxZoom={8}
+            onMoveEnd={p => setPosition(p)}
+            // The wheel scrolls the page (pinch-zoom on a trackpad still zooms); one finger scrolls, two pan
+            filterZoomEvent={(e: Event & { ctrlKey?: boolean; touches?: TouchList }) => {
+              if (e.type === 'wheel') return Boolean(e.ctrlKey);
+              if (e.type.startsWith('touch')) return (e.touches?.length ?? 0) > 1;
+              return true;
+            }}
+          >
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies
+                  .filter(geo => String(geo.id) !== '010' && geo.properties?.name !== 'Antarctica')
+                  .map(geo => {
+                    const c = lookup(geo);
+                    const parent = c?.isDependency && c.parentIso ? byIso[c.parentIso] : undefined;
+                    const target = parent ?? c;
+                    const inRegion = c ? isCountryInRegion(parent ?? c, region) : region === 'global';
+                    let fill = 'url(#nodata)';
+                    let cls = '';
+                    if (c && !c.isDependency && c.compositeScore != null) {
+                      fill = inRegion || region === 'global' ? scale.colour(c.compositeScore, mode) : '';
+                      if (!fill) cls = 'map-outside';
+                    } else if (!inRegion && region !== 'global') {
+                      cls = 'map-outside';
+                      fill = '';
+                    }
+                    const selected = target && target.iso3 === selectedIso;
+                    const label = c ? describeCountry(c, rankedCount, parent?.name) : undefined;
+                    const show = (e: React.MouseEvent | React.FocusEvent) => {
+                      if (!c) return setHover({ name: geo.properties?.name ?? 'Unknown', note: 'Not covered by the sources separately; not ranked.', anchor: anchorFrom(e) });
+                      setHover({
+                        name: c.name,
+                        country: c,
+                        parentName: parent?.name,
+                        regionRank: region !== 'global' && !c.isDependency ? regionRanks[c.iso3] : undefined,
+                        regionName: regionDef.name,
+                        rankedCount,
+                        anchor: anchorFrom(e),
+                      });
+                    };
+                    return (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        fill={fill || undefined}
+                        className={`${cls} ${selected ? 'is-selected' : ''}`}
+                        tabIndex={target ? 0 : -1}
+                        role={target ? 'button' : undefined}
+                        aria-label={label}
+                        aria-hidden={target ? undefined : true}
+                        onMouseEnter={show}
+                        onMouseMove={e => setHover(h => (h ? { ...h, anchor: { x: e.clientX, y: e.clientY } } : h))}
+                        onMouseLeave={() => setHover(null)}
+                        onFocus={show}
+                        onBlur={() => setHover(null)}
+                        onClick={() => target && onSelect(target.iso3)}
+                        onKeyDown={e => {
+                          if (target && (e.key === 'Enter' || e.key === ' ')) {
+                            e.preventDefault();
+                            onSelect(target.iso3);
+                          }
+                        }}
+                      />
+                    );
+                  })
+              }
+            </Geographies>
+          </ZoomableGroup>
+        </ComposableMap>
+      </div>
+      {hover && <HoverCard info={hover} />}
+      <MapLegend scale={scale} mode={mode} regionName={regionDef.name} hoverScore={hover?.country && !hover.country.isDependency ? hover.country.compositeScore : null} />
+      <figcaption id="map-caption" className="mt-2 text-sm text-muted">
+        Overall score under your weights, from 0 to 100. Select a country, or tab to it and press Enter, for its full
+        record. Hatched areas are not ranked: territories of another country, places too few indices cover, and
+        Greenland, which the sources do not cover separately. Antarctica is not shown. Drag to pan; pinch or use the
+        buttons to zoom.
+      </figcaption>
+    </figure>
+  );
+};
+
+function anchorFrom(e: React.MouseEvent | React.FocusEvent): { x: number; y: number } {
+  if ('clientX' in e && e.type.startsWith('mouse')) return { x: e.clientX, y: e.clientY };
+  const r = (e.target as Element).getBoundingClientRect();
+  return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+}
