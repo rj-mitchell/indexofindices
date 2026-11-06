@@ -247,6 +247,34 @@ input[type='range']::-moz-range-thumb {
   animation: sheet-in 0.18s ease-out;
 }
 
+/* The region tabs' faded edges (RegionTabs.tsx): more tabs lie off this side of the row */
+.region-more {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(var(--heather));
+}
+.region-more-right {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(to right, rgb(var(--paper) / 0), rgb(var(--paper)) 60%);
+}
+.region-more-left {
+  left: 0;
+  justify-content: flex-start;
+  background: linear-gradient(to left, rgb(var(--paper) / 0), rgb(var(--paper)) 60%);
+}
+.region-tabs {
+  scrollbar-width: none;
+}
+.region-tabs::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

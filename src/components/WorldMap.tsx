@@ -11,6 +11,7 @@ import { useColourMode } from '../lib/useColourMode';
 import { MapLegend } from './MapLegend';
 import { HoverCard, type HoverInfo } from './HoverCard';
 import { Icon } from './Icon';
+import { RegionTabs } from './RegionTabs';
 import geoUrl from '../data/world-50m.json?url';
 
 interface Props {
@@ -88,21 +89,10 @@ export const WorldMap: React.FC<Props> = ({ byIso, rankedCount, scale, region, r
 
   return (
     <figure className="m-0" aria-labelledby="map-caption">
-      {/* One row: the region tabs scroll sideways on a phone; the zoom buttons stay at the end */}
+      {/* One row: the region tabs scroll sideways on a phone, with a faded edge where more lie off the row; the
+          zoom buttons stay at the end */}
       <div className="flex items-center justify-between gap-2 mb-2 no-print">
-        <div role="group" aria-label="Show a region" className="flex gap-1 min-w-0 overflow-x-auto">
-          {REGIONS.map(r => (
-            <button
-              key={r.id}
-              type="button"
-              aria-pressed={region === r.id}
-              onClick={() => onRegion(r.id)}
-              className={`shrink-0 whitespace-nowrap min-h-[36px] px-2.5 text-sm border cursor-pointer ${region === r.id ? 'bg-heather text-on-heather border-heather font-semibold' : 'bg-sheet border-rule hover:border-heather'}`}
-            >
-              {r.name}
-            </button>
-          ))}
-        </div>
+        <RegionTabs region={region} onRegion={onRegion} />
         <div role="group" aria-label="Zoom" className="flex gap-1 shrink-0">
           <button type="button" className="btn w-9 px-0 min-h-[36px]" onClick={() => zoomBy(1.5)} aria-label="Zoom in">
             <Icon name="plus" />
