@@ -25,8 +25,9 @@ for the files in `data/sources/`, and test with screen-reader users.
 
 Built separately from the other projects, as a static React app. It runs on a Cloudflare Worker (named
 `indexofindices`, the project's old name), not on the shared server. It carries the family kit (`public/family/`,
-see [docs/DESIGN.md](docs/DESIGN.md)). Each country's dossier links to Where Countries Stand (a sources-only search
-for that country, until that site has country pages); sister sites can link to a country here at
+see [docs/DESIGN.md](docs/DESIGN.md)). Each country's dossier links to "Statements by <country> at the UN, on Where
+Countries Stand": a sources-only search for that country, because that site had no country pages on 6 November 2026
+(change `countriesHref` in `src/components/CountryDossier.tsx` when it does); sister sites can link to a country here at
 `https://wherelivesstand.com/country/<ISO3>` ([docs/URLS.md](docs/URLS.md)).
 
 ## Documents
