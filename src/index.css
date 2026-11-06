@@ -336,3 +336,39 @@ input[type='range']::-moz-range-thumb {
 .boot__status {
   color: rgb(var(--ink-muted));
 }
+
+/* The picture mark (src/components/Mark.tsx). In dark mode the heather tile is lifted, as the family kit lifts
+   the cloth (--wts-cloth-lives), so that it stands clear of the dark page. In forced colours it is redrawn in
+   the system colours: the tile and the globe in Canvas, the gilt, the rim and the graticule in CanvasText. */
+.site-mark {
+  display: block;
+  flex: none;
+}
+@media (prefers-color-scheme: dark) {
+  .site-mark__tile {
+    fill: #7F5585;
+  }
+}
+@media (forced-colors: active) {
+  .site-mark {
+    forced-color-adjust: none;
+  }
+  .site-mark__tile,
+  .site-mark__globe {
+    fill: Canvas;
+  }
+  .site-mark__tile {
+    stroke: CanvasText;
+    stroke-width: 2;
+  }
+  .site-mark__gilt-line,
+  .site-mark__line {
+    stroke: CanvasText;
+  }
+  .site-mark__gilt {
+    fill: CanvasText;
+  }
+  .site-mark__cell {
+    fill: none;
+  }
+}
