@@ -24,6 +24,9 @@ const KINDS: Record<number, string> = {
 };
 
 const COUNTRIES_SITE = { url: 'https://wherecountriesstand.com', cloth: '#1F5F8B' };
+// Until Where Countries Stand has a page for each country, a sources-only search for the country's name (its
+// app reads ?q= and ?sources=1). Change this to its country page once that exists (README, "In the family").
+const countriesHref = (name: string) => `${COUNTRIES_SITE.url}/?q=${encodeURIComponent(name)}&sources=1`;
 
 export const CountryDossier: React.FC<Props> = ({ country: c, rankedCount, categories, indicators, macro, compareHref, onClose }) => {
   const [kind, setKind] = useState<number | 'all'>('all');
@@ -244,10 +247,9 @@ export const CountryDossier: React.FC<Props> = ({ country: c, rankedCount, categ
               <li className="flex items-center gap-2">
                 <Spine cloth={COUNTRIES_SITE.cloth} className="w-6 h-6" />
                 <span>
-                  <a href={`${COUNTRIES_SITE.url}/?q=${encodeURIComponent(c.name)}&sources=1`}>
-                    {c.name} at the United Nations
-                  </a>{' '}
-                  on Where Countries Stand, a sister site: what it has said and how it has voted.
+                  <a href={countriesHref(c.name)}>Statements by {c.name} at the UN, on Where Countries Stand</a>, a
+                  sister site. It has no page for each country yet, so this opens a search of its UN records for{' '}
+                  {c.name}.
                 </span>
               </li>
             </ul>

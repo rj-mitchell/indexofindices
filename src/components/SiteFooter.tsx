@@ -16,6 +16,7 @@ export const SiteFooter: React.FC = () => (
           <li><Link href="/corrections">Corrections</Link></li>
           <li><Link href="/accessibility">Accessibility</Link></li>
           <li><Link href="/privacy">Privacy</Link></li>
+          <li><Link href="/terms">Terms</Link></li>
           <li><a href={REPO_URL}>Source code</a></li>
         </ul>
       </nav>
@@ -24,8 +25,9 @@ export const SiteFooter: React.FC = () => (
         sources and of Natural Earth; they do not imply any view on the status of a territory or its borders.
       </p>
       <p>
-        Code licensed under the GNU Affero General Public License 3.0. The figures remain their publishers'; see{' '}
-        <Link href="/method">How it works</Link> for each source and its terms.
+        Code licensed under the GNU Affero General Public License 3.0; the site's own text under CC BY 4.0. The
+        figures remain their publishers'; see <Link href="/method">How it works</Link> for each source, and the{' '}
+        <Link href="/terms">terms of use</Link>.
       </p>
     </div>
     {/* The family kit's shelf (public/family/shelf.html): every project, the charity line and its links */}

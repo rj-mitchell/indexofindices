@@ -18,15 +18,18 @@ A Where They Stand project. Where They Stand is applying to register as a charit
 ## Status
 
 6 November 2026. Live in beta at wherelivesstand.com. Redesigned in the family's Bound Volume style, with
-addresses for every view, a real 404, security headers and the standard pages. Next: check each publisher's terms
-for the files in `data/sources/`, and test with screen-reader users.
+addresses for every view, a real 404, security headers and the standard pages, including terms of use. The map is
+Mercator and comes first on the page, as the owner decided ([docs/DECISIONS.md](docs/DECISIONS.md)). Next: the
+owner to confirm the proposed decisions; check each publisher's terms for the files in `data/sources/`; test with
+screen-reader users.
 
 ## In the family
 
 Built separately from the other projects, as a static React app. It runs on a Cloudflare Worker (named
 `indexofindices`, the project's old name), not on the shared server. It carries the family kit (`public/family/`,
-see [docs/DESIGN.md](docs/DESIGN.md)). Each country's dossier links to Where Countries Stand (a sources-only search
-for that country, until that site has country pages); sister sites can link to a country here at
+see [docs/DESIGN.md](docs/DESIGN.md)). Each country's dossier links to "Statements by <country> at the UN, on Where
+Countries Stand": a sources-only search for that country, because that site had no country pages on 6 November 2026
+(change `countriesHref` in `src/components/CountryDossier.tsx` when it does); sister sites can link to a country here at
 `https://wherelivesstand.com/country/<ISO3>` ([docs/URLS.md](docs/URLS.md)).
 
 ## Documents
@@ -34,6 +37,7 @@ for that country, until that site has country pages); sister sites can link to a
 | Document | What it covers |
 |---|---|
 | [SOURCES.md](SOURCES.md) | Every indicator: publisher, years, coverage, direction and goalposts; what was left out and why. Generated, and shown on the site's How it works page |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | The owner's product decisions, and those proposed for the owner to confirm |
 | [docs/URLS.md](docs/URLS.md) | The address of every view, for sharing and for links from sister sites |
 | [docs/DESIGN.md](docs/DESIGN.md) | The look, the family kit, the colour scale and the map |
 
@@ -41,7 +45,7 @@ for that country, until that site has country pages); sister sites can link to a
 
 - **Weights:** eight dimension dials, six presets (Balanced, Physical, Institutional, Remote worker, Young family,
   Rights and liberties), and a dial for each of the 34 indicators if you want them.
-- **Map and table:** an equal-area map coloured on a single-hue scale, regions, and a sortable table of every ranked
+- **Map and table:** a world map (Mercator) coloured on a single-hue scale, regions, and a sortable table of every ranked
   country.
 - **Country dossier:** score and rank under your weights, the indicators that lift and hold back that score, the
   eight dimensions, and every indicator with its value, year, world rank and publisher.
@@ -93,6 +97,29 @@ npm run preview
 `npx wrangler dev` serves `dist/` as Cloudflare will, with the 404 page, redirects and response headers
 (`public/_headers`).
 
+## Checks
+
+GitHub Actions (`.github/workflows/ci.yml`) runs on every push and pull request: `npm ci`, the type-check, the
+tests, `npm run check:family` and the build, then checks that the build wrote every page. It deploys nothing.
+
+`npm run check:family` checks the family kit's copy in `public/family/` on its own: that `VERSION` is there, for
+this site, from the kit version the build expects (`KIT` in `scripts/check-family.mjs`), and that no copy has been
+edited since it was synced. Whether the copy matches the kit itself can only be checked with the charity's
+repository, which is private, so CI can't.
+
+### Before merging
+
+From a checkout with the charity's repository beside this one:
+
+```bash
+node ../wheretheystand-charity/family/kit/sync.mjs --site lives --out public/family --check
+npm run typecheck && npm test && npm run build
+npx wrangler dev   # then look at the changed pages, light and dark, at desktop and phone widths
+```
+
+If the kit check fails, sync the kit (`docs/DESIGN.md`), commit the copies, and update `KIT` in
+`scripts/check-family.mjs` if the kit's version changed. Merging to `main` deploys the site.
+
 ## Deploying
 
 Cloudflare Workers Builds is connected to this repository: every push to `main` runs `npm run build` and
@@ -112,6 +139,9 @@ The repository was called `indexofindices` until 6 November 2026 (GitHub forward
 
 Code: GNU Affero General Public License 3.0 ([LICENSE](LICENSE)). Anyone who runs a changed copy as a public website
 must offer its source code to that site's visitors.
+
+Text written by the site (its pages, the method and Behind the rankings): Creative Commons Attribution 4.0 (CC BY
+4.0), as set out on the site's [terms of use](https://wherelivesstand.com/terms).
 
 Data: each indicator belongs to its publisher and is used under the publisher's own terms; [SOURCES.md](SOURCES.md)
 names the publisher of each. `data/sources/` keeps a copy of each publisher's file as downloaded, so that the dataset
