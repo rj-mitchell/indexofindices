@@ -35,3 +35,9 @@ jobs:
                    family/VERSION; do
             test -s "dist/$f" || { echo "dist/$f is missing"; exit 1; }
           done
+      - name: Install Chromium for the accessibility check
+        run: npx playwright install --with-deps chromium
+      - name: Accessibility (axe-core, WCAG 2.2 AA) and smoke check of the build
+        # Home, a dossier, the comparison, Behind the rankings, About and Press, at 1280 and 390 pixels, light
+        # and dark. Fails on serious or critical axe findings, console errors, CSP violations or other hosts.
+        run: npm run check:a11y
