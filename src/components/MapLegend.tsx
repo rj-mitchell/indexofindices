@@ -29,7 +29,8 @@ export const MapLegend: React.FC<Props> = ({ scale, mode, regionName, hoverScore
         </div>
         <div className="relative h-5 mt-0.5 num text-xs text-muted" aria-hidden="true">
           {ticks.map((t, i) => (
-            <span key={t} className="absolute -translate-x-1/2 whitespace-nowrap" style={{ left: pct(t), transform: i === 0 ? 'none' : i === ticks.length - 1 ? 'translateX(-100%)' : undefined }}>
+            // On a phone, 30 and 80 would run into "20 or less" and "90 or more", so they are left out
+            <span key={t} className={`absolute -translate-x-1/2 whitespace-nowrap ${!scale.relative && (t === 30 || t === 80) ? 'hidden sm:inline' : ''}`} style={{ left: pct(t), transform: i === 0 ? 'none' : i === ticks.length - 1 ? 'translateX(-100%)' : undefined }}>
               {scale.relative ? t.toFixed(1) : i === 0 ? '20 or less' : i === ticks.length - 1 ? '90 or more' : t}
             </span>
           ))}

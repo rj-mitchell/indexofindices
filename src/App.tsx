@@ -160,25 +160,12 @@ export default function App({ countries }: { countries: Record<string, CountryDa
       />
       <main id="main" tabIndex={-1} className="outline-none">
         {s.view === 'map' && (
-          <div className="max-w-page mx-auto px-4 md:px-8 pt-6 md:pt-8">
-            <div className="max-w-3xl">
-              <h1 id="map-title" tabIndex={-1} className="text-3xl md:text-[2.5rem] md:leading-[2.9rem] outline-none">
-                {TAGLINE}
-              </h1>
-              <p className="font-serif text-lg mt-3">
-                {rankedCount} countries scored on {indicators.length} published indicators. The weights are yours: change
-                them and the map, the table and every country's dossier follow.
-              </p>
-              <p className="text-sm text-muted mt-2 flex flex-wrap gap-x-3 gap-y-1 items-center">
-                <span>Data last updated {formatDate(DATA_UPDATED)}.</span>
-                <button type="button" onClick={copyLink} className="text-heather underline underline-offset-2 hover:text-ink cursor-pointer">
-                  Copy a link to this view
-                </button>
-                <span role="status" className="text-ink">{copied ? 'Link copied.' : ''}</span>
-              </p>
-            </div>
-
-            <div className="mt-6 grid lg:grid-cols-[minmax(17rem,22rem)_1fr] gap-x-10 gap-y-8 items-start">
+          <div className="max-w-page mx-auto px-4 md:px-8 pt-3 md:pt-4">
+            {/* The map comes first (docs/DECISIONS.md, 6): the page's heading is for screen readers and the outline */}
+            <h1 id="map-title" tabIndex={-1} className="visually-hidden">
+              {TAGLINE}: the map and rankings
+            </h1>
+            <div className="grid lg:grid-cols-[minmax(17rem,22rem)_1fr] gap-x-10 gap-y-8 items-start">
               <div className="lg:order-none order-2 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto lg:pr-2">
                 <WeightsPanel
                   categories={categories}
@@ -207,6 +194,16 @@ export default function App({ countries }: { countries: Record<string, CountryDa
                   onRegion={setRegion}
                   onRelative={relative => update({ relative })}
                 />
+                <p className="text-sm text-muted mt-2 flex flex-wrap gap-x-3 gap-y-1 items-center">
+                  <span>
+                    {rankedCount} countries scored on {indicators.length} published indicators. Data last updated{' '}
+                    {formatDate(DATA_UPDATED)}.
+                  </span>
+                  <button type="button" onClick={copyLink} className="text-heather underline underline-offset-2 hover:text-ink cursor-pointer no-print">
+                    Copy a link to this view
+                  </button>
+                  <span role="status" className="text-ink">{copied ? 'Link copied.' : ''}</span>
+                </p>
                 <div className="mt-12">
                   <RankingsTable list={list} categories={categories} region={s.region} onRegion={setRegion} hrefFor={hrefFor} selectedIso={country?.iso3 ?? null} />
                 </div>

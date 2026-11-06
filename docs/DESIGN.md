@@ -47,6 +47,14 @@ Tokens are CSS variables in `src/index.css`, with a dark-mode value for each, fo
 | heather | `#5E3F63` | `#C7AACC` | Links, selected controls, focus |
 | compare-a / compare-b | heather / gilt-text | the same, lifted | The two countries in a comparison |
 
+## The map and rankings view
+
+The map comes first ([DECISIONS.md](DECISIONS.md), 6). Above it there are only the one-line beta banner, the
+compact masthead (the name and endorsement, the navigation and the search, on one row at desktop) and the region
+tabs and zoom buttons, in one row that scrolls sideways on a phone. The page's heading is visually hidden. The
+count of countries, the data date and "Copy a link to this view" sit under the map; the weights are beside it at
+desktop and under it on phones.
+
 ## The map
 
 - **Projection:** Mercator, by the owner's choice ([DECISIONS.md](DECISIONS.md), 5), so that small, densely
