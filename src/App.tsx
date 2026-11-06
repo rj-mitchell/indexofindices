@@ -1,170 +1,252 @@
-import React, { useState } from 'react';
-import { useQualityOfLifeIndex } from './hooks/useQualityOfLifeIndex';
-import { Header } from './components/Header';
-import { ControlSidebar } from './components/ControlSidebar';
-import { ChoroplethMap } from './components/ChoroplethMap';
-import { CountryDossierSheet } from './components/CountryDossierSheet';
-import { CountryComparisonModal } from './components/CountryComparisonModal';
-import { SlidersHorizontal, Map as MapIcon } from 'lucide-react';
-import { BiasesCritiquePage } from './components/BiasesCritiquePage';
-import { BetaBanner } from './components/BetaBanner';
+// The app: holds the view, the open dossier or comparison, the weights and the region, and keeps them
+// in the address bar (src/lib/url.ts, docs/URLS.md) so that every view can be linked to and Back works.
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type { CountryData, IndicatorMeta, MacroCategory, MacroCategoryConfig } from './types';
+import { computeRankings, defaultMacroWeights } from './lib/scoring';
+import { parseUrl, buildUrl, type UrlState, type View } from './lib/url';
+import { worldScale, regionScale } from './lib/colour';
+import { isCountryInRegion, type RegionId } from './data/regions';
+import { NavContext, type Navigate } from './lib/nav';
+import { Masthead } from './components/Masthead';
+import { SiteFooter } from './components/SiteFooter';
+import { WeightsPanel } from './components/WeightsPanel';
+import { WorldMap } from './components/WorldMap';
+import { RankingsTable } from './components/RankingsTable';
+import { CountryDossier } from './components/CountryDossier';
+import { CompareDialog } from './components/CompareDialog';
+import { BehindTheRankings } from './pages/BehindTheRankings';
+import { About, Method, Privacy, Accessibility, Corrections, NotFound } from './pages/StandardPages';
+import { DATA_UPDATED, formatDate, SITE_NAME, TAGLINE } from './config';
+import rawIndicators from './data/indicators.json';
+import rawCategories from './data/categories.json';
 
-export function App() {
-  const {
-    categories,
-    indicators,
-    macroWeights,
-    subWeights,
-    useSubWeights,
-    activeRegion,
-    setActiveRegion,
-    relativiseColors,
-    setRelativiseColors,
-    countriesInRegion,
-    regionalScale,
-    regionalRanks,
-    computedCountries,
-    countryList,
-    selectedCountryIso,
-    compareCountryIso,
-    isCompareOpen,
-    searchQuery,
-    setMacroWeight,
-    setAllMacroWeights,
-    setSubWeight,
-    setUseSubWeights,
-    resetWeights,
-    setSelectedCountryIso,
-    setCompareCountryIso,
-    setIsCompareOpen,
-    setSearchQuery,
-    getScoreColor
-  } = useQualityOfLifeIndex();
+const indicators = rawIndicators as unknown as IndicatorMeta[];
+const categories = rawCategories as unknown as MacroCategoryConfig[];
 
-  const [mobileTab, setMobileTab] = useState<'map' | 'controls'>('map');
-  const [currentView, setCurrentView] = useState<'map' | 'biases'>('map');
+const PAGE_TITLES: Record<Exclude<View, 'map'>, string> = {
+  'behind-the-rankings': 'Behind the rankings',
+  about: 'About',
+  method: 'How it works',
+  privacy: 'Privacy',
+  accessibility: 'Accessibility statement',
+  corrections: 'Corrections and problems',
+  'not-found': 'Page not found',
+};
 
-  const selectedCountry = selectedCountryIso ? computedCountries[selectedCountryIso] : null;
+export default function App({ countries }: { countries: Record<string, CountryData> }) {
+  const parseOpts = useMemo(
+    () => ({ knownIso: new Set(Object.values(countries).filter(c => !c.isDependency).map(c => c.iso3)), indicatorIds: new Set(indicators.map(i => i.id)) }),
+    [countries],
+  );
+  const read = useCallback(() => parseUrl(window.location.pathname, window.location.search, parseOpts), [parseOpts]);
 
-  const handleOpenCompareWith = (iso3: string) => {
-    setCompareCountryIso(iso3);
-    setIsCompareOpen(true);
+  const [s, setS] = useState<UrlState>(() => {
+    const first = read();
+    if (first.canonical) history.replaceState(history.state, '', first.canonical + window.location.hash);
+    return first;
+  });
+
+  // Apply an address: the weights and region come from it only on the map views, so visiting a text page
+  // and coming back keeps them.
+  const apply = useCallback((next: UrlState) => {
+    setS(prev => (next.view === 'map' ? next : { ...prev, view: next.view, country: null, compare: null }));
+  }, []);
+
+  const navigate: Navigate = useCallback(
+    (href, opts = {}) => {
+      const url = new URL(href, window.location.origin);
+      if (url.origin !== window.location.origin) {
+        window.location.assign(href);
+        return;
+      }
+      const next = parseUrl(url.pathname, url.search, parseOpts);
+      const target = (next.canonical ?? url.pathname + url.search) + url.hash;
+      const overlay = next.view === 'map' && Boolean(next.country || next.compare);
+      // `pushed`: this entry was added by the app, so closing a dialog can go Back to the one before it
+      if (opts.replace) history.replaceState({ overlay, pushed: Boolean(history.state?.pushed) }, '', target);
+      else history.pushState({ overlay, pushed: true }, '', target);
+      const prevView = s.view;
+      apply(next);
+      if (next.view !== prevView || (!overlay && next.view !== 'map')) {
+        if (url.hash) requestAnimationFrame(() => document.querySelector(url.hash)?.scrollIntoView());
+        else window.scrollTo(0, 0);
+        requestAnimationFrame(() => document.getElementById(next.view === 'map' ? 'map-title' : 'page-title')?.focus({ preventScroll: true }));
+      }
+    },
+    [apply, parseOpts, s.view],
+  );
+
+  useEffect(() => {
+    const onPop = () => apply(read());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [apply, read]);
+
+  // Keep the address in step with the weights and region, without adding history entries for each slider move
+  const lastWritten = useRef('');
+  useEffect(() => {
+    if (s.view !== 'map') return;
+    const target = buildUrl(s);
+    const current = window.location.pathname + window.location.search;
+    if (target === current || target === lastWritten.current) return;
+    const t = window.setTimeout(() => {
+      lastWritten.current = target;
+      history.replaceState(history.state, '', target + window.location.hash);
+    }, 200);
+    return () => window.clearTimeout(t);
+  }, [s]);
+
+  const weights = useMemo(() => ({ macro: s.macro, sub: s.sub, fine: s.fine }), [s.macro, s.sub, s.fine]);
+  const rankings = useMemo(() => computeRankings(countries, indicators, weights), [countries, weights]);
+  const { byIso, list, rankedCount } = rankings;
+
+  const regionRanked = useMemo(() => list.filter(c => c.rank != null && isCountryInRegion(c, s.region)), [list, s.region]);
+  const regionRanks = useMemo(() => Object.fromEntries(regionRanked.map((c, i) => [c.iso3, i + 1])), [regionRanked]);
+  const scale = useMemo(
+    () => (s.region !== 'global' && s.relative ? regionScale(regionRanked.map(c => c.compositeScore as number)) : worldScale()),
+    [s.region, s.relative, regionRanked],
+  );
+
+  const mapState = { ...s, view: 'map' as const, country: null, compare: null };
+  const mapHref = buildUrl(mapState);
+  const hrefFor = (iso3: string) => buildUrl({ ...mapState, country: iso3 });
+  const otherThan = (iso3: string) => (list[0]?.iso3 !== iso3 ? list[0]?.iso3 : list[1]?.iso3) ?? 'NOR';
+  const compareHref = (a?: string | null) => {
+    const first = a ?? s.country ?? 'GBR';
+    return buildUrl({ ...mapState, compare: [first, otherThan(first)] });
   };
 
+  const closeOverlay = () => {
+    if (history.state?.overlay && history.state?.pushed) history.back();
+    else navigate(mapHref, { replace: true });
+  };
+
+  const country = s.view === 'map' && s.country ? byIso[s.country] : null;
+  const compare = s.view === 'map' && s.compare ? [byIso[s.compare[0]], byIso[s.compare[1]]] : null;
+
+  useEffect(() => {
+    const page = s.view !== 'map' ? PAGE_TITLES[s.view] : compare ? `${compare[0]?.name} and ${compare[1]?.name} compared` : country ? country.name : null;
+    document.title = page ? `${page}: ${SITE_NAME}` : `${SITE_NAME}: ${TAGLINE.toLowerCase()}`;
+  }, [s.view, country, compare]);
+
+  const update = (patch: Partial<UrlState>) => setS(prev => ({ ...prev, ...patch }));
+  const setRegion = (region: RegionId) => update({ region, relative: true });
+
+  const [copied, setCopied] = useState(false);
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 3000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const countriesWithData = list.filter(c => c.hasData !== false);
+
   return (
-    <div className="flex flex-col h-screen w-screen overflow-hidden bg-[#f8fafc] text-slate-800 font-sans">
-      <BetaBanner />
-
-      {/* Top Application Header */}
-      <Header
-        countryList={countryList}
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-        onSelectCountry={setSelectedCountryIso}
-        onResetWeights={resetWeights}
-        onOpenCompare={() => setIsCompareOpen(true)}
-        selectedCountry={selectedCountry}
-        activeView={currentView}
-        onToggleView={setCurrentView}
+    <NavContext.Provider value={navigate}>
+      <a href="#main" className="skip-link">
+        Skip to the main content
+      </a>
+      <Masthead
+        view={s.view}
+        compareOpen={Boolean(compare)}
+        mapHref={mapHref}
+        compareHref={compareHref()}
+        countries={countriesWithData}
+        onSelectCountry={iso => navigate(hrefFor(iso))}
       />
-
-      {/* Main Workspace Body */}
-      {currentView === 'biases' ? (
-        <BiasesCritiquePage
-          categories={categories}
-          onBackToMap={() => setCurrentView('map')}
-        />
-      ) : (
-        <>
-          <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
-            {/* Desktop / Responsive Control Sidebar */}
-            <div className={`h-full ${mobileTab === 'controls' ? 'flex w-full' : 'hidden lg:flex'}`}>
-              <ControlSidebar
-                categories={categories}
-                indicators={indicators}
-                macroWeights={macroWeights}
-                subWeights={subWeights}
-                useSubWeights={useSubWeights}
-                countryList={countryList}
-                onMacroWeightChange={setMacroWeight}
-                onBatchMacroWeightChange={setAllMacroWeights}
-                onSubWeightChange={setSubWeight}
-                onToggleUseSubWeights={setUseSubWeights}
-                onSelectCountry={setSelectedCountryIso}
-                selectedCountryIso={selectedCountryIso}
-                activeRegion={activeRegion}
-                onSelectRegion={setActiveRegion}
-                countriesInRegion={countriesInRegion}
-                onOpenBiases={() => setCurrentView('biases')}
-              />
+      <main id="main" tabIndex={-1} className="outline-none">
+        {s.view === 'map' && (
+          <div className="max-w-page mx-auto px-4 md:px-8 pt-6 md:pt-8">
+            <div className="max-w-3xl">
+              <h1 id="map-title" tabIndex={-1} className="text-3xl md:text-[2.5rem] md:leading-[2.9rem] outline-none">
+                {TAGLINE}
+              </h1>
+              <p className="font-serif text-lg mt-3">
+                {rankedCount} countries scored on {indicators.length} published indicators. The weights are yours: change
+                them and the map, the table and every country's dossier follow.
+              </p>
+              <p className="text-sm text-muted mt-2 flex flex-wrap gap-x-3 gap-y-1 items-center">
+                <span>Data last updated {formatDate(DATA_UPDATED)}.</span>
+                <button type="button" onClick={copyLink} className="text-heather underline underline-offset-2 hover:text-ink cursor-pointer">
+                  Copy a link to this view
+                </button>
+                <span role="status" className="text-ink">{copied ? 'Link copied.' : ''}</span>
+              </p>
             </div>
 
-            {/* Center / Fullscreen World Choropleth Map */}
-            <main className={`flex-1 h-full relative ${mobileTab === 'map' ? 'flex' : 'hidden lg:flex'}`}>
-              <ChoroplethMap
-                computedCountries={computedCountries}
-                selectedCountryIso={selectedCountryIso}
-                onSelectCountry={setSelectedCountryIso}
-                getScoreColor={getScoreColor}
-                activeRegion={activeRegion}
-                onSelectRegion={setActiveRegion}
-                relativiseColors={relativiseColors}
-                onToggleRelativiseColors={setRelativiseColors}
-                regionalScale={regionalScale}
-                regionalRanks={regionalRanks}
-              />
-            </main>
+            <div className="mt-6 grid lg:grid-cols-[minmax(17rem,22rem)_1fr] gap-x-10 gap-y-8 items-start">
+              <div className="lg:order-none order-2 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto lg:pr-2">
+                <WeightsPanel
+                  categories={categories}
+                  indicators={indicators}
+                  macro={s.macro}
+                  sub={s.sub}
+                  fine={s.fine}
+                  onMacro={(cat: MacroCategory, v: number) => update({ macro: { ...s.macro, [cat]: v } })}
+                  onPreset={macro => update({ macro })}
+                  onSub={(id, v) => update({ sub: { ...s.sub, [id]: v } })}
+                  onFine={fine => update({ fine })}
+                  onReset={() => update({ macro: defaultMacroWeights(), sub: {}, fine: false })}
+                />
+              </div>
+              <div className="order-1 lg:order-none min-w-0">
+                <h2 className="visually-hidden">Map</h2>
+                <WorldMap
+                  byIso={byIso}
+                  rankedCount={rankedCount}
+                  scale={scale}
+                  region={s.region}
+                  relative={s.relative}
+                  regionRanks={regionRanks}
+                  selectedIso={country?.iso3 ?? null}
+                  onSelect={iso => navigate(hrefFor(iso))}
+                  onRegion={setRegion}
+                  onRelative={relative => update({ relative })}
+                />
+                <div className="mt-12">
+                  <RankingsTable list={list} categories={categories} region={s.region} onRegion={setRegion} hrefFor={hrefFor} selectedIso={country?.iso3 ?? null} />
+                </div>
+              </div>
+            </div>
           </div>
+        )}
+        {s.view === 'behind-the-rankings' && <BehindTheRankings categories={categories} indicators={indicators} hrefFor={hrefFor} mapHref={mapHref} />}
+        {s.view === 'about' && <About rankedCount={rankedCount} indicatorCount={indicators.length} />}
+        {s.view === 'method' && <Method />}
+        {s.view === 'privacy' && <Privacy />}
+        {s.view === 'accessibility' && <Accessibility />}
+        {s.view === 'corrections' && <Corrections />}
+        {s.view === 'not-found' && <NotFound mapHref={mapHref} />}
+      </main>
+      <SiteFooter />
 
-          {/* Mobile Tab Toggle Bar with 44px Minimum Touch Targets */}
-          <div className="lg:hidden flex items-center justify-around bg-white border-t border-slate-200 p-2 z-20">
-            <button
-              onClick={() => setMobileTab('map')}
-              className={`min-h-[44px] flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold active:scale-95 transition-all cursor-pointer ${
-                mobileTab === 'map' ? 'bg-teal-50 text-teal-700 border border-teal-200 shadow-2xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <MapIcon className="w-4 h-4" />
-              <span>Interactive Map</span>
-            </button>
-            <button
-              onClick={() => setMobileTab('controls')}
-              className={`min-h-[44px] flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold active:scale-95 transition-all cursor-pointer ${
-                mobileTab === 'controls' ? 'bg-teal-50 text-teal-700 border border-teal-200 shadow-2xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <SlidersHorizontal className="w-4 h-4" />
-              <span>Weight Controls</span>
-            </button>
-          </div>
-        </>
+      {country && (
+        <CountryDossier
+          key={country.iso3}
+          country={country}
+          rankedCount={rankedCount}
+          categories={categories}
+          indicators={indicators}
+          macro={s.macro}
+          compareHref={compareHref(country.iso3)}
+          onClose={closeOverlay}
+        />
       )}
-
-      {/* Slide-out Country Dossier Sheet */}
-      <CountryDossierSheet
-        country={selectedCountry}
-        categories={categories}
-        indicators={indicators}
-        onClose={() => setSelectedCountryIso(null)}
-        onOpenCompareWith={handleOpenCompareWith}
-        getScoreColor={getScoreColor}
-        onOpenBiases={() => setCurrentView('biases')}
-      />
-
-      {/* Head-to-Head Country Comparison Modal */}
-      <CountryComparisonModal
-        countryList={countryList}
-        computedCountries={computedCountries}
-        initialCountryA={compareCountryIso || selectedCountryIso || 'ESP'}
-        initialCountryB={countryList.find(c => c.iso3 !== (compareCountryIso || selectedCountryIso || 'ESP'))?.iso3 || 'NOR'}
-        categories={categories}
-        indicators={indicators}
-        isOpen={isCompareOpen}
-        onClose={() => setIsCompareOpen(false)}
-        getScoreColor={getScoreColor}
-      />
-    </div>
+      {compare && compare[0] && compare[1] && (
+        <CompareDialog
+          a={compare[0]}
+          b={compare[1]}
+          choices={countriesWithData}
+          categories={categories}
+          indicators={indicators}
+          onChange={(a, b) => navigate(buildUrl({ ...mapState, compare: [a, b] }), { replace: true })}
+          onClose={closeOverlay}
+        />
+      )}
+    </NavContext.Provider>
   );
 }
-
-export default App;

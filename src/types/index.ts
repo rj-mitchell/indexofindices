@@ -41,6 +41,8 @@ export interface StandoutFact {
   rank?: number;
   totalCountries?: number;
   badgeText: string;
+  /** Share of the overall score this indicator carries under the active weights (0 to 1). */
+  share?: number;
   explanation: string;
 }
 

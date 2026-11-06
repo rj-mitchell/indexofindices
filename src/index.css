@@ -1,148 +1,248 @@
+@import './fonts/fonts.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ==========================================================================
-   good-css Foundations & Modern Reset (https://good-css.com)
-   ========================================================================== */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  min-width: 0;
-}
-
+/* Where Lives Stand in the family's Bound Volume style (docs/DESIGN.md): the charity's paper, ink and gilt,
+   with heather, Where Lives Stand's cloth, as the one accent. Colours are RGB channels so Tailwind can add
+   opacity. Dark mode follows the system setting. */
 :root {
-  /* Dynamic interpolation & smooth layout */
-  interpolate-size: allow-keywords;
-  scrollbar-gutter: stable;
-  text-wrap: pretty;
-  overflow-wrap: break-word;
-  font-synthesis: none;
-
-  /* Crisp subpixel & grayscale smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-
-  /* Modern OKLCH Design Tokens */
-  --color-primary: oklch(0.55 0.14 185);
-  --color-primary-hover: color-mix(in oklch, var(--color-primary), black 12%);
-  --color-primary-active: color-mix(in oklch, var(--color-primary), black 22%);
-  --color-primary-subtle: color-mix(in oklch, var(--color-primary) 12%, transparent);
-
-  --color-surface-bg: oklch(0.985 0.005 240);
-  --color-surface-card: oklch(1 0 none);
-  --color-surface-muted: oklch(0.96 0.008 240);
-  --color-border: oklch(0.89 0.01 240);
-  --color-border-subtle: oklch(0.93 0.006 240);
-  --color-text-main: oklch(0.20 0.02 250);
-  --color-text-muted: oklch(0.50 0.02 250);
+  color-scheme: light dark;
+  --paper: 245 240 227;        /* #F5F0E3 */
+  --sheet: 251 248 240;        /* #FBF8F0: panels, the sea on the map */
+  --ink: 28 36 39;             /* #1C2427 */
+  --ink-muted: 66 72 77;       /* #42484D */
+  --rule: 205 191 156;         /* #CDBF9C */
+  --rule-faint: 225 216 195;   /* #E1D8C3 */
+  --gilt: 176 141 60;          /* #B08D3C: rules and the mark only, never text */
+  --gilt-text: 122 92 28;      /* #7A5C1C: gilt for text on paper */
+  --heather: 94 63 99;         /* #5E3F63 */
+  --heather-strong: 72 46 76;  /* #482E4C */
+  --heather-tint: 236 228 233; /* #ECE4E9 */
+  --on-heather: 251 248 240;
+  --compare-a: 94 63 99;       /* heather */
+  --compare-b: 122 92 28;      /* gilt text */
+  --nodata: 228 221 203;       /* #E4DDCB, hatched */
+  --nodata-hatch: 176 166 140;
+  --land-stroke: 251 248 240;
 }
 
-body {
-  margin: 0;
-  min-height: 100svh;
-  background-color: var(--color-surface-bg);
-  color: var(--color-text-main);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: 24 27 29;           /* #181B1D */
+    --sheet: 31 35 38;           /* #1F2326 */
+    --ink: 237 230 211;          /* #EDE6D3 */
+    --ink-muted: 190 183 165;    /* #BEB7A5 */
+    --rule: 88 82 66;            /* #585242 */
+    --rule-faint: 54 55 52;      /* #363734 */
+    --gilt: 176 141 60;
+    --gilt-text: 217 188 114;    /* #D9BC72 */
+    --heather: 199 170 204;      /* #C7AACC */
+    --heather-strong: 222 202 225;
+    --heather-tint: 56 44 59;    /* #382C3B */
+    --on-heather: 24 27 29;
+    --compare-a: 199 170 204;
+    --compare-b: 217 188 114;
+    --nodata: 44 46 45;
+    --nodata-hatch: 86 84 76;
+    --land-stroke: 24 27 29;
+  }
 }
 
-/* Balanced Headings */
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100svh;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    font-weight: 600;
+    text-wrap: balance;
+    letter-spacing: -0.005em;
+  }
+  a {
+    @apply text-heather underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+  }
+  a:hover {
+    @apply text-ink;
+    text-decoration-thickness: 2px;
+  }
+  ::selection {
+    @apply bg-heather-tint text-ink;
+  }
+  :focus-visible {
+    outline: 3px solid rgb(var(--heather));
+    outline-offset: 2px;
+  }
+  /* iOS zooms into inputs smaller than 16px */
+  input, select, textarea {
+    font-size: max(16px, 1rem);
+  }
+  img, svg {
+    flex-shrink: 0;
+  }
+  table {
+    font-variant-numeric: tabular-nums;
+  }
 }
 
-/* Sized Media */
-img, video {
+@layer components {
+  /* Small capitals with tracking: the family's label style */
+  .caps {
+    @apply font-serif text-xs uppercase tracking-caps;
+    font-weight: 600;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .double-rule {
+    border-bottom: 3px double rgb(var(--ink));
+  }
+  .prose-page {
+    @apply font-serif text-base max-w-prose;
+  }
+  .prose-page p,
+  .prose-page ul,
+  .prose-page ol {
+    @apply my-4;
+  }
+  .prose-page ul {
+    @apply list-disc pl-6;
+  }
+  .prose-page ol {
+    @apply list-decimal pl-6;
+  }
+  .prose-page li {
+    @apply my-1.5;
+  }
+  .prose-page h2 {
+    @apply text-2xl mt-12 mb-3;
+  }
+  .prose-page h3 {
+    @apply text-xl mt-8 mb-2;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 min-h-[40px] px-3 border border-rule bg-sheet text-ink text-sm font-sans font-semibold no-underline cursor-pointer;
+  }
+  .btn:hover {
+    @apply border-heather text-heather;
+  }
+  .btn-primary {
+    @apply bg-heather text-on-heather border-heather;
+  }
+  .btn-primary:hover {
+    @apply bg-heather-strong text-on-heather border-heather-strong;
+  }
+  .field {
+    @apply w-full min-h-[40px] px-3 border border-rule bg-sheet text-ink font-sans placeholder:text-muted;
+  }
+  .field:focus-visible {
+    outline-offset: 0;
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .skip-link {
+    @apply absolute left-2 -top-16 z-[100] bg-sheet text-ink border-2 border-ink px-3 py-2 font-sans;
+  }
+  .skip-link:focus {
+    @apply top-2;
+  }
+}
+
+/* Sliders: a thin rule with a heather thumb */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+  height: 28px;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(to right, rgb(var(--heather)) var(--fill, 50%), rgb(var(--rule)) var(--fill, 50%));
+}
+input[type='range']::-moz-range-track {
+  height: 4px;
+  background: rgb(var(--rule));
+}
+input[type='range']::-moz-range-progress {
+  height: 4px;
+  background: rgb(var(--heather));
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: rgb(var(--heather));
+  border: 2px solid rgb(var(--sheet));
+  box-shadow: 0 0 0 1px rgb(var(--heather));
+}
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(var(--heather));
+  border: 2px solid rgb(var(--sheet));
+}
+
+/* The map */
+.map-svg {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  /* One finger scrolls the page; panning is by mouse drag or two fingers */
+  touch-action: pan-x pan-y !important;
 }
-
-/* Lucide and Inline SVG Protection: min-width: 0 on everything must not shrink icons */
-svg.lucide,
-svg[data-icon] {
-  display: inline-block;
-  vertical-align: middle;
-  flex-shrink: 0;
+.rsm-geography {
+  transition: fill 0.2s ease-out;
 }
-
-/* Inputs at max(16px, 1rem) stop iOS Safari from auto-zooming on focus */
-input, textarea, select {
-  font-size: max(16px, 1rem);
+.rsm-geography[tabindex='0'] {
+  cursor: pointer;
 }
-
-/* Touch manipulation: fires click without 300ms double-tap delay */
-button, a, [role="button"] {
-  touch-action: manipulation;
-}
-
-/* Stop long-press accidental selection on interactive controls */
-button, [role="button"] {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* ==========================================================================
-   good-css Typography & Numeric Discipline
-   ========================================================================== */
-
-/* Tabular numbers for scores, ranks, deltas, percentages, and metrics */
-.tabular-nums,
-[data-tabular] {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
-}
-
-/* ==========================================================================
-   good-css Interaction: Press Feedback & Hover Isolation
-   ========================================================================== */
-
-/* Tactile press feedback on interactive elements */
-button:active:not(:disabled),
-a[role="button"]:active,
-.interactive-card:active {
-  transform: scale(0.98);
-  transition-duration: 75ms;
-}
-
-/* Accessible focus ring with 2px offset */
-:focus-visible {
-  outline: 2px solid oklch(0.55 0.14 185);
-  outline-offset: 2px;
-}
-
-:focus:not(:focus-visible) {
+.rsm-geography:focus {
   outline: none;
 }
-
-/* 44px Minimum Touch Target Expansion for small icons/buttons */
-.hit-target-44 {
-  position: relative;
+.rsm-geography:focus-visible,
+.rsm-geography.is-selected {
+  stroke: rgb(var(--ink)) !important;
+  stroke-width: 2px !important;
 }
-.hit-target-44::after {
-  content: '';
-  position: absolute;
-  inset: -8px;
+.rsm-geography.is-selected {
+  stroke-width: 1.6px !important;
 }
-
-/* Hover effects only where hover is physically supported (no sticky touch states) */
-@media (hover: hover) and (pointer: fine) {
-  .hover-elevate {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .hover-elevate:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+@media (hover: hover) {
+  .rsm-geography[tabindex='0']:hover {
+    stroke: rgb(var(--ink)) !important;
+    stroke-width: 1.2px !important;
   }
 }
 
-/* ==========================================================================
-   good-css Motion & Accessibility
-   ========================================================================== */
+/* Dialogs slide in, unless the reader prefers less motion */
+@keyframes sheet-in {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.sheet-in {
+  animation: sheet-in 0.18s ease-out;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -155,47 +255,53 @@ a[role="button"]:active,
   }
 }
 
-/* ==========================================================================
-   Custom civic scrollbars
-   ========================================================================== */
-
-/* Only restyle scrollbars for mouse users: on touch screens a styled ::-webkit-scrollbar
-   turns Android's thin auto-hiding overlay bars into permanent grey ones. */
-@media (hover: hover) and (pointer: fine) {
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+@media print {
+  .no-print {
+    display: none !important;
   }
-  ::-webkit-scrollbar-track {
-    background: #f1f5f9;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+  body {
+    background: #fff;
   }
 }
 
-/* Horizontal strips (e.g. the map's region tabs) that scroll by swipe without a visible bar */
-.no-scrollbar {
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Map SVG styling */
 .rsm-geography {
-  transition: fill 0.25s ease-out, stroke 0.2s ease, opacity 0.2s ease;
-  outline: none !important;
+  stroke: rgb(var(--land-stroke));
+  stroke-width: 0.5px;
+  vector-effect: non-scaling-stroke;
+}
+.map-outside {
+  fill: rgb(var(--rule-faint));
+}
+.map-nodata {
+  fill: rgb(var(--nodata));
+}
+.map-hatch {
+  stroke: rgb(var(--nodata-hatch));
+  stroke-width: 1.4;
+}
+.map-sphere {
+  color: rgb(var(--rule));
 }
 
-.rsm-geography:hover {
-  filter: brightness(0.92);
-  stroke: #0f172a !important;
-  stroke-width: 1.2px !important;
-  cursor: pointer;
+/* Shown in the HTML until the app has loaded its figures */
+.boot {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 48px 16px;
+  font-family: 'Source Serif 4', Georgia, serif;
 }
-
+.boot__name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.boot__line {
+  margin: 4px 0 24px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(var(--gilt-text));
+}
+.boot__status {
+  color: rgb(var(--ink-muted));
+}

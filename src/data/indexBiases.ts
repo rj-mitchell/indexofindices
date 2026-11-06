@@ -1,4 +1,4 @@
-// Text for the "Index Biases & Critique" page. Indicator names, publishers, links and coverage
+// Text for the "Behind the rankings" page. Indicator names, publishers, links and coverage
 // come from indicators.json; this file holds only the commentary. Every rank quoted below was
 // checked against countries.json with all dials at 50% unless stated.
 
@@ -24,7 +24,6 @@ export interface MacroCritiqueTheme {
 export interface CountryAnomalyCaseStudy {
   id: string;
   countryName: string;
-  flag: string;
   iso3: string;
   headline: string;
   rankText: string;
@@ -63,7 +62,7 @@ export const MACRO_THEMES: MacroCritiqueTheme[] = [
       '15 of the 34 indicators are measured counts or rates, such as homicides, road deaths or broadband speed. Ten are expert assessments, including corruption, rule of law, organised crime, press freedom and democracy. The rest are composite indices.',
       'Expert scores share sources and reputations. Corruption Perceptions and WGI Rule of Law correlate at 0.93, so weighting both mostly counts the same opinion twice.'
     ],
-    takeaway: 'Use the "Data type" label on each index to see how much rests on judgement.'
+    takeaway: 'The "Kind of data" line on each index below shows how much rests on judgement.'
   },
   {
     id: 'gaps',
@@ -381,7 +380,6 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
   {
     id: 'sgp-liberties',
     countryName: 'Singapore',
-    flag: '🇸🇬',
     iso3: 'SGP',
     headline: '#1 for government effectiveness, #118 for press freedom',
     rankText: 'Gov. Effectiveness #1 of 186 · Press Freedom #118 of 175',
@@ -393,7 +391,6 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
   {
     id: 'usa-paradox',
     countryName: 'United States',
-    flag: '🇺🇸',
     iso3: 'USA',
     headline: '#9 for income, #142 for road safety',
     rankText: 'GDP per capita #9 of 181 · Road deaths #142 of 183',
@@ -405,7 +402,6 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
   {
     id: 'nor-nordic',
     countryName: 'Norway',
-    flag: '🇳🇴',
     iso3: 'NOR',
     headline: 'Top five overall, #177 for weather',
     rankText: 'Press Freedom #1 · Rule of Law #3 · Climate comfort #177 of 184',
@@ -417,7 +413,6 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
   {
     id: 'mex-climate',
     countryName: 'Mexico',
-    flag: '🇲🇽',
     iso3: 'MEX',
     headline: '#7 for weather, #182 for organised crime',
     rankText: 'Climate comfort #7 of 184 · Organised crime #182 of 184',
@@ -429,7 +424,6 @@ export const COUNTRY_ANOMALIES: CountryAnomalyCaseStudy[] = [
   {
     id: 'jpn-disasters',
     countryName: 'Japan',
-    flag: '🇯🇵',
     iso3: 'JPN',
     headline: '#2 for healthy lifespan, #166 for disaster risk',
     rankText: 'Healthy life expectancy #2 (72.2 yrs) · WorldRiskIndex #166 of 184',

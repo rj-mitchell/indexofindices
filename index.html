@@ -1,22 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <meta name="theme-color" content="#0f766e" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Where Lives Stand: quality of life, country by country</title>
-    <meta name="description" content="Where Lives Stand ranks 186 countries on quality of life, using your own weights across 34 published indicators." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <meta name="description" content="Where Lives Stand ranks countries on quality of life from published indicators, weighted the way you choose. A Where They Stand project." />
+    <link rel="canonical" href="https://wherelivesstand.com/" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- family:head -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:site_name" content="Where Lives Stand" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Where Lives Stand: quality of life, country by country" />
+    <meta property="og:description" content="Where Lives Stand ranks countries on quality of life from published indicators, weighted the way you choose. A Where They Stand project." />
+    <meta property="og:url" content="https://wherelivesstand.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Where Lives Stand",
+        "alternateName": "Index of Indices",
+        "url": "https://wherelivesstand.com/",
+        "description": "Quality of life, country by country: countries ranked on published indicators, weighted the way you choose.",
+        "inLanguage": "en-GB",
+        "publisher": { "@type": "Organization", "name": "Where They Stand", "url": "https://wheretheystand.uk" }
+      }
+    </script>
   </head>
-  <body class="bg-[#f8f9fa] text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900">
-    <div id="root"></div>
+  <body class="wts-headings">
+    <div id="root">
+      <div class="boot">
+        <p class="boot__name">Where Lives Stand</p>
+        <p class="boot__line">A Where They Stand project</p>
+        <p id="boot-status" class="boot__status" role="status">Loading the figures.</p>
+        <noscript><p class="boot__status">This site needs JavaScript to work out the scores. The method and every source are listed in <a href="https://github.com/rj-mitchell/wherelivesstand/blob/main/SOURCES.md">SOURCES.md</a>.</p></noscript>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
